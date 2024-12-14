@@ -26,7 +26,7 @@ def loadData():
         
         if railroad == 'mnrr':
             print("Wait a moment as we read in data...")
-            return pd.read_csv(f'./calendar_dates.txt'), pd.read_csv(f'./routes.txt'), pd.read_csv(f'./stop_times.txt',dtype={'track' : 'str'}), pd.read_csv(f'./stops.txt'),  pd.read_csv(f'./trips.txt'), pd.read_csv(f'./calendar_dates.txt'), pd.read_csv(f'./transfers.txt'), railroad
+            return pd.read_csv(f'./calendar_dates.txt'), pd.read_csv(f'./routes.txt'), pd.read_csv(f'./stop_times.txt',dtype={'track' : 'str'}), pd.read_csv(f'./stops.txt'),  pd.read_csv(f'./trips.txt'), pd.read_csv(f'./calendar_dates.txt'), railroad
         elif railroad == 'lirr':
             print("Wait a moment as we read in data...")
             return pd.read_csv(f'data/LIRR/calendar_dates.txt'), pd.read_csv(f'data/LIRR/routes.txt'), pd.read_csv(f'data/LIRR/stop_times.txt'), pd.read_csv(f'data/LIRR/stops.txt'),  pd.read_csv(f'data/LIRR/trips.txt'), None, None, railroad
@@ -83,7 +83,7 @@ def reformat(stops,routes,listOfTrains,stop_times):
 
         # print()
         
-        temp = [filtered_df.drop(['stop_id'],axis=1), int(listOfTrains.trip_short_name.iloc[index]) if  listOfTrains.trip_short_name.iloc[index].isdigit() else int(listOfTrains.trip_short_name.iloc[index][1:]),listOfTrains.trip_headsign.iloc[index],cvtRouteStringToNumber(routes,listOfTrains.route_id.iloc[index])]
+        temp = [filtered_df.drop(['stop_id'],axis=1), listOfTrains.block_id.iloc[index],listOfTrains.trip_headsign.iloc[index],cvtRouteStringToNumber(routes,listOfTrains.route_id.iloc[index])]
         reformated.append(temp)
     print(f'{100}%...')
     return reformated
@@ -92,14 +92,14 @@ def reformat(stops,routes,listOfTrains,stop_times):
 def main():
 
     # prepare data
-    calendar_dates, routes, stop_times, stops, trips, calendar, transfers, railroad = loadData()
+    calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData()
 
     # get dates from user & finds the services that run that day
     listOfServices = getServices(calendar_dates,railroad)
 
     # gets all of the trains that run that day
     listOfTrains = getTrains(listOfServices,trips)
-    listOfTrains = listOfTrains.astype({'trip_short_name':'str','trip_headsign':'str','trip_short_name':'str','direction_id':'str','shape_id':'str'})
+    listOfTrains = listOfTrains.astype({'block_id':'str','trip_headsign':'str','block_id':'str','direction_id':'str','shape_id':'str'})
     print("Wait a while as we process data...")
     reformated = reformat(stops, routes,listOfTrains,stop_times)
     reformated = sorted(reformated, key=lambda reformated: reformated[1])
@@ -113,7 +113,7 @@ def main():
         # term = row[2]
         line = row[3]
         # stations_df['match'] = stations_df['stop_name'].isin(sub_df['stop_name']).map({True: '✔', False: ''})
-
+        print(row)
         stops[f'{train_number} ({line})'] = stops['stop_name'].map(
     stop_list.set_index('stop_name')['departure_time']
 ).fillna('')

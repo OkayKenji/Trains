@@ -1,2 +1,3 @@
-"agency_id","agency_name","agency_url","agency_timezone","agency_lang","agency_phone"
-"LI","Long Island Rail Road","https://new.mta.info/agency/long-island-rail-road","America/New_York","en","718-217-5477"
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone
+NJB,"NJ TRANSIT BUS","http://www.njtransit.com/","America/New_York","en",""
+NJT,"NJ TRANSIT RAIL","http://www.njtransit.com/","America/New_York","en",""
