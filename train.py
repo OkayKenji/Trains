@@ -61,7 +61,14 @@ def cvtRouteStringToNumber(routes,route_id):
     else:
         return route_name.route_long_name.to_numpy()[0]
 
-def reformat(routes,listOfTrains,stop_times): 
+def add_values(row, stops):
+    # Use `.loc` instead of `.query` for better clarity with Series data
+    stop_name = stops.loc[stops['stop_id'] == row['stop_id'], 'stop_name']
+    # Return the first match, or a default value if no match is found
+    return stop_name.iloc[0] if not stop_name.empty else None
+
+
+def reformat(stops,routes,listOfTrains,stop_times): 
     reformated = []
     tempPercent = 0
     print(f'{0}%...')
@@ -71,8 +78,12 @@ def reformat(routes,listOfTrains,stop_times):
             tempPercent += 10
         filtered_df = stop_times[stop_times.trip_id == train]
         filtered_df = filtered_df.drop(['trip_id', 'arrival_time', 'pickup_type', 'drop_off_type', 'track', 'note_id'],axis=1)
+        
+        filtered_df['stop_name'] = filtered_df.apply(add_values, axis=1, args=(stops,))
 
-        temp = [filtered_df,listOfTrains.trip_short_name.iloc[index],listOfTrains.trip_headsign.iloc[index],cvtRouteStringToNumber(routes,listOfTrains.route_id.iloc[index])]
+        # print()
+        
+        temp = [filtered_df.drop(['stop_id'],axis=1), int(listOfTrains.trip_short_name.iloc[index]) if  listOfTrains.trip_short_name.iloc[index].isdigit() else int(listOfTrains.trip_short_name.iloc[index][1:]),listOfTrains.trip_headsign.iloc[index],cvtRouteStringToNumber(routes,listOfTrains.route_id.iloc[index])]
         reformated.append(temp)
     print(f'{100}%...')
     return reformated
@@ -90,9 +101,22 @@ def main():
     listOfTrains = getTrains(listOfServices,trips)
     listOfTrains = listOfTrains.astype({'trip_short_name':'str','trip_headsign':'str','trip_short_name':'str','direction_id':'str','shape_id':'str'})
     print("Wait a while as we process data...")
-    reformated = reformat(routes,listOfTrains,stop_times)
+    reformated = reformat(stops, routes,listOfTrains,stop_times)
     reformated = sorted(reformated, key=lambda reformated: reformated[1])
-    print(reformated)
-    
+    # reformated
+    # print(reformated)
+
+    stops = stops.loc[:, ['stop_name']]
+    for row in reformated:
+        stop_list = row[0]
+        train_number = row[1]
+        # term = row[2]
+        line = row[3]
+        # stations_df['match'] = stations_df['stop_name'].isin(sub_df['stop_name']).map({True: '✔', False: ''})
+
+        stops[f'{train_number} ({line})'] = stops['stop_name'].map(
+    stop_list.set_index('stop_name')['departure_time']
+).fillna('')
+    stops.to_csv('test.csv')    
 if __name__ == "__main__":
     main()
