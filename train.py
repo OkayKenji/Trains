@@ -77,7 +77,7 @@ def reformat(stops,routes,listOfTrains,stop_times):
             print(f'{tempPercent+10}%...')
             tempPercent += 10
         filtered_df = stop_times[stop_times.trip_id == train]
-        filtered_df = filtered_df.drop(['trip_id', 'arrival_time', 'pickup_type', 'drop_off_type', 'track', 'note_id'],axis=1)
+        filtered_df = filtered_df.drop(['trip_id', 'arrival_time', 'pickup_type', 'drop_off_type',],axis=1)
         
         filtered_df['stop_name'] = filtered_df.apply(add_values, axis=1, args=(stops,))
 
