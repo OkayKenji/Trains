@@ -86,7 +86,6 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
 def main():
     elements = ['mnrr','lirr','septa','njt','exo']
-    elements = ['exo']
 
     for ele in elements: 
         # prepare data
