@@ -25,8 +25,8 @@ def loadData():
     global railroad 
     global train_classification 
 
-    railroad = 'njt'
-    train_classification = 'block_id' if railroad == 'njt' else 'train_short_name'
+    railroad = 'mnrr'
+    train_classification = 'block_id' if railroad == 'njt' else 'trip_short_name'
     return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt'), railroad
 
 def getTrains(listOfServices, trips): 
@@ -72,7 +72,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
         filtered_df = stop_times[stop_times.trip_id == train]
         filtered_df = filtered_df.drop(['trip_id', 'arrival_time', 'pickup_type', 'drop_off_type'], axis=1)
         filtered_df['stop_name'] = filtered_df.apply(add_values, axis=1, args=(stops,))
-        temp = [filtered_df.drop(['stop_id'], axis=1), listOfTrains[train_classification].iloc[index], listOfTrains.trip_headsign.iloc[index], cvtRouteStringToNumber(routes, listOfTrains.route_id.iloc[index])]
+        temp = [filtered_df.drop(['stop_id'], axis=1), int(listOfTrains[train_classification].iloc[index]) if listOfTrains[train_classification].iloc[index].isdigit() else str(listOfTrains[train_classification].iloc[index])  , listOfTrains.trip_headsign.iloc[index], cvtRouteStringToNumber(routes, listOfTrains.route_id.iloc[index])]
         reformated.append(temp)
     print(f'{100}%...')
     return reformated
@@ -89,8 +89,8 @@ def main():
     listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str', 'shape_id': 'str'})
     print("Wait a while as we process data...")
     reformated = reformat(stops, routes, listOfTrains, stop_times)
-    reformated = sorted(reformated, key=lambda reformated: reformated[1])
-
+    reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
+# x: (isinstance(x, str), x)
     stops = stops.loc[:, ['stop_name']]
     for row in reformated:
         stop_list = row[0]
