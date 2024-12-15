@@ -4,19 +4,28 @@ import time as t
 from datetime import timedelta as td
 import itables
 import webbrowser
+from datetime import datetime
 
-def getServices(calendar_dates, railroad):
+def getServices(calendar_dates, railroad, calendar):
     calendar_dates = calendar_dates.astype({'date': 'str'})
-    while True:
-        listOfServices = calendar_dates[calendar_dates.date == getDate()]
-        if not listOfServices.empty:
-            break
-        else:
-            if railroad == 'mnrr':
-                print("Opps! That was not a valid date. 07/14/2022 to 11/20/2022 only.")
-            else:
-                print("Opps! That was not a valid date. 07/13/2022 to 09/05/2022 only.")
-    return listOfServices
+    listOfServices = calendar_dates[calendar_dates.date == getDate()]
+    
+    if not listOfServices.empty:
+        return listOfServices
+    if railroad == 'septa':
+        date_object = datetime.strptime(getDate(), "%Y%m%d").date()
+        print(calendar)
+        if date_object.weekday() < 5:
+            listOfServices = calendar[calendar.monday == 1]
+            return listOfServices
+        elif date_object.weekday() == 5:
+            listOfServices = calendar[calendar.saturday == 1]
+            return listOfServices
+        elif date_object.weekday() == 6:
+            listOfServices = calendar[calendar.sunday == 1]
+            return listOfServices
+
+
 
 def getDate():
     return "20241213"
@@ -25,9 +34,9 @@ def loadData():
     global railroad 
     global train_classification 
 
-    railroad = 'mnrr'
+    railroad = 'septa'
     train_classification = 'block_id' if railroad == 'njt' else 'trip_short_name'
-    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt'), railroad
+    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if railroad != 'septa' else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
 def getTrains(listOfServices, trips): 
     print(len(listOfServices))
@@ -82,7 +91,7 @@ def main():
     calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData()
 
     # get dates from user & finds the services that run that day
-    listOfServices = getServices(calendar_dates, railroad)
+    listOfServices = getServices(calendar_dates, railroad, calendar)
 
     # gets all of the trains that run that day
     listOfTrains = getTrains(listOfServices, trips)
@@ -104,6 +113,8 @@ def main():
     # Alternatively, Save the HTML table and open it in the browser:
     # Render the table as HTML using pandas
     html_table = stops.to_html()
+
+    stops.to_csv('test.csv')
 
     # Save the HTML table to a file
     with open('test.html', 'w') as f:
