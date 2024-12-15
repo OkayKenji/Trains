@@ -1,8 +1,6 @@
 import pandas as pd
-import os
 import time as t
 from datetime import timedelta as td
-import itables
 import webbrowser
 from datetime import datetime
 
@@ -99,19 +97,15 @@ def main():
     print("Wait a while as we process data...")
     reformated = reformat(stops, routes, listOfTrains, stop_times)
     reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
-# x: (isinstance(x, str), x)
     stops = stops.loc[:, ['stop_name']]
     for row in reformated:
+     
         stop_list = row[0]
+        stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"
         train_number = row[1]
         line = row[3]
-        stops[f'{train_number} ({line})'] = stops['stop_name'].map(stop_list.set_index('stop_name')['departure_time']).fillna('')
-    
-    # Render table using itables.show() for interactive display (this will work only in a Jupyter/IPython environment)
-    itables.show(stops)
+        stops[f'{train_number} ({line})'] = stops['stop_name'].map(stop_list.set_index("stop_name")["eee"]).fillna('')
 
-    # Alternatively, Save the HTML table and open it in the browser:
-    # Render the table as HTML using pandas
     html_table = stops.to_html()
 
     stops.to_csv('test.csv')
