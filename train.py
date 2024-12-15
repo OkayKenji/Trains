@@ -111,18 +111,15 @@ def main():
             stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"
             train_number = row[1]
             line = row[3]
-
-            print(stop_list)
-
             stops[f'{train_number} ({line})'] = stops['stop_name'].map(stop_list.set_index("stop_name")["eee"]).fillna('')
 
-        html_table = stops.to_html()
+        # html_table = stops.to_html()
 
         stops.to_csv(f'./{ele}.csv')
 
-        # Save the HTML table to a file
-        with open(f'./{ele}.html', 'w') as f:
-            f.write(html_table)
+        # # Save the HTML table to a file
+        # with open(f'./{ele}.html', 'w') as f:
+        #     f.write(html_table)
         
         # Automatically open the file in the browser
         # webbrowser.open(f'./{ele}.html', new=2)
