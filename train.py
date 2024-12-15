@@ -28,11 +28,11 @@ def getServices(calendar_dates, railroad, calendar):
 def getDate():
     return "20241213"
 
-def loadData():
+def loadData(name_rail):
     global railroad 
     global train_classification 
+    railroad = name_rail
 
-    railroad = 'septa'
     train_classification = 'block_id' if railroad == 'njt' else 'trip_short_name'
     return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if railroad != 'septa' else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
@@ -85,37 +85,48 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    # prepare data
-    calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData()
+    elements = ['mnrr','lirr','septa','njt','exo']
+    elements = ['exo']
 
-    # get dates from user & finds the services that run that day
-    listOfServices = getServices(calendar_dates, railroad, calendar)
+    for ele in elements: 
+        # prepare data
+        calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
 
-    # gets all of the trains that run that day
-    listOfTrains = getTrains(listOfServices, trips)
-    listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str', 'shape_id': 'str'})
-    print("Wait a while as we process data...")
-    reformated = reformat(stops, routes, listOfTrains, stop_times)
-    reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
-    stops = stops.loc[:, ['stop_name']]
-    for row in reformated:
-     
-        stop_list = row[0]
-        stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"
-        train_number = row[1]
-        line = row[3]
-        stops[f'{train_number} ({line})'] = stops['stop_name'].map(stop_list.set_index("stop_name")["eee"]).fillna('')
+        # get dates from user & finds the services that run that day
+        listOfServices = getServices(calendar_dates, railroad, calendar)
 
-    html_table = stops.to_html()
+        # gets all of the trains that run that day
+        listOfTrains = getTrains(listOfServices, trips)
+        listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str', 'shape_id': 'str'})
+        print("Wait a while as we process data...")
+        reformated = reformat(stops, routes, listOfTrains, stop_times)
+        reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
+        stops = stops.loc[:, ['stop_name']]
 
-    stops.to_csv('test.csv')
 
-    # Save the HTML table to a file
-    with open('test.html', 'w') as f:
-        f.write(html_table)
-    
-    # Automatically open the file in the browser
-    webbrowser.open('test.html', new=2)
+        for row in reformated:
+        
+            stop_list = row[0]
+            stop_list = stop_list.drop_duplicates(subset='stop_name')  # Ensure uniqueness by removing duplicates
+
+            stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"
+            train_number = row[1]
+            line = row[3]
+
+            print(stop_list)
+
+            stops[f'{train_number} ({line})'] = stops['stop_name'].map(stop_list.set_index("stop_name")["eee"]).fillna('')
+
+        html_table = stops.to_html()
+
+        stops.to_csv(f'./{ele}.csv')
+
+        # Save the HTML table to a file
+        with open(f'./{ele}.html', 'w') as f:
+            f.write(html_table)
+        
+        # Automatically open the file in the browser
+        # webbrowser.open(f'./{ele}.html', new=2)
 
 if __name__ == "__main__":
     main()
