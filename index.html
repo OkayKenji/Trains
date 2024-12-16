@@ -154,8 +154,8 @@
         function onSelectionChange() {
             const dropdown = document.getElementById('train-dropdown');
             const selectedValue = dropdown.value;
-            document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
-            document.getElementById('testTest').href = `?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
+            document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
+            document.getElementById('testTest').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
             fetchData(selectedValue);
         }
 
@@ -214,8 +214,8 @@
         }
 
         function filterNumberA() {
-            document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
-            document.getElementById('testTest').href = `?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
+            document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
+            document.getElementById('testTest').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
             const regex = new RegExp(document.getElementById('testing').value);
             filterNumber(regex);
         }
