@@ -23,6 +23,17 @@
     <script>
         let global_list;
         let orig_list;
+        const queryString = window.location.search;
+        const queryParams = queryString.substring(1).split('&');
+        console.log(queryString)
+
+        const params = {};
+        queryParams.forEach(param => {
+            const [key, value] = param.split('=');
+            params[key] = decodeURIComponent(value); // Decode URI components
+        });
+
+        console.log(params)
 
         function fetchData(fileName) {
             fetch(`./json/data${fileName}.json`)
@@ -70,6 +81,8 @@
 
                     global_list = result;
                     orig_list = result;
+
+                    filterNumberA();
 
                     createTable();
                 })
@@ -141,12 +154,23 @@
         function onSelectionChange() {
             const dropdown = document.getElementById('train-dropdown');
             const selectedValue = dropdown.value;
+            document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
+            document.getElementById('testTest').href = `?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
             fetchData(selectedValue);
         }
 
         // Load the default file on page load
         window.onload = function () {
-            fetchData('lirr'); // Default to LIRR
+            document.getElementById('testing').value = params.trainFilter ?? ''; // Set a dynamic regex
+
+            const dropdown = document.getElementById('train-dropdown');
+            dropdown.value = params.railroad ; // Set the value of the dropdow
+
+            fetchData(
+                params.railroad ??
+                'lirr'); // Default to LIRR
+
+               
         };
 
         function filterLine(trainline) {
@@ -157,21 +181,21 @@
         }
 
         function filterNumber(regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_number?.padStart(4,"0").search(regex) >= 0 || word[0] == "never-filter")));
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_number?.padStart(4, "0").search(regex) >= 0 || word[0] == "never-filter")));
             global_list = result;
             createTable();
             doStats(transpose(global_list))
         }
 
-        function filterBothAnd(trainline,regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline && word[0].train_number?.padStart(4,"0").search(regex) >= 0) || word[0] == "never-filter")));
+        function filterBothAnd(trainline, regex) {
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline && word[0].train_number?.padStart(4, "0").search(regex) >= 0) || word[0] == "never-filter")));
             global_list = result;
             createTable();
             console.log('Done');
         }
 
-        function filterBothOr(trainline,regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline || word[0].train_number?.padStart(4,"0").search(regex) >= 0) || word[0] == "never-filter")));
+        function filterBothOr(trainline, regex) {
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline || word[0].train_number?.padStart(4, "0").search(regex) >= 0) || word[0] == "never-filter")));
             global_list = result;
             createTable();
             console.log('Done');
@@ -187,17 +211,65 @@
         function doStats(trainList) {
             const numberOfTrains = trainList.length - 1; // 1 row is for header row
             const firstStation = trainList[0][1];
-            const lastStation = trainList[0][trainList[0].length-1]; 
-            console.log({numberOfTrains,firstStation,lastStation
-
-            })
-
+            const lastStation = trainList[0][trainList[0].length - 1];
         }
 
         function filterNumberA() {
-            const regex = new RegExp(document.getElementById('testing').value); 
-            console.log(regex)
+            document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
+            document.getElementById('testTest').href = `?trainFilter=${document.getElementById('testing').value}&railroad=${document.getElementById('train-dropdown').value}`
+            const regex = new RegExp(document.getElementById('testing').value);
             filterNumber(regex);
+        }
+
+        let normalizeTime = (time) => {
+            const [hours, minutes, seconds] = time.split(':').map(Number);
+
+            if (hours >= 24) {
+                // Shift to the next day
+                const normalizedHours = hours % 24; // Wrap hours to 0-23
+                const daysToAdd = Math.floor(hours / 24); // Determine extra days
+                const normalizedTime = `${normalizedHours
+                    .toString()
+                    .padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds
+                        .toString()
+                        .padStart(2, '0')}`;
+                return { time: normalizedTime, daysToAdd }; // Next day adjustment
+            } else if (hours >= 0 && hours < 4) {
+                // Shift to the previous day
+                const normalizedTime = `${hours
+                    .toString()
+                    .padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds
+                        .toString()
+                        .padStart(2, '0')}`;
+                return { time: normalizedTime, daysToAdd: 1 }; // Previous day adjustment
+            }
+
+            return { time, daysToAdd: 0 }; // No adjustment needed
+        };
+
+        function sortTrainsTime() {
+            let newArr = transpose(global_list).sort((a, b) => {
+                let timeA = a[1]?.split(' ')[0] || ""; // Handle empty/undefined row[1]
+                let timeB = b[1]?.split(' ')[0] || "";
+
+                // Normalize times
+                const { time: normalizedTimeA, daysToAdd: daysA } = normalizeTime(timeA);
+                const { time: normalizedTimeB, daysToAdd: daysB } = normalizeTime(timeB);
+
+                // Create Date objects adjusted for days
+                let dateA = new Date(`1970-01-01T${normalizedTimeA}`);
+                dateA.setDate(dateA.getDate() + daysA); // Adjust by days
+
+                let dateB = new Date(`1970-01-01T${normalizedTimeB}`);
+                dateB.setDate(dateB.getDate() + daysB); // Adjust by days
+
+                return dateA - dateB; // Sort by adjusted dates
+            });
+            global_list = transpose(newArr);
+
+
+            createTable();
+
         }
     </script>
 </head>
@@ -208,17 +280,22 @@
         <label for="train-dropdown">Select Train Line:</label>
         <select id="train-dropdown" onchange="onSelectionChange()">
             <option value="mnrr">MNRR</option>
-            <option value="lirr" selected>LIRR</option>
+            <option value="lirr">LIRR</option>
             <option value="septa">SEPTA</option>
             <option value="njt">NJT</option>
             <option value="exo">EXO</option>
         </select>
     </div>
     <pre id="filters">
-        <input id="testing" value="00[0-9][0-9]"></input>
+        <input id="testing" placeholder="00[0-9][0-9]"></input>
+        <p style="margin-top: 0; margin-bottom: 0; margin-left: 50px;">Shareable Link:</p>
+        <a id="testTest" style="margin: 0;" href="?trainFilter=">?trainFilter=</a>
         <button onclick="filterNumberA()">Filter by Regex Number</button>
+        <button onclick="sortTrainsTime()">Sort by Time</button>
     </pre>
     <pre id="table-container">Loading JSON data...</pre>
+
+
 </body>
 
 </html>
