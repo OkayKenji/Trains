@@ -7,17 +7,17 @@
     <title>Fetch JSON Example</title>
     <style>
         th {
-        position: sticky;
-        top: 0px;  
-        z-index: 1;
-        background: white;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            background: white;
         }
 
         .aaaaaaaaa {
-        position: sticky;
-        left: 0px;  
-        z-index: 0;
-        background: white;
+            position: sticky;
+            left: 0px;
+            z-index: 0;
+            background: white;
         }
     </style>
     <script>
@@ -78,14 +78,14 @@
 
 
         function clean_table(arr) {
-            for (let i = arr.length - 1 ; i >= 0 ; i--) {
-                for (let j = 1 ; j <= arr[i].length ; j++ ) {
-                    if (j == arr[i].length ) {
-                        arr.splice(i,1);
+            for (let i = arr.length - 1; i >= 0; i--) {
+                for (let j = 1; j <= arr[i].length; j++) {
+                    if (j == arr[i].length) {
+                        arr.splice(i, 1);
                         break;
                     }
 
-                    if (arr[i][j] !== '' ) {
+                    if (arr[i][j] !== '') {
                         break;
                     }
 
@@ -123,7 +123,7 @@
                 const row = document.createElement('tr');
                 let firstCell = true;
                 headers.forEach(header => {
-                    
+
                     const td = document.createElement('td');
                     td.innerText = item[header];
                     if (firstCell) {
@@ -149,21 +149,21 @@
         }
 
         function filterNumber(regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_number?.padStart(4,"0").search(regex) >= 0 || word[0] == "never-filter")));
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_number?.padStart(4, "0").search(regex) >= 0 || word[0] == "never-filter")));
             global_list = result;
             createTable();
             doStats(transpose(global_list))
         }
 
-        function filterBothAnd(trainline,regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline && word[0].train_number?.padStart(4,"0").search(regex) >= 0) || word[0] == "never-filter")));
+        function filterBothAnd(trainline, regex) {
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline && word[0].train_number?.padStart(4, "0").search(regex) >= 0) || word[0] == "never-filter")));
             global_list = result;
             createTable();
             console.log('Done');
         }
 
-        function filterBothOr(trainline,regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline || word[0].train_number?.padStart(4,"0").search(regex) >= 0) || word[0] == "never-filter")));
+        function filterBothOr(trainline, regex) {
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline || word[0].train_number?.padStart(4, "0").search(regex) >= 0) || word[0] == "never-filter")));
             global_list = result;
             createTable();
             console.log('Done');
@@ -179,15 +179,16 @@
         function doStats(trainList) {
             const numberOfTrains = trainList.length - 1; // 1 row is for header row
             const firstStation = trainList[0][1];
-            const lastStation = trainList[0][trainList[0].length-1]; 
-            console.log({numberOfTrains,firstStation,lastStation
+            const lastStation = trainList[0][trainList[0].length - 1];
+            console.log({
+                numberOfTrains, firstStation, lastStation
 
             })
 
         }
 
         function filterNumberA() {
-            const regex = new RegExp(document.getElementById('testing').value); 
+            const regex = new RegExp(document.getElementById('testing').value);
             console.log(regex)
             filterNumber(regex);
         }
