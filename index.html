@@ -142,7 +142,7 @@
         }
 
         function filter(trainline) {
-            const result = clean_table(transpose(transpose(global_list).filter((word) => word[0].train_line === trainline || word[0] == "never-filter")));
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_line === trainline || word[0] == "never-filter")));
             global_list = result;
             createTable();
             console.log('Done');
