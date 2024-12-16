@@ -164,11 +164,10 @@
             document.getElementById('testing').value = params.trainFilter ?? ''; // Set a dynamic regex
 
             const dropdown = document.getElementById('train-dropdown');
-            dropdown.value = params.railroad ; // Set the value of the dropdow
+            dropdown.value = params.railroad ?? 'mnrr' ; // Set the value of the dropdow
 
             fetchData(
-                params.railroad ??
-                'lirr'); // Default to LIRR
+                dropdown.value ); 
 
                
         };
@@ -234,7 +233,7 @@
                         .toString()
                         .padStart(2, '0')}`;
                 return { time: normalizedTime, daysToAdd }; // Next day adjustment
-            } else if (hours >= 0 && hours < 4) {
+            } else if (hours >= 0 && hours < 4 && document.getElementById('train-dropdown').value === 'mnrr') {
                 // Shift to the previous day
                 const normalizedTime = `${hours
                     .toString()
