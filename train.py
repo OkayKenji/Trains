@@ -1,8 +1,13 @@
 import pandas as pd
 import time as t
 from datetime import timedelta as td
-import webbrowser
+import re
 from datetime import datetime
+import json
+
+import warnings 
+warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
+
 
 def getServices(calendar_dates, railroad, calendar):
     calendar_dates = calendar_dates.astype({'date': 'str'})
@@ -86,7 +91,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
 def main():
     elements = ['mnrr','lirr','septa','njt','exo']
-
+    # elements = ['lirr']
     for ele in elements: 
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
@@ -115,14 +120,44 @@ def main():
 
         # html_table = stops.to_html()
 
-        stops.to_csv(f'./{ele}.csv')
+        stops.to_csv(f'./csv/{ele}.csv')
 
-        # # Save the HTML table to a file
-        # with open(f'./{ele}.html', 'w') as f:
-        #     f.write(html_table)
-        
-        # Automatically open the file in the browser
-        # webbrowser.open(f'./{ele}.html', new=2)
+        # print(stops.to_dict())
+
+
+
+
+
+        arr = []
+        for i, k in enumerate(stops):
+            match = re.match(r'(\w+)\s+\(([éô0-9a-zA-Z\/\-\&\s]+)\)', k)
+            if match:
+                eggs = pd.DataFrame(stops[k].to_list())
+                eggs['station_names'] = pd.DataFrame(stops['stop_name'].to_list())[0]  # Accessing the Series by index
+                eggs.set_index('station_names', inplace=True)
+                eggs.rename(columns={0: 'stopping'}, inplace=True)
+                eggs[['departure_time', 'stop_index']] = eggs['stopping'].str.extract(r'([0-9:]+)\s+\(([0-9]+)\)')
+                eggs[['departure_time', 'stop_index']] = eggs[['departure_time', 'stop_index']].fillna('n/a') 
+                eggs.drop('stopping',axis=1,inplace=True)
+                
+                # print(pd.DataFrame(stops['stop_name'].to_list())  )
+                new_ele = { 
+                    'train_number': match.group(1),
+                    'train_line': match.group(2),
+                    'stops' : eggs.to_dict(orient='index')
+                }
+
+                arr.append(new_ele)
+                
+            else:
+                print("No match found.",k )
+        #  = json.dumps(arr)
+        # print(json_data)
+        # Save dictionary as JSON to a file
+        pretty_json = json.dumps(arr, indent=4)
+
+        with open(f'./json/data{ele}.json', 'w') as file:
+            file.write(pretty_json)
 
 if __name__ == "__main__":
     main()
