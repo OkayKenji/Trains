@@ -25,6 +25,7 @@
         let orig_list;
         const queryString = window.location.search;
         const queryParams = queryString.substring(1).split('&');
+
         console.log(queryString)
 
         const params = {};
@@ -33,7 +34,7 @@
             params[key] = decodeURIComponent(value); // Decode URI components
         });
 
-        console.log(params)
+        console.log(params.sort)
 
         function fetchData(fileName) {
             fetch(`./json/data${fileName}.json`)
@@ -83,6 +84,10 @@
                     orig_list = result;
 
                     filterNumberA();
+
+                    if (params.sort === 'y' || params.sort === 'yes' || params.sort === 't' || params.sort === 'true') {
+                        sortTrainsTime();
+                    }
 
                     createTable();
                 })
@@ -156,6 +161,9 @@
             const selectedValue = dropdown.value;
             document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
             document.getElementById('testTest').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
+            document.getElementById('testTestSorted').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
+            document.getElementById('testTestSorted').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
+            
             fetchData(selectedValue);
         }
 
@@ -216,6 +224,8 @@
         function filterNumberA() {
             document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
             document.getElementById('testTest').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
+                        document.getElementById('testTestSorted').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
+            document.getElementById('testTestSorted').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
             const regex = new RegExp(document.getElementById('testing').value);
             filterNumber(regex);
         }
@@ -289,6 +299,8 @@
         <input id="testing" placeholder="00[0-9][0-9]"></input>
         <p style="margin-top: 0; margin-bottom: 0; margin-left: 50px;">Shareable Link:</p>
         <a id="testTest" style="margin: 0;" href="?trainFilter=">?trainFilter=</a>
+        <p style="margin-top: 0; margin-bottom: 0; margin-left: 50px;">Shareable Link (sorted):</p>
+        <a id="testTestSorted" style="margin: 0;" href="?trainFilter=">?trainFilter=</a>
         <button onclick="filterNumberA()">Filter by Regex Number</button>
         <button onclick="sortTrainsTime()">Sort by Time</button>
     </pre>
