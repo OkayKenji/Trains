@@ -24,7 +24,7 @@
         let global_list;
         let orig_list;
         // Fetch JSON data
-        fetch('./json/datamnrr.json')
+        fetch('./json/datalirr.json')
             .then(response => response.json())
             .then(data => {
                 // Log data to console
@@ -63,9 +63,10 @@
                     }
                 }
 
-                const result = clean_table(transpose(transpose(trains).filter((word) => word[0].train_line != "" || word[0] == "never-filter")));
+                const result = clean_table(transpose(transpose(trains).filter((word) => word[0].train_line !== "" || word[0] == "never-filter")));
 
-                global_list = result
+                global_list = result;
+                orig_list = result;
 
                 createTable();
             })
@@ -138,6 +139,19 @@
             tableContainer.innerText = '';
             tableContainer.appendChild(table);
 
+        }
+
+        function filter(trainline) {
+            const result = clean_table(transpose(transpose(global_list).filter((word) => word[0].train_line === trainline || word[0] == "never-filter")));
+            global_list = result;
+            createTable();
+            console.log('Done');
+        }
+
+        function reset() {
+            global_list = orig_list;
+            createTable();
+            console.log('Done');
         }
 
     </script>
