@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch JSON Example</title>
+    <title>Trains</title>
     <style>
         th {
             position: sticky;
@@ -23,59 +23,62 @@
     <script>
         let global_list;
         let orig_list;
-        // Fetch JSON data
-        fetch('./json/datalirr.json')
-            .then(response => response.json())
-            .then(data => {
-                // Log data to console
-                const trains = [];
 
+        function fetchData(fileName) {
+            fetch(`./json/data${fileName}.json`)
+                .then(response => response.json())
+                .then(data => {
+                    // Process the JSON data
+                    const trains = [];
 
-                for (const [key, train] of Object.entries(data)) {
-                    const stops = train.stops;
-                    trains.push(['never-filter'])
+                    for (const [key, train] of Object.entries(data)) {
+                        const stops = train.stops;
+                        trains.push(['never-filter']);
 
-                    for (const property in stops) {
-                        trains.push([property])
+                        for (const property in stops) {
+                            trains.push([property]);
+                        }
+                        break;
                     }
-                    break;
-                }
 
+                    for (const train of data) {
+                        const stops = train.stops;
+                        let index = 0;
+                        trains[index].push({
+                            train_number: train.train_number,
+                            train_line: train.train_line
+                        });
 
+                        index++;
 
-                for (const train of data) {
-                    const stops = train.stops;
-                    let index = 0;
-                    trains[index].push({
-                        train_number: train.train_number,
-                        train_line: train.train_line
-                    })
-
-                    index++;
-
-
-
-                    for (const property in stops) {
-                        trains[++index - 1].push(
-                            stops[property].departure_time === 'n/a'
-                                ? ''
-                                : `${stops[property].departure_time} ${stops[property].stop_index}`);
+                        for (const property in stops) {
+                            trains[++index - 1].push(
+                                stops[property].departure_time === 'n/a'
+                                    ? ''
+                                    : `${stops[property].departure_time} ${stops[property].stop_index}`
+                            );
+                        }
                     }
-                }
 
-                const result = clean_table(transpose(transpose(trains).filter((word) => word[0].train_line !== "" || word[0] == "never-filter")));
+                    const result = clean_table(
+                        transpose(
+                            transpose(trains).filter(
+                                word => word[0].train_line !== '' || word[0] == 'never-filter'
+                            )
+                        )
+                    );
 
-                global_list = result;
-                orig_list = result;
+                    global_list = result;
+                    orig_list = result;
 
-                createTable();
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
+                    createTable();
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        }
 
         function transpose(matrix) {
             return matrix[0].map((_, colIndex) => matrix.map(row => row[colIndex]));
         }
-
 
         function clean_table(arr) {
             for (let i = arr.length - 1; i >= 0; i--) {
@@ -88,46 +91,41 @@
                     if (arr[i][j] !== '') {
                         break;
                     }
-
                 }
             }
             return arr;
-
         }
 
         function createTable() {
             let data = global_list;
-            // Get the table container element
             const tableContainer = document.getElementById('table-container');
 
-            // Create the table
             const table = document.createElement('table');
-            table.setAttribute('border', '1'); // Optional: Add border to the table
+            table.setAttribute('border', '1');
 
-            // Create the table header
             const thead = document.createElement('thead');
             const headerRow = document.createElement('tr');
-            // Add header cells
             const headers = Object.keys(data[0]);
+
             headers.forEach(header => {
                 const th = document.createElement('th');
-                th.innerText = data[0][header].train_number ? `${data[0][header].train_line} - ${data[0][header].train_number}` : '';
+                th.innerText = data[0][header].train_number
+                    ? `${data[0][header].train_line} - ${data[0][header].train_number}`
+                    : '';
                 headerRow.appendChild(th);
             });
             thead.appendChild(headerRow);
             table.appendChild(thead);
 
-            // Create the table body
             const tbody = document.createElement('tbody');
             data.slice(1).forEach(item => {
                 const row = document.createElement('tr');
                 let firstCell = true;
                 headers.forEach(header => {
-
                     const td = document.createElement('td');
                     td.innerText = item[header];
                     if (firstCell) {
-                        td.classList.add("aaaaaaaaa");
+                        td.classList.add('aaaaaaaaa');
                         firstCell = false;
                     }
                     row.appendChild(td);
@@ -138,8 +136,18 @@
             table.appendChild(tbody);
             tableContainer.innerText = '';
             tableContainer.appendChild(table);
-
         }
+
+        function onSelectionChange() {
+            const dropdown = document.getElementById('train-dropdown');
+            const selectedValue = dropdown.value;
+            fetchData(selectedValue);
+        }
+
+        // Load the default file on page load
+        window.onload = function () {
+            fetchData('lirr'); // Default to LIRR
+        };
 
         function filterLine(trainline) {
             const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_line === trainline || word[0] == "never-filter")));
@@ -149,21 +157,21 @@
         }
 
         function filterNumber(regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_number?.padStart(4, "0").search(regex) >= 0 || word[0] == "never-filter")));
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => word[0].train_number?.padStart(4,"0").search(regex) >= 0 || word[0] == "never-filter")));
             global_list = result;
             createTable();
             doStats(transpose(global_list))
         }
 
-        function filterBothAnd(trainline, regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline && word[0].train_number?.padStart(4, "0").search(regex) >= 0) || word[0] == "never-filter")));
+        function filterBothAnd(trainline,regex) {
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline && word[0].train_number?.padStart(4,"0").search(regex) >= 0) || word[0] == "never-filter")));
             global_list = result;
             createTable();
             console.log('Done');
         }
 
-        function filterBothOr(trainline, regex) {
-            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline || word[0].train_number?.padStart(4, "0").search(regex) >= 0) || word[0] == "never-filter")));
+        function filterBothOr(trainline,regex) {
+            const result = clean_table(transpose(transpose(orig_list).filter((word) => (word[0].train_line === trainline || word[0].train_number?.padStart(4,"0").search(regex) >= 0) || word[0] == "never-filter")));
             global_list = result;
             createTable();
             console.log('Done');
@@ -179,30 +187,38 @@
         function doStats(trainList) {
             const numberOfTrains = trainList.length - 1; // 1 row is for header row
             const firstStation = trainList[0][1];
-            const lastStation = trainList[0][trainList[0].length - 1];
-            console.log({
-                numberOfTrains, firstStation, lastStation
+            const lastStation = trainList[0][trainList[0].length-1]; 
+            console.log({numberOfTrains,firstStation,lastStation
 
             })
 
         }
 
         function filterNumberA() {
-            const regex = new RegExp(document.getElementById('testing').value);
+            const regex = new RegExp(document.getElementById('testing').value); 
             console.log(regex)
             filterNumber(regex);
         }
-
     </script>
 </head>
 
 <body>
     <h1>Trains</h1>
+    <div>
+        <label for="train-dropdown">Select Train Line:</label>
+        <select id="train-dropdown" onchange="onSelectionChange()">
+            <option value="mnrr">MNRR</option>
+            <option value="lirr" selected>LIRR</option>
+            <option value="septa">SEPTA</option>
+            <option value="njt">NJT</option>
+            <option value="exo">EXO</option>
+        </select>
+    </div>
     <pre id="filters">
         <input id="testing" value="00[0-9][0-9]"></input>
-        <button onclick=filterNumberA()>Filter by Regex Number</button>
+        <button onclick="filterNumberA()">Filter by Regex Number</button>
     </pre>
-    <pre id="table-container">Loading JSON data...</pre> <!-- Display the JSON data here -->
+    <pre id="table-container">Loading JSON data...</pre>
 </body>
 
 </html>
