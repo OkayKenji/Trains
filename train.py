@@ -91,18 +91,34 @@ def reformat(stops, routes, listOfTrains, stop_times):
     print(f'{100}%...')
     return reformated
 
-# Convert times like '24:33:00' to '00:33:00' on the next day
 def fix_time_format(time_str):
-    time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
-    
-    # If the time is invalid, it's likely in the '24+ hours' format
-    if time_obj.hour == 24:
+    try:
+        # Attempt to parse the time normally
+        time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
+    except ValueError:
+        return None  # Return None for invalid times
+
+    if time_obj is not None and time_obj.hour == 24:
         # Add one day and reset the hour to 0
         time_obj += pd.Timedelta(days=1)
         time_obj = time_obj.replace(hour=0)
-        
+
     return time_obj
 
+# Function to fix times like 24:xx:xx and make them the next day
+def fix_24_hour_time(time_obj):
+    # Check if the hour is 24, which is invalid, and needs to be corrected
+    if time_obj.hour == 24:
+        time_obj += pd.Timedelta(days=-1)
+        time_obj = time_obj.replace(hour=0)
+    return time_obj
+
+def find_first_last_valid_index(series):
+    # Treat both NaN and empty strings as missing values
+    valid_indices = series[~series.isna() & (series != '')].index
+    first_valid_index = valid_indices[0] if len(valid_indices) > 0 else None
+    last_valid_index = valid_indices[-1] if len(valid_indices) > 0 else None
+    return first_valid_index, last_valid_index
 
 def main():
     elements = ['mnrr','lirr','septa','njt','exo']
@@ -123,45 +139,52 @@ def main():
         stops = stops.loc[:, ['stop_name','stopping_routes']]
 
         for row in reformated:
-            
             stop_list = row[0]
-            stop_list = stop_list.drop_duplicates(subset='stop_name')  # Ensure uniqueness by removing duplicates
+            stop_list = stop_list.drop_duplicates(subset='stop_name')  # Ensure uniqueness
 
             stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"      
             train_number = row[1]
             line = row[3]
 
-            # line_only_stops[]
             line_only_stops = stops[stops.stopping_routes.str.contains(line)]
-            line_only_stops[f'{train_number} ({line})'] = line_only_stops['stop_name'].map(stop_list.set_index("stop_name")["departure_time"]).fillna('')
+            line_only_stops[f'{train_number} ({line})'] = (
+                line_only_stops['stop_name']
+                .map(stop_list.set_index("stop_name")["departure_time"])
+                .fillna('')
+            )
 
-            # stops[f'{train_number} ({line}) Times'] = stops['stop_name'].map(stop_list.set_index("stop_name")["departure_time"]).fillna('')
-            line_only_stops[f'{train_number} ({line})'] = line_only_stops[f'{train_number} ({line})'].apply(fix_time_format)
-            line_only_stops = line_only_stops.interpolate()
+            # Fix invalid times like '24:xx:xx'
+            line_only_stops[f'{train_number} ({line})'] = (
+                line_only_stops[f'{train_number} ({line})']
+                .apply(fix_time_format)
+            )
 
-            # print(line_only_stops)
-            # exit(0)
+            # Handle NaT or missing values before interpolation
+            line_only_stops[f'{train_number} ({line})'] = line_only_stops[f'{train_number} ({line})'].fillna(pd.NaT)
 
-            stops[f'{train_number} ({line})'] = stops['stop_name'].map(line_only_stops.set_index("stop_name")[f'{train_number} ({line})']).fillna('')
-            
-            # Function to fix times like 24:xx:xx and make them the next day
-            def fix_24_hour_time(time_obj):
-                # Check if the hour is 24, which is invalid, and needs to be corrected
-                if time_obj.hour == 24:
-                    time_obj += pd.Timedelta(days=1)
-                    time_obj = time_obj.replace(hour=0)
-                return time_obj
+            first_valid_index, last_valid_index = find_first_last_valid_index(
+                line_only_stops[f'{train_number} ({line})']
+            )
 
-            # Apply the fix to the 'Train1 (LineA)' column
+            if first_valid_index is not None and last_valid_index is not None:
+                # Interpolate only valid rows
+                line_only_stops.loc[first_valid_index:last_valid_index, f'{train_number} ({line})'] = (
+                    line_only_stops.loc[first_valid_index:last_valid_index, f'{train_number} ({line})']
+                    .interpolate()
+                )
+
+            stops[f'{train_number} ({line})'] = (
+                stops['stop_name']
+                .map(line_only_stops.set_index("stop_name")[f'{train_number} ({line})'])
+                .fillna('')
+            )
+
+            # # Fix any remaining invalid times
             stops[f'{train_number} ({line})'] = stops[f'{train_number} ({line})'].apply(fix_24_hour_time)
 
-            # Remove the date part and keep only the time (HH:MM:SS)
+            # # Remove the date part and keep only the time (HH:MM:SS)
             stops[f'{train_number} ({line})'] = stops[f'{train_number} ({line})'].dt.strftime('%H:%M:%S (0)')
 
-            
-            # print(stops)
-            # stops.interpolate().to_csv('joe.csv')
-            
 
         # html_table = stops.to_html()
 
