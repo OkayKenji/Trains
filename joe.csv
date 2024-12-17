@@ -1,0 +1,115 @@
+,stop_name,stopping_routes,304 (Harlem),304 (Harlem) Times
+0,Grand Central,"['New Haven', 'Harlem', 'Hudson', 'New Canaan', 'Danbury']",06:28:00 (18),2024-12-17 06:28:00
+1,Harlem-125 St,"['New Haven', 'Harlem', 'Hudson', 'New Canaan', 'Danbury']",06:15:00 (17),2024-12-17 06:15:00
+2,Yankees-E 153 St,['Hudson'],,2024-12-17 06:14:50
+3,Highbridge Yard,['Hudson'],,2024-12-17 06:14:40
+4,Morris Heights,['Hudson'],,2024-12-17 06:14:30
+5,University Heights,['Hudson'],,2024-12-17 06:14:20
+6,Marble Hill,['Hudson'],,2024-12-17 06:14:10
+7,Spuyten Duyvil,['Hudson'],,2024-12-17 06:14:00
+8,Riverdale,['Hudson'],,2024-12-17 06:13:50
+9,Ludlow,['Hudson'],,2024-12-17 06:13:40
+10,Yonkers,['Hudson'],,2024-12-17 06:13:30
+11,Glenwood,['Hudson'],,2024-12-17 06:13:20
+12,Greystone,['Hudson'],,2024-12-17 06:13:10
+13,Hastings-on-Hudson,['Hudson'],,2024-12-17 06:13:00
+14,Dobbs Ferry,['Hudson'],,2024-12-17 06:12:50
+15,Ardsley-on-Hudson,['Hudson'],,2024-12-17 06:12:40
+16,Irvington,['Hudson'],,2024-12-17 06:12:30
+17,Tarrytown,['Hudson'],,2024-12-17 06:12:20
+18,Philipse Manor,['Hudson'],,2024-12-17 06:12:10
+19,Scarborough,['Hudson'],,2024-12-17 06:12:00
+20,Ossining,['Hudson'],,2024-12-17 06:11:50
+21,Croton-Harmon,['Hudson'],,2024-12-17 06:11:40
+22,Cortlandt,['Hudson'],,2024-12-17 06:11:30
+23,Peekskill,['Hudson'],,2024-12-17 06:11:20
+24,Manitou,['Hudson'],,2024-12-17 06:11:10
+25,Garrison,['Hudson'],,2024-12-17 06:11:00
+26,Cold Spring,['Hudson'],,2024-12-17 06:10:50
+27,Breakneck Ridge,['Hudson'],,2024-12-17 06:10:40
+28,Beacon,['Hudson'],,2024-12-17 06:10:30
+29,New Hamburg,['Hudson'],,2024-12-17 06:10:20
+30,Poughkeepsie,['Hudson'],,2024-12-17 06:10:10
+31,Melrose,"['New Haven', 'Harlem', 'New Canaan', 'Danbury']",06:10:00 (16),2024-12-17 06:10:00
+32,Tremont,"['New Haven', 'Harlem', 'New Canaan', 'Danbury']",06:07:00 (15),2024-12-17 06:07:00
+33,Fordham,"['New Haven', 'Harlem', 'New Canaan', 'Danbury']",06:05:00 (14),2024-12-17 06:05:00
+34,Botanical Garden,"['New Haven', 'Harlem', 'New Canaan', 'Danbury']",06:02:00 (13),2024-12-17 06:02:00
+35,Williams Bridge,"['New Haven', 'Harlem', 'New Canaan', 'Danbury']",06:00:00 (12),2024-12-17 06:00:00
+36,Woodlawn,"['New Haven', 'Harlem', 'New Canaan', 'Danbury']",05:58:00 (11),2024-12-17 05:58:00
+37,Wakefield,['Harlem'],05:56:00 (10),2024-12-17 05:56:00
+38,Mt Vernon West,['Harlem'],05:54:00 (9),2024-12-17 05:54:00
+39,Fleetwood,['Harlem'],05:51:00 (8),2024-12-17 05:51:00
+40,Bronxville,['Harlem'],05:49:00 (7),2024-12-17 05:49:00
+41,Tuckahoe,['Harlem'],05:47:00 (6),2024-12-17 05:47:00
+42,Crestwood,['Harlem'],05:45:00 (5),2024-12-17 05:45:00
+43,Scarsdale,['Harlem'],05:42:00 (4),2024-12-17 05:42:00
+44,Hartsdale,['Harlem'],05:39:00 (3),2024-12-17 05:39:00
+45,White Plains,['Harlem'],05:36:00 (2),2024-12-17 05:36:00
+46,North White Plains,['Harlem'],05:33:00 (1),2024-12-17 05:33:00
+47,Valhalla,['Harlem'],,2024-12-17 05:33:00
+48,Mt Pleasant,['Harlem'],,2024-12-17 05:33:00
+49,Hawthorne,['Harlem'],,2024-12-17 05:33:00
+50,Pleasantville,['Harlem'],,2024-12-17 05:33:00
+51,Chappaqua,['Harlem'],,2024-12-17 05:33:00
+52,Mt Kisco,['Harlem'],,2024-12-17 05:33:00
+53,Bedford Hills,['Harlem'],,2024-12-17 05:33:00
+54,Katonah,['Harlem'],,2024-12-17 05:33:00
+55,Goldens Bridge,['Harlem'],,2024-12-17 05:33:00
+56,Purdy's,['Harlem'],,2024-12-17 05:33:00
+57,Croton Falls,['Harlem'],,2024-12-17 05:33:00
+58,Brewster,['Harlem'],,2024-12-17 05:33:00
+59,Southeast,['Harlem'],,2024-12-17 05:33:00
+60,Patterson,['Harlem'],,2024-12-17 05:33:00
+61,Pawling,['Harlem'],,2024-12-17 05:33:00
+62,Appalachian Trail,['Harlem'],,2024-12-17 05:33:00
+63,Harlem Valley-Wingdale,['Harlem'],,2024-12-17 05:33:00
+64,Dover Plains,['Harlem'],,2024-12-17 05:33:00
+65,Tenmile River,['Harlem'],,2024-12-17 05:33:00
+66,Wassaic,['Harlem'],,2024-12-17 05:33:00
+67,Mt Vernon East ,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+68,Pelham,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+69,New Rochelle,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+70,Larchmont,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+71,Mamaroneck,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+72,Harrison,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+73,Rye,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+74,Port Chester,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+75,Greenwich,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+76,Cos Cob,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+77,Riverside,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+78,Old Greenwich,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+79,Stamford,"['New Haven', 'New Canaan', 'Danbury']",,2024-12-17 05:33:00
+80,Glenbrook,['New Canaan'],,2024-12-17 05:33:00
+81,Springdale MW Facility,['New Canaan'],,2024-12-17 05:33:00
+82,Springdale,['New Canaan'],,2024-12-17 05:33:00
+83,Talmadge Hill,['New Canaan'],,2024-12-17 05:33:00
+84,New Canaan,['New Canaan'],,2024-12-17 05:33:00
+85,Noroton Heights,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+86,Darien,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+87,Rowayton,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+88,South Norwalk,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+89,Merritt 7,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+90,Wilton,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+91,Cannondale,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+92,Branchville,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+93,Redding,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+94,Bethel,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+95,Danbury,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+96,East Norwalk,['New Haven'],,2024-12-17 05:33:00
+97,Westport,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+98,Green's Farms,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+99,Southport,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+100,Fairfield,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+101,Fairfield-Black Rock,"['New Haven', 'Danbury']",,2024-12-17 05:33:00
+102,Bridgeport,"['New Haven', 'Danbury','Waterbury']",,2024-12-17 05:33:00
+103,Stratford,"['New Haven', 'Danbury','Waterbury']",,2024-12-17 05:33:00
+104,Derby-Shelton,['Waterbury'],,2024-12-17 05:33:00
+105,Ansonia,['Waterbury'],,2024-12-17 05:33:00
+106,Seymour,['Waterbury'],,2024-12-17 05:33:00
+107,Beacon Falls,['Waterbury'],,2024-12-17 05:33:00
+108,Naugatuck,['Waterbury'],,2024-12-17 05:33:00
+109,Waterbury,['Waterbury'],,2024-12-17 05:33:00
+110,Milford,['New Haven'],,2024-12-17 05:33:00
+111,West Haven,['New Haven'],,2024-12-17 05:33:00
+112,New Haven,['New Haven'],,2024-12-17 05:33:00
+113,New Haven-State St,['New Haven'],,2024-12-17 05:33:00

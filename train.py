@@ -7,7 +7,9 @@ import json
 
 import warnings 
 warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
-
+warnings.simplefilter(action='ignore', category=pd.errors.SettingWithCopyWarning)
+warnings.simplefilter(action='ignore', category=FutureWarning)
+# warnings.simplefilter(action='ignore', category=pd.errors.UserWarning)
 
 def getServices(calendar_dates, railroad, calendar):
     calendar_dates = calendar_dates.astype({'date': 'str'})
@@ -89,6 +91,19 @@ def reformat(stops, routes, listOfTrains, stop_times):
     print(f'{100}%...')
     return reformated
 
+# Convert times like '24:33:00' to '00:33:00' on the next day
+def fix_time_format(time_str):
+    time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
+    
+    # If the time is invalid, it's likely in the '24+ hours' format
+    if time_obj.hour == 24:
+        # Add one day and reset the hour to 0
+        time_obj += pd.Timedelta(days=1)
+        time_obj = time_obj.replace(hour=0)
+        
+    return time_obj
+
+
 def main():
     elements = ['mnrr','lirr','septa','njt','exo']
     # elements = ['lirr']
@@ -105,25 +120,56 @@ def main():
         print("Wait a while as we process data...")
         reformated = reformat(stops, routes, listOfTrains, stop_times)
         reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
-        stops = stops.loc[:, ['stop_name']]
-
+        stops = stops.loc[:, ['stop_name','stopping_routes']]
 
         for row in reformated:
-        
+            
             stop_list = row[0]
             stop_list = stop_list.drop_duplicates(subset='stop_name')  # Ensure uniqueness by removing duplicates
 
-            stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"
+            stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"      
             train_number = row[1]
             line = row[3]
-            stops[f'{train_number} ({line})'] = stops['stop_name'].map(stop_list.set_index("stop_name")["eee"]).fillna('')
+
+            # line_only_stops[]
+            line_only_stops = stops[stops.stopping_routes.str.contains(line)]
+            line_only_stops[f'{train_number} ({line})'] = line_only_stops['stop_name'].map(stop_list.set_index("stop_name")["departure_time"]).fillna('')
+
+            # stops[f'{train_number} ({line}) Times'] = stops['stop_name'].map(stop_list.set_index("stop_name")["departure_time"]).fillna('')
+            line_only_stops[f'{train_number} ({line})'] = line_only_stops[f'{train_number} ({line})'].apply(fix_time_format)
+            line_only_stops = line_only_stops.interpolate()
+
+            # print(line_only_stops)
+            # exit(0)
+
+            stops[f'{train_number} ({line})'] = stops['stop_name'].map(line_only_stops.set_index("stop_name")[f'{train_number} ({line})']).fillna('')
+            
+            # Function to fix times like 24:xx:xx and make them the next day
+            def fix_24_hour_time(time_obj):
+                # Check if the hour is 24, which is invalid, and needs to be corrected
+                if time_obj.hour == 24:
+                    time_obj += pd.Timedelta(days=1)
+                    time_obj = time_obj.replace(hour=0)
+                return time_obj
+
+            # Apply the fix to the 'Train1 (LineA)' column
+            stops[f'{train_number} ({line})'] = stops[f'{train_number} ({line})'].apply(fix_24_hour_time)
+
+            # Remove the date part and keep only the time (HH:MM:SS)
+            stops[f'{train_number} ({line})'] = stops[f'{train_number} ({line})'].dt.strftime('%H:%M:%S (0)')
+
+            
+            # print(stops)
+            # stops.interpolate().to_csv('joe.csv')
+            
 
         # html_table = stops.to_html()
 
-        stops.to_csv(f'./csv/{ele}.csv')
+        stops.drop(['stopping_routes'],axis=1).to_csv(f'./csv/{ele}.csv')
 
         # print(stops.to_dict())
 
+       
 
 
 
@@ -136,6 +182,7 @@ def main():
                 eggs['station_names'] = pd.DataFrame(stops['stop_name'].to_list())[0]  # Accessing the Series by index
                 eggs.set_index('station_names', inplace=True)
                 eggs.rename(columns={0: 'stopping'}, inplace=True)
+                eggs['stopping'] = eggs['stopping'].astype(str)
                 eggs[['departure_time', 'stop_index']] = eggs['stopping'].str.extract(r'([0-9:]+)\s+\(([0-9]+)\)')
                 eggs[['departure_time', 'stop_index']] = eggs[['departure_time', 'stop_index']].fillna('n/a') 
                 eggs.drop('stopping',axis=1,inplace=True)
@@ -158,6 +205,9 @@ def main():
 
         with open(f'./json/data{ele}.json', 'w') as file:
             file.write(pretty_json)
+
+        exit(0)
+
 
 if __name__ == "__main__":
     main()
