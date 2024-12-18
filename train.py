@@ -91,19 +91,32 @@ def reformat(stops, routes, listOfTrains, stop_times):
     print(f'{100}%...')
     return reformated
 
-def fix_time_format(time_str):
-    try:
-        # Attempt to parse the time normally
-        time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
-    except ValueError:
-        return None  # Return None for invalid times
+import pandas as pd
 
-    if time_obj is not None and time_obj.hour == 24:
-        # Add one day and reset the hour to 0
-        time_obj += pd.Timedelta(days=1)
-        time_obj = time_obj.replace(hour=0)
+def fix_time_format(time_str):
+    if '24:' in time_str or '25:' in time_str:
+        # Split the string into hours, minutes, and seconds
+        hours, minutes, seconds = time_str.split(':')
+        
+        # Replace '24' with '00' for the hours part
+        if int(hours) == 24:
+            time_str = f"00:{minutes}:{seconds}"
+        if int(hours) == 25:
+            time_str = f"01:{minutes}:{seconds}"
+
+        # Convert to datetime and add one day
+        time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
+        if time_obj is not pd.NaT:
+            time_obj += pd.Timedelta(days=1)
+    else:
+        try:
+            # Attempt to parse the time normally
+            time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
+        except ValueError:
+            return None  # Return None for invalid times
 
     return time_obj
+
 
 # Function to fix times like 24:xx:xx and make them the next day
 def fix_24_hour_time(time_obj):
@@ -146,6 +159,9 @@ def main():
             train_number = row[1]
             line = row[3]
 
+
+            if (str(train_number) != '698'):
+                continue
             line_only_stops = stops[stops.stopping_routes.str.contains(line)]
             line_only_stops[f'{train_number} ({line})'] = (
                 line_only_stops['stop_name']
@@ -167,7 +183,6 @@ def main():
             )
 
             if first_valid_index is not None and last_valid_index is not None:
-                # Interpolate only valid rows
                 line_only_stops.loc[first_valid_index:last_valid_index, f'{train_number} ({line})'] = (
                     line_only_stops.loc[first_valid_index:last_valid_index, f'{train_number} ({line})']
                     .interpolate()
