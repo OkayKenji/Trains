@@ -243,7 +243,7 @@
                         .toString()
                         .padStart(2, '0')}`;
                 return { time: normalizedTime, daysToAdd }; // Next day adjustment
-            } else if (hours >= 0 && hours < 4 && document.getElementById('train-dropdown').value === 'mnrr') {
+            } else if (hours >= 0 && hours < 4 && (document.getElementById('train-dropdown').value === 'mnrr' || document.getElementById('train-dropdown').value === 'mnrrInterpolated')) {
                 // Shift to the previous day
                 const normalizedTime = `${hours
                     .toString()
