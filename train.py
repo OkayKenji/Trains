@@ -159,9 +159,6 @@ def main():
             train_number = row[1]
             line = row[3]
 
-
-            if (str(train_number) != '698'):
-                continue
             line_only_stops = stops[stops.stopping_routes.str.contains(line)]
             line_only_stops[f'{train_number} ({line})'] = (
                 line_only_stops['stop_name']
