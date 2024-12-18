@@ -94,7 +94,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
 import pandas as pd
 
 def fix_time_format(time_str):
-    if '24:' in time_str[0:2] or '25:' in time_str[0:2]:
+    if '24:' in time_str[0:3] or '25:' in time_str[0:3]:
         # Split the string into hours, minutes, and seconds
         hours, minutes, seconds = time_str.split(':')
         
