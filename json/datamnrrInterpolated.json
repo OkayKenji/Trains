@@ -1,0 +1,464 @@
+[
+    {
+        "train_number": "698",
+        "train_line": "Harlem",
+        "stops": {
+            "Grand Central": {
+                "departure_time": "01:51:00",
+                "stop_index": "0"
+            },
+            "Harlem-125 St": {
+                "departure_time": "01:38:00",
+                "stop_index": "0"
+            },
+            "Yankees-E 153 St": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Highbridge Yard": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Morris Heights": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "University Heights": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Marble Hill": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Spuyten Duyvil": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Riverdale": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Ludlow": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Yonkers": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Glenwood": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Greystone": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Hastings-on-Hudson": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Dobbs Ferry": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Ardsley-on-Hudson": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Irvington": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Tarrytown": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Philipse Manor": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Scarborough": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Ossining": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Croton-Harmon": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Cortlandt": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Peekskill": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Manitou": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Garrison": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Cold Spring": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Breakneck Ridge": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Beacon": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "New Hamburg": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Poughkeepsie": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Melrose": {
+                "departure_time": "01:34:40",
+                "stop_index": "0"
+            },
+            "Tremont": {
+                "departure_time": "01:31:20",
+                "stop_index": "0"
+            },
+            "Fordham": {
+                "departure_time": "01:28:00",
+                "stop_index": "0"
+            },
+            "Botanical Garden": {
+                "departure_time": "01:27:00",
+                "stop_index": "0"
+            },
+            "Williams Bridge": {
+                "departure_time": "01:26:00",
+                "stop_index": "0"
+            },
+            "Woodlawn": {
+                "departure_time": "01:25:00",
+                "stop_index": "0"
+            },
+            "Wakefield": {
+                "departure_time": "01:24:00",
+                "stop_index": "0"
+            },
+            "Mt Vernon West": {
+                "departure_time": "01:23:00",
+                "stop_index": "0"
+            },
+            "Fleetwood": {
+                "departure_time": "01:21:00",
+                "stop_index": "0"
+            },
+            "Bronxville": {
+                "departure_time": "01:18:00",
+                "stop_index": "0"
+            },
+            "Tuckahoe": {
+                "departure_time": "01:16:00",
+                "stop_index": "0"
+            },
+            "Crestwood": {
+                "departure_time": "01:14:00",
+                "stop_index": "0"
+            },
+            "Scarsdale": {
+                "departure_time": "01:10:00",
+                "stop_index": "0"
+            },
+            "Hartsdale": {
+                "departure_time": "01:06:00",
+                "stop_index": "0"
+            },
+            "White Plains": {
+                "departure_time": "01:01:00",
+                "stop_index": "0"
+            },
+            "North White Plains": {
+                "departure_time": "00:57:00",
+                "stop_index": "0"
+            },
+            "Valhalla": {
+                "departure_time": "00:53:00",
+                "stop_index": "0"
+            },
+            "Mt Pleasant": {
+                "departure_time": "00:51:00",
+                "stop_index": "0"
+            },
+            "Hawthorne": {
+                "departure_time": "00:49:00",
+                "stop_index": "0"
+            },
+            "Pleasantville": {
+                "departure_time": "00:45:00",
+                "stop_index": "0"
+            },
+            "Chappaqua": {
+                "departure_time": "00:42:00",
+                "stop_index": "0"
+            },
+            "Mt Kisco": {
+                "departure_time": "00:36:00",
+                "stop_index": "0"
+            },
+            "Bedford Hills": {
+                "departure_time": "00:32:00",
+                "stop_index": "0"
+            },
+            "Katonah": {
+                "departure_time": "00:28:00",
+                "stop_index": "0"
+            },
+            "Goldens Bridge": {
+                "departure_time": "00:24:00",
+                "stop_index": "0"
+            },
+            "Purdy's": {
+                "departure_time": "00:20:00",
+                "stop_index": "0"
+            },
+            "Croton Falls": {
+                "departure_time": "00:17:00",
+                "stop_index": "0"
+            },
+            "Brewster": {
+                "departure_time": "00:12:00",
+                "stop_index": "0"
+            },
+            "Southeast": {
+                "departure_time": "00:09:00",
+                "stop_index": "0"
+            },
+            "Patterson": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Pawling": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Appalachian Trail": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Harlem Valley-Wingdale": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Dover Plains": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Tenmile River": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Wassaic": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Mt Vernon East ": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Pelham": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "New Rochelle": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Larchmont": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Mamaroneck": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Harrison": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Rye": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Port Chester": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Greenwich": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Cos Cob": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Riverside": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Old Greenwich": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Stamford": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Glenbrook": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Springdale MW Facility": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Springdale": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Talmadge Hill": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "New Canaan": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Noroton Heights": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Darien": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Rowayton": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "South Norwalk": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Merritt 7": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Wilton": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Cannondale": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Branchville": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Redding": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Bethel": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Danbury": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "East Norwalk": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Westport": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Green's Farms": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Southport": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Fairfield": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Fairfield-Black Rock": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Bridgeport": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Stratford": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Derby-Shelton": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Ansonia": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Seymour": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Beacon Falls": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Naugatuck": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Waterbury": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "Milford": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "West Haven": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "New Haven": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            },
+            "New Haven-State St": {
+                "departure_time": "n/a",
+                "stop_index": "n/a"
+            }
+        }
+    }
+]
