@@ -15,11 +15,23 @@ def getServices(calendar_dates, railroad, calendar):
     
     if not listOfServices.empty:
         return listOfServices
-    if railroad == 'septa':
+    if railroad == 'septa' or railroad =='metrolink':
         date_object = datetime.strptime(getDate(), "%Y%m%d").date()
         print(calendar)
-        if date_object.weekday() < 5:
+        if date_object.weekday() == 0:
             listOfServices = calendar[calendar.monday == 1]
+            return listOfServices
+        if date_object.weekday() == 1:
+            listOfServices = calendar[calendar.tuesday == 1]
+            return listOfServices
+        if date_object.weekday() == 2:
+            listOfServices = calendar[calendar.wednesday == 1]
+            return listOfServices
+        if date_object.weekday() == 3:
+            listOfServices = calendar[calendar.thursday == 1]
+            return listOfServices
+        if date_object.weekday() == 4:
+            listOfServices = calendar[calendar.friday == 1]
             return listOfServices
         elif date_object.weekday() == 5:
             listOfServices = calendar[calendar.saturday == 1]
@@ -39,7 +51,7 @@ def loadData(name_rail):
     railroad = name_rail
 
     train_classification = 'block_id' if railroad == 'njt' else 'trip_short_name'
-    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if railroad != 'septa' else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
+    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (railroad != 'metrolink') else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
 def getTrains(listOfServices, trips): 
     print(len(listOfServices))
@@ -82,7 +94,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
             print(f'{tempPercent + 10}%...')
             tempPercent += 10
         filtered_df = stop_times[stop_times.trip_id == train]
-        filtered_df = filtered_df.drop(['trip_id', 'arrival_time', 'pickup_type', 'drop_off_type'], axis=1)
+        filtered_df = filtered_df.drop(['trip_id', 'arrival_time', 'pickup_type'], axis=1)
         filtered_df['stop_name'] = filtered_df.apply(add_values, axis=1, args=(stops,))
         temp = [filtered_df.drop(['stop_id'], axis=1), int(listOfTrains[train_classification].iloc[index]) if listOfTrains[train_classification].iloc[index].isdigit() else str(listOfTrains[train_classification].iloc[index])  , listOfTrains.trip_headsign.iloc[index], cvtRouteStringToNumber(routes, listOfTrains.route_id.iloc[index])]
         reformated.append(temp)
@@ -90,8 +102,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    elements = ['mnrr','lirr','septa','njt','exo']
-    # elements = ['lirr']
+    # elements = ['mnrr','lirr','septa','njt','exo']
+    elements = ['metrolink']
     for ele in elements: 
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
@@ -101,7 +113,7 @@ def main():
 
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
-        listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str', 'shape_id': 'str'})
+        listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str'})
         print("Wait a while as we process data...")
         reformated = reformat(stops, routes, listOfTrains, stop_times)
         reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
