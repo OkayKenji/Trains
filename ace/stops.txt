@@ -25,5 +25,5 @@ LIV,73548,Livermore Amtrak Station,,37.685045,-121.766906,LIV,https://www.amtrak
 PLS,73757,Pleasanton Amtrak Station,,37.658561,-121.882229,PLS,https://www.amtrak.com/stations/pls.html,0,,,1,
 FMT,73368,Fremont Amtrak Station,,37.559114,-122.007353,FMT,https://www.amtrak.com/stations/fmt.html,0,,,1,
 GAC,73422,Great America Parkway Amtrak Station,,37.406833,-121.967047,GAC,https://www.amtrak.com/stations/gac.html,0,,,1,
-SJC,73752,San Jose Amtrak Station,,37.330686,-121.902378,SJC,https://www.amtrak.com/stations/sjc.html,0,,,1,
 SCC,73722,Santa Clara Amtrak Station,,37.353506,-121.936312,SCC,https://www.amtrak.com/stations/scc.html,0,,,1,
+SJC,73752,San Jose Amtrak Station,,37.330686,-121.902378,SJC,https://www.amtrak.com/stations/sjc.html,0,,,1,
