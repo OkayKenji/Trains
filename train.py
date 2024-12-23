@@ -78,10 +78,10 @@ def assign_station_names(row, stops):
     if not stop_name.empty:
         return stop_name.iloc[0]
     
-    if railroad != 'exo':
+    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo':
         return None # give up
                               
-    stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: row['stop_id'] in ast.literal_eval(x)), 'stop_name']
+    stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: str(row['stop_id']) in ast.literal_eval(x)), 'stop_name']
 
     if not stop_name.empty:
         return stop_name.iloc[0]
@@ -109,8 +109,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
-    elements = ['exo']
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
+    # elements = ['marc']
     for ele in elements: 
         print("NOW - ",ele)
         # prepare data
@@ -139,8 +139,8 @@ def main():
 
         # html_table = stops.to_html()
 
+        stops.columns = stops.columns.str.replace('Train ', '', regex=False)
         stops.to_csv(f'./csv/{ele}.csv')
-
         # print(stops.to_dict())
 
 
