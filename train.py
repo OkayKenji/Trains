@@ -8,6 +8,8 @@ import ast
 
 import warnings 
 warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
+pd.set_option('mode.chained_assignment', None)
+
 
 def getServices(calendar_dates, railroad, calendar):
     calendar_dates = calendar_dates.astype({'date': 'str'})
@@ -41,7 +43,7 @@ def getServices(calendar_dates, railroad, calendar):
             return listOfServices
 
 def getDate():
-    return "20241213"
+    return "20250110"
 
 def loadData(name_rail):
     global railroad 
@@ -60,7 +62,6 @@ def loadData(name_rail):
     return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (not use_calendar) else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
 def getTrains(listOfServices, trips): 
-    print(len(listOfServices))
     listOfTrains = []
     for service in listOfServices.service_id:
         listOfTrains.append(trips[trips.service_id == service])
@@ -77,6 +78,9 @@ def assign_station_names(row, stops):
     stop_name = stops.loc[stops['stop_id'] == row['stop_id'], 'stop_name']
     if not stop_name.empty:
         return stop_name.iloc[0]
+    
+    if railroad != 'vre':
+        return None # give up
                               
     stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: row['stop_id'] in ast.literal_eval(x)), 'stop_name']
     if not stop_name.empty:
@@ -106,14 +110,15 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    # elements = ['mnrr','lirr','septa','njt','exo']
-    elements = ['ace']
+    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
+    elements = ['lirr']
     for ele in elements: 
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
 
         # get dates from user & finds the services that run that day
         listOfServices = getServices(calendar_dates, railroad, calendar)
+        print(listOfServices)
 
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
