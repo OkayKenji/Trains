@@ -8,8 +8,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "06:49:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "06:41:00",
@@ -556,8 +556,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "07:29:00",
-                "stop_index": "18"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "07:20:00",
@@ -1104,8 +1104,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:02:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "07:52:00",
@@ -1652,8 +1652,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:34:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "08:26:00",
@@ -2200,8 +2200,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:49:00",
-                "stop_index": "18"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "08:41:00",
@@ -2748,8 +2748,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "09:13:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "09:05:00",
@@ -3296,8 +3296,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "12:16:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "12:08:00",
@@ -3844,8 +3844,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "14:56:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "14:48:00",
@@ -4392,8 +4392,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "17:52:00",
-                "stop_index": "11"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "17:43:00",
@@ -5214,8 +5214,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "20:56:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "20:48:00",
@@ -5762,8 +5762,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "09:23:00",
-                "stop_index": "10"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "09:15:00",
@@ -6310,8 +6310,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "06:35:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "06:30:00",
@@ -6584,11 +6584,11 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "07:18:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "07:12:00",
+                "departure_time": "07:11:00",
                 "stop_index": "8"
             },
             "Gare Montr\u00e9al-Ouest": {
@@ -6858,11 +6858,11 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "07:40:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "07:34:00",
+                "departure_time": "07:33:00",
                 "stop_index": "8"
             },
             "Gare Montr\u00e9al-Ouest": {
@@ -7132,11 +7132,11 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:10:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "08:04:00",
+                "departure_time": "08:03:00",
                 "stop_index": "8"
             },
             "Gare Montr\u00e9al-Ouest": {
@@ -7680,8 +7680,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:41:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "08:35:00",
@@ -8228,8 +8228,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "09:06:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "09:00:00",
@@ -8776,11 +8776,11 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "09:32:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "09:26:00",
+                "departure_time": "09:25:00",
                 "stop_index": "8"
             },
             "Gare Montr\u00e9al-Ouest": {
@@ -9324,11 +9324,11 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "11:11:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "11:06:00",
+                "departure_time": "11:05:00",
                 "stop_index": "8"
             },
             "Gare Montr\u00e9al-Ouest": {
@@ -9872,11 +9872,11 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "14:01:00",
-                "stop_index": "9"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "13:56:00",
+                "departure_time": "13:55:00",
                 "stop_index": "8"
             },
             "Gare Montr\u00e9al-Ouest": {
@@ -11516,8 +11516,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:20:00",
-                "stop_index": "18"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "08:11:00",
@@ -11790,8 +11790,8 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "07:51:00",
-                "stop_index": "17"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
                 "departure_time": "07:41:00",
@@ -12338,15 +12338,15 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "06:38:00",
-                "stop_index": "14"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "06:30:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
-                "departure_time": "06:24:00",
+                "departure_time": "06:22:00",
                 "stop_index": "12"
             },
             "Gare Lachine": {
@@ -12410,43 +12410,43 @@
                 "stop_index": "n/a"
             },
             "Gare Parc": {
-                "departure_time": "06:09:00",
+                "departure_time": "06:07:00",
                 "stop_index": "11"
             },
             "Gare Chabanel": {
-                "departure_time": "06:04:00",
+                "departure_time": "06:02:00",
                 "stop_index": "10"
             },
             "Gare Bois-de-Boulogne": {
-                "departure_time": "06:02:00",
+                "departure_time": "06:00:00",
                 "stop_index": "9"
             },
             "Gare De la Concorde": {
-                "departure_time": "05:56:00",
+                "departure_time": "05:54:00",
                 "stop_index": "8"
             },
             "Gare Vimont": {
-                "departure_time": "05:50:00",
+                "departure_time": "05:48:00",
                 "stop_index": "7"
             },
             "Gare Sainte-Rose": {
-                "departure_time": "05:46:00",
+                "departure_time": "05:43:00",
                 "stop_index": "6"
             },
             "Gare Rosem\u00e8re": {
-                "departure_time": "05:42:00",
+                "departure_time": "05:40:00",
                 "stop_index": "5"
             },
             "Gare Sainte-Th\u00e9r\u00e8se": {
-                "departure_time": "05:38:00",
+                "departure_time": "05:36:00",
                 "stop_index": "4"
             },
             "Gare Blainville": {
-                "departure_time": "05:30:00",
+                "departure_time": "05:28:00",
                 "stop_index": "3"
             },
             "Gare Mirabel": {
-                "departure_time": "05:24:00",
+                "departure_time": "05:23:00",
                 "stop_index": "2"
             },
             "Gare Saint-J\u00e9r\u00f4me": {
@@ -12886,12 +12886,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "07:36:00",
-                "stop_index": "14"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "07:28:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "07:22:00",
@@ -13434,12 +13434,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:04:00",
-                "stop_index": "14"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "07:56:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "07:49:00",
@@ -14256,12 +14256,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "08:35:00",
-                "stop_index": "14"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "08:28:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "08:22:00",
@@ -16722,12 +16722,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "17:12:00",
-                "stop_index": "14"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "17:05:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "16:59:00",
@@ -17270,12 +17270,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "18:31:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "18:24:00",
-                "stop_index": "12"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "18:18:00",
@@ -17342,7 +17342,7 @@
                 "stop_index": "n/a"
             },
             "Gare Parc": {
-                "departure_time": "18:04:00",
+                "departure_time": "18:04:45",
                 "stop_index": "10"
             },
             "Gare Chabanel": {
@@ -17818,12 +17818,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "19:02:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "18:55:00",
-                "stop_index": "12"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "18:49:00",
@@ -17890,7 +17890,7 @@
                 "stop_index": "n/a"
             },
             "Gare Parc": {
-                "departure_time": "18:35:00",
+                "departure_time": "18:35:45",
                 "stop_index": "10"
             },
             "Gare Chabanel": {
@@ -18366,12 +18366,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "20:15:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "20:08:00",
-                "stop_index": "12"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "20:02:00",
@@ -18438,7 +18438,7 @@
                 "stop_index": "n/a"
             },
             "Gare Parc": {
-                "departure_time": "19:48:00",
+                "departure_time": "19:48:45",
                 "stop_index": "10"
             },
             "Gare Chabanel": {
@@ -18914,12 +18914,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "21:56:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "21:49:00",
-                "stop_index": "12"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "21:43:00",
@@ -18986,7 +18986,7 @@
                 "stop_index": "n/a"
             },
             "Gare Parc": {
-                "departure_time": "21:28:00",
+                "departure_time": "21:28:45",
                 "stop_index": "10"
             },
             "Gare Chabanel": {
@@ -19462,12 +19462,12 @@
                 "stop_index": "n/a"
             },
             "Gare Lucien-L'Allier": {
-                "departure_time": "23:00:00",
-                "stop_index": "14"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Vend\u00f4me": {
-                "departure_time": "22:53:00",
-                "stop_index": "13"
+                "departure_time": "n/a",
+                "stop_index": "n/a"
             },
             "Gare Montr\u00e9al-Ouest": {
                 "departure_time": "22:47:00",

@@ -14,12 +14,11 @@ pd.set_option('mode.chained_assignment', None)
 def getServices(calendar_dates, railroad, calendar):
     calendar_dates = calendar_dates.astype({'date': 'str'})
     listOfServices = calendar_dates[calendar_dates.date == getDate()]
-    
+
     if not listOfServices.empty:
         return listOfServices
     if use_calendar:
         date_object = datetime.strptime(getDate(), "%Y%m%d").date()
-        print(calendar)
         if date_object.weekday() == 0:
             listOfServices = calendar[calendar.monday == 1]
             return listOfServices
@@ -43,7 +42,7 @@ def getServices(calendar_dates, railroad, calendar):
             return listOfServices
 
 def getDate():
-    return "20250110"
+    return "20250103"
 
 def loadData(name_rail):
     global railroad 
@@ -110,15 +109,15 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
-    elements = ['lirr']
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
+    # elements = ['lirr']
     for ele in elements: 
+        print("NOW - ",ele)
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
 
         # get dates from user & finds the services that run that day
         listOfServices = getServices(calendar_dates, railroad, calendar)
-        print(listOfServices)
 
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
