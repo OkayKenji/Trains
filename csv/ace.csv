@@ -1,0 +1,29 @@
+,stop_name,ACE01 (ACE Train),ACE02 (ACE Train),ACE03 (ACE Train),ACE04 (ACE Train),ACE05 (ACE Train),ACE06 (ACE Train),ACE07 (ACE Train),ACE08 (ACE Train)
+0,Los Angeles Amtrak Station,,,,,,,,
+1,Bakersfield Amtrak Station,,,,,,,,
+2,Wasco Amtrak Station,,,,,,,,
+3,Corcoran Amtrak Station,,,,,,,,
+4,Hanford Amtrak Station,,,,,,,,
+5,Fresno Amtrak Station,,,,,,,,
+6,Madera Amtrak Station,,,,,,,,
+7,Merced Amtrak Station,,,,,,,,
+8,Turlock-Denair Amtrak Station,,,,,,,,
+9,Modesto Amtrak Station,,,,,,,,
+10,Stockton- Robert J Cabral Amtrak Station,04:10:00 (0),16:32:00 (9),05:35:00 (0),17:47:00 (9),06:40:00 (0),18:47:00 (9),07:32:00 (0),19:47:00 (9)
+11,Stockton- San Joaquin Street Amtrak Station,,,,,,,,
+12,Lodi Amtrak Station,,,,,,,,
+13,Sacremento Amtrak Station,,,,,,,,
+14,Antioch Amtrak Station,,,,,,,,
+15,Martinez Amtrak Station,,,,,,,,
+16,Richmond Amtrak Station,,,,,,,,
+17,Emeryville Amtrak Station,,,,,,,,
+18,Oakaland Amtrak Station,,,,,,,,
+19,Lathrop Amtrak Station,04:29:00 (1),16:08:00 (8),05:54:00 (1),17:23:00 (8),06:59:00 (1),18:23:00 (8),07:51:00 (1),19:23:00 (8)
+20,Tracy Amtrak Station,04:41:00 (2),15:56:00 (7),06:06:00 (2),17:11:00 (7),07:11:00 (2),18:11:00 (7),08:03:00 (2),19:11:00 (7)
+21,Vasco Rt Amtrak Station,05:10:00 (3),15:27:00 (6),06:35:00 (3),16:42:00 (6),07:40:00 (3),17:42:00 (6),08:32:00 (3),18:42:00 (6)
+22,Livermore Amtrak Station,05:15:00 (4),15:22:00 (5),06:40:00 (4),16:37:00 (5),07:45:00 (4),17:37:00 (5),08:37:00 (4),18:37:00 (5)
+23,Pleasanton Amtrak Station,05:23:00 (5),15:08:00 (4),06:48:00 (5),16:28:00 (4),07:53:00 (5),17:28:00 (4),08:45:00 (5),18:28:00 (4)
+24,Fremont Amtrak Station,05:45:00 (6),14:45:00 (3),07:10:00 (6),16:05:00 (3),08:15:00 (6),17:05:00 (3),09:07:00 (6),18:05:00 (3)
+25,Great America Parkway Amtrak Station,06:03:00 (7),14:24:00 (2),07:28:00 (7),15:49:00 (2),08:33:00 (7),16:49:00 (2),09:25:00 (7),17:49:00 (2)
+26,San Jose Amtrak Station,06:22:00 (9),14:10:00 (0),07:47:00 (9),15:35:00 (0),08:52:00 (9),16:35:00 (0),09:44:00 (9),17:35:00 (0)
+27,Santa Clara Amtrak Station,06:10:00 (8),14:15:00 (1),07:35:00 (8),15:40:00 (1),08:40:00 (8),16:40:00 (1),09:32:00 (8),17:40:00 (1)

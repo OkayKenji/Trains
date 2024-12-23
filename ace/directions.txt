@@ -1,0 +1,3 @@
+route_id,direction_id,direction
+ACETrain,0,Inbound
+ACETrain,1,Outbound

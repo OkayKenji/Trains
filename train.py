@@ -15,7 +15,7 @@ def getServices(calendar_dates, railroad, calendar):
     
     if not listOfServices.empty:
         return listOfServices
-    if railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd':
+    if railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace":
         date_object = datetime.strptime(getDate(), "%Y%m%d").date()
         print(calendar)
         if date_object.weekday() == 0:
@@ -48,8 +48,8 @@ def loadData(name_rail):
     global train_classification 
     railroad = name_rail
 
-    train_classification = 'block_id' if railroad == 'njt' else 'trip_short_name'
-    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (railroad != 'nicd') else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
+    train_classification = 'block_id' if railroad == 'njt' else 'trip_id'
+    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (railroad != 'ace') else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
 def getTrains(listOfServices, trips): 
     print(len(listOfServices))
@@ -99,7 +99,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
 def main():
     # elements = ['mnrr','lirr','septa','njt','exo']
-    elements = ['nicd']
+    elements = ['ace']
     for ele in elements: 
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
