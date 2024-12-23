@@ -15,7 +15,7 @@ def getServices(calendar_dates, railroad, calendar):
     
     if not listOfServices.empty:
         return listOfServices
-    if railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre':
+    if railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd':
         date_object = datetime.strptime(getDate(), "%Y%m%d").date()
         print(calendar)
         if date_object.weekday() == 0:
@@ -49,7 +49,7 @@ def loadData(name_rail):
     railroad = name_rail
 
     train_classification = 'block_id' if railroad == 'njt' else 'trip_short_name'
-    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (railroad != 'vre') else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
+    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (railroad != 'nicd') else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
 def getTrains(listOfServices, trips): 
     print(len(listOfServices))
@@ -88,7 +88,9 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
         filtered_df = stop_times[stop_times.trip_id == train]
         filtered_df = filtered_df.drop(['trip_id', 'arrival_time'], axis=1)
-        
+        if (filtered_df.empty):
+            print("Opps! Missing train data, skipping.")
+            continue
         filtered_df['stop_name'] = filtered_df.apply(assign_station_names, axis=1, args=(stops,))
         temp = [filtered_df.drop(['stop_id'], axis=1), int(listOfTrains[train_classification].iloc[index]) if listOfTrains[train_classification].iloc[index].isdigit() else str(listOfTrains[train_classification].iloc[index])  , listOfTrains.trip_headsign.iloc[index], cvtRouteStringToNumber(routes, listOfTrains.route_id.iloc[index])]
         reformated.append(temp)
@@ -97,7 +99,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
 def main():
     # elements = ['mnrr','lirr','septa','njt','exo']
-    elements = ['vre']
+    elements = ['nicd']
     for ele in elements: 
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)

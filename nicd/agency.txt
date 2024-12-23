@@ -1,0 +1,2 @@
+﻿agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone
+NICTD,Northern Indiana Commuter Transportation District,http://www.mysouthshoreline.com,America/Chicago,en,219-926-5744
