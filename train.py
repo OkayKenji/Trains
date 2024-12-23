@@ -82,6 +82,7 @@ def assign_station_names(row, stops):
         return None # give up
                               
     stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: row['stop_id'] in ast.literal_eval(x)), 'stop_name']
+
     if not stop_name.empty:
         return stop_name.iloc[0]
     else:
