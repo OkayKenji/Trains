@@ -47,7 +47,8 @@ if response.status_code == 200:
 
     os.system("cp ./ace/stopsSorted.txt ./ace/stops.txt")
     os.system("rm *.zip")
-    os.system("rm *.zip")
+    os.system("rm indexACE.html")
+
 
 
 else:

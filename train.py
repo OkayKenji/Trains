@@ -15,7 +15,7 @@ def getServices(calendar_dates, railroad, calendar):
     
     if not listOfServices.empty:
         return listOfServices
-    if railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace":
+    if use_calendar:
         date_object = datetime.strptime(getDate(), "%Y%m%d").date()
         print(calendar)
         if date_object.weekday() == 0:
@@ -46,10 +46,18 @@ def getDate():
 def loadData(name_rail):
     global railroad 
     global train_classification 
+    global use_calendar 
     railroad = name_rail
+    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace"
+    train_classification = ''
+    if railroad == 'njt':
+        train_classification = 'block_id'
+    elif railroad == 'ace':
+        train_classification = 'trip_id'
+    else:
+        train_classification = 'trip_short_name'
 
-    train_classification = 'block_id' if railroad == 'njt' else 'trip_id'
-    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (railroad != 'ace') else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
+    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (not use_calendar) else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
 def getTrains(listOfServices, trips): 
     print(len(listOfServices))
