@@ -78,7 +78,7 @@ def assign_station_names(row, stops):
     if not stop_name.empty:
         return stop_name.iloc[0]
     
-    if railroad != 'vre':
+    if railroad != 'exo':
         return None # give up
                               
     stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: row['stop_id'] in ast.literal_eval(x)), 'stop_name']
@@ -96,7 +96,6 @@ def reformat(stops, routes, listOfTrains, stop_times):
         if ((index / len(listOfTrains)) * 100 > tempPercent + 10):
             print(f'{tempPercent + 10}%...')
             tempPercent += 10
-
         filtered_df = stop_times[stop_times.trip_id == train]
         filtered_df = filtered_df.drop(['trip_id', 'arrival_time'], axis=1)
         if (filtered_df.empty):
@@ -109,8 +108,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
-    # elements = ['lirr']
+    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
+    elements = ['exo']
     for ele in elements: 
         print("NOW - ",ele)
         # prepare data
@@ -126,7 +125,6 @@ def main():
         reformated = reformat(stops, routes, listOfTrains, stop_times)
         reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
         stops = stops.loc[:, ['stop_name']]
-        
 
         for row in reformated:
         
@@ -159,7 +157,6 @@ def main():
                 eggs[['departure_time', 'stop_index']] = eggs[['departure_time', 'stop_index']].fillna('n/a') 
                 eggs.drop('stopping',axis=1,inplace=True)
                 
-                # print(pd.DataFrame(stops['stop_name'].to_list())  )
                 new_ele = { 
                     'train_number': match.group(1),
                     'train_line': match.group(2),
