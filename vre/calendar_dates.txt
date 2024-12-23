@@ -1,7 +1,6 @@
 service_id,date,exception_type
 Pre-Christmas S Schedule,20241223,1
 Regular,20241223,2
-Pre-Christmas S Schedule,20241224,1
 Regular,20241224,2
 Regular,20241225,2
 S Schedule post Christmas I,20241226,1
