@@ -5,6 +5,7 @@ import re
 from datetime import datetime
 import json
 import ast
+import time
 
 import warnings 
 warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
@@ -92,10 +93,10 @@ def assign_station_names(row, stops):
 def reformat(stops, routes, listOfTrains, stop_times): 
     reformated = []
     tempPercent = 0
-    print(f'{0}%...')
+    # print(f'{0}%...')
     for index, train in enumerate(listOfTrains.trip_id):
         if ((index / len(listOfTrains)) * 100 > tempPercent + 10):
-            print(f'{tempPercent + 10}%...')
+            # print(f'{tempPercent + 10}%...')
             tempPercent += 10
         filtered_df = stop_times[stop_times.trip_id == train]
         filtered_df = filtered_df.drop(['trip_id', 'arrival_time'], axis=1)
@@ -105,7 +106,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
         filtered_df['stop_name'] = filtered_df.apply(assign_station_names, axis=1, args=(stops,))
         temp = [filtered_df.drop(['stop_id'], axis=1), int(listOfTrains[train_classification].iloc[index]) if listOfTrains[train_classification].iloc[index].isdigit() else str(listOfTrains[train_classification].iloc[index])  , listOfTrains.trip_headsign.iloc[index], cvtRouteStringToNumber(routes, listOfTrains.route_id.iloc[index])]
         reformated.append(temp)
-    print(f'{100}%...')
+    # print(f'{100}%...')
     return reformated
 
 def main():
@@ -177,4 +178,15 @@ def main():
             file.write(pretty_json)
 
 if __name__ == "__main__":
+    # Start the timer
+    start_time = time.time()
+
+    # Call the function
     main()
+
+    # Calculate the time taken
+    end_time = time.time()
+    execution_time = end_time - start_time
+
+    print(f"Execution time: {execution_time:.4f} seconds")
+    
