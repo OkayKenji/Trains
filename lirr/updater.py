@@ -1,6 +1,5 @@
 import requests
 import zipfile
-import shutil
 import os
 
 url = 'https://rrgtfsfeeds.s3.amazonaws.com/gtfslirr.zip'
