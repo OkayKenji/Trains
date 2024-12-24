@@ -16,4 +16,4 @@ with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)
 
 os.system("cp ./njt/stopsSorted.txt ./njt/stops.txt")
-os.system("rm *.zip")
+os.system("rm gtfsnjt.zip")
