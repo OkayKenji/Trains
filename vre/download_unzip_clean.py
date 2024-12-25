@@ -19,7 +19,6 @@ with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
 os.system("rm gtfsvre.zip")
 
 df = pd.read_csv('./vre/stops.txt')
-
 df1 = df[pd.isna(df['parent_station'])] 
 df2 = df[~pd.isna(df['parent_station'])]  
 df1['station_id_additional'] = [[] for _ in range(len(df1))]

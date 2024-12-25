@@ -50,7 +50,7 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace"
+    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta'
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
@@ -79,7 +79,7 @@ def assign_station_names(row, stops):
     if not stop_name.empty:
         return stop_name.iloc[0]
     
-    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo':
+    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo' and railroad != 'mbta':
         return None # give up
                               
     stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: str(row['stop_id']) in ast.literal_eval(x)), 'stop_name']
@@ -93,10 +93,10 @@ def assign_station_names(row, stops):
 def reformat(stops, routes, listOfTrains, stop_times): 
     reformated = []
     tempPercent = 0
-    # print(f'{0}%...')
+    print(f'{0}%...')
     for index, train in enumerate(listOfTrains.trip_id):
         if ((index / len(listOfTrains)) * 100 > tempPercent + 10):
-            # print(f'{tempPercent + 10}%...')
+            print(f'{tempPercent + 10}%...')
             tempPercent += 10
         filtered_df = stop_times[stop_times.trip_id == train]
         filtered_df = filtered_df.drop(['trip_id', 'arrival_time'], axis=1)
@@ -105,13 +105,14 @@ def reformat(stops, routes, listOfTrains, stop_times):
             continue
         filtered_df['stop_name'] = filtered_df.apply(assign_station_names, axis=1, args=(stops,))
         temp = [filtered_df.drop(['stop_id'], axis=1), int(listOfTrains[train_classification].iloc[index]) if listOfTrains[train_classification].iloc[index].isdigit() else str(listOfTrains[train_classification].iloc[index])  , listOfTrains.trip_headsign.iloc[index], cvtRouteStringToNumber(routes, listOfTrains.route_id.iloc[index])]
+        print(temp)
         reformated.append(temp)
-    # print(f'{100}%...')
+    print(f'{100}%...')
     return reformated
 
 def main():
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
-    # elements = ['marc']
+    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
+    elements = ['mbta']
     for ele in elements: 
         print("NOW - ",ele)
         # prepare data
@@ -158,7 +159,6 @@ def main():
                 eggs[['departure_time', 'stop_index']] = eggs['stopping'].str.extract(r'([0-9:]+)\s+\(([0-9]+)\)')
                 eggs[['departure_time', 'stop_index']] = eggs[['departure_time', 'stop_index']].fillna('n/a') 
                 eggs.drop('stopping',axis=1,inplace=True)
-                
                 new_ele = { 
                     'train_number': match.group(1),
                     'train_line': match.group(2),
