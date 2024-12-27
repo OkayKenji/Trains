@@ -1,25 +1,46 @@
+import requests
+import zipfile
+import os
 import pandas as pd
 
-# df = pd.read_csv('./mbta/routes.txt')
-# df = df.drop(df[(df.network_id != "commuter_rail") & (df.network_id != "cr_foxboro") & (df.network_id != "cape_flyer")].index)
-# df.to_csv("./mbta/routes.txt",index=False)
-# route_list = df['route_id'].to_list()
-# print(route_list)
+url = 'https://cdn.mbta.com/MBTA_GTFS.zip'
+file_name = 'gtfsmbta.zip'
 
-# df = pd.read_csv('./mbta/trips.txt')
-# df = df[df['route_id'].isin(route_list)]
-# df.to_csv("./mbta/trips.txt",index=False)
+response = requests.get(url)
+with open(file_name, 'wb') as file:
+    file.write(response.content)
 
-# service_list = list(set(df['service_id'].to_list()))
-# trip_list = list(set(df['trip_id'].to_list()))
+zip_file_path = 'gtfsmbta.zip'
+extract_to = './mbta'
 
-# df = pd.read_csv('./mbta/calendar.txt')
-# df = df[df['service_id'].isin(service_list)]
-# df.to_csv("./mbta/calendar.txt",index=False)
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_to)
 
-# df = pd.read_csv('./mbta/stop_times.txt')
-# df = df[df['trip_id'].isin(trip_list)]
-# df.to_csv("./mbta/stop_times.txt",index=False)
+os.system("rm gtfsmbta.zip")
+
+
+
+
+df = pd.read_csv('./mbta/routes.txt')
+df = df.drop(df[(df.network_id != "commuter_rail") & (df.network_id != "cr_foxboro") & (df.network_id != "cape_flyer")].index)
+df.to_csv("./mbta/routes.txt",index=False)
+route_list = df['route_id'].to_list()
+print(route_list)
+
+df = pd.read_csv('./mbta/trips.txt')
+df = df[df['route_id'].isin(route_list)]
+df.to_csv("./mbta/trips.txt",index=False)
+
+service_list = list(set(df['service_id'].to_list()))
+trip_list = list(set(df['trip_id'].to_list()))
+
+df = pd.read_csv('./mbta/calendar.txt')
+df = df[df['service_id'].isin(service_list)]
+df.to_csv("./mbta/calendar.txt",index=False)
+
+df = pd.read_csv('./mbta/stop_times.txt')
+df = df[df['trip_id'].isin(trip_list)]
+df.to_csv("./mbta/stop_times.txt",index=False)
 
 
 df = pd.read_csv('./mbta/stops.txt')
