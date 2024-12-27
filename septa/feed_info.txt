@@ -1,2 +1,0 @@
-feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
-SEPTA,https://www.septa.org,EN,20241222,20250308,"Mon Dec 23 21:56:13 UTC 2024"
