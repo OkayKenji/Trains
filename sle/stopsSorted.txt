@@ -1,0 +1,10 @@
+stop_id,stop_name,stop_url,stop_timezone,stop_lat,stop_lon
+NHV,New Haven - NHV,https://www.amtrak.com/stations/nhv,America/New_York,41.297714,-72.92667
+STS,New Haven - STS,https://www.amtrak.com/stations/sts,America/New_York,41.305253,-72.922086
+BNF,Branford - BNF,http://www.amtrak.com/stations/bnf,America/New_York,41.274549,-72.817225
+GUI,Guilford - GUI,http://www.amtrak.com/stations/gui,America/New_York,41.275603,-72.673513
+MDS,Madison - MDS,http://www.amtrak.com/stations/mds,America/New_York,41.283577,-72.599444
+CLN,Clinton - CLN,http://www.amtrak.com/stations/cln,America/New_York,41.279458,-72.528314
+WSB,Westbrook - WSB,http://www.amtrak.com/stations/wsb,America/New_York,41.288787,-72.448
+OSB,Old Saybrook Amtrak Station - OSB,https://www.amtrak.com/stations/osb,America/New_York,41.30039,-72.376818
+NLC,New London - NLC,https://www.amtrak.com/stations/nlc,America/New_York,41.354267,-72.093225

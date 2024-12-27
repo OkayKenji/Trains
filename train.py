@@ -50,7 +50,7 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta' or railroad == 'sunrail' or railroad == 'amtrak'
+    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta' or railroad == 'sunrail' or railroad == 'amtrak' or "sle" or railroad == "hl"
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
@@ -114,8 +114,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail"]
-    elements = ["amtrak"]
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
@@ -148,6 +147,7 @@ def main():
         # html_table = stops.to_html()
 
         all_stops.columns = all_stops.columns.str.replace('Train ', '', regex=False)
+        all_stops.columns = all_stops.columns.str.replace('CTrail ', '', regex=False)
         all_stops.to_csv(f'./csv/{ele}.csv')
 
         print("\tWait a while as we format the data...")
