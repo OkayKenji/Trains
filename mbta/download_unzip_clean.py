@@ -44,11 +44,7 @@ df.to_csv("./mbta/stop_times.txt",index=False)
 
 
 df = pd.read_csv('./mbta/stops.txt')
-print(len(df))
 df = df[(df["zone_id"] != "LocalBus") & (df["zone_id"] != "ExpressBus-Downtown") & (df["stop_url"].notna())]
-df.to_csv('e.csv',index=False)
-print(len(df))
-
 final_result = []
 
 processed_rows = set()

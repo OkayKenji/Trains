@@ -31,22 +31,6 @@ route_id,service_id,trip_id,trip_headsign,trip_short_name,direction_id,block_id,
 4,Regular,336-Regular,Union Station,336,1,,4
 4,Regular,337-Regular,Broad Run,337,0,,4
 4,Regular,338-Regular,Union Station,338,1,,4
-2,Pre-Christmas S Schedule,301-Pre-Christmas S Schedule,Spotsylvania,301,0,,2
-2,Pre-Christmas S Schedule,302-Pre-Christmas S Schedule,Union Station,302,1,,2
-2,Pre-Christmas S Schedule,305-Pre-Christmas S Schedule,Spotsylvania,305,0,,2
-2,Pre-Christmas S Schedule,306-Pre-Christmas S Schedule,Union Station,306,1,,2
-2,Pre-Christmas S Schedule,309-Pre-Christmas S Schedule,Spotsylvania,309,0,,2
-2,Pre-Christmas S Schedule,310-Pre-Christmas S Schedule,Union Station,310,1,,2
-2,Pre-Christmas S Schedule,313-Pre-Christmas S Schedule,Spotsylvania,313,0,,2
-2,Pre-Christmas S Schedule,314-Pre-Christmas S Schedule,Union Station,314,1,,2
-4,Pre-Christmas S Schedule,324-Pre-Christmas S Schedule,Union Station,324,1,,4
-4,Pre-Christmas S Schedule,325-Pre-Christmas S Schedule,Broad Run,325,0,,4
-4,Pre-Christmas S Schedule,328-Pre-Christmas S Schedule,Union Station,328,1,,4
-4,Pre-Christmas S Schedule,329-Pre-Christmas S Schedule,Broad Run,329,0,,4
-4,Pre-Christmas S Schedule,330-Pre-Christmas S Schedule,Union Station,330,1,,4
-4,Pre-Christmas S Schedule,332-Pre-Christmas S Schedule,Union Station,332,1,,4
-4,Pre-Christmas S Schedule,333-Pre-Christmas S Schedule,Broad Run,333,0,,4
-4,Pre-Christmas S Schedule,335-Pre-Christmas S Schedule,Broad Run,335,0,,4
 2,S Schedule post Christmas I,301-S Schedule post Christmas I,Spotsylvania,301,0,,2
 2,S Schedule post Christmas I,302-S Schedule post Christmas I,Union Station,302,1,,2
 2,S Schedule post Christmas I,305-S Schedule post Christmas I,Spotsylvania,305,0,,2
