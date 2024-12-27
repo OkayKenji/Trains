@@ -95,7 +95,11 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
     grouped = stop_times.groupby('trip_id')
 
-    for _, (train, group) in enumerate(grouped):        
+    total_trains = len(grouped)
+    print(total_trains)
+    for i, (train, group) in enumerate(grouped):
+        if total_trains > 10 and i % (total_trains // 10) == 0:
+            print(f'{(i / total_trains) * 100:.0f}%...')   
         group = group.drop(['trip_id', 'arrival_time'], axis=1)
         if group.empty:
             continue
@@ -110,8 +114,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
-    # elements = ['marc']
+    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
+    elements = ['mbta']
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
@@ -148,6 +152,7 @@ def main():
 
         print("\tWait a while as we format the data...")
         arr = []
+
         for _, k in enumerate(all_stops):
 
             match = re.match(r'([\w\s\.]+)\s+\(([éô0-9a-zA-Z\/\-\&\-\s]+)\)', k)
@@ -167,7 +172,7 @@ def main():
 
                 arr.append(new_ele)
         # Save dictionary as JSON to a file
-        pretty_json = json.dumps(arr, indent=4)
+        pretty_json = json.dumps(arr)
 
         with open(f'./json/data{ele}.json', 'w') as file:
             file.write(pretty_json)
@@ -177,8 +182,6 @@ def main():
         local_execution_time = local_end_time - local_start_time
 
         print(f"\tLocal Execution time: {local_execution_time:.4f} seconds")
-    
-
 
 if __name__ == "__main__":
     # Start the timer
