@@ -96,10 +96,10 @@ def reformat(stops, routes, listOfTrains, stop_times):
     grouped = stop_times.groupby('trip_id')
 
     total_trains = len(grouped)
-    print(total_trains)
+    # print(total_trains)
     for i, (train, group) in enumerate(grouped):
-        if total_trains > 10 and i % (total_trains // 10) == 0:
-            print(f'{(i / total_trains) * 100:.0f}%...')   
+        # if total_trains > 10 and i % (total_trains // 10) == 0:
+        #     print(f'{(i / total_trains) * 100:.0f}%...')   
         group = group.drop(['trip_id', 'arrival_time'], axis=1)
         if group.empty:
             continue

@@ -3,6 +3,7 @@ import subprocess
 
 def action(ele):
     subprocess.run(['python', f'./{ele}/download_unzip_clean.py'])
+    print(f'Done: {ele}')
 
 
 def main():

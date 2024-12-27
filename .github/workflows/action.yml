@@ -25,8 +25,8 @@ jobs:
       - name: Execute Python Download script
         run: python update_all.py
 
-      # - name: Execute Python Download script
-      #   run: python update_all.py
+      - name: Execute Python Download script
+        run: python train.py
 
       - name: Commit files if changed
         run: |
