@@ -1,4 +1,4 @@
-name: run main.py
+name: Update Data
 
 on:
   schedule:
@@ -22,15 +22,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Execute Python script
-        run: python update_all.py  # Execute the Python script
+      - name: Execute Python Download script
+        run: python update_all.py
+
+      # - name: Execute Python Download script
+      #   run: python update_all.py
 
       - name: Commit files if changed
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || git commit -m "Automated update from GitHub Actions"
+          git diff-index --quiet HEAD || git commit -m "Automated Data Update on $(date +'%m/%d/%Y')"
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
