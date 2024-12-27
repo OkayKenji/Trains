@@ -62,10 +62,8 @@ def loadData(name_rail):
     return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (not use_calendar) else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
 
 def getTrains(listOfServices, trips): 
-    listOfTrains = []
-    for service in listOfServices.service_id:
-        listOfTrains.append(trips[trips.service_id == service])
-    return pd.DataFrame(pd.concat(listOfTrains))
+    listOfTrains = trips[trips.service_id.isin(listOfServices.service_id)]
+    return listOfTrains
 
 def cvtRouteStringToNumber(routes, route_id):
     route_name = routes[routes.route_id == route_id]
@@ -96,13 +94,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     reformated = []
 
     grouped = stop_times.groupby('trip_id')
-    total_trains = len(grouped)
-    print(total_trains)
 
-    for i, (train, group) in enumerate(grouped):
-        if total_trains > 10 and i % (total_trains // 10) == 0:
-            print(f'{(i / total_trains) * 100:.0f}%...')
-        
+    for _, (train, group) in enumerate(grouped):        
         group = group.drop(['trip_id', 'arrival_time'], axis=1)
         if group.empty:
             continue
@@ -120,7 +113,9 @@ def main():
     elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
     # elements = ['marc']
     for ele in elements: 
-        print("NOW - ",ele)
+        print(f"Processing: {ele}")
+        local_start_time = time.time()
+
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
 
@@ -130,10 +125,10 @@ def main():
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
         listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str'})
-        print("Wait a while as we process data...")
+        print("\tWait a while as we process the data...")
         reformated = reformat(stops, routes, listOfTrains, stop_times)
         reformated = sorted(reformated, key=lambda train: (isinstance( train[1].zfill(4), str),  train[1].zfill(4)))
-        stops = stops.loc[:, ['stop_name']]
+        all_stops = stops.loc[:, ['stop_name']]
 
         for row in reformated:
         
@@ -143,44 +138,47 @@ def main():
             stop_list['eee'] = stop_list['departure_time'] + " (" + stop_list['stop_sequence'].astype(str) + ")"
             train_number = row[1]
             line = row[3]
-            stops[f'{train_number} ({line})'] = stops['stop_name'].map(stop_list.set_index("stop_name")["eee"]).fillna('')
+            stop_map = stop_list.set_index("stop_name")["eee"]
+            all_stops[f'{train_number} ({line})'] = all_stops['stop_name'].map(stop_map).fillna('')
 
         # html_table = stops.to_html()
 
-        stops.columns = stops.columns.str.replace('Train ', '', regex=False)
-        stops.to_csv(f'./csv/{ele}.csv')
-        # print(stops.to_dict())
+        all_stops.columns = all_stops.columns.str.replace('Train ', '', regex=False)
+        all_stops.to_csv(f'./csv/{ele}.csv')
 
-
-
-
+        print("\tWait a while as we format the data...")
         arr = []
-        for i, k in enumerate(stops):
+        for _, k in enumerate(all_stops):
+
             match = re.match(r'([\w\s\.]+)\s+\(([éô0-9a-zA-Z\/\-\&\-\s]+)\)', k)
             if match:
-                eggs = pd.DataFrame(stops[k].to_list())
-                eggs['station_names'] = pd.DataFrame(stops['stop_name'].to_list())[0]  # Accessing the Series by index
-                eggs.set_index('station_names', inplace=True)
-                eggs.rename(columns={0: 'stopping'}, inplace=True)
-                eggs[['departure_time', 'stop_index']] = eggs['stopping'].str.extract(r'([0-9:]+)\s+\(([0-9]+)\)')
-                eggs[['departure_time', 'stop_index']] = eggs[['departure_time', 'stop_index']].fillna('n/a') 
-                eggs.drop('stopping',axis=1,inplace=True)
+                train_stops = all_stops[k].to_frame()               
+                train_stops['station_names'] = all_stops['stop_name']
+                train_stops.set_index('station_names', inplace=True)
+                train_stops.rename(columns={k: 'stop_times'}, inplace=True)
+                train_stops[['departure_time', 'stop_index']] = train_stops['stop_times'].str.extract(r'([0-9:]+)\s+\(([0-9]+)\)')
+                train_stops[['departure_time', 'stop_index']] = train_stops[['departure_time', 'stop_index']].fillna('n/a') 
+                train_stops.drop('stop_times',axis=1,inplace=True)
                 new_ele = { 
                     'train_number': match.group(1),
                     'train_line': match.group(2),
-                    'stops' : eggs.to_dict(orient='index')
+                    'stops' : train_stops.to_dict(orient='index')
                 }
 
                 arr.append(new_ele)
-                
-            else:
-                print("No match found.",k )
-        #  = json.dumps(arr)
         # Save dictionary as JSON to a file
         pretty_json = json.dumps(arr, indent=4)
 
         with open(f'./json/data{ele}.json', 'w') as file:
             file.write(pretty_json)
+        
+        local_end_time = time.time()
+
+        local_execution_time = local_end_time - local_start_time
+
+        print(f"\tLocal Execution time: {local_execution_time:.4f} seconds")
+    
+
 
 if __name__ == "__main__":
     # Start the timer
