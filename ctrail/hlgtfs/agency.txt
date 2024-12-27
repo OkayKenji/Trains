@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+1,CONN DOT,https://www.hartfordline.com/fares-schedules/,America/New_York,en,1-877-287-4337,,

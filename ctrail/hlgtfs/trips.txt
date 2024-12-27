@@ -1,0 +1,34 @@
+trip_id,route_id,service_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+10010,HART,2,"Northbound to Hartford",CTrail 6456,0,6456,shp-HART-11,1,0
+12010,HART,2,"Northbound to Hartford",CTrail 6458,0,6458,shp-HART-06,1,0
+17020,HART,1,"Northbound to Hartford",CTrail 4452,0,4452,shp-HART-02,1,0
+3020,HART,1,"Northbound to Hartford",CTrail 4450,0,4450,shp-HART-14,1,0
+7020,HART,1,"Northbound to Hartford",CTrail 4458,0,4458,shp-HART-12,1,0
+9020,HART,1,"Northbound to Hartford",CTrail 4462,0,4462,shp-HART-04,1,0
+31010,HART,2,"Northbound to Springfield",CTrail 6402,0,6402,shp-HART-10,1,0
+15010,HART,2,"Northbound to Springfield",CTrail 6400,0,6400,shp-HART-05,1,0
+16020,HART,1,"Northbound to Springfield",CTrail 4414,0,4414,shp-HART-09,1,0
+5010,HART,2,"Northbound to Springfield",CTrail 6410,0,6410,shp-HART-13,1,0
+18020,HART,1,"Northbound to Springfield",CTrail 4406,0,4406,shp-HART-01,1,0
+1020,HART,1,"Northbound to Springfield",CTrail 4466,0,4466,shp-HART-03,1,0
+11020,HART,1,"Northbound to Springfield",CTrail 4476,0,4476,shp-HART-72,0,0
+2010,HART,2,"Northbound to Springfield",CTrail 6454,0,6454,shp-HART-08,1,0
+26020,HART,1,"Northbound to Springfield",CTrail 4400,0,4400,shp-HART-17,1,0
+27020,HART,1,"Northbound to Springfield",CTrail 4404,0,4404,shp-HART-07,1,0
+28020,HART,1,"Southbound to New Haven Union Station",CTrail 4417,1,4417,shp-HART-21,0,0
+29020,HART,1,"Southbound to New Haven Union Station",CTrail 4405,1,4405,shp-HART-56,1,0
+30010,HART,2,"Southbound to New Haven Union Station",CTrail 6401,1,6401,shp-HART-63,1,0
+21020,HART,1,"Southbound to New Haven Union Station",CTrail 4415,1,4415,shp-HART-60,1,0
+22020,HART,1,"Southbound to New Haven Union Station",CTrail 4451,1,4451,shp-HART-53,1,0
+23020,HART,1,"Southbound to New Haven Union Station",CTrail 4403,1,4403,shp-HART-65,1,0
+24010,HART,2,"Southbound to New Haven Union Station",CTrail 6457,1,6457,shp-HART-52,1,0
+25020,HART,1,"Southbound to New Haven Union Station",CTrail 4401,1,4401,shp-HART-66,1,0
+13020,HART,1,"Southbound to New Haven Union Station",CTrail 4467,1,4467,shp-HART-61,1,0
+14020,HART,1,"Southbound to New Haven Union Station",CTrail 4461,1,4461,shp-HART-57,1,0
+19020,HART,1,"Southbound to New Haven Union Station",CTrail 4407,1,4407,shp-HART-62,1,0
+20010,HART,2,"Southbound to New Haven Union Station",CTrail 6459,1,6459,shp-HART-58,1,0
+6010,HART,2,"Southbound to New Haven Union Station",CTrail 6455,1,6455,shp-HART-55,1,0
+32010,HART,2,"Southbound to New Haven Union Station",CTrail 6403,1,6403,shp-HART-51,1,0
+33020,HART,1,"Southbound to New Haven Union Station",CTrail 4463,1,4463,shp-HART-54,1,0
+4020,HART,1,"Southbound to New Haven Union Station",CTrail 4453,1,4453,shp-HART-59,1,0
+8010,HART,2,"Southbound to New Haven Union Station",CTrail 6411,1,6411,shp-HART-64,1,0

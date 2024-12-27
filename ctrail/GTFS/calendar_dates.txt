@@ -1,0 +1,2 @@
+service_id,date,exception_type
+TRAIN-H25-TRKPI-Semaine-02,20250418,2

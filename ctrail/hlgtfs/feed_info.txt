@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+CONN DOT,https://www.hartfordline.com/fares-schedules/,en,20241206,20251213,S1000040

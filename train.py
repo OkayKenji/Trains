@@ -50,7 +50,7 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta' or railroad == 'sunrail'
+    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta' or railroad == 'sunrail' or railroad == 'amtrak'
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
@@ -77,7 +77,7 @@ def assign_station_names(row, stops):
     if not stop_name.empty:
         return stop_name.iloc[0]
     
-    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo' and railroad != 'mbta':
+    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo' and railroad != 'mbta' and railroad != 'amtrak':
         return None # give up
                               
     stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: str(row['stop_id']) in ast.literal_eval(x)), 'stop_name']
@@ -115,7 +115,7 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
 def main():
     # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail"]
-    elements = ["sunrail"]
+    elements = ["amtrak"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
