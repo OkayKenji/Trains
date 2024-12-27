@@ -50,7 +50,7 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta'
+    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta' or railroad == 'sunrail'
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
@@ -114,7 +114,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta"]
+    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail"]
+    elements = ["sunrail"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()

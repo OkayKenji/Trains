@@ -1,0 +1,5 @@
+fare_id,price,currency_type,payment_method,transfers,agency_id,transfer_duration
+BASE ONE COUNTY,2.00,USD,1,1,FDOT,
+TWO COUNTIES,3.00,USD,1,1,FDOT,
+THREE COUNTIES,4.00,USD,1,1,FDOT,
+FOUR COUNTIES,5.00,USD,1,1,FDOT,

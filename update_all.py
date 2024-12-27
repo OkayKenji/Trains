@@ -8,7 +8,7 @@ def action(ele):
 
 def main():
     threads = []
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta"]
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail"]
 
     for ele in elements:
         thread = threading.Thread(target=action, args=(ele,))
