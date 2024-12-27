@@ -91,28 +91,34 @@ def assign_station_names(row, stops):
     # ] if not stop_name.empty else None
 
 def reformat(stops, routes, listOfTrains, stop_times): 
+    # Filter stop_times to reduce size of what search through
+    stop_times = stop_times[stop_times.trip_id.isin(listOfTrains.trip_id)]
     reformated = []
-    tempPercent = 0
-    print(f'{0}%...')
-    for index, train in enumerate(listOfTrains.trip_id):
-        if ((index / len(listOfTrains)) * 100 > tempPercent + 10):
-            print(f'{tempPercent + 10}%...')
-            tempPercent += 10
-        filtered_df = stop_times[stop_times.trip_id == train]
-        filtered_df = filtered_df.drop(['trip_id', 'arrival_time'], axis=1)
-        if (filtered_df.empty):
-            print("Opps! Missing train data, skipping.")
+
+    grouped = stop_times.groupby('trip_id')
+    total_trains = len(grouped)
+    print(total_trains)
+
+    for i, (train, group) in enumerate(grouped):
+        if total_trains > 10 and i % (total_trains // 10) == 0:
+            print(f'{(i / total_trains) * 100:.0f}%...')
+        
+        group = group.drop(['trip_id', 'arrival_time'], axis=1)
+        if group.empty:
             continue
-        filtered_df['stop_name'] = filtered_df.apply(assign_station_names, axis=1, args=(stops,))
-        temp = [filtered_df.drop(['stop_id'], axis=1), int(listOfTrains[train_classification].iloc[index]) if listOfTrains[train_classification].iloc[index].isdigit() else str(listOfTrains[train_classification].iloc[index])  , listOfTrains.trip_headsign.iloc[index], cvtRouteStringToNumber(routes, listOfTrains.route_id.iloc[index])]
-        print(temp)
-        reformated.append(temp)
-    print(f'{100}%...')
+        group['stop_name'] = group.apply(assign_station_names, axis=1, args=(stops,))
+        
+        reformated.append([
+            group.drop(['stop_id'], axis=1),
+            listOfTrains.loc[listOfTrains.trip_id == train, train_classification].iloc[0],
+            listOfTrains.loc[listOfTrains.trip_id == train, 'trip_headsign'].iloc[0],
+            cvtRouteStringToNumber(routes, listOfTrains.loc[listOfTrains.trip_id == train, 'route_id'].iloc[0])
+        ])
     return reformated
 
 def main():
-    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
-    elements = ['mbta']
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre"]
+    # elements = ['marc']
     for ele in elements: 
         print("NOW - ",ele)
         # prepare data
@@ -126,7 +132,7 @@ def main():
         listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str'})
         print("Wait a while as we process data...")
         reformated = reformat(stops, routes, listOfTrains, stop_times)
-        reformated = sorted(reformated, key=lambda reformated: (isinstance( reformated[1], str),  reformated[1]))
+        reformated = sorted(reformated, key=lambda train: (isinstance( train[1].zfill(4), str),  train[1].zfill(4)))
         stops = stops.loc[:, ['stop_name']]
 
         for row in reformated:
@@ -170,7 +176,6 @@ def main():
             else:
                 print("No match found.",k )
         #  = json.dumps(arr)
-        # print(json_data)
         # Save dictionary as JSON to a file
         pretty_json = json.dumps(arr, indent=4)
 
