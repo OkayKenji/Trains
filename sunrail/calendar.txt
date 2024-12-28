@@ -1,2 +1,2 @@
 service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
-Weekday_Oct19change,1,1,1,1,1,0,0,20191014,20251231
+Weekday_Oct19change,1,1,1,1,1,0,0,20191014,20241231

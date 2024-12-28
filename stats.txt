@@ -3,7 +3,7 @@ Processing: ace
 	Total number of trains: 8
 Processing: exo
 	11 - Vaudreuil/Hudson:    27 (26.2%)
-	12 - Saint-Jérôme:        28 (27.2%)
+	12 - Saint-JÃ©rÃ´me:        28 (27.2%)
 	13 - Mont-Saint-Hilaire:  14 (13.6%)
 	14 - Candiac:             18 (17.5%)
 	15 - Mascouche:           16 (15.5%)
@@ -171,14 +171,14 @@ Processing: go
 Processing: via
 	Air Connect:             1 (1.5%)
 	Jasper - Prince Rupert:  2 (3.0%)
-	Montréal - Halifax:      2 (3.0%)
-	Montréal - Senneterre:   1 (1.5%)
-	Montréal - Toronto:      12 (17.9%)
-	Ottawa - Montréal:       2 (3.0%)
-	Ottawa - Québec:         4 (6.0%)
+	MontrÃ©al - Halifax:      2 (3.0%)
+	MontrÃ©al - Senneterre:   1 (1.5%)
+	MontrÃ©al - Toronto:      12 (17.9%)
+	Ottawa - MontrÃ©al:       2 (3.0%)
+	Ottawa - QuÃ©bec:         4 (6.0%)
 	Ottawa - Toronto:        20 (29.9%)
-	Québec - Fallowfield:    4 (6.0%)
-	Québec - Montréal:       2 (3.0%)
+	QuÃ©bec - Fallowfield:    4 (6.0%)
+	QuÃ©bec - MontrÃ©al:       2 (3.0%)
 	Sudbury - White River:   1 (1.5%)
 	The Pas - Churchill:     1 (1.5%)
 	Toronto - Kingston:      2 (3.0%)
@@ -193,5 +193,5 @@ Processing: rtd
 	G:                      81 (24.2%)
 	N:                      72 (21.5%)
 	Total number of trains: 335
-Execution time: 0.8506 seconds
-Data last updated: 2024-12-28 05:57:43.473012
+Execution time: 0.7787 seconds
+Data last updated: 2024-12-28 11:02:10.821583
