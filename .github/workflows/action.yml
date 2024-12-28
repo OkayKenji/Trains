@@ -25,8 +25,11 @@ jobs:
       - name: Execute Python Download script
         run: python update_all.py
 
-      - name: Execute Python Download script
+      - name: Execute Python csv/json script
         run: python train.py
+
+      - name: Generate stats/check file
+        run: python stats.py > stats.txt
 
       - name: Commit files if changed
         run: |

@@ -1,0 +1,197 @@
+Processing: ace
+	ACE Train:              8 (100.0%)
+	Total number of trains: 8
+Processing: exo
+	11 - Vaudreuil/Hudson:    27 (26.2%)
+	12 - Saint-Jérôme:        28 (27.2%)
+	13 - Mont-Saint-Hilaire:  14 (13.6%)
+	14 - Candiac:             18 (17.5%)
+	15 - Mascouche:           16 (15.5%)
+	Total number of trains:   103
+Processing: lirr
+	Babylon Branch:          150 (15.9%)
+	City Terminal Zone:      133 (14.1%)
+	Far Rockaway Branch:     61 (6.5%)
+	Hempstead Branch:        57 (6.0%)
+	Long Beach Branch:       60 (6.3%)
+	Montauk Branch:          59 (6.2%)
+	Oyster Bay Branch:       32 (3.4%)
+	Port Jefferson Branch:   140 (14.8%)
+	Port Washington Branch:  103 (10.9%)
+	Ronkonkoma Branch:       112 (11.9%)
+	West Hempstead Branch:   38 (4.0%)
+	Total number of trains:  945
+Processing: marc
+	BRUNSWICK - WASHINGTON:  19 (19.6%)
+	CAMDEN - WASHINGTON:     21 (21.6%)
+	PENN - WASHINGTON:       57 (58.8%)
+	Total number of trains:  97
+Processing: metrolink
+	Metrolink 91-Perris Valley Line:             14 (6.8%)
+	Metrolink Antelope Valley Line:              30 (14.6%)
+	Metrolink Inland Empire-Orange County Line:  18 (8.7%)
+	Metrolink Orange County Line:                26 (12.6%)
+	Metrolink Riverside Line:                    10 (4.9%)
+	Metrolink San Bernardino Line:               86 (41.7%)
+	Metrolink Ventura County Line:               22 (10.7%)
+	Total number of trains:                      206
+Processing: mnrr
+	Danbury:                26 (3.9%)
+	Harlem:                 208 (31.3%)
+	Hudson:                 156 (23.5%)
+	New Canaan:             39 (5.9%)
+	New Haven:              211 (31.8%)
+	Waterbury:              24 (3.6%)
+	Total number of trains: 664
+Processing: nicd
+	South Shore Line:       59 (100.0%)
+	Total number of trains: 59
+Processing: njt
+	Atlantic City Rail Line:   24 (2.8%)
+	Gladstone Branch:          44 (5.1%)
+	Hudson-Bergen Light Rail:  33 (3.8%)
+	Main/Bergen County Line:   93 (10.8%)
+	Montclair-Boonton Line:    65 (7.5%)
+	Morris & Essex Line:       106 (12.3%)
+	Newark Light Rail:         24 (2.8%)
+	North Jersey Coast Line:   103 (12.0%)
+	Northeast Corridor:        132 (15.3%)
+	Pascack Valley Line:       40 (4.6%)
+	Port Jervis Line:          27 (3.1%)
+	Princeton Shuttle:         95 (11.0%)
+	Raritan Valley Line:       52 (6.0%)
+	Riverline Light Rail:      23 (2.7%)
+	Total number of trains:    861
+Processing: septa
+	Airport Line:              78 (12.6%)
+	Chestnut Hill East Line:   40 (6.5%)
+	Chestnut Hill West Line:   39 (6.3%)
+	Cynwyd Line:               12 (1.9%)
+	Fox Chase Line:            40 (6.5%)
+	Lansdale/Doylestown Line:  55 (8.9%)
+	Manayunk/Norristown Line:  52 (8.4%)
+	Media/Wawa Line:           52 (8.4%)
+	Paoli/Thorndale Line:      63 (10.2%)
+	Trenton Line:              50 (8.1%)
+	Warminster Line:           54 (8.7%)
+	West Trenton Line:         42 (6.8%)
+	Wilmington/Newark Line:    42 (6.8%)
+	Total number of trains:    619
+Processing: trirail
+	Downtown Miami Link:    24 (30.8%)
+	MiamiCentral Express:   2 (2.6%)
+	Tri-Rail:               52 (66.7%)
+	Total number of trains: 78
+Processing: vre
+	Fredericksburg Line:    16 (50.0%)
+	Manassas Line:          16 (50.0%)
+	Total number of trains: 32
+Processing: mbta
+	Fairmount Line:                57 (10.9%)
+	Fitchburg Line:                38 (7.3%)
+	Framingham/Worcester Line:     55 (10.5%)
+	Franklin/Foxboro Line:         47 (9.0%)
+	Greenbush Line:                26 (5.0%)
+	Haverhill Line:                43 (8.2%)
+	Kingston Line:                 26 (5.0%)
+	Lowell Line:                   37 (7.1%)
+	Middleborough/Lakeville Line:  28 (5.3%)
+	Needham Line:                  34 (6.5%)
+	Newburyport/Rockport Line:     59 (11.3%)
+	Providence/Stoughton Line:     74 (14.1%)
+	Total number of trains:        524
+Processing: sunrail
+	SunRail:                40 (100.0%)
+	Total number of trains: 40
+Processing: amtrak
+	Acela:                                  27 (4.5%)
+	Adirondack:                             2 (0.3%)
+	Amtrak Cascades:                        14 (2.3%)
+	Amtrak Hartford Line:                   6 (1.0%)
+	Amtrak Thruway Connecting Service:      201 (33.5%)
+	Auto Train:                             2 (0.3%)
+	Blue Water:                             2 (0.3%)
+	Borealis:                               2 (0.3%)
+	California Zephyr:                      2 (0.3%)
+	Capitol Corridor:                       24 (4.0%)
+	Cardinal:                               1 (0.2%)
+	Carl Sandburg:                          2 (0.3%)
+	Carolinian:                             2 (0.3%)
+	City of New Orleans:                    2 (0.3%)
+	Coast Starlight:                        2 (0.3%)
+	Commuter Rail:                          88 (14.7%)
+	Crescent:                               2 (0.3%)
+	Downeaster:                             11 (1.8%)
+	Empire Builder:                         4 (0.7%)
+	Empire Service:                         16 (2.7%)
+	Ethan Allen Express:                    2 (0.3%)
+	Floridian:                              2 (0.3%)
+	Heartland Flyer:                        2 (0.3%)
+	Hiawatha Service:                       13 (2.2%)
+	Illini:                                 2 (0.3%)
+	Illinois Zephyr:                        2 (0.3%)
+	Keystone Service:                       27 (4.5%)
+	Lake Shore Limited:                     4 (0.7%)
+	Lincoln Service:                        6 (1.0%)
+	Lincoln Service Missouri River Runner:  2 (0.3%)
+	Maple Leaf:                             4 (0.7%)
+	Missouri River Runner:                  2 (0.3%)
+	Northeast Regional:                     46 (7.7%)
+	Pacific Surfliner:                      20 (3.3%)
+	Palmetto:                               2 (0.3%)
+	Pennsylvanian:                          2 (0.3%)
+	Pere Marquette:                         2 (0.3%)
+	Piedmont:                               8 (1.3%)
+	Saluki:                                 2 (0.3%)
+	San Joaquins:                           12 (2.0%)
+	Silver Meteor:                          2 (0.3%)
+	Southwest Chief:                        2 (0.3%)
+	Sunset Limited:                         1 (0.2%)
+	Texas Eagle:                            4 (0.7%)
+	Valley Flyer:                           7 (1.2%)
+	Vermonter:                              2 (0.3%)
+	Winter Park Express:                    2 (0.3%)
+	Wolverine:                              6 (1.0%)
+	Total number of trains:                 600
+Processing: sle
+	Commuter Rail:          20 (100.0%)
+	Total number of trains: 20
+Processing: hl
+	Hartford Line:          21 (100.0%)
+	Total number of trains: 21
+Processing: go
+	Barrie:                 32 (9.2%)
+	Kitchener:              70 (20.1%)
+	Lakeshore East:         83 (23.8%)
+	Lakeshore West:         100 (28.7%)
+	Milton:                 20 (5.7%)
+	Richmond Hill:          9 (2.6%)
+	Stouffville:            35 (10.0%)
+	Total number of trains: 349
+Processing: via
+	Air Connect:             1 (1.5%)
+	Jasper - Prince Rupert:  2 (3.0%)
+	Montréal - Halifax:      2 (3.0%)
+	Montréal - Senneterre:   1 (1.5%)
+	Montréal - Toronto:      12 (17.9%)
+	Ottawa - Montréal:       2 (3.0%)
+	Ottawa - Québec:         4 (6.0%)
+	Ottawa - Toronto:        20 (29.9%)
+	Québec - Fallowfield:    4 (6.0%)
+	Québec - Montréal:       2 (3.0%)
+	Sudbury - White River:   1 (1.5%)
+	The Pas - Churchill:     1 (1.5%)
+	Toronto - Kingston:      2 (3.0%)
+	Toronto - London:        2 (3.0%)
+	Toronto - Sarnia:        2 (3.0%)
+	Toronto - Windsor:       8 (11.9%)
+	Vancouver - Toronto:     1 (1.5%)
+	Total number of trains:  67
+Processing: rtd
+	A:                      146 (43.6%)
+	B:                      36 (10.7%)
+	G:                      81 (24.2%)
+	N:                      72 (21.5%)
+	Total number of trains: 335
+Execution time: 0.8506 seconds
+Data last updated: 2024-12-28 05:57:43.473012
