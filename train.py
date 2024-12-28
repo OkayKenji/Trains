@@ -54,7 +54,7 @@ def loadData(name_rail):
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
-    elif railroad == 'ace':
+    elif railroad == 'ace' or railroad == 'go':
         train_classification = 'trip_id'
     else:
         train_classification = 'trip_short_name'
@@ -114,7 +114,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl"]
+    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl"]
+    elements = ["go"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
@@ -125,9 +126,12 @@ def main():
         # get dates from user & finds the services that run that day
         listOfServices = getServices(calendar_dates, railroad, calendar)
 
+
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
+        print(listOfTrains.to_csv('e1.csv'))
         listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str'})
+        print(listOfTrains.to_csv('e.csv'))
         print("\tWait a while as we process the data...")
         reformated = reformat(stops, routes, listOfTrains, stop_times)
         reformated = sorted(reformated, key=lambda train: (isinstance( train[1].zfill(4), str),  train[1].zfill(4)))
@@ -148,6 +152,7 @@ def main():
 
         all_stops.columns = all_stops.columns.str.replace('Train ', '', regex=False)
         all_stops.columns = all_stops.columns.str.replace('CTrail ', '', regex=False)
+        all_stops.columns = all_stops.columns.str.replace( r"^\d{8}-[A-Za-z]{2}-", '', regex=True)
         all_stops.to_csv(f'./csv/{ele}.csv')
 
         print("\tWait a while as we format the data...")
