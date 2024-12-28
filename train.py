@@ -15,8 +15,7 @@ pd.set_option('mode.chained_assignment', None)
 def getServices(calendar_dates, railroad, calendar):
     calendar_dates = calendar_dates.astype({'date': 'str'})
     listOfServices = calendar_dates[calendar_dates.date == getDate()]
-
-    if not listOfServices.empty:
+    if not listOfServices.empty and not use_calendar:
         return listOfServices
     if use_calendar:
         date_object = datetime.strptime(getDate(), "%Y%m%d").date()
@@ -50,7 +49,7 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = railroad == 'septa' or railroad =='metrolink' or railroad == 'marc' or railroad == 'trirail' or railroad == 'sounder' or railroad == 'vre' or railroad == 'nicd' or railroad == "ace" or railroad == 'mbta' or railroad == 'sunrail' or railroad == 'amtrak' or "sle" or railroad == "hl"
+    use_calendar = (railroad == 'septa') or (railroad =='metrolink') or (railroad == 'marc') or (railroad == 'trirail') or (railroad == 'sounder') or (railroad == 'vre') or (railroad == 'nicd') or (railroad == "ace") or (railroad == 'mbta') or (railroad == 'sunrail') or (railroad == 'amtrak') or (railroad == "sle") or (railroad == "hl") or (railroad == "via")
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
@@ -115,17 +114,16 @@ def reformat(stops, routes, listOfTrains, stop_times):
 
 def main():
     # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl"]
-    elements = ["go"]
+    elements = ["via"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
 
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
-
         # get dates from user & finds the services that run that day
         listOfServices = getServices(calendar_dates, railroad, calendar)
-
+        print(listOfServices)
 
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
