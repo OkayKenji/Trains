@@ -49,11 +49,11 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = (railroad == 'septa') or (railroad =='metrolink') or (railroad == 'marc') or (railroad == 'trirail') or (railroad == 'sounder') or (railroad == 'vre') or (railroad == 'nicd') or (railroad == "ace") or (railroad == 'mbta') or (railroad == 'sunrail') or (railroad == 'amtrak') or (railroad == "sle") or (railroad == "hl") or (railroad == "via") or (railroad  == "RTD_Denver_Direct_Operated_Commuter_Rail_GTFS") or (railroad == "RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS")
+    use_calendar = (railroad == 'septa') or (railroad =='metrolink') or (railroad == 'marc') or (railroad == 'trirail') or (railroad == 'sounder') or (railroad == 'vre') or (railroad == 'nicd') or (railroad == "ace") or (railroad == 'mbta') or (railroad == 'sunrail') or (railroad == 'amtrak') or (railroad == "sle") or (railroad == "hl") or (railroad == "via") or (railroad  == "rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS") or (railroad == "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS")
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
-    elif railroad == 'ace' or railroad == 'go'or railroad == 'RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
+    elif railroad == 'ace' or railroad == 'go'or railroad == 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
         train_classification = 'trip_id'
     else:
         train_classification = 'trip_short_name'
@@ -75,7 +75,7 @@ def assign_station_names(row, stops):
     stop_name = stops.loc[stops['stop_id'] == row['stop_id'], 'stop_name']
     if not stop_name.empty:
         return stop_name.iloc[0]
-    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo' and railroad != 'mbta' and railroad != 'amtrak' and  railroad != 'RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' and railroad != 'RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
+    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo' and railroad != 'mbta' and railroad != 'amtrak' and  railroad != 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' and railroad != 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
         return None # give up
     stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: str(row['stop_id']) in ast.literal_eval(x)), 'stop_name']
 
@@ -110,12 +110,36 @@ def reformat(stops, routes, listOfTrains, stop_times):
         ])
     return reformated
 
+def rtd_exempt():
+    print("\tRTD Exception...")
+
+    with open('./json/datartd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS.json', 'r') as file1:
+        data1 = json.load(file1)
+
+    with open('./json/datartd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS.json', 'r') as file2:
+        data2 = json.load(file2)
+
+    arr = data1 + data2
+
+    pretty_json = json.dumps(arr)
+
+    with open(f'./json/datartd.json', 'w') as file:
+        file.write(pretty_json)
+    
 def main():
     # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via"]
-    elements = ["RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS"]
+    elements = ["rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
+
+        # RTD is a combination of two separate GTFS 
+        if ele == "rtd":
+            rtd_exempt()
+            local_end_time = time.time()
+            local_execution_time = local_end_time - local_start_time
+            print(f"\tLocal Execution time: {local_execution_time:.4f} seconds")
+            continue
 
         # prepare data
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
