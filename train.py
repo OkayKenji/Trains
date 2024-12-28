@@ -129,9 +129,7 @@ def main():
 
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
-        print(listOfTrains.to_csv('e1.csv'))
         listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str'})
-        print(listOfTrains.to_csv('e.csv'))
         print("\tWait a while as we process the data...")
         reformated = reformat(stops, routes, listOfTrains, stop_times)
         reformated = sorted(reformated, key=lambda train: (isinstance( train[1].zfill(4), str),  train[1].zfill(4)))
