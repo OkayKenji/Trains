@@ -69,7 +69,10 @@ def cvtRouteStringToNumber(routes, route_id):
     if route_name.empty == True:
         return None
     else:
-        return route_name.route_short_name.to_numpy()[0]
+        if ( railroad == 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS'):
+            return route_name.route_short_name.to_numpy()[0]
+        else:
+            return route_name.route_long_name.to_numpy()[0]
 
 def assign_station_names(row, stops):
     stop_name = stops.loc[stops['stop_id'] == row['stop_id'], 'stop_name']
@@ -127,8 +130,7 @@ def rtd_exempt():
         file.write(pretty_json)
     
 def main():
-    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via"]
-    elements = ["rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
@@ -148,7 +150,9 @@ def main():
 
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
-        stop_times = stop_times.astype( { 'trip_id': 'str'})
+
+        if ( railroad == 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS'):
+            stop_times = stop_times.astype( { 'trip_id': 'str'})
         listOfTrains = listOfTrains.astype({f'{train_classification}': 'str',
                                             'trip_headsign': 'str',
                                             f'{train_classification}': 'str', 'direction_id': 'str'})

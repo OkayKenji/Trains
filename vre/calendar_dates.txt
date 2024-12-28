@@ -1,8 +1,4 @@
 service_id,date,exception_type
-S Schedule post Christmas I,20241226,1
-Regular,20241226,2
-S Schedule post Christmas I,20241227,1
-Regular,20241227,2
 S Schedule post Christmas II,20241230,1
 Regular,20241230,2
 S Schedule post Christmas II,20241231,1
