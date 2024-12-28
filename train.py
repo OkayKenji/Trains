@@ -49,11 +49,11 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = (railroad == 'septa') or (railroad =='metrolink') or (railroad == 'marc') or (railroad == 'trirail') or (railroad == 'sounder') or (railroad == 'vre') or (railroad == 'nicd') or (railroad == "ace") or (railroad == 'mbta') or (railroad == 'sunrail') or (railroad == 'amtrak') or (railroad == "sle") or (railroad == "hl") or (railroad == "via")
+    use_calendar = (railroad == 'septa') or (railroad =='metrolink') or (railroad == 'marc') or (railroad == 'trirail') or (railroad == 'sounder') or (railroad == 'vre') or (railroad == 'nicd') or (railroad == "ace") or (railroad == 'mbta') or (railroad == 'sunrail') or (railroad == 'amtrak') or (railroad == "sle") or (railroad == "hl") or (railroad == "via") or (railroad  == "RTD_Denver_Direct_Operated_Commuter_Rail_GTFS") or (railroad == "RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS")
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
-    elif railroad == 'ace' or railroad == 'go':
+    elif railroad == 'ace' or railroad == 'go'or railroad == 'RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
         train_classification = 'trip_id'
     else:
         train_classification = 'trip_short_name'
@@ -69,16 +69,14 @@ def cvtRouteStringToNumber(routes, route_id):
     if route_name.empty == True:
         return None
     else:
-        return route_name.route_long_name.to_numpy()[0]
+        return route_name.route_short_name.to_numpy()[0]
 
 def assign_station_names(row, stops):
     stop_name = stops.loc[stops['stop_id'] == row['stop_id'], 'stop_name']
     if not stop_name.empty:
         return stop_name.iloc[0]
-    
-    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo' and railroad != 'mbta' and railroad != 'amtrak':
+    if railroad != 'marc' and railroad != 'vre' and railroad != 'exo' and railroad != 'mbta' and railroad != 'amtrak' and  railroad != 'RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' and railroad != 'RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
         return None # give up
-                              
     stop_name = stops.loc[stops['station_id_additional'].apply(lambda x: str(row['stop_id']) in ast.literal_eval(x)), 'stop_name']
 
     if not stop_name.empty:
@@ -95,15 +93,15 @@ def reformat(stops, routes, listOfTrains, stop_times):
     grouped = stop_times.groupby('trip_id')
 
     total_trains = len(grouped)
-    # print(total_trains)
     for i, (train, group) in enumerate(grouped):
         # if total_trains > 10 and i % (total_trains // 10) == 0:
         #     print(f'{(i / total_trains) * 100:.0f}%...')   
         group = group.drop(['trip_id', 'arrival_time'], axis=1)
+
         if group.empty:
             continue
         group['stop_name'] = group.apply(assign_station_names, axis=1, args=(stops,))
-        
+
         reformated.append([
             group.drop(['stop_id'], axis=1),
             listOfTrains.loc[listOfTrains.trip_id == train, train_classification].iloc[0],
@@ -113,8 +111,8 @@ def reformat(stops, routes, listOfTrains, stop_times):
     return reformated
 
 def main():
-    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl"]
-    elements = ["via"]
+    # elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via"]
+    elements = ["RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
@@ -123,13 +121,17 @@ def main():
         calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
         # get dates from user & finds the services that run that day
         listOfServices = getServices(calendar_dates, railroad, calendar)
-        print(listOfServices)
 
         # gets all of the trains that run that day
         listOfTrains = getTrains(listOfServices, trips)
-        listOfTrains = listOfTrains.astype({f'{train_classification}': 'str', 'trip_headsign': 'str', f'{train_classification}': 'str', 'direction_id': 'str'})
+        stop_times = stop_times.astype( { 'trip_id': 'str'})
+        listOfTrains = listOfTrains.astype({f'{train_classification}': 'str',
+                                            'trip_headsign': 'str',
+                                            f'{train_classification}': 'str', 'direction_id': 'str'})
         print("\tWait a while as we process the data...")
+
         reformated = reformat(stops, routes, listOfTrains, stop_times)
+
         reformated = sorted(reformated, key=lambda train: (isinstance( train[1].zfill(4), str),  train[1].zfill(4)))
         all_stops = stops.loc[:, ['stop_name']]
 
