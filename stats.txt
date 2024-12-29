@@ -1,13 +1,21 @@
 Processing: ace
 	ACE Train:              8 (100.0%)
 	Total number of trains: 8
+	Shortest Trip (stop # wise): 10 stops on ACE01
+	Longest Trip (stop # wise): 10 stops on ACE01
+	Shortest Trip (time wise): 132.0 minutes on ACE01
+	Longest Trip (time wise): 142.0 minutes on ACE02
 Processing: exo
 	11 - Vaudreuil/Hudson:    27 (26.2%)
-	12 - Saint-JÃ©rÃ´me:        28 (27.2%)
+	12 - Saint-Jérôme:        28 (27.2%)
 	13 - Mont-Saint-Hilaire:  14 (13.6%)
 	14 - Candiac:             18 (17.5%)
 	15 - Mascouche:           16 (15.5%)
 	Total number of trains:   103
+	Shortest Trip (stop # wise): 6 stops on 41
+	Longest Trip (stop # wise): 26 stops on 1202
+	Shortest Trip (time wise): 26.0 minutes on 41
+	Longest Trip (time wise): 110.0 minutes on 1202
 Processing: lirr
 	Babylon Branch:          150 (15.9%)
 	City Terminal Zone:      133 (14.1%)
@@ -21,11 +29,19 @@ Processing: lirr
 	Ronkonkoma Branch:       112 (11.9%)
 	West Hempstead Branch:   38 (4.0%)
 	Total number of trains:  945
+	Shortest Trip (stop # wise): 2 stops on 2306
+	Longest Trip (stop # wise): 18 stops on 2
+	Shortest Trip (time wise): 19.0 minutes on 2832
+	Longest Trip (time wise): 193.0 minutes on 7
 Processing: marc
 	BRUNSWICK - WASHINGTON:  19 (19.6%)
 	CAMDEN - WASHINGTON:     21 (21.6%)
 	PENN - WASHINGTON:       57 (58.8%)
 	Total number of trains:  97
+	Shortest Trip (stop # wise): 2 stops on 408
+	Longest Trip (stop # wise): 17 stops on 879
+	Shortest Trip (time wise): 16.0 minutes on 613
+	Longest Trip (time wise): 134.0 minutes on 875
 Processing: metrolink
 	Metrolink 91-Perris Valley Line:             14 (6.8%)
 	Metrolink Antelope Valley Line:              30 (14.6%)
@@ -35,6 +51,10 @@ Processing: metrolink
 	Metrolink San Bernardino Line:               86 (41.7%)
 	Metrolink Ventura County Line:               22 (10.7%)
 	Total number of trains:                      206
+	Shortest Trip (stop # wise): 5 stops on 302
+	Longest Trip (stop # wise): 15 stops on 803
+	Shortest Trip (time wise): 20.0 minutes on 3806
+	Longest Trip (time wise): 157.0 minutes on 824
 Processing: mnrr
 	Danbury:                26 (3.9%)
 	Harlem:                 208 (31.3%)
@@ -43,9 +63,17 @@ Processing: mnrr
 	New Haven:              211 (31.8%)
 	Waterbury:              24 (3.6%)
 	Total number of trains: 664
+	Shortest Trip (stop # wise): 4 stops on 507
+	Longest Trip (stop # wise): 30 stops on 699
+	Shortest Trip (time wise): 17.0 minutes on 1751
+	Longest Trip (time wise): 139.0 minutes on 1575
 Processing: nicd
 	South Shore Line:       59 (100.0%)
 	Total number of trains: 59
+	Shortest Trip (stop # wise): 2 stops on 400
+	Longest Trip (stop # wise): 16 stops on 11
+	Shortest Trip (time wise): 38.0 minutes on 400
+	Longest Trip (time wise): 124.0 minutes on 22
 Processing: njt
 	Atlantic City Rail Line:   24 (2.8%)
 	Gladstone Branch:          44 (5.1%)
@@ -62,6 +90,10 @@ Processing: njt
 	Raritan Valley Line:       52 (6.0%)
 	Riverline Light Rail:      23 (2.7%)
 	Total number of trains:    861
+	Shortest Trip (stop # wise): 2 stops on 4100
+	Longest Trip (stop # wise): 26 stops on 0067
+	Shortest Trip (time wise): 5.0 minutes on 4100
+	Longest Trip (time wise): 158.0 minutes on 0062
 Processing: septa
 	Airport Line:              78 (12.6%)
 	Chestnut Hill East Line:   40 (6.5%)
@@ -77,15 +109,27 @@ Processing: septa
 	West Trenton Line:         42 (6.8%)
 	Wilmington/Newark Line:    42 (6.8%)
 	Total number of trains:    619
+	Shortest Trip (stop # wise): 5 stops on 401
+	Longest Trip (stop # wise): 27 stops on 3526
+	Shortest Trip (time wise): 21.0 minutes on 1059
+	Longest Trip (time wise): 102.0 minutes on 514
 Processing: trirail
 	Downtown Miami Link:    24 (30.8%)
 	MiamiCentral Express:   2 (2.6%)
 	Tri-Rail:               52 (66.7%)
 	Total number of trains: 78
+	Shortest Trip (stop # wise): 2 stops on P305X
+	Longest Trip (stop # wise): 18 stops on P600
+	Shortest Trip (time wise): 20.0 minutes on P305X
+	Longest Trip (time wise): 120.0 minutes on P611
 Processing: vre
 	Fredericksburg Line:    16 (50.0%)
 	Manassas Line:          16 (50.0%)
 	Total number of trains: 32
+	Shortest Trip (stop # wise): 4 stops on 321
+	Longest Trip (stop # wise): 13 stops on 301
+	Shortest Trip (time wise): 72.0 minutes on 321
+	Longest Trip (time wise): 107.0 minutes on 301
 Processing: mbta
 	Fairmount Line:                57 (10.9%)
 	Fitchburg Line:                38 (7.3%)
@@ -100,9 +144,17 @@ Processing: mbta
 	Newburyport/Rockport Line:     59 (11.3%)
 	Providence/Stoughton Line:     74 (14.1%)
 	Total number of trains:        524
+	Shortest Trip (stop # wise): 5 stops on 204
+	Longest Trip (stop # wise): 19 stops on 732
+	Shortest Trip (time wise): 26.0 minutes on 633
+	Longest Trip (time wise): 118.0 minutes on 801
 Processing: sunrail
 	SunRail:                40 (100.0%)
 	Total number of trains: 40
+	Shortest Trip (stop # wise): 15 stops on P301
+	Longest Trip (stop # wise): 17 stops on P302
+	Shortest Trip (time wise): 82.0 minutes on P301
+	Longest Trip (time wise): 118.0 minutes on P337
 Processing: amtrak
 	Acela:                                  27 (4.5%)
 	Adirondack:                             2 (0.3%)
@@ -153,12 +205,24 @@ Processing: amtrak
 	Winter Park Express:                    2 (0.3%)
 	Wolverine:                              6 (1.0%)
 	Total number of trains:                 600
+	Shortest Trip (stop # wise): 2 stops on 52
+	Longest Trip (stop # wise): 46 stops on 40
+	Shortest Trip (time wise): 10.0 minutes on 3768
+	Longest Trip (time wise): 3943.0 minutes on 421
 Processing: sle
 	Commuter Rail:          20 (100.0%)
 	Total number of trains: 20
+	Shortest Trip (stop # wise): 7 stops on 1691
+	Longest Trip (stop # wise): 9 stops on 1600
+	Shortest Trip (time wise): 62.0 minutes on 1637
+	Longest Trip (time wise): 72.0 minutes on 1634
 Processing: hl
 	Hartford Line:          21 (100.0%)
 	Total number of trains: 21
+	Shortest Trip (stop # wise): 6 stops on 4450
+	Longest Trip (stop # wise): 9 stops on 4400
+	Shortest Trip (time wise): 52.0 minutes on 4450
+	Longest Trip (time wise): 96.0 minutes on 4466
 Processing: go
 	Barrie:                 32 (9.2%)
 	Kitchener:              70 (20.1%)
@@ -168,17 +232,21 @@ Processing: go
 	Richmond Hill:          9 (2.6%)
 	Stouffville:            35 (10.0%)
 	Total number of trains: 349
+	Shortest Trip (stop # wise): 5 stops on 3009
+	Longest Trip (stop # wise): 12 stops on 3812
+	Shortest Trip (time wise): 35.0 minutes on 3328
+	Longest Trip (time wise): 157.0 minutes on 1977
 Processing: via
 	Air Connect:             1 (1.5%)
 	Jasper - Prince Rupert:  2 (3.0%)
-	MontrÃ©al - Halifax:      2 (3.0%)
-	MontrÃ©al - Senneterre:   1 (1.5%)
-	MontrÃ©al - Toronto:      12 (17.9%)
-	Ottawa - MontrÃ©al:       2 (3.0%)
-	Ottawa - QuÃ©bec:         4 (6.0%)
+	Montréal - Halifax:      2 (3.0%)
+	Montréal - Senneterre:   1 (1.5%)
+	Montréal - Toronto:      12 (17.9%)
+	Ottawa - Montréal:       2 (3.0%)
+	Ottawa - Québec:         4 (6.0%)
 	Ottawa - Toronto:        20 (29.9%)
-	QuÃ©bec - Fallowfield:    4 (6.0%)
-	QuÃ©bec - MontrÃ©al:       2 (3.0%)
+	Québec - Fallowfield:    4 (6.0%)
+	Québec - Montréal:       2 (3.0%)
 	Sudbury - White River:   1 (1.5%)
 	The Pas - Churchill:     1 (1.5%)
 	Toronto - Kingston:      2 (3.0%)
@@ -187,11 +255,19 @@ Processing: via
 	Toronto - Windsor:       8 (11.9%)
 	Vancouver - Toronto:     1 (1.5%)
 	Total number of trains:  67
+	Shortest Trip (stop # wise): 2 stops on nan
+	Longest Trip (stop # wise): 67 stops on 2
+	Shortest Trip (time wise): 10.0 minutes on nan
+	Longest Trip (time wise): 5549.0 minutes on 2
 Processing: rtd
 	A:                      146 (43.6%)
 	B:                      36 (10.7%)
 	G:                      81 (24.2%)
 	N:                      72 (21.5%)
 	Total number of trains: 335
-Execution time: 0.7787 seconds
-Data last updated: 2024-12-28 11:02:10.821583
+	Shortest Trip (stop # wise): 4 stops on 115056971
+	Longest Trip (stop # wise): 8 stops on 115056970
+	Shortest Trip (time wise): 15.0 minutes on 115056971
+	Longest Trip (time wise): 37.0 minutes on 115068805
+Execution time: 29.4199 seconds
+Data last updated: 2024-12-29 01:51:49.349942
