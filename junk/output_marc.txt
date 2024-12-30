@@ -1,0 +1,212 @@
+Processing element: marc
+116480 1/42
+Total Est. Distance: 118.04 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99897.74%
+
+116481 2/42
+Total Est. Distance: 78.84 kilometers
+Total Given Distance: 0.08 kilometers
+%error: 99901.17%
+
+116482 3/42
+Total Est. Distance: 89.98 kilometers
+Total Given Distance: 0.09 kilometers
+%error: 99899.67%
+
+116483 4/42
+Total Est. Distance: 89.98 kilometers
+Total Given Distance: 0.09 kilometers
+%error: 99899.67%
+
+116484 5/42
+Total Est. Distance: 89.98 kilometers
+Total Given Distance: 0.09 kilometers
+%error: 99899.67%
+
+116485 6/42
+Total Est. Distance: 118.04 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99897.74%
+
+116486 7/42
+Total Est. Distance: 118.04 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99897.74%
+
+116488 8/42
+Total Est. Distance: 78.84 kilometers
+Total Given Distance: 0.08 kilometers
+%error: 99901.17%
+
+116489 9/42
+Total Est. Distance: 118.04 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99897.74%
+
+116492 10/42
+Total Est. Distance: 18.33 kilometers
+Total Given Distance: 0.02 kilometers
+%error: 99890.91%
+
+116497 11/42
+Total Est. Distance: 82.71 kilometers
+Total Given Distance: 0.08 kilometers
+%error: 99840.40%
+
+116498 12/42
+Total Est. Distance: 82.76 kilometers
+Total Given Distance: 0.08 kilometers
+%error: 99899.03%
+
+116499 13/42
+Total Est. Distance: 58.34 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99899.63%
+
+116504 14/42
+Total Est. Distance: 122.73 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99856.21%
+
+116513 15/42
+Total Est. Distance: 64.40 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99784.67%
+
+116542 16/42
+Total Est. Distance: 82.71 kilometers
+Total Given Distance: 0.08 kilometers
+%error: 99840.41%
+
+116543 17/42
+Total Est. Distance: 58.34 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99899.63%
+
+116549 18/42
+Total Est. Distance: 122.73 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99856.21%
+
+116564 19/42
+Total Est. Distance: 64.43 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99845.34%
+
+116566 20/42
+Total Est. Distance: 64.43 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99845.34%
+
+116576 21/42
+Total Est. Distance: 64.40 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99784.67%
+
+116579 22/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116580 23/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116581 24/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116582 25/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116583 26/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116584 27/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116585 28/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116586 29/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116588 30/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116589 31/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116592 32/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116593 33/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116595 34/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116598 35/42
+Total Est. Distance: 59.12 kilometers
+Total Given Distance: 0.06 kilometers
+%error: 99891.57%
+
+116473 36/42
+Total Est. Distance: 89.98 kilometers
+Total Given Distance: 0.09 kilometers
+%error: 99899.67%
+
+116474 37/42
+Total Est. Distance: 89.98 kilometers
+Total Given Distance: 0.09 kilometers
+%error: 99899.67%
+
+116475 38/42
+Total Est. Distance: 89.98 kilometers
+Total Given Distance: 0.09 kilometers
+%error: 99899.67%
+
+116476 39/42
+Total Est. Distance: 78.84 kilometers
+Total Given Distance: 0.08 kilometers
+%error: 99901.17%
+
+116477 40/42
+Total Est. Distance: 118.04 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99897.74%
+
+116478 41/42
+Total Est. Distance: 78.84 kilometers
+Total Given Distance: 0.08 kilometers
+%error: 99901.17%
+
+116479 42/42
+Total Est. Distance: 118.04 kilometers
+Total Given Distance: 0.12 kilometers
+%error: 99897.74%
+
+

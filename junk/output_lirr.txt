@@ -1,0 +1,392 @@
+Processing element: lirr
+4687B150 1/130
+Total Est. Distance: 118.52 kilometers
+
+CE41583F 2/130
+Total Est. Distance: 72.20 kilometers
+
+4FA72919 3/130
+Total Est. Distance: 72.10 kilometers
+
+2C29C908 4/130
+Total Est. Distance: 100.32 kilometers
+
+C85CC273W 5/130
+Total Est. Distance: 59.24 kilometers
+
+0D7A627BW 6/130
+Total Est. Distance: 34.68 kilometers
+
+E1F5E47F 7/130
+Total Est. Distance: 46.37 kilometers
+
+BBA47E8E 8/130
+Total Est. Distance: 34.21 kilometers
+
+3AF9F7BC 9/130
+Total Est. Distance: 33.76 kilometers
+
+2CFE6B24W 10/130
+Total Est. Distance: 52.82 kilometers
+
+68EA9362 11/130
+Total Est. Distance: 45.70 kilometers
+
+C5955902 12/130
+Total Est. Distance: 81.25 kilometers
+
+1B63AE37 13/130
+Total Est. Distance: 47.65 kilometers
+
+A6CFAE20 14/130
+Total Est. Distance: 34.88 kilometers
+
+4F768E3B 15/130
+Total Est. Distance: 117.37 kilometers
+
+09646F9B 16/130
+Total Est. Distance: 25.22 kilometers
+
+42243F91 17/130
+Total Est. Distance: 39.99 kilometers
+
+6663602C 18/130
+Total Est. Distance: 24.45 kilometers
+
+6167D1C4 19/130
+Total Est. Distance: 185.63 kilometers
+
+7A51E605 20/130
+Total Est. Distance: 27.73 kilometers
+
+DE60969A 21/130
+Total Est. Distance: 31.21 kilometers
+
+9D7E0462W 22/130
+Total Est. Distance: 48.68 kilometers
+
+5AA7B37AW 23/130
+Total Est. Distance: 51.88 kilometers
+
+54C9D02AW 24/130
+Total Est. Distance: 73.56 kilometers
+
+701CC182 25/130
+Total Est. Distance: 40.93 kilometers
+
+EBC24828W 26/130
+Total Est. Distance: 36.32 kilometers
+
+6B58EDF0 27/130
+Total Est. Distance: 80.59 kilometers
+
+A8F61878W 28/130
+Total Est. Distance: 62.46 kilometers
+
+42243F91W 29/130
+Total Est. Distance: 39.99 kilometers
+
+C45C3C8FW 30/130
+Total Est. Distance: 36.98 kilometers
+
+6F8FDD4AW 31/130
+Total Est. Distance: 31.97 kilometers
+
+9AE1B4A5 32/130
+Total Est. Distance: 39.53 kilometers
+
+5D287D06 33/130
+Total Est. Distance: 189.83 kilometers
+
+91BE652DW 34/130
+Total Est. Distance: 59.04 kilometers
+
+C85CC273 35/130
+Total Est. Distance: 59.24 kilometers
+
+6663602CW 36/130
+Total Est. Distance: 24.45 kilometers
+
+8BBA541AW 37/130
+Total Est. Distance: 51.81 kilometers
+
+EB92ADDEW 38/130
+Total Est. Distance: 71.24 kilometers
+
+DCCDE88C 39/130
+Total Est. Distance: 91.45 kilometers
+
+901F9009 40/130
+Total Est. Distance: 52.69 kilometers
+
+830EA221W 41/130
+Total Est. Distance: 39.30 kilometers
+
+76789C63 42/130
+Total Est. Distance: 14.86 kilometers
+
+84C8040BW 43/130
+Total Est. Distance: 35.96 kilometers
+
+03FFAF24W 44/130
+Total Est. Distance: 171.63 kilometers
+
+C45C3C8F 45/130
+Total Est. Distance: 36.98 kilometers
+
+119ED8FB 46/130
+Total Est. Distance: 58.38 kilometers
+
+1CDF3AB7 47/130
+Total Est. Distance: 87.05 kilometers
+
+E1F5E47FW 48/130
+Total Est. Distance: 46.37 kilometers
+
+76789C63W 49/130
+Total Est. Distance: 14.86 kilometers
+
+724A9954W 50/130
+Total Est. Distance: 49.12 kilometers
+
+38E56A97W 51/130
+Total Est. Distance: 29.38 kilometers
+
+857C5943W 52/130
+Total Est. Distance: 55.82 kilometers
+
+4687B150W 53/130
+Total Est. Distance: 118.52 kilometers
+
+FBDED0B3 54/130
+Total Est. Distance: 37.96 kilometers
+
+FBDED0B3W 55/130
+Total Est. Distance: 37.96 kilometers
+
+A1D86BDA 56/130
+Total Est. Distance: 95.65 kilometers
+
+9D7E0462 57/130
+Total Est. Distance: 48.68 kilometers
+
+6503B9AB 58/130
+Total Est. Distance: 77.54 kilometers
+
+DECD0CE9 59/130
+Total Est. Distance: 36.54 kilometers
+
+09646F9BW 60/130
+Total Est. Distance: 25.22 kilometers
+
+077BA7EAW 61/130
+Total Est. Distance: 147.23 kilometers
+
+2C29C908W 62/130
+Total Est. Distance: 100.32 kilometers
+
+1C9177A1W 63/130
+Total Est. Distance: 36.80 kilometers
+
+E1567DD0W 64/130
+Total Est. Distance: 186.58 kilometers
+
+4BEEF5BFW 65/130
+Total Est. Distance: 31.65 kilometers
+
+4BD1FCF2 66/130
+Total Est. Distance: 36.74 kilometers
+
+436E0248 67/130
+Total Est. Distance: 18.04 kilometers
+
+DF79570E 68/130
+Total Est. Distance: 56.07 kilometers
+
+724A9954 69/130
+Total Est. Distance: 49.12 kilometers
+
+DE60969AW 70/130
+Total Est. Distance: 31.21 kilometers
+
+C47E4DA6W 71/130
+Total Est. Distance: 55.96 kilometers
+
+D895985A 72/130
+Total Est. Distance: 35.69 kilometers
+
+2CFE6B24 73/130
+Total Est. Distance: 52.82 kilometers
+
+DE591684W 74/130
+Total Est. Distance: 25.15 kilometers
+
+A1D86BDAW 75/130
+Total Est. Distance: 95.65 kilometers
+
+1EFB3B6DW 76/130
+Total Est. Distance: 40.63 kilometers
+
+C905AE44W 77/130
+Total Est. Distance: 18.83 kilometers
+
+DF671E6C 78/130
+Total Est. Distance: 61.36 kilometers
+
+DECD0CE9W 79/130
+Total Est. Distance: 36.54 kilometers
+
+4C209B4EW 80/130
+Total Est. Distance: 92.40 kilometers
+
+68EA9362W 81/130
+Total Est. Distance: 45.70 kilometers
+
+9048A345W 82/130
+Total Est. Distance: 37.79 kilometers
+
+C5955902W 83/130
+Total Est. Distance: 81.25 kilometers
+
+6B58EDF0W 84/130
+Total Est. Distance: 80.59 kilometers
+
+119ED8FBW 85/130
+Total Est. Distance: 58.38 kilometers
+
+4BEEF5BF 86/130
+Total Est. Distance: 31.65 kilometers
+
+A3EBB8CE 87/130
+Total Est. Distance: 36.36 kilometers
+
+5AA7B37A 88/130
+Total Est. Distance: 51.88 kilometers
+
+A8F61878 89/130
+Total Est. Distance: 62.46 kilometers
+
+DF79570EW 90/130
+Total Est. Distance: 56.07 kilometers
+
+5E489136 91/130
+Total Est. Distance: 17.38 kilometers
+
+EB92ADDE 92/130
+Total Est. Distance: 71.24 kilometers
+
+C815405FW 93/130
+Total Est. Distance: 78.03 kilometers
+
+3AF9F7BCW 94/130
+Total Est. Distance: 33.76 kilometers
+
+A6CFAE20W 95/130
+Total Est. Distance: 34.88 kilometers
+
+5556C818W 96/130
+Total Est. Distance: 34.57 kilometers
+
+CC742A90 97/130
+Total Est. Distance: 44.60 kilometers
+
+878A640B 98/130
+Total Est. Distance: 38.86 kilometers
+
+03FFAF24 99/130
+Total Est. Distance: 171.63 kilometers
+
+457A40DCW 100/130
+Total Est. Distance: 42.19 kilometers
+
+88D56B42 101/130
+Total Est. Distance: 61.80 kilometers
+
+7703FCECW 102/130
+Total Est. Distance: 33.13 kilometers
+
+BBA47E8EW 103/130
+Total Est. Distance: 34.21 kilometers
+
+1A411A78 104/130
+Total Est. Distance: 54.30 kilometers
+
+D895985AW 105/130
+Total Est. Distance: 35.69 kilometers
+
+88D56B42W 106/130
+Total Est. Distance: 61.80 kilometers
+
+A3EBB8CEW 107/130
+Total Est. Distance: 36.36 kilometers
+
+FAB78717W 108/130
+Total Est. Distance: 115.27 kilometers
+
+C905AE44 109/130
+Total Est. Distance: 18.83 kilometers
+
+901F9009W 110/130
+Total Est. Distance: 52.69 kilometers
+
+6F8FDD4A 111/130
+Total Est. Distance: 31.97 kilometers
+
+C47E4DA6 112/130
+Total Est. Distance: 55.96 kilometers
+
+DCCDE88CW 113/130
+Total Est. Distance: 91.45 kilometers
+
+77C0EF3AW 114/130
+Total Est. Distance: 36.30 kilometers
+
+4FA72919W 115/130
+Total Est. Distance: 72.10 kilometers
+
+EBC24828 116/130
+Total Est. Distance: 36.32 kilometers
+
+91BE652D 117/130
+Total Est. Distance: 59.04 kilometers
+
+1EFB3B6D 118/130
+Total Est. Distance: 40.63 kilometers
+
+4C209B4E 119/130
+Total Est. Distance: 92.40 kilometers
+
+3B0D077A 120/130
+Total Est. Distance: 34.24 kilometers
+
+9AE1B4A5W 121/130
+Total Est. Distance: 39.53 kilometers
+
+DF671E6CW 122/130
+Total Est. Distance: 61.36 kilometers
+
+54C9D02A 123/130
+Total Est. Distance: 73.56 kilometers
+
+0EA08BA1W 124/130
+Total Est. Distance: 45.26 kilometers
+
+280AD1DB 125/130
+Total Est. Distance: 52.91 kilometers
+
+7A51E605W 126/130
+Total Est. Distance: 27.73 kilometers
+
+878A640BW 127/130
+Total Est. Distance: 38.86 kilometers
+
+0EA08BA1 128/130
+Total Est. Distance: 45.26 kilometers
+
+87AEE1EDW 129/130
+Total Est. Distance: 42.85 kilometers
+
+6503B9ABW 130/130
+Total Est. Distance: 77.54 kilometers
+
+

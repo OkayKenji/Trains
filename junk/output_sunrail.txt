@@ -1,0 +1,12 @@
+Processing element: sunrail
+1 1/2
+Total Est. Distance: 97.59 kilometers
+Total Given Distance: nan kilometers
+%error: nan%
+
+2 2/2
+Total Est. Distance: 97.59 kilometers
+Total Given Distance: nan kilometers
+%error: nan%
+
+

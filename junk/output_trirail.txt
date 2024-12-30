@@ -1,0 +1,20 @@
+Processing element: trirail
+1 1/6
+Total Est. Distance: 114.35 kilometers
+
+2 2/6
+Total Est. Distance: 114.35 kilometers
+
+3 3/6
+Total Est. Distance: 14.31 kilometers
+
+4 4/6
+Total Est. Distance: 14.31 kilometers
+
+5 5/6
+Total Est. Distance: 117.53 kilometers
+
+6 6/6
+Total Est. Distance: 117.53 kilometers
+
+

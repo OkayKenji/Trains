@@ -22,7 +22,7 @@ def main():
 
     # List of patterns to match the files you want to delete
     patterns = [
-        '*/shapes.txt',
+        # '*/shapes.txt',
         '*/agency.txt',
         '*/fare*.txt',
         '*/feed_*.txt',

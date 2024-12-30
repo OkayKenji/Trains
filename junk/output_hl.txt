@@ -1,0 +1,167 @@
+Processing element: hl
+shp-HART-11 1/33
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
+
+shp-HART-07 2/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-17 3/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-14 4/33
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
+
+shp-HART-64 5/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-51 6/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-54 7/33
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-05 8/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-61 9/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-52 10/33
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-58 11/33
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-66 12/33
+Total Est. Distance: 76.33 kilometers
+Total Given Distance: 76.37 kilometers
+%error: -0.05%
+
+shp-HART-10 13/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-12 14/33
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
+
+shp-HART-08 15/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-59 16/33
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-02 17/33
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
+
+shp-HART-06 18/33
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
+
+shp-HART-04 19/33
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
+
+shp-HART-63 20/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-56 21/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-72 22/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-55 23/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-60 24/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-57 25/33
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-13 26/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-09 27/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-01 28/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-65 29/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-21 30/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-53 31/33
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-62 32/33
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-03 33/33
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+

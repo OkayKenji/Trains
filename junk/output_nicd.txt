@@ -1,0 +1,8 @@
+Processing element: nicd
+south_shore_EB 1/2
+Total Est. Distance: 144.41 kilometers
+
+south_shore_WB 2/2
+Total Est. Distance: 144.41 kilometers
+
+

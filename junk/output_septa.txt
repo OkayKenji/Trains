@@ -1,0 +1,260 @@
+Processing element: septa
+406538 1/86
+Total Est. Distance: 58.99 kilometers
+
+7701 2/86
+Total Est. Distance: 57.60 kilometers
+
+511005 3/86
+Total Est. Distance: 23.09 kilometers
+
+7201 4/86
+Total Est. Distance: 66.57 kilometers
+
+7203 5/86
+Total Est. Distance: 47.15 kilometers
+
+7205 6/86
+Total Est. Distance: 31.73 kilometers
+
+6701 7/86
+Total Est. Distance: 54.09 kilometers
+
+531004 8/86
+Total Est. Distance: 41.43 kilometers
+
+531005 9/86
+Total Est. Distance: 40.18 kilometers
+
+5701 10/86
+Total Est. Distance: 53.25 kilometers
+
+701005 11/86
+Total Est. Distance: 53.25 kilometers
+
+701006 12/86
+Total Est. Distance: 54.09 kilometers
+
+701007 13/86
+Total Est. Distance: 57.60 kilometers
+
+5201 14/86
+Total Est. Distance: 62.21 kilometers
+
+5203 15/86
+Total Est. Distance: 42.79 kilometers
+
+5205 16/86
+Total Est. Distance: 27.37 kilometers
+
+5720 17/86
+Total Est. Distance: 18.20 kilometers
+
+5223 18/86
+Total Est. Distance: 18.21 kilometers
+
+5226 19/86
+Total Est. Distance: 28.69 kilometers
+
+5228 20/86
+Total Est. Distance: 30.14 kilometers
+
+401005 21/86
+Total Est. Distance: 15.15 kilometers
+
+401007 22/86
+Total Est. Distance: 19.50 kilometers
+
+4720 23/86
+Total Est. Distance: 19.45 kilometers
+
+7801 24/86
+Total Est. Distance: 23.33 kilometers
+
+7300 25/86
+Total Est. Distance: 33.44 kilometers
+
+720005 26/86
+Total Est. Distance: 18.20 kilometers
+
+7302 27/86
+Total Est. Distance: 26.76 kilometers
+
+4228 28/86
+Total Est. Distance: 31.39 kilometers
+
+228004 29/86
+Total Est. Distance: 31.39 kilometers
+
+228005 30/86
+Total Est. Distance: 30.14 kilometers
+
+5801 31/86
+Total Est. Distance: 18.98 kilometers
+
+505005 32/86
+Total Est. Distance: 34.48 kilometers
+
+505007 33/86
+Total Est. Distance: 38.86 kilometers
+
+5300 34/86
+Total Est. Distance: 29.09 kilometers
+
+5302 35/86
+Total Est. Distance: 22.41 kilometers
+
+5815 36/86
+Total Est. Distance: 18.89 kilometers
+
+5323 37/86
+Total Est. Distance: 34.96 kilometers
+
+205005 38/86
+Total Est. Distance: 27.37 kilometers
+
+4815 39/86
+Total Est. Distance: 20.14 kilometers
+
+5327 40/86
+Total Est. Distance: 53.37 kilometers
+
+205007 41/86
+Total Est. Distance: 31.73 kilometers
+
+226004 42/86
+Total Est. Distance: 29.94 kilometers
+
+226005 43/86
+Total Est. Distance: 28.69 kilometers
+
+4327 44/86
+Total Est. Distance: 54.62 kilometers
+
+417004 45/86
+Total Est. Distance: 34.55 kilometers
+
+801005 46/86
+Total Est. Distance: 18.98 kilometers
+
+417005 47/86
+Total Est. Distance: 33.30 kilometers
+
+801007 48/86
+Total Est. Distance: 23.33 kilometers
+
+203005 49/86
+Total Est. Distance: 42.79 kilometers
+
+203007 50/86
+Total Est. Distance: 47.15 kilometers
+
+501005 51/86
+Total Est. Distance: 56.63 kilometers
+
+501007 52/86
+Total Est. Distance: 61.00 kilometers
+
+5401 53/86
+Total Est. Distance: 15.15 kilometers
+
+223005 54/86
+Total Est. Distance: 18.21 kilometers
+
+5411 55/86
+Total Est. Distance: 20.07 kilometers
+
+538406 56/86
+Total Est. Distance: 58.99 kilometers
+
+5417 57/86
+Total Est. Distance: 33.30 kilometers
+
+201005 58/86
+Total Est. Distance: 62.21 kilometers
+
+201007 59/86
+Total Est. Distance: 66.57 kilometers
+
+4411 60/86
+Total Est. Distance: 21.32 kilometers
+
+4417 61/86
+Total Est. Distance: 34.55 kilometers
+
+7501 62/86
+Total Est. Distance: 61.00 kilometers
+
+7505 63/86
+Total Est. Distance: 38.86 kilometers
+
+327004 64/86
+Total Est. Distance: 54.62 kilometers
+
+327005 65/86
+Total Est. Distance: 53.37 kilometers
+
+411004 66/86
+Total Est. Distance: 21.32 kilometers
+
+411005 67/86
+Total Est. Distance: 20.07 kilometers
+
+5501 68/86
+Total Est. Distance: 56.63 kilometers
+
+5505 69/86
+Total Est. Distance: 34.48 kilometers
+
+5001 70/86
+Total Est. Distance: 9.59 kilometers
+
+5516 71/86
+Total Est. Distance: 16.15 kilometers
+
+538004 72/86
+Total Est. Distance: 57.53 kilometers
+
+538005 73/86
+Total Est. Distance: 56.28 kilometers
+
+5531 74/86
+Total Est. Distance: 40.18 kilometers
+
+815005 75/86
+Total Est. Distance: 18.89 kilometers
+
+5538 76/86
+Total Est. Distance: 56.28 kilometers
+
+516005 77/86
+Total Est. Distance: 16.15 kilometers
+
+4531 78/86
+Total Est. Distance: 41.43 kilometers
+
+302005 79/86
+Total Est. Distance: 22.41 kilometers
+
+4538 80/86
+Total Est. Distance: 57.53 kilometers
+
+323005 81/86
+Total Est. Distance: 34.96 kilometers
+
+531406 82/86
+Total Est. Distance: 42.88 kilometers
+
+407005 83/86
+Total Est. Distance: 12.21 kilometers
+
+300005 84/86
+Total Est. Distance: 29.09 kilometers
+
+300007 85/86
+Total Est. Distance: 33.44 kilometers
+
+1005 86/86
+Total Est. Distance: 9.59 kilometers
+
+

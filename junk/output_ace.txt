@@ -1,0 +1,12 @@
+Processing element: ace
+pv35 1/2
+Total Est. Distance: 138.16 kilometers
+Total Given Distance: 138.12 kilometers
+%error: 0.03%
+
+u32g 2/2
+Total Est. Distance: 137.23 kilometers
+Total Given Distance: 137.17 kilometers
+%error: 0.04%
+
+
