@@ -21,7 +21,7 @@ def linkedin(ele, output_file):
         total_distance = sum(distances)
 
         if 'shape_dist_traveled' in df.columns:
-            provided = sub_df['shape_dist_traveled'].max() / 1000
+            provided = sub_df['shape_dist_traveled'].max() 
 
         output_file.write(f"Total Est. Distance: {total_distance:.2f} kilometers\n")
         if 'shape_dist_traveled' in df.columns:
@@ -37,9 +37,9 @@ def fileWriter(ele):
         output_file.write("\n")  # Add a blank line after processing the element
 
 def main():
-    elements = ["ace", "exo", "lirr", "marc", "mnrr", "nicd", "njt", "septa", "trirail", "vre", "mbta", "sunrail", "sle", "amtrak", "hl", "go", "via"]
-    
-    max_threads = 4
+    # elements = ["ace", "exo", "lirr", "marc", "mnrr", "nicd", "njt", "septa", "trirail", "vre", "mbta", "sunrail", "sle", "amtrak", "hl", "go", "via"]
+    elements = ["exo"]
+    max_threads = 17
 
     with ThreadPoolExecutor(max_threads) as executor:
         futures = [executor.submit(fileWriter, ele) for ele in elements]

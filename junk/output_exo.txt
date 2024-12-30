@@ -1,197 +1,197 @@
 Processing element: exo
 60165 1/39
 Total Est. Distance: 40.08 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99885.39%
+Total Given Distance: 40.09 kilometers
+%error: -0.01%
 
 60166 2/39
 Total Est. Distance: 40.08 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99901.80%
+Total Given Distance: 40.08 kilometers
+%error: 0.00%
 
 40080 3/39
 Total Est. Distance: 43.64 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99879.76%
+Total Given Distance: 43.64 kilometers
+%error: -0.02%
 
 10385 4/39
 Total Est. Distance: 38.13 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99898.29%
+Total Given Distance: 38.13 kilometers
+%error: -0.00%
 
 10386 5/39
 Total Est. Distance: 38.13 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99893.47%
+Total Given Distance: 38.13 kilometers
+%error: -0.01%
 
 10387 6/39
 Total Est. Distance: 20.32 kilometers
-Total Given Distance: 0.02 kilometers
-%error: 99919.92%
+Total Given Distance: 20.32 kilometers
+%error: 0.02%
 
 10388 7/39
 Total Est. Distance: 38.12 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99894.09%
+Total Given Distance: 38.13 kilometers
+%error: -0.01%
 
 10389 8/39
 Total Est. Distance: 48.06 kilometers
-Total Given Distance: 0.05 kilometers
-%error: 99888.66%
+Total Given Distance: 48.07 kilometers
+%error: -0.01%
 
 10390 9/39
 Total Est. Distance: 38.12 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99897.29%
+Total Given Distance: 38.12 kilometers
+%error: -0.00%
 
 40082 10/39
 Total Est. Distance: 43.64 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99879.43%
+Total Given Distance: 43.65 kilometers
+%error: -0.02%
 
 10392 11/39
 Total Est. Distance: 48.07 kilometers
-Total Given Distance: 0.05 kilometers
-%error: 99892.35%
+Total Given Distance: 48.07 kilometers
+%error: -0.01%
 
 10393 12/39
 Total Est. Distance: 20.32 kilometers
-Total Given Distance: 0.02 kilometers
-%error: 99921.30%
+Total Given Distance: 20.32 kilometers
+%error: 0.02%
 
 40084 13/39
 Total Est. Distance: 35.72 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99882.35%
+Total Given Distance: 35.72 kilometers
+%error: -0.02%
 
 40085 14/39
 Total Est. Distance: 35.72 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99880.52%
+Total Given Distance: 35.73 kilometers
+%error: -0.02%
 
 50077 15/39
 Total Est. Distance: 25.85 kilometers
-Total Given Distance: 0.03 kilometers
-%error: 99903.98%
+Total Given Distance: 25.85 kilometers
+%error: 0.00%
 
 40107 16/39
 Total Est. Distance: 54.89 kilometers
-Total Given Distance: 0.05 kilometers
-%error: 99876.83%
+Total Given Distance: 54.90 kilometers
+%error: -0.02%
 
 40108 17/39
 Total Est. Distance: 54.89 kilometers
-Total Given Distance: 0.05 kilometers
-%error: 99875.35%
+Total Given Distance: 54.90 kilometers
+%error: -0.02%
 
 40110 18/39
 Total Est. Distance: 43.64 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99879.43%
+Total Given Distance: 43.65 kilometers
+%error: -0.02%
 
 60177 19/39
 Total Est. Distance: 63.82 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99886.67%
+Total Given Distance: 63.83 kilometers
+%error: -0.01%
 
 60178 20/39
 Total Est. Distance: 63.84 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99889.72%
+Total Given Distance: 63.84 kilometers
+%error: -0.01%
 
 10421 21/39
 Total Est. Distance: 41.57 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99893.53%
+Total Given Distance: 41.58 kilometers
+%error: -0.01%
 
 10422 22/39
 Total Est. Distance: 51.51 kilometers
-Total Given Distance: 0.05 kilometers
-%error: 99892.47%
+Total Given Distance: 51.52 kilometers
+%error: -0.01%
 
 10423 23/39
 Total Est. Distance: 41.57 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99895.55%
+Total Given Distance: 41.57 kilometers
+%error: -0.00%
 
 10424 24/39
 Total Est. Distance: 23.77 kilometers
-Total Given Distance: 0.02 kilometers
-%error: 99913.16%
+Total Given Distance: 23.77 kilometers
+%error: 0.01%
 
 10425 25/39
 Total Est. Distance: 41.57 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99891.82%
+Total Given Distance: 41.57 kilometers
+%error: -0.01%
 
 40117 26/39
 Total Est. Distance: 54.89 kilometers
-Total Given Distance: 0.05 kilometers
-%error: 99877.17%
+Total Given Distance: 54.90 kilometers
+%error: -0.02%
 
 40118 27/39
 Total Est. Distance: 43.64 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99879.76%
+Total Given Distance: 43.64 kilometers
+%error: -0.02%
 
 40134 28/39
 Total Est. Distance: 62.09 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99876.48%
+Total Given Distance: 62.10 kilometers
+%error: -0.02%
 
 40135 29/39
 Total Est. Distance: 62.09 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99874.59%
+Total Given Distance: 62.11 kilometers
+%error: -0.03%
 
 40136 30/39
 Total Est. Distance: 62.09 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99876.48%
+Total Given Distance: 62.10 kilometers
+%error: -0.02%
 
 30037 31/39
 Total Est. Distance: 34.64 kilometers
-Total Given Distance: 0.03 kilometers
-%error: 99869.07%
+Total Given Distance: 34.65 kilometers
+%error: -0.03%
 
 30038 32/39
 Total Est. Distance: 34.64 kilometers
-Total Given Distance: 0.03 kilometers
-%error: 99877.38%
+Total Given Distance: 34.65 kilometers
+%error: -0.02%
 
 10215 33/39
 Total Est. Distance: 41.57 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99891.82%
+Total Given Distance: 41.57 kilometers
+%error: -0.01%
 
 10217 34/39
 Total Est. Distance: 51.51 kilometers
-Total Given Distance: 0.05 kilometers
-%error: 99887.19%
+Total Given Distance: 51.51 kilometers
+%error: -0.01%
 
 50153 35/39
 Total Est. Distance: 22.41 kilometers
-Total Given Distance: 0.02 kilometers
-%error: 99905.95%
+Total Given Distance: 22.41 kilometers
+%error: 0.01%
 
 50154 36/39
 Total Est. Distance: 22.40 kilometers
-Total Given Distance: 0.02 kilometers
-%error: 99909.71%
+Total Given Distance: 22.40 kilometers
+%error: 0.01%
 
 10220 37/39
 Total Est. Distance: 23.76 kilometers
-Total Given Distance: 0.02 kilometers
-%error: 99912.20%
+Total Given Distance: 23.76 kilometers
+%error: 0.01%
 
 10221 38/39
 Total Est. Distance: 41.57 kilometers
-Total Given Distance: 0.04 kilometers
-%error: 99894.75%
+Total Given Distance: 41.57 kilometers
+%error: -0.01%
 
 50165 39/39
 Total Est. Distance: 25.85 kilometers
-Total Given Distance: 0.03 kilometers
-%error: 99900.51%
+Total Given Distance: 25.85 kilometers
+%error: 0.00%
 
 
