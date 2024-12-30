@@ -1,195 +1,195 @@
 Processing element: exo
-60165 1/39
+60165 1/39 - 15 - Mascouche
 Total Est. Distance: 40.08 kilometers
 Total Given Distance: 40.09 kilometers
 %error: -0.01%
 
-60166 2/39
+60166 2/39 - 15 - Mascouche
 Total Est. Distance: 40.08 kilometers
 Total Given Distance: 40.08 kilometers
 %error: 0.00%
 
-40080 3/39
+40080 3/39 - 12 - Saint-Jérôme
 Total Est. Distance: 43.64 kilometers
 Total Given Distance: 43.64 kilometers
 %error: -0.02%
 
-10385 4/39
+10385 4/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 38.13 kilometers
 Total Given Distance: 38.13 kilometers
 %error: -0.00%
 
-10386 5/39
+10386 5/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 38.13 kilometers
 Total Given Distance: 38.13 kilometers
 %error: -0.01%
 
-10387 6/39
+10387 6/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 20.32 kilometers
 Total Given Distance: 20.32 kilometers
 %error: 0.02%
 
-10388 7/39
+10388 7/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 38.12 kilometers
 Total Given Distance: 38.13 kilometers
 %error: -0.01%
 
-10389 8/39
+10389 8/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 48.06 kilometers
 Total Given Distance: 48.07 kilometers
 %error: -0.01%
 
-10390 9/39
+10390 9/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 38.12 kilometers
 Total Given Distance: 38.12 kilometers
 %error: -0.00%
 
-40082 10/39
+40082 10/39 - 12 - Saint-Jérôme
 Total Est. Distance: 43.64 kilometers
 Total Given Distance: 43.65 kilometers
 %error: -0.02%
 
-10392 11/39
+10392 11/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 48.07 kilometers
 Total Given Distance: 48.07 kilometers
 %error: -0.01%
 
-10393 12/39
+10393 12/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 20.32 kilometers
 Total Given Distance: 20.32 kilometers
 %error: 0.02%
 
-40084 13/39
+40084 13/39 - 12 - Saint-Jérôme
 Total Est. Distance: 35.72 kilometers
 Total Given Distance: 35.72 kilometers
 %error: -0.02%
 
-40085 14/39
+40085 14/39 - 12 - Saint-Jérôme
 Total Est. Distance: 35.72 kilometers
 Total Given Distance: 35.73 kilometers
 %error: -0.02%
 
-50077 15/39
+50077 15/39 - 14 - Candiac
 Total Est. Distance: 25.85 kilometers
 Total Given Distance: 25.85 kilometers
 %error: 0.00%
 
-40107 16/39
+40107 16/39 - 12 - Saint-Jérôme
 Total Est. Distance: 54.89 kilometers
 Total Given Distance: 54.90 kilometers
 %error: -0.02%
 
-40108 17/39
+40108 17/39 - 12 - Saint-Jérôme
 Total Est. Distance: 54.89 kilometers
 Total Given Distance: 54.90 kilometers
 %error: -0.02%
 
-40110 18/39
+40110 18/39 - 12 - Saint-Jérôme
 Total Est. Distance: 43.64 kilometers
 Total Given Distance: 43.65 kilometers
 %error: -0.02%
 
-60177 19/39
+60177 19/39 - 15 - Mascouche
 Total Est. Distance: 63.82 kilometers
 Total Given Distance: 63.83 kilometers
 %error: -0.01%
 
-60178 20/39
+60178 20/39 - 15 - Mascouche
 Total Est. Distance: 63.84 kilometers
 Total Given Distance: 63.84 kilometers
 %error: -0.01%
 
-10421 21/39
+10421 21/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 41.57 kilometers
 Total Given Distance: 41.58 kilometers
 %error: -0.01%
 
-10422 22/39
+10422 22/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 51.51 kilometers
 Total Given Distance: 51.52 kilometers
 %error: -0.01%
 
-10423 23/39
+10423 23/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 41.57 kilometers
 Total Given Distance: 41.57 kilometers
 %error: -0.00%
 
-10424 24/39
+10424 24/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 23.77 kilometers
 Total Given Distance: 23.77 kilometers
 %error: 0.01%
 
-10425 25/39
+10425 25/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 41.57 kilometers
 Total Given Distance: 41.57 kilometers
 %error: -0.01%
 
-40117 26/39
+40117 26/39 - 12 - Saint-Jérôme
 Total Est. Distance: 54.89 kilometers
 Total Given Distance: 54.90 kilometers
 %error: -0.02%
 
-40118 27/39
+40118 27/39 - 12 - Saint-Jérôme
 Total Est. Distance: 43.64 kilometers
 Total Given Distance: 43.64 kilometers
 %error: -0.02%
 
-40134 28/39
+40134 28/39 - 12 - Saint-Jérôme
 Total Est. Distance: 62.09 kilometers
 Total Given Distance: 62.10 kilometers
 %error: -0.02%
 
-40135 29/39
+40135 29/39 - 12 - Saint-Jérôme
 Total Est. Distance: 62.09 kilometers
 Total Given Distance: 62.11 kilometers
 %error: -0.03%
 
-40136 30/39
+40136 30/39 - 12 - Saint-Jérôme
 Total Est. Distance: 62.09 kilometers
 Total Given Distance: 62.10 kilometers
 %error: -0.02%
 
-30037 31/39
+30037 31/39 - 13 - Mont-Saint-Hilaire
 Total Est. Distance: 34.64 kilometers
 Total Given Distance: 34.65 kilometers
 %error: -0.03%
 
-30038 32/39
+30038 32/39 - 13 - Mont-Saint-Hilaire
 Total Est. Distance: 34.64 kilometers
 Total Given Distance: 34.65 kilometers
 %error: -0.02%
 
-10215 33/39
+10215 33/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 41.57 kilometers
 Total Given Distance: 41.57 kilometers
 %error: -0.01%
 
-10217 34/39
+10217 34/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 51.51 kilometers
 Total Given Distance: 51.51 kilometers
 %error: -0.01%
 
-50153 35/39
+50153 35/39 - 14 - Candiac
 Total Est. Distance: 22.41 kilometers
 Total Given Distance: 22.41 kilometers
 %error: 0.01%
 
-50154 36/39
+50154 36/39 - 14 - Candiac
 Total Est. Distance: 22.40 kilometers
 Total Given Distance: 22.40 kilometers
 %error: 0.01%
 
-10220 37/39
+10220 37/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 23.76 kilometers
 Total Given Distance: 23.76 kilometers
 %error: 0.01%
 
-10221 38/39
+10221 38/39 - 11 - Vaudreuil/Hudson
 Total Est. Distance: 41.57 kilometers
 Total Given Distance: 41.57 kilometers
 %error: -0.01%
 
-50165 39/39
+50165 39/39 - 14 - Candiac
 Total Est. Distance: 25.85 kilometers
 Total Given Distance: 25.85 kilometers
 %error: 0.00%

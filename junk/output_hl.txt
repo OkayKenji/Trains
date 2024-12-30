@@ -1,167 +1,167 @@
 Processing element: hl
-shp-HART-60 1/33
+shp-HART-09 1/33 - Hartford Line
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-62 2/33 - Hartford Line
 Total Est. Distance: 99.83 kilometers
 Total Given Distance: 99.88 kilometers
 %error: -0.05%
 
-shp-HART-11 2/33
+shp-HART-13 3/33 - Hartford Line
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-72 4/33 - Hartford Line
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-60 5/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-63 6/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-14 7/33 - Hartford Line
 Total Est. Distance: 59.01 kilometers
 Total Given Distance: 58.96 kilometers
 %error: 0.09%
 
-shp-HART-53 3/33
-Total Est. Distance: 59.00 kilometers
-Total Given Distance: 59.03 kilometers
-%error: -0.04%
+shp-HART-64 8/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
 
-shp-HART-66 4/33
+shp-HART-65 9/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-03 10/33 - Hartford Line
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-66 11/33 - Hartford Line
 Total Est. Distance: 76.33 kilometers
 Total Given Distance: 76.37 kilometers
 %error: -0.05%
 
-shp-HART-10 5/33
-Total Est. Distance: 99.85 kilometers
-Total Given Distance: 99.76 kilometers
-%error: 0.09%
-
-shp-HART-08 6/33
-Total Est. Distance: 99.85 kilometers
-Total Given Distance: 99.76 kilometers
-%error: 0.09%
-
-shp-HART-01 7/33
-Total Est. Distance: 99.85 kilometers
-Total Given Distance: 99.76 kilometers
-%error: 0.09%
-
-shp-HART-05 8/33
-Total Est. Distance: 99.85 kilometers
-Total Given Distance: 99.76 kilometers
-%error: 0.09%
-
-shp-HART-17 9/33
-Total Est. Distance: 99.85 kilometers
-Total Given Distance: 99.76 kilometers
-%error: 0.09%
-
-shp-HART-52 10/33
+shp-HART-54 12/33 - Hartford Line
 Total Est. Distance: 59.00 kilometers
 Total Given Distance: 59.03 kilometers
 %error: -0.04%
 
-shp-HART-07 11/33
-Total Est. Distance: 99.85 kilometers
-Total Given Distance: 99.76 kilometers
+shp-HART-11 13/33 - Hartford Line
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
 %error: 0.09%
 
-shp-HART-13 12/33
-Total Est. Distance: 99.85 kilometers
-Total Given Distance: 99.76 kilometers
-%error: 0.09%
-
-shp-HART-57 13/33
+shp-HART-57 14/33 - Hartford Line
 Total Est. Distance: 59.00 kilometers
 Total Given Distance: 59.03 kilometers
 %error: -0.04%
 
-shp-HART-58 14/33
-Total Est. Distance: 59.00 kilometers
-Total Given Distance: 59.03 kilometers
-%error: -0.04%
-
-shp-HART-54 15/33
-Total Est. Distance: 59.00 kilometers
-Total Given Distance: 59.03 kilometers
-%error: -0.04%
-
-shp-HART-55 16/33
+shp-HART-21 15/33 - Hartford Line
 Total Est. Distance: 99.83 kilometers
 Total Given Distance: 99.88 kilometers
 %error: -0.05%
 
-shp-HART-56 17/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
-
-shp-HART-02 18/33
+shp-HART-06 16/33 - Hartford Line
 Total Est. Distance: 59.01 kilometers
 Total Given Distance: 58.96 kilometers
 %error: 0.09%
 
-shp-HART-09 19/33
+shp-HART-04 17/33 - Hartford Line
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
+
+shp-HART-51 18/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-55 19/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-05 20/33 - Hartford Line
 Total Est. Distance: 99.85 kilometers
 Total Given Distance: 99.76 kilometers
 %error: 0.09%
 
-shp-HART-65 20/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
-
-shp-HART-51 21/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
-
-shp-HART-03 22/33
+shp-HART-17 21/33 - Hartford Line
 Total Est. Distance: 99.85 kilometers
 Total Given Distance: 99.76 kilometers
 %error: 0.09%
 
-shp-HART-06 23/33
-Total Est. Distance: 59.01 kilometers
-Total Given Distance: 58.96 kilometers
-%error: 0.09%
-
-shp-HART-21 24/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
-
-shp-HART-61 25/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
-
-shp-HART-72 26/33
+shp-HART-01 22/33 - Hartford Line
 Total Est. Distance: 99.85 kilometers
 Total Given Distance: 99.76 kilometers
 %error: 0.09%
 
-shp-HART-12 27/33
-Total Est. Distance: 59.01 kilometers
-Total Given Distance: 58.96 kilometers
-%error: 0.09%
-
-shp-HART-64 28/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
-
-shp-HART-14 29/33
-Total Est. Distance: 59.01 kilometers
-Total Given Distance: 58.96 kilometers
-%error: 0.09%
-
-shp-HART-59 30/33
+shp-HART-59 23/33 - Hartford Line
 Total Est. Distance: 59.00 kilometers
 Total Given Distance: 59.03 kilometers
 %error: -0.04%
 
-shp-HART-04 31/33
+shp-HART-08 24/33 - Hartford Line
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-61 25/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-07 26/33 - Hartford Line
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
+
+shp-HART-52 27/33 - Hartford Line
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-58 28/33 - Hartford Line
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-56 29/33 - Hartford Line
+Total Est. Distance: 99.83 kilometers
+Total Given Distance: 99.88 kilometers
+%error: -0.05%
+
+shp-HART-02 30/33 - Hartford Line
 Total Est. Distance: 59.01 kilometers
 Total Given Distance: 58.96 kilometers
 %error: 0.09%
 
-shp-HART-62 32/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
+shp-HART-10 31/33 - Hartford Line
+Total Est. Distance: 99.85 kilometers
+Total Given Distance: 99.76 kilometers
+%error: 0.09%
 
-shp-HART-63 33/33
-Total Est. Distance: 99.83 kilometers
-Total Given Distance: 99.88 kilometers
-%error: -0.05%
+shp-HART-53 32/33 - Hartford Line
+Total Est. Distance: 59.00 kilometers
+Total Given Distance: 59.03 kilometers
+%error: -0.04%
+
+shp-HART-12 33/33 - Hartford Line
+Total Est. Distance: 59.01 kilometers
+Total Given Distance: 58.96 kilometers
+%error: 0.09%
 
 

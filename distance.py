@@ -4,10 +4,24 @@ from concurrent.futures import ThreadPoolExecutor
 
 def linkedin(ele, output_file):
     df = pd.read_csv(f'./{ele}/shapes.txt')
+    df_trips = pd.read_csv(f'./{ele}/trips.txt')
+    df_routes = pd.read_csv(f'./{ele}/routes.txt')
+
     shapes = list(set(df['shape_id'].to_list()))
 
     for i, shape in enumerate(shapes):
-        output_file.write(f'{shape} {i+1}/{len(shapes)}\n')
+        df_trips_sub = df_trips[df_trips.shape_id.isin([shape])]
+        train_line = ''
+        if not df_trips_sub.empty:
+            route_to_look_for = df_trips_sub['route_id'].to_list()[0]
+            
+            first_occurrence_index = df_routes[df_routes['route_id'] == (route_to_look_for)].index[0]
+            
+            train_line = df_routes.loc[first_occurrence_index, 'route_long_name']
+
+
+
+        output_file.write(f'{shape} {i+1}/{len(shapes)} - {train_line}\n')
 
         sub_df = df[df.shape_id.isin([shape])]
         if 'shape_pt_sequence' in df.columns:
@@ -21,7 +35,12 @@ def linkedin(ele, output_file):
         total_distance = sum(distances)
 
         if 'shape_dist_traveled' in df.columns:
-            provided = sub_df['shape_dist_traveled'].max() 
+            if (ele == 'exo' or ele == 'marc' or ele == 'njt'):
+                provided = sub_df['shape_dist_traveled'].max() 
+            else:
+                provided = sub_df['shape_dist_traveled'].max() / 1000
+
+
 
         output_file.write(f"Total Est. Distance: {total_distance:.2f} kilometers\n")
         if 'shape_dist_traveled' in df.columns:
@@ -38,8 +57,8 @@ def fileWriter(ele):
 
 def main():
     # elements = ["ace", "exo", "lirr", "marc", "mnrr", "nicd", "njt", "septa", "trirail", "vre", "mbta", "sunrail", "sle", "amtrak", "hl", "go", "via"]
-    elements = ["exo"]
-    max_threads = 17
+    elements = ["marc","njt","sle","mbta"]
+    max_threads = 10
 
     with ThreadPoolExecutor(max_threads) as executor:
         futures = [executor.submit(fileWriter, ele) for ele in elements]

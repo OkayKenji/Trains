@@ -1,190 +1,190 @@
 Processing element: mnrr
-1 1/38
+1 1/38 - Hudson
 Total Est. Distance: 117.11 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-2 2/38
+2 2/38 - Hudson
 Total Est. Distance: 117.11 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-3 3/38
+3 3/38 - Harlem
 Total Est. Distance: 131.91 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-4 4/38
+4 4/38 - Harlem
 Total Est. Distance: 124.04 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-5 5/38
+5 5/38 - New Haven
 Total Est. Distance: 117.10 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-6 6/38
+6 6/38 - New Haven
 Total Est. Distance: 109.23 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-7 7/38
+7 7/38 - New Haven
 Total Est. Distance: 86.57 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-8 8/38
+8 8/38 - New Canaan
 Total Est. Distance: 65.78 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-10 9/38
+10 9/38 - Danbury
 Total Est. Distance: 103.95 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-11 10/38
+11 10/38 - Waterbury
 Total Est. Distance: 140.71 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-12 11/38
+12 11/38 - Hudson
 Total Est. Distance: 117.11 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-13 12/38
+13 12/38 - Hudson
 Total Est. Distance: 117.11 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-14 13/38
+14 13/38 - Harlem
 Total Est. Distance: 131.91 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-15 14/38
+15 14/38 - Harlem
 Total Est. Distance: 124.04 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-16 15/38
+16 15/38 - New Haven
 Total Est. Distance: 117.10 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-17 16/38
+17 16/38 - New Haven
 Total Est. Distance: 109.23 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-18 17/38
+18 17/38 - New Haven
 Total Est. Distance: 86.57 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-19 18/38
+19 18/38 - New Canaan
 Total Est. Distance: 65.78 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-21 19/38
+21 19/38 - Danbury
 Total Est. Distance: 103.95 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-22 20/38
+22 20/38 - Waterbury
 Total Est. Distance: 140.71 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-25 21/38
+25 21/38 - Waterbury
 Total Est. Distance: 1.09 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-26 22/38
+26 22/38 - Waterbury
 Total Est. Distance: 1.09 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-27 23/38
+27 23/38 - Waterbury
 Total Est. Distance: 0.00 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-28 24/38
+28 24/38 - Waterbury
 Total Est. Distance: 0.00 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-31 25/38
+31 25/38 - Waterbury
 Total Est. Distance: 0.00 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-32 26/38
+32 26/38 - Waterbury
 Total Est. Distance: 0.00 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-33 27/38
+33 27/38 - Waterbury
 Total Est. Distance: 98.38 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-34 28/38
+34 28/38 - Waterbury
 Total Est. Distance: 98.38 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-45 29/38
+45 29/38 - Waterbury
 Total Est. Distance: 112.24 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-46 30/38
+46 30/38 - Waterbury
 Total Est. Distance: 112.24 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-47 31/38
+47 31/38 - Waterbury
 Total Est. Distance: 78.84 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-48 32/38
+48 32/38 - Waterbury
 Total Est. Distance: 78.84 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-49 33/38
+49 33/38 - Waterbury
 Total Est. Distance: 63.61 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-50 34/38
+50 34/38 - Waterbury
 Total Est. Distance: 63.61 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-51 35/38
+51 35/38 - Waterbury
 Total Est. Distance: 45.35 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-52 36/38
+52 36/38 - Waterbury
 Total Est. Distance: 45.35 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-55 37/38
+55 37/38 - Waterbury
 Total Est. Distance: 6.64 kilometers
 Total Given Distance: nan kilometers
 %error: nan%
 
-56 38/38
+56 38/38 - Waterbury
 Total Est. Distance: 9.09 kilometers
 Total Given Distance: nan kilometers
 %error: nan%

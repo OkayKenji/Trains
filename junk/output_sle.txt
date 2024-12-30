@@ -1,443 +1,443 @@
 Processing element: sle
-3 1/147
+3 1/147 - 
 Total Est. Distance: 613.55 kilometers
 
-4 2/147
+4 2/147 - 
 Total Est. Distance: 613.59 kilometers
 
-5 3/147
+5 3/147 - 
 Total Est. Distance: 1376.63 kilometers
 
-6 4/147
+6 4/147 - 
 Total Est. Distance: 1385.48 kilometers
 
-17 5/147
+17 5/147 - 
 Total Est. Distance: 328.33 kilometers
 
-18 6/147
+18 6/147 - 
 Total Est. Distance: 328.33 kilometers
 
-19 7/147
+19 7/147 - 
 Total Est. Distance: 137.83 kilometers
 
-20 8/147
+20 8/147 - 
 Total Est. Distance: 137.83 kilometers
 
-21 9/147
+21 9/147 - 
 Total Est. Distance: 304.85 kilometers
 
-22 10/147
+22 10/147 - 
 Total Est. Distance: 164.19 kilometers
 
-23 11/147
+23 11/147 - 
 Total Est. Distance: 304.85 kilometers
 
-24 12/147
+24 12/147 - 
 Total Est. Distance: 145.46 kilometers
 
-25 13/147
+25 13/147 - 
 Total Est. Distance: 169.43 kilometers
 
-27 14/147
+27 14/147 - 
 Total Est. Distance: 284.71 kilometers
 
-28 15/147
+28 15/147 - 
 Total Est. Distance: 284.71 kilometers
 
-52 16/147
+52 16/147 - 
 Total Est. Distance: 489.85 kilometers
 
-53 17/147
+53 17/147 - 
 Total Est. Distance: 489.85 kilometers
 
-59 18/147
+59 18/147 - 
 Total Est. Distance: 54.85 kilometers
 
-60 19/147
+60 19/147 - 
 Total Est. Distance: 152.45 kilometers
 
-61 20/147
+61 20/147 - 
 Total Est. Distance: 149.19 kilometers
 
-63 21/147
+63 21/147 - 
 Total Est. Distance: 271.81 kilometers
 
-64 22/147
+64 22/147 - 
 Total Est. Distance: 217.49 kilometers
 
-69 23/147
+69 23/147 - 
 Total Est. Distance: 415.34 kilometers
 
-70 24/147
+70 24/147 - 
 Total Est. Distance: 415.34 kilometers
 
-73 25/147
+73 25/147 - 
 Total Est. Distance: 1499.00 kilometers
 
-74 26/147
+74 26/147 - 
 Total Est. Distance: 1499.00 kilometers
 
-84 27/147
+84 27/147 - 
 Total Est. Distance: 1023.49 kilometers
 
-90 28/147
+90 28/147 - 
 Total Est. Distance: 1023.48 kilometers
 
-101 29/147
+101 29/147 - 
 Total Est. Distance: 205.47 kilometers
 
-102 30/147
+102 30/147 - 
 Total Est. Distance: 205.47 kilometers
 
-103 31/147
+103 31/147 - 
 Total Est. Distance: 1332.64 kilometers
 
-104 32/147
+104 32/147 - 
 Total Est. Distance: 1332.64 kilometers
 
-105 33/147
+105 33/147 - 
 Total Est. Distance: 1324.21 kilometers
 
-106 34/147
+106 34/147 - 
 Total Est. Distance: 1207.20 kilometers
 
-107 35/147
+107 35/147 - 
 Total Est. Distance: 277.89 kilometers
 
-108 36/147
+108 36/147 - 
 Total Est. Distance: 277.87 kilometers
 
-109 37/147
+109 37/147 - 
 Total Est. Distance: 497.50 kilometers
 
-110 38/147
+110 38/147 - 
 Total Est. Distance: 497.72 kilometers
 
-113 39/147
+113 39/147 - 
 Total Est. Distance: 2229.72 kilometers
 
-114 40/147
+114 40/147 - 
 Total Est. Distance: 2229.81 kilometers
 
-115 41/147
+115 41/147 - 
 Total Est. Distance: 2427.45 kilometers
 
-116 42/147
+116 42/147 - 
 Total Est. Distance: 3980.02 kilometers
 
-118 43/147
+118 43/147 - 
 Total Est. Distance: 3592.32 kilometers
 
-121 44/147
+121 44/147 - 
 Total Est. Distance: 498.11 kilometers
 
-122 45/147
+122 45/147 - 
 Total Est. Distance: 497.82 kilometers
 
-125 46/147
+125 46/147 - 
 Total Est. Distance: 1638.31 kilometers
 
-126 47/147
+126 47/147 - 
 Total Est. Distance: 1638.31 kilometers
 
-127 48/147
+127 48/147 - 
 Total Est. Distance: 1544.02 kilometers
 
-128 49/147
+128 49/147 - 
 Total Est. Distance: 1543.98 kilometers
 
-134 50/147
+134 50/147 - 
 Total Est. Distance: 1379.40 kilometers
 
-135 51/147
+135 51/147 - 
 Total Est. Distance: 1379.42 kilometers
 
-146 52/147
+146 52/147 - 
 Total Est. Distance: 560.06 kilometers
 
-147 53/147
+147 53/147 - 
 Total Est. Distance: 356.81 kilometers
 
-148 54/147
+148 54/147 - 
 Total Est. Distance: 560.06 kilometers
 
-149 55/147
+149 55/147 - 
 Total Est. Distance: 384.03 kilometers
 
-151 56/147
+151 56/147 - 
 Total Est. Distance: 384.03 kilometers
 
-152 57/147
+152 57/147 - 
 Total Est. Distance: 231.88 kilometers
 
-153 58/147
+153 58/147 - 
 Total Est. Distance: 231.85 kilometers
 
-158 59/147
+158 59/147 - 
 Total Est. Distance: 718.61 kilometers
 
-173 60/147
+173 60/147 - 
 Total Est. Distance: 5403.61 kilometers
 
-174 61/147
+174 61/147 - 
 Total Est. Distance: 5403.99 kilometers
 
-177 62/147
+177 62/147 - 
 Total Est. Distance: 1129.56 kilometers
 
-178 63/147
+178 63/147 - 
 Total Est. Distance: 1129.46 kilometers
 
-184 64/147
+184 64/147 - 
 Total Est. Distance: 3541.21 kilometers
 
-186 65/147
+186 65/147 - 
 Total Est. Distance: 3540.99 kilometers
 
-187 66/147
+187 66/147 - 
 Total Est. Distance: 1838.55 kilometers
 
-188 67/147
+188 67/147 - 
 Total Est. Distance: 1838.56 kilometers
 
-190 68/147
+190 68/147 - 
 Total Est. Distance: 968.27 kilometers
 
-191 69/147
+191 69/147 - 
 Total Est. Distance: 968.27 kilometers
 
-193 70/147
+193 70/147 - 
 Total Est. Distance: 4379.46 kilometers
 
-195 71/147
+195 71/147 - 
 Total Est. Distance: 4382.27 kilometers
 
-198 72/147
+198 72/147 - 
 Total Est. Distance: 880.43 kilometers
 
-221 73/147
+221 73/147 - 
 Total Est. Distance: 507.55 kilometers
 
-222 74/147
+222 74/147 - 
 Total Est. Distance: 455.17 kilometers
 
-223 75/147
+223 75/147 - 
 Total Est. Distance: 507.74 kilometers
 
-224 76/147
+224 76/147 - 
 Total Est. Distance: 455.17 kilometers
 
-230 77/147
+230 77/147 - 
 Total Est. Distance: 215.02 kilometers
 
-237 78/147
+237 78/147 - 
 Total Est. Distance: 361.49 kilometers
 
-238 79/147
+238 79/147 - 
 Total Est. Distance: 1249.96 kilometers
 
-240 80/147
+240 80/147 - 
 Total Est. Distance: 1249.96 kilometers
 
-241 81/147
+241 81/147 - 
 Total Est. Distance: 3622.34 kilometers
 
-242 82/147
+242 82/147 - 
 Total Est. Distance: 2214.75 kilometers
 
-243 83/147
+243 83/147 - 
 Total Est. Distance: 3622.26 kilometers
 
-244 84/147
+244 84/147 - 
 Total Est. Distance: 2212.45 kilometers
 
-245 85/147
+245 85/147 - 
 Total Est. Distance: 226.82 kilometers
 
-248 86/147
+248 86/147 - 
 Total Est. Distance: 226.92 kilometers
 
-254 87/147
+254 87/147 - 
 Total Est. Distance: 460.87 kilometers
 
-255 88/147
+255 88/147 - 
 Total Est. Distance: 448.40 kilometers
 
-256 89/147
+256 89/147 - 
 Total Est. Distance: 460.87 kilometers
 
-257 90/147
+257 90/147 - 
 Total Est. Distance: 448.52 kilometers
 
-258 91/147
+258 91/147 - 
 Total Est. Distance: 581.88 kilometers
 
-259 92/147
+259 92/147 - 
 Total Est. Distance: 581.88 kilometers
 
-260 93/147
+260 93/147 - 
 Total Est. Distance: 734.33 kilometers
 
-264 94/147
+264 94/147 - 
 Total Est. Distance: 734.33 kilometers
 
-267 95/147
+267 95/147 - 
 Total Est. Distance: 361.49 kilometers
 
-269 96/147
+269 96/147 - 
 Total Est. Distance: 3207.14 kilometers
 
-270 97/147
+270 97/147 - 
 Total Est. Distance: 3591.45 kilometers
 
-271 98/147
+271 98/147 - 
 Total Est. Distance: 3207.07 kilometers
 
-272 99/147
+272 99/147 - 
 Total Est. Distance: 2099.14 kilometers
 
-274 100/147
+274 100/147 - 
 Total Est. Distance: 2094.38 kilometers
 
-279 101/147
+279 101/147 - 
 Total Est. Distance: 747.04 kilometers
 
-280 102/147
+280 102/147 - 
 Total Est. Distance: 747.20 kilometers
 
-289 103/147
+289 103/147 - 
 Total Est. Distance: 489.40 kilometers
 
-290 104/147
+290 104/147 - 
 Total Est. Distance: 290.56 kilometers
 
-291 105/147
+291 105/147 - 
 Total Est. Distance: 544.45 kilometers
 
-292 106/147
+292 106/147 - 
 Total Est. Distance: 489.42 kilometers
 
-293 107/147
+293 107/147 - 
 Total Est. Distance: 290.58 kilometers
 
-297 108/147
+297 108/147 - 
 Total Est. Distance: 259.55 kilometers
 
-313 109/147
+313 109/147 - 
 Total Est. Distance: 2209.07 kilometers
 
-314 110/147
+314 110/147 - 
 Total Est. Distance: 2209.07 kilometers
 
-315 111/147
+315 111/147 - 
 Total Est. Distance: 157.19 kilometers
 
-316 112/147
+316 112/147 - 
 Total Est. Distance: 157.11 kilometers
 
-317 113/147
+317 113/147 - 
 Total Est. Distance: 57.96 kilometers
 
-318 114/147
+318 114/147 - 
 Total Est. Distance: 99.80 kilometers
 
-319 115/147
+319 115/147 - 
 Total Est. Distance: 99.80 kilometers
 
-320 116/147
+320 116/147 - 
 Total Est. Distance: 58.02 kilometers
 
-324 117/147
+324 117/147 - 
 Total Est. Distance: 732.17 kilometers
 
-325 118/147
+325 118/147 - 
 Total Est. Distance: 370.75 kilometers
 
-326 119/147
+326 119/147 - 
 Total Est. Distance: 361.49 kilometers
 
-327 120/147
+327 120/147 - 
 Total Est. Distance: 732.24 kilometers
 
-328 121/147
+328 121/147 - 
 Total Est. Distance: 364.28 kilometers
 
-337 122/147
+337 122/147 - 
 Total Est. Distance: 660.25 kilometers
 
-338 123/147
+338 123/147 - 
 Total Est. Distance: 660.02 kilometers
 
-339 124/147
+339 124/147 - 
 Total Est. Distance: 722.41 kilometers
 
-340 125/147
+340 125/147 - 
 Total Est. Distance: 722.41 kilometers
 
-341 126/147
+341 126/147 - 
 Total Est. Distance: 1091.36 kilometers
 
-342 127/147
+342 127/147 - 
 Total Est. Distance: 1091.36 kilometers
 
-343 128/147
+343 128/147 - 
 Total Est. Distance: 1095.25 kilometers
 
-344 129/147
+344 129/147 - 
 Total Est. Distance: 2049.88 kilometers
 
-346 130/147
+346 130/147 - 
 Total Est. Distance: 871.39 kilometers
 
-348 131/147
+348 131/147 - 
 Total Est. Distance: 938.91 kilometers
 
-349 132/147
+349 132/147 - 
 Total Est. Distance: 718.61 kilometers
 
-350 133/147
+350 133/147 - 
 Total Est. Distance: 880.43 kilometers
 
-353 134/147
+353 134/147 - 
 Total Est. Distance: 921.55 kilometers
 
-354 135/147
+354 135/147 - 
 Total Est. Distance: 921.55 kilometers
 
-355 136/147
+355 136/147 - 
 Total Est. Distance: 518.26 kilometers
 
-356 137/147
+356 137/147 - 
 Total Est. Distance: 518.26 kilometers
 
-357 138/147
+357 138/147 - 
 Total Est. Distance: 271.81 kilometers
 
-370 139/147
+370 139/147 - 
 Total Est. Distance: 498.74 kilometers
 
-371 140/147
+371 140/147 - 
 Total Est. Distance: 498.74 kilometers
 
-372 141/147
+372 141/147 - 
 Total Est. Distance: 544.45 kilometers
 
-375 142/147
+375 142/147 - 
 Total Est. Distance: 250.46 kilometers
 
-376 143/147
+376 143/147 - 
 Total Est. Distance: 900.76 kilometers
 
-377 144/147
+377 144/147 - 
 Total Est. Distance: 900.76 kilometers
 
-381 145/147
+381 145/147 - 
 Total Est. Distance: 650.76 kilometers
 
-384 146/147
+384 146/147 - 
 Total Est. Distance: 4866.30 kilometers
 
-385 147/147
+385 147/147 - 
 Total Est. Distance: 3316.14 kilometers
 
 

@@ -1,212 +1,212 @@
 Processing element: marc
-116480 1/42
+116480 1/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 118.04 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99897.74%
+Total Given Distance: 118.04 kilometers
+%error: -0.00%
 
-116481 2/42
+116481 2/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 78.84 kilometers
-Total Given Distance: 0.08 kilometers
-%error: 99901.17%
+Total Given Distance: 78.84 kilometers
+%error: 0.00%
 
-116482 3/42
+116482 3/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 89.98 kilometers
-Total Given Distance: 0.09 kilometers
-%error: 99899.67%
+Total Given Distance: 89.98 kilometers
+%error: -0.00%
 
-116483 4/42
+116483 4/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 89.98 kilometers
-Total Given Distance: 0.09 kilometers
-%error: 99899.67%
+Total Given Distance: 89.98 kilometers
+%error: -0.00%
 
-116484 5/42
+116484 5/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 89.98 kilometers
-Total Given Distance: 0.09 kilometers
-%error: 99899.67%
+Total Given Distance: 89.98 kilometers
+%error: -0.00%
 
-116485 6/42
+116485 6/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 118.04 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99897.74%
+Total Given Distance: 118.04 kilometers
+%error: -0.00%
 
-116486 7/42
+116486 7/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 118.04 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99897.74%
+Total Given Distance: 118.04 kilometers
+%error: -0.00%
 
-116488 8/42
+116488 8/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 78.84 kilometers
-Total Given Distance: 0.08 kilometers
-%error: 99901.17%
+Total Given Distance: 78.84 kilometers
+%error: 0.00%
 
-116489 9/42
+116489 9/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 118.04 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99897.74%
+Total Given Distance: 118.04 kilometers
+%error: -0.00%
 
-116492 10/42
+116492 10/42 - PENN - WASHINGTON
 Total Est. Distance: 18.33 kilometers
-Total Given Distance: 0.02 kilometers
-%error: 99890.91%
+Total Given Distance: 18.33 kilometers
+%error: -0.01%
 
-116497 11/42
+116497 11/42 - PENN - WASHINGTON
 Total Est. Distance: 82.71 kilometers
-Total Given Distance: 0.08 kilometers
-%error: 99840.40%
+Total Given Distance: 82.76 kilometers
+%error: -0.06%
 
-116498 12/42
+116498 12/42 - 
 Total Est. Distance: 82.76 kilometers
-Total Given Distance: 0.08 kilometers
-%error: 99899.03%
+Total Given Distance: 82.76 kilometers
+%error: -0.00%
 
-116499 13/42
+116499 13/42 - PENN - WASHINGTON
 Total Est. Distance: 58.34 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99899.63%
+Total Given Distance: 58.34 kilometers
+%error: -0.00%
 
-116504 14/42
+116504 14/42 - PENN - WASHINGTON
 Total Est. Distance: 122.73 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99856.21%
+Total Given Distance: 122.78 kilometers
+%error: -0.04%
 
-116513 15/42
+116513 15/42 - PENN - WASHINGTON
 Total Est. Distance: 64.40 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99784.67%
+Total Given Distance: 64.47 kilometers
+%error: -0.12%
 
-116542 16/42
+116542 16/42 - PENN - WASHINGTON
 Total Est. Distance: 82.71 kilometers
-Total Given Distance: 0.08 kilometers
-%error: 99840.41%
+Total Given Distance: 82.76 kilometers
+%error: -0.06%
 
-116543 17/42
+116543 17/42 - PENN - WASHINGTON
 Total Est. Distance: 58.34 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99899.63%
+Total Given Distance: 58.34 kilometers
+%error: -0.00%
 
-116549 18/42
+116549 18/42 - PENN - WASHINGTON
 Total Est. Distance: 122.73 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99856.21%
+Total Given Distance: 122.78 kilometers
+%error: -0.04%
 
-116564 19/42
+116564 19/42 - 
 Total Est. Distance: 64.43 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99845.34%
+Total Given Distance: 64.47 kilometers
+%error: -0.05%
 
-116566 20/42
+116566 20/42 - 
 Total Est. Distance: 64.43 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99845.34%
+Total Given Distance: 64.47 kilometers
+%error: -0.05%
 
-116576 21/42
+116576 21/42 - PENN - WASHINGTON
 Total Est. Distance: 64.40 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99784.67%
+Total Given Distance: 64.47 kilometers
+%error: -0.12%
 
-116579 22/42
+116579 22/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116580 23/42
+116580 23/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116581 24/42
+116581 24/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116582 25/42
+116582 25/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116583 26/42
+116583 26/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116584 27/42
+116584 27/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116585 28/42
+116585 28/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116586 29/42
+116586 29/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116588 30/42
+116588 30/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116589 31/42
+116589 31/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116592 32/42
+116592 32/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116593 33/42
+116593 33/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116595 34/42
+116595 34/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116598 35/42
+116598 35/42 - CAMDEN - WASHINGTON
 Total Est. Distance: 59.12 kilometers
-Total Given Distance: 0.06 kilometers
-%error: 99891.57%
+Total Given Distance: 59.12 kilometers
+%error: -0.01%
 
-116473 36/42
+116473 36/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 89.98 kilometers
-Total Given Distance: 0.09 kilometers
-%error: 99899.67%
+Total Given Distance: 89.98 kilometers
+%error: -0.00%
 
-116474 37/42
+116474 37/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 89.98 kilometers
-Total Given Distance: 0.09 kilometers
-%error: 99899.67%
+Total Given Distance: 89.98 kilometers
+%error: -0.00%
 
-116475 38/42
+116475 38/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 89.98 kilometers
-Total Given Distance: 0.09 kilometers
-%error: 99899.67%
+Total Given Distance: 89.98 kilometers
+%error: -0.00%
 
-116476 39/42
+116476 39/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 78.84 kilometers
-Total Given Distance: 0.08 kilometers
-%error: 99901.17%
+Total Given Distance: 78.84 kilometers
+%error: 0.00%
 
-116477 40/42
+116477 40/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 118.04 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99897.74%
+Total Given Distance: 118.04 kilometers
+%error: -0.00%
 
-116478 41/42
+116478 41/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 78.84 kilometers
-Total Given Distance: 0.08 kilometers
-%error: 99901.17%
+Total Given Distance: 78.84 kilometers
+%error: 0.00%
 
-116479 42/42
+116479 42/42 - BRUNSWICK - WASHINGTON
 Total Est. Distance: 118.04 kilometers
-Total Given Distance: 0.12 kilometers
-%error: 99897.74%
+Total Given Distance: 118.04 kilometers
+%error: -0.00%
 
 
