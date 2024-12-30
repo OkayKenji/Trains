@@ -3,9 +3,31 @@ import json
 import time
 import pandas as pd
 import re
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+
+def graphs(trip_durations):
+    mean = np.mean(trip_durations)
+    std_dev = np.std(trip_durations)
+    med = np.median(trip_durations)
+    plt.hist(trip_durations, bins=len(trip_durations)//2, density=True, alpha=0.6, color='b')
+    xmin, xmax = plt.xlim()
+    x = np.linspace(xmin, xmax, 100)
+    p = stats.norm.pdf(x, mean, std_dev)
+    plt.plot(x, p, 'k', linewidth=2)
+    plt.title(f'Normal Distribution (mean={mean:.2f}, med={med:.2f} std_dev={std_dev:.2f})')
+    plt.xlabel('Trip (stops)')
+    plt.ylabel('Density')
+
+    # Show the plot
+    plt.show()
+
+
+
 def main():
     elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via", "rtd"]
-    # elements = ["via"]
+    # elements = ["mnrr"]
     for ele in elements: 
         print(f"Processing: {ele}")
 
@@ -44,12 +66,24 @@ def main():
 
             min_by_stops = min(num_stops, key=lambda x: x["number_of_stops"])
             max_by_stops = max(num_stops, key=lambda x: x["number_of_stops"])
+            trip_durations = [trip['number_of_stops'] for trip in num_stops]
+            avg_stops = np.mean(trip_durations)
+            median_stops = np.median(trip_durations)
             print(f'\tShortest Trip (stop # wise): {min_by_stops["number_of_stops"]} stops on {min_by_stops["train_id"]}')
             print(f'\tLongest Trip (stop # wise): {max_by_stops["number_of_stops"]} stops on {max_by_stops["train_id"]}')
+            print(f'\tOn average trains make: {avg_stops:.0f} stops')
+            print(f'\tMedian # of train: {median_stops:.0f} stops')
+
             min_by_time = min(num_stops, key=lambda x: x["travel_time"])
             max_by_time = max(num_stops, key=lambda x: x["travel_time"])
+            trip_durations = [trip['travel_time'] for trip in num_stops]
+            avg_time = np.mean(trip_durations)
+            median_time = np.median(trip_durations)
             print(f'\tShortest Trip (time wise): {min_by_time["travel_time"]/60:.1f} minutes on {min_by_time["train_id"]}')
             print(f'\tLongest Trip (time wise): {max_by_time["travel_time"]/60:.1f} minutes on {max_by_time["train_id"]}')
+            print(f'\tOn average trains take: {avg_time/60:.1f} minutes')
+            print(f'\tMedian time of trips: {median_time/60:.1f} minutes')
+
 if __name__ == "__main__":
     # Start the timer
     start_time = time.time()

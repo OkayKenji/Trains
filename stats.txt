@@ -3,8 +3,12 @@ Processing: ace
 	Total number of trains: 8
 	Shortest Trip (stop # wise): 10 stops on ACE01
 	Longest Trip (stop # wise): 10 stops on ACE01
+	On average trains make: 10 stops
+	Median # of train: 10 stops
 	Shortest Trip (time wise): 132.0 minutes on ACE01
 	Longest Trip (time wise): 142.0 minutes on ACE02
+	On average trains take: 133.2 minutes
+	Median time of trips: 132.0 minutes
 Processing: exo
 	11 - Vaudreuil/Hudson:    27 (26.2%)
 	12 - Saint-Jérôme:        28 (27.2%)
@@ -14,8 +18,12 @@ Processing: exo
 	Total number of trains:   103
 	Shortest Trip (stop # wise): 6 stops on 41
 	Longest Trip (stop # wise): 26 stops on 1202
+	On average trains make: 12 stops
+	Median # of train: 12 stops
 	Shortest Trip (time wise): 26.0 minutes on 41
 	Longest Trip (time wise): 110.0 minutes on 1202
+	On average trains take: 58.4 minutes
+	Median time of trips: 56.0 minutes
 Processing: lirr
 	Babylon Branch:          150 (15.9%)
 	City Terminal Zone:      133 (14.1%)
@@ -31,8 +39,12 @@ Processing: lirr
 	Total number of trains:  945
 	Shortest Trip (stop # wise): 2 stops on 2306
 	Longest Trip (stop # wise): 18 stops on 2
+	On average trains make: 11 stops
+	Median # of train: 11 stops
 	Shortest Trip (time wise): 19.0 minutes on 2832
 	Longest Trip (time wise): 193.0 minutes on 7
+	On average trains take: 57.3 minutes
+	Median time of trips: 56.0 minutes
 Processing: marc
 	BRUNSWICK - WASHINGTON:  19 (19.6%)
 	CAMDEN - WASHINGTON:     21 (21.6%)
@@ -40,8 +52,12 @@ Processing: marc
 	Total number of trains:  97
 	Shortest Trip (stop # wise): 2 stops on 408
 	Longest Trip (stop # wise): 17 stops on 879
+	On average trains make: 9 stops
+	Median # of train: 9 stops
 	Shortest Trip (time wise): 16.0 minutes on 613
 	Longest Trip (time wise): 134.0 minutes on 875
+	On average trains take: 76.4 minutes
+	Median time of trips: 68.0 minutes
 Processing: metrolink
 	Metrolink 91-Perris Valley Line:             14 (6.8%)
 	Metrolink Antelope Valley Line:              30 (14.6%)
@@ -53,8 +69,12 @@ Processing: metrolink
 	Total number of trains:                      206
 	Shortest Trip (stop # wise): 5 stops on 302
 	Longest Trip (stop # wise): 15 stops on 803
+	On average trains make: 10 stops
+	Median # of train: 10 stops
 	Shortest Trip (time wise): 20.0 minutes on 3806
 	Longest Trip (time wise): 157.0 minutes on 824
+	On average trains take: 80.5 minutes
+	Median time of trips: 91.0 minutes
 Processing: mnrr
 	Danbury:                26 (3.9%)
 	Harlem:                 208 (31.3%)
@@ -65,15 +85,23 @@ Processing: mnrr
 	Total number of trains: 664
 	Shortest Trip (stop # wise): 4 stops on 507
 	Longest Trip (stop # wise): 30 stops on 699
+	On average trains make: 13 stops
+	Median # of train: 13 stops
 	Shortest Trip (time wise): 17.0 minutes on 1751
 	Longest Trip (time wise): 139.0 minutes on 1575
+	On average trains take: 77.1 minutes
+	Median time of trips: 71.0 minutes
 Processing: nicd
 	South Shore Line:       59 (100.0%)
 	Total number of trains: 59
 	Shortest Trip (stop # wise): 2 stops on 400
 	Longest Trip (stop # wise): 16 stops on 11
+	On average trains make: 11 stops
+	Median # of train: 11 stops
 	Shortest Trip (time wise): 38.0 minutes on 400
 	Longest Trip (time wise): 124.0 minutes on 22
+	On average trains take: 78.3 minutes
+	Median time of trips: 81.0 minutes
 Processing: njt
 	Atlantic City Rail Line:   24 (2.8%)
 	Gladstone Branch:          44 (5.1%)
@@ -92,8 +120,12 @@ Processing: njt
 	Total number of trains:    861
 	Shortest Trip (stop # wise): 2 stops on 4100
 	Longest Trip (stop # wise): 26 stops on 0067
+	On average trains make: 13 stops
+	Median # of train: 13 stops
 	Shortest Trip (time wise): 5.0 minutes on 4100
 	Longest Trip (time wise): 158.0 minutes on 0062
+	On average trains take: 66.0 minutes
+	Median time of trips: 70.0 minutes
 Processing: septa
 	Airport Line:              78 (12.6%)
 	Chestnut Hill East Line:   40 (6.5%)
@@ -111,8 +143,12 @@ Processing: septa
 	Total number of trains:    619
 	Shortest Trip (stop # wise): 5 stops on 401
 	Longest Trip (stop # wise): 27 stops on 3526
+	On average trains make: 15 stops
+	Median # of train: 15 stops
 	Shortest Trip (time wise): 21.0 minutes on 1059
 	Longest Trip (time wise): 102.0 minutes on 514
+	On average trains take: 51.8 minutes
+	Median time of trips: 52.0 minutes
 Processing: trirail
 	Downtown Miami Link:    24 (30.8%)
 	MiamiCentral Express:   2 (2.6%)
@@ -120,16 +156,24 @@ Processing: trirail
 	Total number of trains: 78
 	Shortest Trip (stop # wise): 2 stops on P305X
 	Longest Trip (stop # wise): 18 stops on P600
+	On average trains make: 13 stops
+	Median # of train: 18 stops
 	Shortest Trip (time wise): 20.0 minutes on P305X
 	Longest Trip (time wise): 120.0 minutes on P611
+	On average trains take: 85.3 minutes
+	Median time of trips: 115.0 minutes
 Processing: vre
 	Fredericksburg Line:    16 (50.0%)
 	Manassas Line:          16 (50.0%)
 	Total number of trains: 32
 	Shortest Trip (stop # wise): 4 stops on 321
 	Longest Trip (stop # wise): 13 stops on 301
+	On average trains make: 11 stops
+	Median # of train: 10 stops
 	Shortest Trip (time wise): 72.0 minutes on 321
 	Longest Trip (time wise): 107.0 minutes on 301
+	On average trains take: 91.8 minutes
+	Median time of trips: 88.5 minutes
 Processing: mbta
 	Fairmount Line:                57 (10.9%)
 	Fitchburg Line:                38 (7.3%)
@@ -146,15 +190,23 @@ Processing: mbta
 	Total number of trains:        524
 	Shortest Trip (stop # wise): 5 stops on 204
 	Longest Trip (stop # wise): 19 stops on 732
+	On average trains make: 11 stops
+	Median # of train: 11 stops
 	Shortest Trip (time wise): 26.0 minutes on 633
 	Longest Trip (time wise): 118.0 minutes on 801
+	On average trains take: 62.4 minutes
+	Median time of trips: 64.0 minutes
 Processing: sunrail
 	SunRail:                40 (100.0%)
 	Total number of trains: 40
 	Shortest Trip (stop # wise): 15 stops on P301
 	Longest Trip (stop # wise): 17 stops on P302
+	On average trains make: 17 stops
+	Median # of train: 17 stops
 	Shortest Trip (time wise): 82.0 minutes on P301
 	Longest Trip (time wise): 118.0 minutes on P337
+	On average trains take: 104.7 minutes
+	Median time of trips: 105.0 minutes
 Processing: amtrak
 	Acela:                                  27 (4.5%)
 	Adirondack:                             2 (0.3%)
@@ -207,22 +259,34 @@ Processing: amtrak
 	Total number of trains:                 600
 	Shortest Trip (stop # wise): 2 stops on 52
 	Longest Trip (stop # wise): 46 stops on 40
+	On average trains make: 10 stops
+	Median # of train: 9 stops
 	Shortest Trip (time wise): 10.0 minutes on 3768
 	Longest Trip (time wise): 3943.0 minutes on 421
+	On average trains take: 310.2 minutes
+	Median time of trips: 178.0 minutes
 Processing: sle
 	Commuter Rail:          20 (100.0%)
 	Total number of trains: 20
 	Shortest Trip (stop # wise): 7 stops on 1691
 	Longest Trip (stop # wise): 9 stops on 1600
+	On average trains make: 9 stops
+	Median # of train: 9 stops
 	Shortest Trip (time wise): 62.0 minutes on 1637
 	Longest Trip (time wise): 72.0 minutes on 1634
+	On average trains take: 66.0 minutes
+	Median time of trips: 65.0 minutes
 Processing: hl
 	Hartford Line:          21 (100.0%)
 	Total number of trains: 21
 	Shortest Trip (stop # wise): 6 stops on 4450
 	Longest Trip (stop # wise): 9 stops on 4400
+	On average trains make: 8 stops
+	Median # of train: 9 stops
 	Shortest Trip (time wise): 52.0 minutes on 4450
 	Longest Trip (time wise): 96.0 minutes on 4466
+	On average trains take: 75.5 minutes
+	Median time of trips: 91.0 minutes
 Processing: go
 	Barrie:                 32 (9.2%)
 	Kitchener:              70 (20.1%)
@@ -234,8 +298,12 @@ Processing: go
 	Total number of trains: 349
 	Shortest Trip (stop # wise): 5 stops on 3009
 	Longest Trip (stop # wise): 12 stops on 3812
+	On average trains make: 9 stops
+	Median # of train: 10 stops
 	Shortest Trip (time wise): 35.0 minutes on 3328
 	Longest Trip (time wise): 157.0 minutes on 1977
+	On average trains take: 67.3 minutes
+	Median time of trips: 62.0 minutes
 Processing: via
 	Air Connect:             1 (1.5%)
 	Jasper - Prince Rupert:  2 (3.0%)
@@ -257,8 +325,12 @@ Processing: via
 	Total number of trains:  67
 	Shortest Trip (stop # wise): 2 stops on nan
 	Longest Trip (stop # wise): 67 stops on 2
+	On average trains make: 13 stops
+	Median # of train: 10 stops
 	Shortest Trip (time wise): 10.0 minutes on nan
 	Longest Trip (time wise): 5549.0 minutes on 2
+	On average trains take: 470.9 minutes
+	Median time of trips: 290.0 minutes
 Processing: rtd
 	A:                      146 (43.6%)
 	B:                      36 (10.7%)
@@ -267,7 +339,11 @@ Processing: rtd
 	Total number of trains: 335
 	Shortest Trip (stop # wise): 4 stops on 115056971
 	Longest Trip (stop # wise): 8 stops on 115056970
+	On average trains make: 7 stops
+	Median # of train: 8 stops
 	Shortest Trip (time wise): 15.0 minutes on 115056971
 	Longest Trip (time wise): 37.0 minutes on 115068805
-Execution time: 29.4199 seconds
-Data last updated: 2024-12-29 01:51:49.349942
+	On average trains take: 30.7 minutes
+	Median time of trips: 30.8 minutes
+Execution time: 53.7423 seconds
+Data last updated: 2024-12-30 00:20:40.815174
