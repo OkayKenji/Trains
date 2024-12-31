@@ -31,11 +31,7 @@ def shape_to_dist(ele):
             
     df = pd.DataFrame(obj)
     df.to_csv(f'./{ele}/distances.txt',index=False)
-# def fileWriter(ele):
-#     with open(f'./junk/output_{ele}.txt', 'w') as output_file:
-#         output_file.write(f"Processing element: {ele}\n")
-#         linkedin(ele, output_file)
-#         output_file.write("\n")  # Add a blank line after processing the element
+
 
 def main():
     elements = ["ace", "exo", "lirr", "marc", "mnrr", "nicd", "njt", "septa", "trirail", "vre", "mbta", "sunrail", "sle", "amtrak", "hl", "go", "via"]
