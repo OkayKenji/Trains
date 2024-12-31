@@ -56,8 +56,7 @@ def fileWriter(ele):
         output_file.write("\n")  # Add a blank line after processing the element
 
 def main():
-    # elements = ["ace", "exo", "lirr", "marc", "mnrr", "nicd", "njt", "septa", "trirail", "vre", "mbta", "sunrail", "sle", "amtrak", "hl", "go", "via"]
-    elements = ["marc","njt","sle","mbta"]
+    elements = ["ace", "exo", "lirr", "marc", "mnrr", "nicd", "njt", "septa", "trirail", "vre", "mbta", "sunrail", "sle", "amtrak", "hl", "go", "via"]
     max_threads = 10
 
     with ThreadPoolExecutor(max_threads) as executor:
