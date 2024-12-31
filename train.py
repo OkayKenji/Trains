@@ -104,12 +104,12 @@ def reformat(stops, routes, listOfTrains, stop_times):
         if group.empty:
             continue
         group['stop_name'] = group.apply(assign_station_names, axis=1, args=(stops,))
-
         reformated.append([
             group.drop(['stop_id'], axis=1),
             listOfTrains.loc[listOfTrains.trip_id == train, train_classification].iloc[0],
             listOfTrains.loc[listOfTrains.trip_id == train, 'trip_headsign'].iloc[0],
-            cvtRouteStringToNumber(routes, listOfTrains.loc[listOfTrains.trip_id == train, 'route_id'].iloc[0])
+            cvtRouteStringToNumber(routes, listOfTrains.loc[listOfTrains.trip_id == train, 'route_id'].iloc[0]),
+            listOfTrains.loc[listOfTrains.trip_id == train, 'shape_id'].iloc[0] if 'shape_id' in listOfTrains.columns else 'NA'
         ])
     return reformated
 
@@ -153,9 +153,11 @@ def main():
 
         if ( railroad == 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS'):
             stop_times = stop_times.astype( { 'trip_id': 'str'})
+        if ( railroad != 'metrolink'):
+            listOfTrains = listOfTrains.astype({'shape_id': 'str'})
         listOfTrains = listOfTrains.astype({f'{train_classification}': 'str',
                                             'trip_headsign': 'str',
-                                            f'{train_classification}': 'str', 'direction_id': 'str'})
+                                            'direction_id': 'str'})
         print("\tWait a while as we process the data...")
 
         reformated = reformat(stops, routes, listOfTrains, stop_times)
@@ -180,10 +182,8 @@ def main():
         all_stops.columns = all_stops.columns.str.replace('CTrail ', '', regex=False)
         all_stops.columns = all_stops.columns.str.replace( r"^\d{8}-[A-Za-z]{2}-", '', regex=True)
         all_stops.to_csv(f'./csv/{ele}.csv')
-
         print("\tWait a while as we format the data...")
         arr = []
-
         for _, k in enumerate(all_stops):
 
             match = re.match(r'([\w\s\.]+)\s+\(([éô0-9a-zA-Z\/\-\&\-\s]+)\)', k)
@@ -195,11 +195,22 @@ def main():
                 train_stops[['departure_time', 'stop_index']] = train_stops['stop_times'].str.extract(r'([0-9:]+)\s+\(([0-9]+)\)')
                 train_stops[['departure_time', 'stop_index']] = train_stops[['departure_time', 'stop_index']].fillna('n/a') 
                 train_stops.drop('stop_times',axis=1,inplace=True)
+                if railroad == 'marc': 
+                    result = [sublist for sublist in reformated if sublist[1] == f'Train {match.group(1)}']
+                    distance = result[0][4] if len(result) > 0 else "N/A"
+                elif railroad == 'hl':
+                    result = [sublist for sublist in reformated if sublist[1] == f'CTrail {match.group(1)}']
+                    distance = result[0][4] if len(result) > 0 else "N/A"
+                else:
+                    result = [sublist for sublist in reformated if sublist[1] == f'{match.group(1)}']
+                    distance = result[0][4] if len(result) > 0 else "N/A"
                 new_ele = { 
                     'train_number': match.group(1),
                     'train_line': match.group(2),
-                    'stops' : train_stops.to_dict(orient='index')
+                    'stops' : train_stops.to_dict(orient='index'),
+                    'distance' : distance
                 }
+              
 
                 arr.append(new_ele)
         # Save dictionary as JSON to a file
@@ -207,7 +218,6 @@ def main():
 
         with open(f'./json/data{ele}.json', 'w') as file:
             file.write(pretty_json)
-        
         local_end_time = time.time()
 
         local_execution_time = local_end_time - local_start_time
