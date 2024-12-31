@@ -1,6 +1,8 @@
 import pandas as pd
 from geopy.distance import geodesic
 from geopy.distance import great_circle
+import time
+start_time = time.time()
 
 class QuadTree:
     def __init__(self, bounds, max_points=4):
@@ -41,7 +43,7 @@ class QuadTree:
         if not self.in_bounds(point):
             return best, best_dist
         for p in self.points:
-            dist = great_circle((point[0], point[1]), (p[0], p[1])).meters
+            dist = geodesic((point[0], point[1]), (p[0], p[1])).meters
             if dist < best_dist:
                 best, best_dist = p, dist
         if self.children:
@@ -62,15 +64,17 @@ quad_tree = QuadTree(bounds)
 for point in lat_lon_list:
     quad_tree.insert(point)
 
-stop = (40.958997,-73.820564)
-nearest, distance = quad_tree.query(stop)
+df = pd.read_csv('./mnrr/stops.txt')
+for index, row in df.iterrows():
+    # Accessing values in each row
+    shape_id = row['stop_name']
+    lat = row['stop_lat']
+    lon = row['stop_lon']
+    stop = (lat,lon)
+    nearest, distance = quad_tree.query(stop)
+    print(f"Nearest point for {shape_id}: {nearest}, Distance: {distance:.2f} meters")
 
-print(f"Nearest point: {nearest}, Distance: {distance:.2f} meters")
+end_time = time.time()
+execution_time = end_time - start_time
 
-point1 = (40.95947, -73.82053)  # New York
-point2 = (40.958997,-73.820564)  # Another point in New York
-distance_haversine = great_circle(point1, point2).meters
-distance_geo = geodesic(point1, point2).meters
-
-print(f"Haversine distance: {distance_haversine:.2f} meters")
-print(f"geodesic distance: {distance_geo:.2f} meters")
+print(f"Execution time: {execution_time:.4f} seconds")
