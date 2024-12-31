@@ -24,7 +24,6 @@ if response.status_code == 200:
     # Save the HTML content to a file (optional)
     with open('indexACE.html', 'w') as file:
         file.write(html_content)
-    print("index.html downloaded and saved.")
 
     # Step 2: Use a regular expression to find all .zip links
     pattern = r'https://cdn[^"]*\.zip'
@@ -47,8 +46,6 @@ if response.status_code == 200:
     os.system("cp ./ace/stopsSorted.txt ./ace/stops.txt")
     os.system("rm gtfsace.zip")
     os.system("rm indexACE.html")
-
-
 
 else:
     print(f"Failed to retrieve the page. Status code: {response.status_code}")

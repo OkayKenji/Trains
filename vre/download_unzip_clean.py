@@ -34,5 +34,5 @@ df_sorted = pd.read_csv('./vre/stopsSorted.txt')
 
 df1 = df1.set_index('stop_name').loc[df_sorted['stop_name']].reset_index()
 
-print(df1.to_csv('./vre/stops.txt',index=False))
+df1.to_csv('./vre/stops.txt',index=False)
 

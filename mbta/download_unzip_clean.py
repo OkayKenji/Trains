@@ -25,7 +25,6 @@ df = pd.read_csv('./mbta/routes.txt')
 df = df.drop(df[(df.network_id != "commuter_rail") & (df.network_id != "cr_foxboro") & (df.network_id != "cape_flyer")].index)
 df.to_csv("./mbta/routes.txt",index=False)
 route_list = df['route_id'].to_list()
-print(route_list)
 
 df = pd.read_csv('./mbta/trips.txt')
 df = df[df['route_id'].isin(route_list)]

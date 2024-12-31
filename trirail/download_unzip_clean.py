@@ -53,7 +53,6 @@ if response.status_code == 200:
             result = extracted_str.replace('#', 'A')
             
             # Print the final result
-            print(result)
             url = "https://ftis.org/PostFileDownload.aspx?id="+result
             file_name = 'gtfstrirail.zip'
 
@@ -97,10 +96,6 @@ if response.status_code == 200:
                         print(f"Moved: {filename}")
             os.system("rmdir ./trirail/google_transit")
             os.system("rm *.aspx")
-
-
-
-
         else:
             print("No content found between &quot; and &quot;.")
     else:

@@ -27,7 +27,6 @@ df = pd.read_csv('./sle/routes.txt')
 df = df[df['agency_id'].isin(agency_id_list)]
 df.to_csv("./sle/routes.txt",index=False)
 route_list = df['route_id'].to_list()
-print(route_list)
 
 df = pd.read_csv('./sle/trips.txt')
 df = df[df['route_id'].isin(route_list)]
