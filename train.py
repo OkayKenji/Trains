@@ -135,7 +135,6 @@ def rtd_exempt():
     
 def main():
     elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
-    # elements = ["go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()

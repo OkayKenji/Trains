@@ -66,9 +66,22 @@ class QuadTree:
 class CalculateDistance:
     def __init__(self, shapes):
         self.shapes = shapes  
-
+    def safe_str_conversion(self, value):
+        try:
+            # If the value contains 'E' (likely to be scientific notation), treat it as a string.
+            if 'e' in str(value).lower():
+                return str(value)  # Return the value as a string without conversion
+            
+            # Convert value to float first (in case it's a float or a string representation of a number)
+            return str(int(float(value)))
+        except ValueError:
+            # If the value can't be converted to a number, return it as is (as a string)
+            return str(value)
     def shape_to_dist(self,shape_id,starting_lat_long,ending_lat_long):
-        sub_df = self.shapes[self.shapes.shape_id.astype(str).isin([shape_id])]
+        sub_df = self.shapes[self.shapes.shape_id.astype(str).isin([self.safe_str_conversion(shape_id)])]
+        
+        logging.debug(f"{len(sub_df)}")
+
         if 'shape_pt_sequence' in self.shapes.columns:
             sub_df = sub_df.sort_values(by='shape_pt_sequence')
         sub_df = sub_df.reset_index() # in case sorting breaks indexing
@@ -146,9 +159,14 @@ class MainDistanceCalculator:
             nearest_A, _ = quad_tree.execute(stops,departure_station)
 
             nearest_B, _ = quad_tree.execute(stops,arrival_station)
+
+            logging.debug(f"{nearest_A} {nearest_B}")
+
             dist = CalculateDistance(self.shapes)
             total_distance = dist.shape_to_dist(shape_id,nearest_A,nearest_B)
             self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}'] = total_distance
+            
+            logging.debug(f"{total_distance} miles")
             return total_distance
     def test(self):
         return self.shape_distances
