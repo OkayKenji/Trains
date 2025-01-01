@@ -58,7 +58,8 @@
                         let index = 0;
                         trains[index].push({
                             train_number: train.train_number,
-                            train_line: train.train_line
+                            train_line: train.train_line,
+                            distance: train.distance
                         });
 
                         index++;
@@ -128,7 +129,7 @@
             headers.forEach(header => {
                 const th = document.createElement('th');
                 th.innerText = data[0][header].train_number
-                    ? `${data[0][header].train_line} - ${data[0][header].train_number}`
+                    ? `${data[0][header].train_line} - ${data[0][header].train_number} (${data[0][header].distance.toFixed(2)} miles)`
                     : '';
                 headerRow.appendChild(th);
             });
