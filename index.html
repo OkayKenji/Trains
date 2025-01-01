@@ -125,11 +125,10 @@
             const thead = document.createElement('thead');
             const headerRow = document.createElement('tr');
             const headers = Object.keys(data[0]);
-
             headers.forEach(header => {
                 const th = document.createElement('th');
                 th.innerText = data[0][header].train_number
-                    ? `${data[0][header].train_line} - ${data[0][header].train_number} (${data[0][header].distance.toFixed(2)} miles)`
+                    ? `${data[0][header].train_line} - ${data[0][header].train_number} (${data[0][header].distance != "NA"? data[0][header].distance.toFixed(2) : 'NAN'} miles)`
                     : '';
                 headerRow.appendChild(th);
             });
@@ -295,14 +294,14 @@
             <option value="njt">NJT</option>
             <option value="exo">EXO</option>
             <option value="metrolink">Metrolink</option>
-            <option value="MARC">MARC</option>
+            <option value="marc">MARC</option>
             <option value="trirail">Tri-Rail</option>
-            <option value="VRE">VRE</option>
+            <option value="vre">VRE</option>
             <option value="nicd">South Shore Line</option>
             <option value="ace">Altamont Corridor Express</option>
             <option value="mbta">MBTA</option>
             <option value="sunrail">SunRail</option>
-            <option value="Amtrak">Amtrak</option>
+            <option value="amtrak">Amtrak</option>
             <option value="sle">Shore Line East</option>
             <option value="hl">Hartford Line</option>
             <option value="go">Go Transit</option>
