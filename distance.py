@@ -1,7 +1,9 @@
 import pandas as pd
 from geopy.distance import geodesic
 from geopy.distance import great_circle
-import time
+import math
+import logging
+
 
 class QuadTree:
     def __init__(self, bounds, max_points=4):
@@ -56,7 +58,6 @@ class QuadTree:
         lat = stop_info['stop_lat'].iloc[0]
         lon = stop_info['stop_lon'].iloc[0]
         stop_lat_long = (lat,lon)
-
         nearest, distance = self.query(stop_lat_long)
         # print(self.bounds)
 
@@ -67,21 +68,20 @@ class CalculateDistance:
         self.shapes = shapes  
 
     def shape_to_dist(self,shape_id,starting_lat_long,ending_lat_long):
-        # Extract the shape of the route
         sub_df = self.shapes[self.shapes.shape_id.astype(str).isin([shape_id])]
         if 'shape_pt_sequence' in self.shapes.columns:
             sub_df = sub_df.sort_values(by='shape_pt_sequence')
+        sub_df = sub_df.reset_index() # in case sorting breaks indexing
         starting_lat, staring_long = starting_lat_long
         ending_lat, ending_long = ending_lat_long
-        # Find the indices of the first "L" and last "Z"
         start_idx = sub_df[(sub_df["shape_pt_lat"] == starting_lat) & (sub_df["shape_pt_lon"] == staring_long)].index.min()
         end_idx = sub_df[(sub_df["shape_pt_lat"] == ending_lat) & (sub_df["shape_pt_lon"] == ending_long)].index.max()
-        start_idx, end_idx = min(start_idx, end_idx), max(start_idx, end_idx)
 
-    
-        # Extract rows between the start and end indices
+        start_idx, end_idx = min(start_idx, end_idx), max(start_idx, end_idx)
+        
         sub_df = sub_df.loc[start_idx:end_idx]
 
+        
 
         coordinates = [(lat, lon) for lat, lon in zip(sub_df['shape_pt_lat'], sub_df['shape_pt_lon'])]
         distances = [
@@ -95,26 +95,44 @@ class MainDistanceCalculator:
     def __init__(self, shapes, shape_distances={}):
         self.shapes = shapes
         self.shape_distances = shape_distances
+    def safe_str_conversion(self, value):
+        try:
+            # If the value contains 'E' (likely to be scientific notation), treat it as a string.
+            if 'e' in str(value).lower():
+                return str(value)  # Return the value as a string without conversion
+            
+            # Convert value to float first (in case it's a float or a string representation of a number)
+            return str(int(float(value)))
+        except ValueError:
+            # If the value can't be converted to a number, return it as is (as a string)
+            return str(value)
+
 
     def calculate_distance(self, departure_station,arrival_station,stops,shape_id):
         if departure_station > arrival_station:
             departure_station, arrival_station = arrival_station, departure_station
         if f'{departure_station}-{arrival_station}-{shape_id}' in self.shape_distances:
+            logging.info(f'Collision with: {departure_station}-{arrival_station}-{shape_id}')
             return self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}']
         else: 
-            if (shape_id == "NA"):
+            logging.info(f'First time with: {departure_station}-{arrival_station}-{shape_id}')
+
+            if (shape_id == "NA" or shape_id == "nan" or pd.isna(shape_id)):
                 return "NA"
+            logging.debug(f'{shape_id}, {type(shape_id)}') # nan
             df = self.shapes
-            sub_df = df[df.shape_id.astype(str).isin([shape_id])]
+            sub_df = df[df.shape_id.astype(str).isin([self.safe_str_conversion(shape_id)])]
             if 'shape_pt_sequence' in df.columns:
                 sub_df = sub_df.sort_values(by='shape_pt_sequence')
             lat_lon_list = sub_df[['shape_pt_lat', 'shape_pt_lon']].values.tolist()
+            if shape_id == "436E0248":
+                print(self.safe_str_conversion(shape_id))
             # Calculate min and max latitude/longitude from your dataset
             min_lat = sub_df['shape_pt_lat'].min()
             max_lat = sub_df['shape_pt_lat'].max()
             min_lon = sub_df['shape_pt_lon'].min()
             max_lon = sub_df['shape_pt_lon'].max()
-
+            logging.debug(f"{len(sub_df['shape_pt_lat'])}")
             bounds = (min_lat-1, min_lon-1,  max_lat+1,max_lon+1)
 
             quad_tree = QuadTree(bounds)

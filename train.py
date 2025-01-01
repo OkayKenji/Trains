@@ -7,7 +7,10 @@ import json
 import ast
 import time
 from distance import MainDistanceCalculator
-
+import logging
+logging.basicConfig(level=logging.WARNING,
+    format='%(asctime)s | %(levelname)s | %(filename)s:%(lineno)d | \nMessage: %(message)s'
+)
 import warnings 
 warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
 pd.set_option('mode.chained_assignment', None)
@@ -132,9 +135,7 @@ def rtd_exempt():
     
 def main():
     elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
-
-    # elements = ["njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
-    elements = ["mnrr"]
+    # elements = ["go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
@@ -189,6 +190,12 @@ def main():
         print("\tWait a while as we format the data...")
         arr = []
 
+        for index, sublist in enumerate(reformated):
+            if len(sublist) > 1 and sublist[1] == 4:  # Checking the second element
+                logging.debug(sublist)
+                break
+
+
         main_distance_calculator = MainDistanceCalculator(shapes)
         for _, k in enumerate(all_stops):
 
@@ -211,12 +218,17 @@ def main():
                     starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
                     ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
+                elif railroad == 'go':  
+                    result = [sublist for sublist in reformated if re.sub(r"^\d{8}-[A-Za-z]{2}-", '', sublist[1]) == f'{match.group(1)}']
+                    starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
+                    ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
+                    distance = result[0][4] if len(result) > 0 else "N/A"
+                    
                 else:
                     result = [sublist for sublist in reformated if sublist[1] == f'{match.group(1)}']
                     starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
                     ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
-
                 # print(match.group(1),distance)
                 new_ele = { 
                     'train_number': match.group(1),
@@ -231,7 +243,7 @@ def main():
                }
 
                 arr.append(new_ele)
-        print(main_distance_calculator.test())
+        # print(main_distance_calculator.test())
         # Save dictionary as JSON to a file
         pretty_json = json.dumps(arr)
 
