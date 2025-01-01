@@ -6,6 +6,7 @@ from datetime import datetime
 import json
 import ast
 import time
+from distance import MainDistanceCalculator
 
 import warnings 
 warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
@@ -58,7 +59,7 @@ def loadData(name_rail):
     else:
         train_classification = 'trip_short_name'
 
-    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (not use_calendar) else pd.read_csv(f'./{railroad}/calendar.txt'), railroad
+    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (not use_calendar) else pd.read_csv(f'./{railroad}/calendar.txt'), railroad, pd.read_csv(f'{railroad}/shapes.txt')
 
 def getTrains(listOfServices, trips): 
     listOfTrains = trips[trips.service_id.isin(listOfServices.service_id)]
@@ -131,6 +132,9 @@ def rtd_exempt():
     
 def main():
     elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
+
+    # elements = ["njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
+    elements = ["mnrr"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()
@@ -144,7 +148,7 @@ def main():
             continue
 
         # prepare data
-        calendar_dates, routes, stop_times, stops, trips, calendar, railroad = loadData(ele)
+        calendar_dates, routes, stop_times, stops, trips, calendar, railroad, shapes = loadData(ele)
         # get dates from user & finds the services that run that day
         listOfServices = getServices(calendar_dates, railroad, calendar)
 
@@ -184,6 +188,8 @@ def main():
         all_stops.to_csv(f'./csv/{ele}.csv')
         print("\tWait a while as we format the data...")
         arr = []
+
+        main_distance_calculator = MainDistanceCalculator(shapes)
         for _, k in enumerate(all_stops):
 
             match = re.match(r'([\w\s\.]+)\s+\(([éô0-9a-zA-Z\/\-\&\-\s]+)\)', k)
@@ -197,22 +203,35 @@ def main():
                 train_stops.drop('stop_times',axis=1,inplace=True)
                 if railroad == 'marc': 
                     result = [sublist for sublist in reformated if sublist[1] == f'Train {match.group(1)}']
+                    starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
+                    ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
                 elif railroad == 'hl':
                     result = [sublist for sublist in reformated if sublist[1] == f'CTrail {match.group(1)}']
+                    starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
+                    ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
                 else:
                     result = [sublist for sublist in reformated if sublist[1] == f'{match.group(1)}']
+                    starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
+                    ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
+
+                # print(match.group(1),distance)
                 new_ele = { 
                     'train_number': match.group(1),
                     'train_line': match.group(2),
                     'stops' : train_stops.to_dict(orient='index'),
-                    'distance' : distance
-                }
-              
+                    'distance' : main_distance_calculator.calculate_distance(
+                        starting_station['stop_name'],
+                        ending_station['stop_name'],
+                        stops,
+                        distance
+                    ) 
+               }
 
                 arr.append(new_ele)
+        print(main_distance_calculator.test())
         # Save dictionary as JSON to a file
         pretty_json = json.dumps(arr)
 
@@ -223,6 +242,7 @@ def main():
         local_execution_time = local_end_time - local_start_time
 
         print(f"\tLocal Execution time: {local_execution_time:.4f} seconds")
+        # exit(0)
 
 if __name__ == "__main__":
     # Start the timer

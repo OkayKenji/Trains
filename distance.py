@@ -1,47 +1,143 @@
 import pandas as pd
 from geopy.distance import geodesic
-from concurrent.futures import ThreadPoolExecutor
+from geopy.distance import great_circle
+import time
 
-def shape_to_dist(ele):
-    df = pd.read_csv(f'./{ele}/shapes.txt')
-    # df_trips = pd.read_csv(f'./ace/trips.txt')
-    # df_routes = pd.read_csv(f'./ace/routes.txt')
+class QuadTree:
+    def __init__(self, bounds, max_points=4):
+        self.bounds = bounds  # (xmin, ymin, xmax, ymax)
+        self.max_points = max_points
+        self.points = []
+        self.children = None
 
-    shapes = list(set(df['shape_id'].to_list()))
+    def subdivide(self):
+        xmin, ymin, xmax, ymax = self.bounds
+        midx = (xmin + xmax) / 2
+        midy = (ymin + ymax) / 2
+        self.children = [
+            QuadTree((xmin, ymin, midx, midy), self.max_points),  # Bottom-left
+            QuadTree((midx, ymin, xmax, midy), self.max_points),  # Bottom-right
+            QuadTree((xmin, midy, midx, ymax), self.max_points),  # Top-left
+            QuadTree((midx, midy, xmax, ymax), self.max_points),  # Top-right
+        ]
 
-    obj = {
-        'shape_id' : [],
-        'distance' : []
-    }
+    def insert(self, point):
+        if not self.in_bounds(point):
+            return False
+        if len(self.points) < self.max_points:
+            self.points.append(point)
+            return True
+        if not self.children:
+            self.subdivide()
+        for child in self.children:
+            if child.insert(point):
+                return True
 
-    for _, shape in enumerate(shapes):
-        if (not shape in obj):
-            sub_df = df[df.shape_id.isin([shape])]
+    def in_bounds(self, point):
+        x, y = point
+        xmin, ymin, xmax, ymax = self.bounds
+
+        return xmin <= float(x) <= xmax and ymin <= float(y) <= ymax
+
+    def query(self, point, best=None, best_dist=float('inf')):
+        if not self.in_bounds(point):
+            return best, best_dist
+        for p in self.points:
+            dist = geodesic((point[0], point[1]), (p[0], p[1])).meters
+            if dist < best_dist:
+                best, best_dist = p, dist
+        if self.children:
+            for child in self.children:
+                best, best_dist = child.query(point, best, best_dist)
+        return best, best_dist
+    
+    def execute(self,stops,calculate_station):
+        stop_info = stops[stops.stop_name == calculate_station]
+        lat = stop_info['stop_lat'].iloc[0]
+        lon = stop_info['stop_lon'].iloc[0]
+        stop_lat_long = (lat,lon)
+
+        nearest, distance = self.query(stop_lat_long)
+        # print(self.bounds)
+
+        return nearest, distance
+
+class CalculateDistance:
+    def __init__(self, shapes):
+        self.shapes = shapes  
+
+    def shape_to_dist(self,shape_id,starting_lat_long,ending_lat_long):
+        # Extract the shape of the route
+        sub_df = self.shapes[self.shapes.shape_id.astype(str).isin([shape_id])]
+        if 'shape_pt_sequence' in self.shapes.columns:
+            sub_df = sub_df.sort_values(by='shape_pt_sequence')
+        starting_lat, staring_long = starting_lat_long
+        ending_lat, ending_long = ending_lat_long
+        # Find the indices of the first "L" and last "Z"
+        start_idx = sub_df[(sub_df["shape_pt_lat"] == starting_lat) & (sub_df["shape_pt_lon"] == staring_long)].index.min()
+        end_idx = sub_df[(sub_df["shape_pt_lat"] == ending_lat) & (sub_df["shape_pt_lon"] == ending_long)].index.max()
+        start_idx, end_idx = min(start_idx, end_idx), max(start_idx, end_idx)
+
+    
+        # Extract rows between the start and end indices
+        sub_df = sub_df.loc[start_idx:end_idx]
+
+
+        coordinates = [(lat, lon) for lat, lon in zip(sub_df['shape_pt_lat'], sub_df['shape_pt_lon'])]
+        distances = [
+            geodesic(coordinates[i], coordinates[i + 1]).miles
+            for i in range(len(coordinates) - 1)
+        ]
+        total_distance = sum(distances)
+        return total_distance
+
+class MainDistanceCalculator:
+    def __init__(self, shapes, shape_distances={}):
+        self.shapes = shapes
+        self.shape_distances = shape_distances
+
+    def calculate_distance(self, departure_station,arrival_station,stops,shape_id):
+        if departure_station > arrival_station:
+            departure_station, arrival_station = arrival_station, departure_station
+        if f'{departure_station}-{arrival_station}-{shape_id}' in self.shape_distances:
+            return self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}']
+        else: 
+            if (shape_id == "NA"):
+                return "NA"
+            df = self.shapes
+            sub_df = df[df.shape_id.astype(str).isin([shape_id])]
             if 'shape_pt_sequence' in df.columns:
                 sub_df = sub_df.sort_values(by='shape_pt_sequence')
+            lat_lon_list = sub_df[['shape_pt_lat', 'shape_pt_lon']].values.tolist()
+            # Calculate min and max latitude/longitude from your dataset
+            min_lat = sub_df['shape_pt_lat'].min()
+            max_lat = sub_df['shape_pt_lat'].max()
+            min_lon = sub_df['shape_pt_lon'].min()
+            max_lon = sub_df['shape_pt_lon'].max()
 
-            coordinates = [(lat, lon) for lat, lon in zip(sub_df['shape_pt_lat'], sub_df['shape_pt_lon'])]
-            distances = [
-                geodesic(coordinates[i], coordinates[i + 1]).kilometers
-                for i in range(len(coordinates) - 1)
-            ]
-            total_distance = sum(distances)
-            obj['shape_id'].append(shape)
-            obj['distance'].append(total_distance)
-            
-    df = pd.DataFrame(obj)
-    df.to_csv(f'./{ele}/distances.txt',index=False)
+            bounds = (min_lat-1, min_lon-1,  max_lat+1,max_lon+1)
 
+            quad_tree = QuadTree(bounds)
 
-def main():
-    elements = ["ace", "exo", "lirr", "marc", "mnrr", "nicd", "njt", "septa", "trirail", "vre", "mbta", "sunrail", "sle", "amtrak", "hl", "go", "via"]
-    max_threads = 17
+            for point in lat_lon_list:
+                quad_tree.insert(point)
 
-    with ThreadPoolExecutor(max_threads) as executor:
-        futures = [executor.submit(shape_to_dist, ele) for ele in elements]
         
-        for future in futures:
-            future.result()  # This will raise an exception if any task fails
 
-if __name__ == "__main__":
-    main()
+
+            nearest_A, _ = quad_tree.execute(stops,departure_station)
+
+            nearest_B, _ = quad_tree.execute(stops,arrival_station)
+            dist = CalculateDistance(self.shapes)
+            total_distance = dist.shape_to_dist(shape_id,nearest_A,nearest_B)
+            self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}'] = total_distance
+            return total_distance
+    def test(self):
+        return self.shape_distances
+
+# stops = pd.read_csv('./exo/stops.txt')
+# shapes = pd.read_csv('./exo/shapes.txt')
+# shape_id = 10388
+# departure_station = 'Gare Hudson'
+# arrival_station = "Gare Lucien-L'Allier"
+# print(calculate_distance(departure_station,arrival_station,stops,shape_id,shapes))

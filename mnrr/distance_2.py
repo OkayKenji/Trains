@@ -6,8 +6,8 @@ import time
 start_time = time.time()
 
 
-df = pd.read_csv('./mnrr/shapes.txt')
-sub_df = df[df.shape_id.isin([14])]
+df = pd.read_csv('./amtrak/shapes.txt')
+sub_df = df[df.shape_id.isin([4])]
 if 'shape_pt_sequence' in df.columns:
     sub_df = sub_df.sort_values(by='shape_pt_sequence')
 lat_lon_list = sub_df[['shape_pt_lat', 'shape_pt_lon']].values.tolist()
@@ -30,7 +30,7 @@ def geodesic_distance(x, y):
 nbrs = NearestNeighbors(n_neighbors=1, metric=geodesic_distance)
 nbrs.fit(shape_points)
 
-df = pd.read_csv('./mnrr/stops.txt')
+df = pd.read_csv('./amtrak/stops.txt')
 for index, row in df.iterrows():
     # Accessing values in each row
     shape_id = row['stop_name']

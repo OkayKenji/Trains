@@ -2,7 +2,6 @@ import pandas as pd
 from geopy.distance import geodesic
 from geopy.distance import great_circle
 import time
-start_time = time.time()
 
 class QuadTree:
     def __init__(self, bounds, max_points=4):
@@ -50,31 +49,45 @@ class QuadTree:
             for child in self.children:
                 best, best_dist = child.query(point, best, best_dist)
         return best, best_dist
+def main():
+    start_time = time.time()
 
+    df = pd.read_csv(f'./exo/shapes.txt')
+    sub_df = df[df.shape_id.isin([10217])]
+    if 'shape_pt_sequence' in df.columns:
+        sub_df = sub_df.sort_values(by='shape_pt_sequence')
+    lat_lon_list = sub_df[['shape_pt_lat', 'shape_pt_lon']].values.tolist()
 
-df = pd.read_csv('./mnrr/shapes.txt')
-sub_df = df[df.shape_id.isin([14])]
-if 'shape_pt_sequence' in df.columns:
-    sub_df = sub_df.sort_values(by='shape_pt_sequence')
-lat_lon_list = sub_df[['shape_pt_lat', 'shape_pt_lon']].values.tolist()
+    # Calculate min and max latitude/longitude from your dataset
+    min_lat = sub_df['shape_pt_lat'].min()
+    max_lat = sub_df['shape_pt_lat'].max()
+    min_lon = sub_df['shape_pt_lon'].min()
+    max_lon = sub_df['shape_pt_lon'].max()
 
-bounds = (-180, -90, 180, 90)
-quad_tree = QuadTree(bounds)
+    print(f"Min Latitude: {min_lat}, Max Latitude: {max_lat}")
+    print(f"Min Longitude: {min_lon}, Max Longitude: {max_lon}")
 
-for point in lat_lon_list:
-    quad_tree.insert(point)
+    bounds = (min_lat-1, min_lon-1,  max_lat+1,max_lon+1)
+    # bounds = (-180, -90, 180, 90)  # World bounds for latitude and longitude
 
-df = pd.read_csv('./mnrr/stops.txt')
-for index, row in df.iterrows():
-    # Accessing values in each row
-    shape_id = row['stop_name']
-    lat = row['stop_lat']
-    lon = row['stop_lon']
-    stop = (lat,lon)
-    nearest, distance = quad_tree.query(stop)
-    print(f"Nearest point for {shape_id}: {nearest}, Distance: {distance:.2f} meters")
+    quad_tree = QuadTree(bounds)
 
-end_time = time.time()
-execution_time = end_time - start_time
+    for point in lat_lon_list:
+        quad_tree.insert(point)
 
-print(f"Execution time: {execution_time:.4f} seconds")
+    df = pd.read_csv('./exo/stops.txt')
+    for index, row in df.iterrows():
+        # Accessing values in each row
+        shape_id = row['stop_name']
+        lat = row['stop_lat']
+        lon = row['stop_lon']
+        stop = (lat,lon)
+        nearest, distance = quad_tree.query(stop)
+        print(f"Nearest point for {shape_id}: {nearest}, Distance: {distance:.2f} meters")
+
+    end_time = time.time()
+    execution_time = end_time - start_time
+
+    print(f"Execution time: {execution_time:.4f} seconds")
+
+main()
