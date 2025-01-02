@@ -1,2 +1,0 @@
-route_id,category,subcategory,running_way
-ACE,1,101,1
