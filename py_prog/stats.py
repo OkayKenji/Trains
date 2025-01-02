@@ -31,7 +31,7 @@ def main():
     for ele in elements: 
         print(f"Processing: {ele}")
 
-        with open(f'./json/data{ele}.json', 'r') as file:
+        with open(f'./data/json/data{ele}.json', 'r') as file:
             train_list = json.load(file)
             if (len(train_list) <= 0):
                 print(f"\tWarning! Empty List.")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 route_id,service_id,trip_id,trip_short_name,trip_headsign,shape_id,direction_id
 2,9,P601X,"P601X","South",3,0
 2,9,P605X,"P605X","South",3,0
@@ -130,3 +131,239 @@ route_id,service_id,trip_id,trip_short_name,trip_headsign,shape_id,direction_id
 1,9,P638,"P638","North",1,1
 1,9,P631,"P631","South",2,0
 2,9,P305X,"P305X","South",3,0
+=======
+﻿route_id,service_id,trip_id,trip_headsign,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+1,MTWTF,Weekday-Southbound_T01,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T02,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T03,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T04,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T05,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T06,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T07,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T08,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T09,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T10,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T11,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T12,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T13,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T14,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T15,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T16,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T17,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T18,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T19,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T20,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T21,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T22,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T23,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T24,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T25,Miami Airport Station,0,,2,1,1
+1,MTWTF,Weekday-Southbound_T26,Miami Airport Station,0,,2,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T01,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T02,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T03,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T04,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T05,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T06,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T07,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T08,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T09,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T10,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T11,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T12,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Southbound_T13,Miami Central Station,0,,3,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T01,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T02,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T03,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T04,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T05,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T06,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T07,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T08,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T09,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T10,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T11,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T12,Metrorail Transfer Station,1,,4,1,1
+2,MTWTF,Downtown Miami Link - Northbound_T13,Metrorail Transfer Station,1,,4,1,1
+1,MTWTF,Weekday-Northbound_T01,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T02,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T03,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T04,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T05,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T06,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T07,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T08,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T09,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T10,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T11,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T12,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T13,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T14,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T15,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T16,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T17,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T18,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T19,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T20,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T21,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T22,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T23,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T24,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T25,Mangonia Park Station,1,,1,1,1
+1,MTWTF,Weekday-Northbound_T26,Mangonia Park Station,1,,1,1,1
+3,MTWTF,Southbound Express-Weekday_T01,Miami Central Station,0,,6,1,1
+3,MTWTF,Northbound Express-Weekday_T01,West Palm Beach Station,1,,5,1,1
+1,SSH,Southbound-Weekend_T01,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T02,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T03,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T04,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T05,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T06,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T07,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T08,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T09,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T10,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T11,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T12,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T13,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T14,Miami Airport Station,0,,2,1,1
+1,SSH,Southbound-Weekend_T15,Miami Airport Station,0,,2,1,1
+1,SSH,Northbound - Weekend_T01,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T02,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T03,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T04,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T05,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T06,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T07,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T08,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T09,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T10,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T11,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T12,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T13,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T14,Mangonia Park Station,1,,1,1,1
+1,SSH,Northbound - Weekend_T15,Mangonia Park Station,1,,1,1,1
+4,MTWTF,FLA Loop_T01,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T02,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T03,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T04,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T05,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T06,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T07,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T08,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T09,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T10,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T11,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T12,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T13,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T14,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T15,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T16,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T17,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T18,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T19,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T20,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T21,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T22,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T23,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T24,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T25,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T26,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T27,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T28,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T29,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T30,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T31,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T32,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T33,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T34,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T35,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T36,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T37,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T38,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T39,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T40,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T41,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T42,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T43,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T44,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T45,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T46,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T47,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T48,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T49,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T50,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T51,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T52,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T53,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T54,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T55,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T56,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T57,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T58,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T59,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T60,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T61,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T62,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T63,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T64,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T65,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T66,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T67,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T68,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T69,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T70,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T71,FLL Airport,0,,7,1,1
+4,MTWTF,FLA Loop_T72,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T01,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T02,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T03,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T04,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T05,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T06,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T07,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T08,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T09,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T10,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T11,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T12,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T13,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T14,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T15,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T16,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T17,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T18,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T19,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T20,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T21,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T22,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T23,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T24,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T25,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T26,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T27,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T28,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T29,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T30,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T31,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T32,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T33,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T34,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T35,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T36,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T37,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T38,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T39,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T40,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T41,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T42,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T43,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T44,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T45,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T46,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T47,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T48,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T49,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T50,FLL Airport,0,,7,1,1
+4,SSH,FLA Loop Weekend Holiday_T51,FLL Airport,0,,7,1,1
+>>>>>>> new-branch

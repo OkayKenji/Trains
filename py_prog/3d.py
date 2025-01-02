@@ -2,24 +2,19 @@
 import pandas as pd
 import pydeck as pdk
 
-# DATA_URL = "https://raw.githubusercontent.com/ajduberstein/geo_datasets/master/housing.csv"
-
-
-
-
-
 elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS","metra"]
 for ele in elements:
-    df = pd.read_csv(f'./csv/{ele}.csv')
-    df_ref = pd.read_csv(f'./{ele}/stops.txt')
+    # Get stops and their info
+    df = pd.read_csv(f'./data/csv/{ele}.csv') # assuming running form root
+    df_ref = pd.read_csv(f'./gtfs_data/{ele}/stops.txt')
+    
+    # Clean and calculate max trains per stop
     df.drop('Unnamed: 0', axis=1, inplace=True)
     row_stop_counts = df.drop(columns=["stop_name"]).notna().sum(axis=1)
     df_ref['height'] = row_stop_counts
-    df_ref.to_csv('e.csv',index=False)
     df_ref['stop_lat'] = df_ref['stop_lat'].apply(pd.to_numeric, errors='coerce')
 
-    print(df_ref[["stop_lon", "stop_lat","height"]].to_csv('e.csv'))
-
+    # Generate map
     view = pdk.data_utils.compute_view(df_ref[["stop_lon", "stop_lat"]])
     view.pitch = 75
     view.bearing = 0

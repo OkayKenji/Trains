@@ -11,13 +11,13 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfsamtrak.zip'
-extract_to = './amtrak'
+extract_to = './gtfs_data/amtrak'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)
 
 os.system("rm gtfsamtrak.zip")
 
-df = pd.read_csv('./amtrak/stops.txt')
+df = pd.read_csv('./gtfs_data/amtrak/stops.txt')
 df['stop_name'] = df['stop_name'] + " - " + df['stop_id']
-df.to_csv("./amtrak/stops.txt",index=False)
+df.to_csv("./gtfs_data/amtrak/stops.txt",index=False)

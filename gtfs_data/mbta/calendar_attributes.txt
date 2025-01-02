@@ -18,10 +18,6 @@ Boat-F4-Sunday-Fall-24,Sunday schedule,Sunday,Sunday,1,20240825,,Fall
 Boat-F4-Weekday-Fall-24,Weekday schedule,Weekday,Weekday,1,20240825,,Fall
 Boat-F6-Weekday-Summer-25,Weekday schedule,Weekday,Weekday,1,20250303,,Summer
 Boat-Lynn-Weekday-Summer-25,Weekday schedule,Weekday,Weekday,1,20250303,,Summer
-CR-LowellNorthStation-Express-Wtr-Snd,Sunday schedule,Sunday,Sunday,4,20241215,20250405,Winter
-CR-LowellNorthStation-Express-Wtr-Std,Saturday schedule,Saturday,Saturday,4,20241215,20250405,Winter
-CR-LowellNorthStation-Wil-Winter-Std,Saturday schedule,Saturday,Saturday,4,20241215,20250405,Winter
-CR-LowellNorthStation-Wil-Winter-Sunday,Sunday schedule,Sunday,Sunday,4,20241215,20250405,Winter
 ChristmasDay-NewYearsDay,Holiday (Sunday schedule),Holiday,Sunday,3,20241215,20250405,Winter
 FALL 2024-N-Sa-1-S6561ad1d-HvlBrdVn,Saturday schedule,Saturday,Saturday,4,20241118,,Fall/Winter
 FALL 2024-N-Sunday-1-S6561ad1d-HvlBrdVn,Sunday schedule,Sunday,Sunday,4,20241118,,Fall/Winter
@@ -68,9 +64,7 @@ FALL 2024-SOUTHWKD-Weekday-14-Sb7371956,Weekday schedule (modified service),Week
 FALL 2024-SOUTHWKD-Weekday-14-Sc9a3b080,Weekday schedule (modified service),Weekday (modified service),Weekday,4,20241118,,Fall/Winter
 FALL 2024-SOUTHWKD-Weekday-14-Scbbf1ea5,Weekday schedule (modified service),Weekday (modified service),Weekday,4,20241118,,Fall/Winter
 FALL 2024-SOUTHWKD-Weekday-42-Sb0e4ed14,Weekday schedule (modified service),Weekday (modified service),Weekday,4,20241118,,Fall/Winter
-Green-E-MedfordNorthStation-Weekday-a4b,Weekday schedule (Track Improvement),Weekday (Track Improvement),Weekday,4,20241215,20250405,Winter
 LRV12025-hlb15011-Weekday-01,Weekday schedule,Weekday,Weekday,1,20241215,20250405,Winter
-LRV12025-hlb15gs1-Weekday-01,Weekday schedule (modified service),Weekday (modified service),Weekday,4,20241215,20250405,Winter
 LRV12025-hlb15hl7-Sunday-01,Holiday (Sunday schedule),Holiday,Sunday,3,20241215,20250405,Winter
 LRV12025-hlb15xm7-Sunday-01,Holiday (Sunday schedule),Holiday,Sunday,3,20241215,20250405,Winter
 LRV12025-hlm15011-Weekday-01,Weekday schedule,Weekday,Weekday,1,20241215,20250405,Winter

@@ -11,7 +11,7 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfsmarc.zip'
-extract_to = './marc'
+extract_to = './gtfs_data/marc'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)
@@ -19,7 +19,7 @@ with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
 os.system("rm gtfsmarc.zip")
 
 
-df = pd.read_csv('./marc/stops.txt')
+df = pd.read_csv('./gtfs_data/marc/stops.txt')
 df['stop_name'] = df['stop_name'].str.replace(r'DUFFIELFS', 'DUFFIELDS', regex=True)
 
 df['stop_name_trimmed'] = df['stop_name'].str[:-2]
@@ -59,4 +59,4 @@ else:
     
     final_df = pd.concat([final_df, row_to_move]).reset_index(drop=True)
 
-final_df.to_csv('./marc/stops.txt', index=False)
+final_df.to_csv('./gtfs_data/marc/stops.txt', index=False)

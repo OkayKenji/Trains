@@ -29,7 +29,7 @@ jobs:
         run: python train.py
 
       - name: Generate stats/check file
-        run: python stats.py > stats.txt
+        run: python stats.py > ./outputs/stats.txt
 
       - name: Commit files if changed
         run: |

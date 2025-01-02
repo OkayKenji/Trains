@@ -10,41 +10,41 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfsgo.zip'
-extract_to = './go'
+extract_to = './gtfs_data/go'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)
 
-# os.system("cp ./go/stopsSorted.txt ./go/stops.txt")
+# os.system("cp ./gtfs_data/go/stopsSorted.txt ./gtfs_data/go/stops.txt")
 os.system("rm gtfsgo.zip")
 
-df = pd.read_csv('./go/routes.txt')
+df = pd.read_csv('./gtfs_data/go/routes.txt')
 df = df[pd.to_numeric(df['route_short_name'], errors='coerce').isna()]
-df.to_csv("./go/routes.txt",index=False)
+df.to_csv("./gtfs_data/go/routes.txt",index=False)
 route_list = df['route_id'].to_list()
 
-df = pd.read_csv('./go/trips.txt')
+df = pd.read_csv('./gtfs_data/go/trips.txt')
 df = df[df['route_id'].isin(route_list)]
-df.to_csv("./go/trips.txt",index=False)
+df.to_csv("./gtfs_data/go/trips.txt",index=False)
 
 service_list = list(set(df['service_id'].to_list()))
 trip_list = list(set(df['trip_id'].to_list()))
 
-df = pd.read_csv('./go/calendar.txt')
+df = pd.read_csv('./gtfs_data/go/calendar_dates.txt')
 df = df[df['service_id'].isin(service_list)]
-df.to_csv("./go/calendar.txt",index=False)
+df.to_csv("./gtfs_data/go/calendar_dates.txt",index=False)
 
-df = pd.read_csv('./go/stop_times.txt')
+df = pd.read_csv('./gtfs_data/go/stop_times.txt')
 df = df[df['trip_id'].isin(trip_list)]
-df.to_csv("./go/stop_times.txt",index=False)
+df.to_csv("./gtfs_data/go/stop_times.txt",index=False)
 stop_list = list(set(df['stop_id'].to_list()))
 
 
-df = pd.read_csv('./go/stops.txt')
+df = pd.read_csv('./gtfs_data/go/stops.txt')
 df = df[df['stop_id'].isin(stop_list)]
-df.to_csv("./go/stops.txt",index=False)
+df.to_csv("./gtfs_data/go/stops.txt",index=False)
 
-df_sorted = pd.read_csv('./go/stopsSorted.txt')
+df_sorted = pd.read_csv('./gtfs_data/go/stopsSorted.txt')
 
 df = df.set_index('stop_name').loc[df_sorted['stop_name']].reset_index()
-df.to_csv('./go/stops.txt',index=False)
+df.to_csv('./gtfs_data/go/stops.txt',index=False)

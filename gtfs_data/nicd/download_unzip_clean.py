@@ -10,7 +10,7 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfsnicd.zip'
-extract_to = './nicd'
+extract_to = './gtfs_data/nicd'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)

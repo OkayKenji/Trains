@@ -3,13 +3,13 @@ import subprocess
 import os
 import glob
 def action(ele):
-    subprocess.run(['python', f'./{ele}/download_unzip_clean.py'])
+    subprocess.run(['python', f'./gtfs_data/{ele}/download_unzip_clean.py'])
     print(f'Done: {ele}')
 
 
 def main():
     threads = []
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","sle","amtrak","sle","hl","go","via","rtd"]
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","sle","amtrak","sle","hl","go","via","rtd","metra"]
 
     for ele in elements:
         thread = threading.Thread(target=action, args=(ele,))
@@ -22,20 +22,20 @@ def main():
 
     # List of patterns to match the files you want to delete
     patterns = [
-        # '*/shapes.txt',
-        '*/agency.txt',
-        '*/fare*.txt',
-        '*/feed_*.txt',
-        '*/facilities*.txt',
-        '*/levels*.txt',
-        '*/lines*.txt',
-        '*/linked*.txt',
-        '*/multi*.txt',
-        '*/pathwa*.txt',
-        '*/route_p*.txt',
-        '*/stop_are*.txt',
-        '*/timeframes*.txt',
-        '*/areas.txt'
+        # './gtfs_data/*/shapes.txt',
+        './gtfs_data/*/agency.txt',
+        './gtfs_data/*/fare*.txt',
+        './gtfs_data/*/feed_*.txt',
+        './gtfs_data/*/facilities*.txt',
+        './gtfs_data/*/levels*.txt',
+        './gtfs_data/*/lines*.txt',
+        './gtfs_data/*/linked*.txt',
+        './gtfs_data/*/multi*.txt',
+        './gtfs_data/*/pathwa*.txt',
+        './gtfs_data/*/route_p*.txt',
+        './gtfs_data/*/stop_are*.txt',
+        './gtfs_data/*/timeframes*.txt',
+        './gtfs_data/*/areas.txt'
     ]
 
     # Loop through each pattern and delete matching files

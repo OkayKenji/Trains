@@ -621,8 +621,6 @@ Shuttle-LechmereNorthStation,0,West,North Station
 Shuttle-LechmereNorthStation,1,East,Lechmere & North
 Shuttle-LittletonWachusett,0,Outbound,Wachusett
 Shuttle-LittletonWachusett,1,Inbound,North Station
-Shuttle-LowellNorthStationExpress,0,Outbound,Lowell
-Shuttle-LowellNorthStationExpress,1,Inbound,North Station
 Shuttle-LowellWilmington,0,Outbound,Lowell
 Shuttle-LowellWilmington,1,Inbound,North Station
 Shuttle-LynnNorthStationExpress,0,Outbound,Newburyport or Rockport
@@ -705,5 +703,3 @@ Shuttle-SuffolkDownsWonderland,0,West,Bowdoin
 Shuttle-SuffolkDownsWonderland,1,East,Wonderland
 Shuttle-TFGreenWickfordJunction,0,Outbound,Wickford Junction
 Shuttle-TFGreenWickfordJunction,1,Inbound,South Station
-Shuttle-WilmingtonNorthStation,0,Outbound,Lowell
-Shuttle-WilmingtonNorthStation,1,Inbound,North Station

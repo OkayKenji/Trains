@@ -1,9 +1,6 @@
-# MBTA
+# Metra
 
-Link: https://cdn.mbta.com/MBTA_GTFS.zip
+Link: https://schedules.metrarail.com/gtfs/schedule.zip
 
 Notes:
-- Extensive cleaning to have rail-only GTFS
-
-TODO:
-- Reorder stops
+- Clean file to trim whitespace
