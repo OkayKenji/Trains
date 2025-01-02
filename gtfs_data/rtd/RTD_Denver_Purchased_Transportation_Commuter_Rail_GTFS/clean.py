@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('./rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS/stops.txt')
+df = pd.read_csv('./gtfs_data/rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS/stops.txt')
 df1 = df[pd.isna(df['parent_station'])] 
 df2 = df[~pd.isna(df['parent_station'])]  
 df2 = df2.astype({'parent_station' : 'int'})
@@ -37,6 +37,6 @@ final_df = pd.DataFrame(final_result)
 
 final_df = final_df.drop_duplicates(subset='stop_name', keep='first')
 
-df_sorted = pd.read_csv('./rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS/stopsSorted.txt')
+df_sorted = pd.read_csv('./gtfs_data/rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS/stopsSorted.txt')
 final_df = final_df.set_index('stop_name').loc[df_sorted['stop_name']].reset_index()
-final_df.to_csv('./rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS/stops.txt', index=False)
+final_df.to_csv('./gtfs_data/rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS/stops.txt', index=False)

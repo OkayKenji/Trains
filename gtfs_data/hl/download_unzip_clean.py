@@ -11,7 +11,7 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfshl.zip'
-extract_to = './hl'
+extract_to = './gtfs_data/hl'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)

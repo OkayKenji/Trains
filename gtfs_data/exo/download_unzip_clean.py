@@ -11,14 +11,14 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfsexo.zip'
-extract_to = './exo'
+extract_to = './gtfs_data/exo'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)
 
 os.system("rm gtfsexo.zip")
 
-df = pd.read_csv('./exo/stops.txt')
+df = pd.read_csv('./gtfs_data/exo/stops.txt')
 
 final_result = []
 
@@ -44,4 +44,4 @@ final_df = pd.DataFrame(final_result)
 
 final_df = final_df.drop_duplicates(subset='stop_name', keep='first')
 
-final_df.to_csv('./exo/stops.txt', index=False)
+final_df.to_csv('./gtfs_data/exo/stops.txt', index=False)

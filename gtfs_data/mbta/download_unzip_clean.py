@@ -11,7 +11,7 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfsmbta.zip'
-extract_to = './mbta'
+extract_to = './gtfs_data/mbta'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)
@@ -21,28 +21,28 @@ os.system("rm gtfsmbta.zip")
 
 
 
-df = pd.read_csv('./mbta/routes.txt')
+df = pd.read_csv('./gtfs_data/mbta/routes.txt')
 df = df.drop(df[(df.network_id != "commuter_rail") & (df.network_id != "cr_foxboro") & (df.network_id != "cape_flyer")].index)
-df.to_csv("./mbta/routes.txt",index=False)
+df.to_csv("./gtfs_data/mbta/routes.txt",index=False)
 route_list = df['route_id'].to_list()
 
-df = pd.read_csv('./mbta/trips.txt')
+df = pd.read_csv('./gtfs_data/mbta/trips.txt')
 df = df[df['route_id'].isin(route_list)]
-df.to_csv("./mbta/trips.txt",index=False)
+df.to_csv("./gtfs_data/mbta/trips.txt",index=False)
 
 service_list = list(set(df['service_id'].to_list()))
 trip_list = list(set(df['trip_id'].to_list()))
 
-df = pd.read_csv('./mbta/calendar.txt')
+df = pd.read_csv('./gtfs_data/mbta/calendar.txt')
 df = df[df['service_id'].isin(service_list)]
-df.to_csv("./mbta/calendar.txt",index=False)
+df.to_csv("./gtfs_data/mbta/calendar.txt",index=False)
 
-df = pd.read_csv('./mbta/stop_times.txt')
+df = pd.read_csv('./gtfs_data/mbta/stop_times.txt')
 df = df[df['trip_id'].isin(trip_list)]
-df.to_csv("./mbta/stop_times.txt",index=False)
+df.to_csv("./gtfs_data/mbta/stop_times.txt",index=False)
 
 
-df = pd.read_csv('./mbta/stops.txt')
+df = pd.read_csv('./gtfs_data/mbta/stops.txt')
 df = df[(df["zone_id"] != "LocalBus") & (df["zone_id"] != "ExpressBus-Downtown") & (df["stop_url"].notna())]
 final_result = []
 
@@ -68,4 +68,4 @@ final_df = pd.DataFrame(final_result)
 
 final_df = final_df.drop_duplicates(subset='stop_name', keep='first')
 
-final_df.to_csv("./mbta/stops.txt",index=False)
+final_df.to_csv("./gtfs_data/mbta/stops.txt",index=False)

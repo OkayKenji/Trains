@@ -61,7 +61,7 @@ if response.status_code == 200:
                 file.write(response.content)
 
             zip_file_path = 'gtfstrirail.zip'
-            extract_to = './trirail'
+            extract_to = './gtfs_data/trirail'
 
             with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
                 zip_ref.extractall(extract_to)
@@ -70,8 +70,8 @@ if response.status_code == 200:
 
                         
             # Define source and destination directories
-            source_dir = './trirail/google_transit'
-            destination_dir = './trirail/'
+            source_dir = './gtfs_data/trirail/google_transit'
+            destination_dir = './gtfs_data/trirail/'
 
             # Check if the source directory exists
             if not os.path.exists(source_dir):
@@ -94,7 +94,7 @@ if response.status_code == 200:
                         # Move the file
                         shutil.move(source_file, destination_file)
                         print(f"Moved: {filename}")
-            os.system("rmdir ./trirail/google_transit")
+            os.system("rmdir ./gtfs_data/trirail/google_transit")
             os.system("rm *.aspx")
         else:
             print("No content found between &quot; and &quot;.")

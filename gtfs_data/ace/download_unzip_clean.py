@@ -38,12 +38,12 @@ if response.status_code == 200:
         file.write(response.content)
 
     zip_file_path = 'gtfsace.zip'
-    extract_to = './ace'
+    extract_to = './gtfs_data/ace'
 
     with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
         zip_ref.extractall(extract_to)
 
-    os.system("cp ./ace/stopsSorted.txt ./ace/stops.txt")
+    os.system("cp ./gtfs_data/ace/stopsSorted.txt ./gtfs_data/ace/stops.txt")
     os.system("rm gtfsace.zip")
     os.system("rm indexACE.html")
 

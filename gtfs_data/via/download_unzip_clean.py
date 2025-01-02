@@ -10,7 +10,7 @@ with open(file_name, 'wb') as file:
     file.write(response.content)
 
 zip_file_path = 'gtfsvia.zip'
-extract_to = './via'
+extract_to = './gtfs_data/via'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to)

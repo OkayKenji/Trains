@@ -1,0 +1,68 @@
+stop_id,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_code,wheelchair_boarding,station_id_additional
+MTL5D,Gare Centrale,,45.500002,-73.566668,1.0,11010,1,"""['MTL5B']"""
+MTL3A,Gare Lucien-L'Allier,,45.494771,-73.570807,1.0,11150,0,"""['MTL3C']"""
+MTL2A,Gare Vendôme,,45.473771,-73.603101,1.0,11160,0,"""['MTL2C']"""
+MTL1A,Gare Montréal-Ouest,,45.453681,-73.64174,1.0,11170,0,"""['MTL1C']"""
+LCH1D,Gare Lachine,,45.448687,-73.711325,1.0,11180,0,"""['LCH1B']"""
+DVL2D,Gare Dorval,,45.449209,-73.74311,2.0,11190,0,"""['DVL2B']"""
+DVL1D,Gare Pine Beach,,45.449603,-73.764257,2.0,11200,0,"""['DVL1B']"""
+PCL3D,Gare Valois,,45.449754,-73.790874,2.0,11210,0,"""['PCL3B']"""
+PCL2D,Gare Pointe-Claire,,45.447256,-73.803441,2.0,11220,0,"""['PCL2B']"""
+PCL1D,Gare Cedar Park,,45.442424,-73.81988,2.0,11230,0,"""['PCL1B']"""
+BEA2D,Gare Beaconsfield,,45.434983,-73.847393,2.0,11240,0,"""['BEA2B']"""
+BEA1D,Gare Beaurepaire,,45.427404,-73.887258,2.0,11250,0,"""['BEA1B']"""
+BUR1D,Gare Baie-d'Urfé,,45.419916,-73.915559,2.0,11260,0,"""['BUR1B']"""
+SAB1D,Gare Sainte-Anne-de-Bellevue,,45.407615,-73.951215,2.0,11270,0,"""['SAB1B']"""
+LIP1D,Gare Île-Perrot,,45.395932,-73.965426,4.0,11280,0,"""['LIP1B']"""
+TVA1D,Gare Pincourt,,45.387182,-73.992274,4.0,11290,0,"""['TVA1B']"""
+VAU1D,Gare Dorion,,45.3864,-74.008255,5.0,11300,0,"""['VAU1B']"""
+VAU8D,Gare Vaudreuil,,45.399009,-74.050558,5.0,11310,0,"""['VAU8B']"""
+HUD1D,Gare Hudson,,45.459638,-74.140937,6.0,11320,0,"""['HUD1B']"""
+MTL8D,Gare Parc,,45.531493,-73.62378,1.0,11350,0,"""['MTL8B']"""
+MTL37C,Gare Chabanel,,45.537058,-73.658031,1.0,11355,0,"""['MTL37A']"""
+MTL7D,Gare Bois-de-Boulogne,,45.540251,-73.676902,2.0,11360,0,"""['MTL7B']"""
+LVL24C,Gare De la Concorde,,45.560288,-73.710104,3.0,11365,0,"""['LVL24A']"""
+LVL22C,Gare Vimont,,45.603767,-73.74266,3.0,11375,0,"""['LVL22A']"""
+LVL4C,Gare Sainte-Rose,,45.625439,-73.764748,3.0,11380,0,"""['LVL4A']"""
+ROS2C,Gare Rosemère,,45.634505,-73.79574,5.0,11390,0,"""['ROS2A']"""
+STR4D,Gare Sainte-Thérèse,,45.636039,-73.83355,5.0,11400,0,"""['STR4B']"""
+BLA1C,Gare Blainville,,45.672427,-73.866162,5.0,11410,0,"""['BLA1A']"""
+MIR1C,Gare Mirabel,,45.711707,-73.918555,6.0,11420,0,"""['MIR1A']"""
+SJM1C,Gare Saint-Jérôme,,45.773188,-73.999119,5.0,11430,0,"""['SJM1A']"""
+STL1B,Gare Saint-Lambert,,45.499634,-73.505824,3.0,11440,0,"""['STL1D']"""
+STH3B,Gare Longueuil-Saint-Hubert,,45.508145,-73.433824,3.0,11450,0,"""['STH3D']"""
+STB2B,Gare Saint-Bruno,,45.512028,-73.374408,5.0,11460,0,"""['STB2D']"""
+SBA2B,Gare Saint-Basile-le-Grand,,45.523306,-73.305923,5.0,11470,0,"""['SBA2D']"""
+MMS1B,Gare McMasterville,,45.546052,-73.229775,5.0,11480,0,"""['MMS1D']"""
+MSH1C,Gare Mont-Saint-Hilaire,,45.577198,-73.178501,6.0,11490,0,"""['MSH1A']"""
+LCH4A,Gare Du Canal,,45.437645,-73.655887,1.0,11495,0,"""['LCH4C']"""
+LSL1A,Gare LaSalle,,45.425218,-73.656978,1.0,11500,0,"""['LSL1C']"""
+SCS2A,Gare Sainte-Catherine,,45.382043,-73.600099,5.0,11510,0,"""['SCS2C']"""
+SCS1A,Gare Saint-Constant,,45.373948,-73.570299,5.0,11520,0,"""['SCS1C']"""
+DEL1A,Gare Delson,,45.366844,-73.540801,5.0,11530,0,"""['DEL1C']"""
+CAN1A,Gare Candiac,,45.360923,-73.514848,5.0,11540,0,"""['CAN1C']"""
+MTL59C,Gare Ahuntsic,,45.535026,-73.662662,1.0,11550,1,"""['MTL59A']"""
+MTL58C,Gare Sauvé,,45.549408,-73.654339,1.0,11560,1,"""['MTL58A']"""
+MTL57C,Gare Saint-Michel-Montréal-Nord,,45.582993,-73.630262,2.0,11570,1,"""['MTL57A']"""
+MTL56C,Gare Saint-Léonard-Montréal-Nord,,45.600339,-73.615779,2.0,11580,1,"""['MTL56A']"""
+MTL55C,Gare Anjou,,45.617867,-73.596659,2.0,11590,1,"""['MTL55A']"""
+MTL54C,Gare Rivière-des-Prairies,,45.660661,-73.539166,2.0,11600,1,"""['MTL54A']"""
+MTL53C,Gare Pointe-aux-Trembles,,45.674876,-73.505342,2.0,11610,1,"""['MTL53A']"""
+LEG1C,Gare Repentigny,,45.734587,-73.486111,5.0,11630,1,"""['LEG1A']"""
+LCN1C,Gare Terrebonne,,45.728495,-73.521187,5.0,11640,1,"""['LCN1A']"""
+MAS1C,Gare Mascouche,,45.729587,-73.598495,5.0,11650,1,"""['MAS1A']"""
+_BALLAN,Ballantyne,,45.447867,-73.68077,,99916,0,"""['_BALLANT']"""
+_Josy,Josy Receving,,45.487885,-73.676139,,FA0003,0,[]
+_PAT_Sud,Début Sud de la voie d'évitement Pointes-aux-Trembles,,45.677631,-73.495249,,FA0004,0,[]
+_PAT_Nord,Fin Nord voie de contournement Pointe-aux-Trembles,,45.694456,-73.48869,,FA0005,0,[]
+_Hibernia,Hibernia,,45.478019,-73.564211,,FA0006,0,[]
+_Chlemagne,Faux arrêt Voie de contournement Charlemagne,,45.731546,-73.486611,,FA0020,0,[]
+_RDP_Sud,Rivières-des-Prairies Sud,,45.628154,-73.583037,,FA0021,0,[]
+_RDP_Nord,Rivière-des-Prairies Nord,,45.642338,-73.564132,,FA0022,0,[]
+Turcot,Turcot Ouest,,45.451478,-73.633384,,FA0023,0,[]
+_ST_Henri,Saint-Henri,,45.473696,-73.591113,,FA0024,0,[]
+_Lachine,Canal Lachine,,45.476887,-73.581406,,FA0025,0,[]
+_Bridge_N,Bridge Nord,,45.489205,-73.556482,,FA0026,0,[]
+Wellington,Wellington,,45.492605,-73.555951,,FA0027,0,[]
+_Paco,Paco,,45.494674,-73.556294,,FA0028,0,[]
+Montreal,Montréal,,45.498368,-73.563151,,FA0029,0,[]
