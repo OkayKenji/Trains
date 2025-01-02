@@ -1,4 +1,0 @@
-route_id,route_short_name,route_long_name,route_type,route_color,route_text_color
-1,"TR","Tri-Rail",2,006c86,FFFFFF
-2,"DML","Downtown Miami Link",2,F3BE18,000000
-3,"MCE","MiamiCentral Express",2,9BCD65,FFFFFF
