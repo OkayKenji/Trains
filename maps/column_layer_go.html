@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 43.713139605882354,
+    "longitude": -79.5113874970588,
+    "pitch": 75,
+    "zoom": 7
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 6,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "NI",
+          "stop_lat": 43.108882,
+          "stop_lon": -79.063319,
+          "stop_name": "Niagara Falls GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/NI/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 84
+        },
+        {
+          "height": 6,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "SCTH",
+          "stop_lat": 43.1476135,
+          "stop_lon": -79.2549057,
+          "stop_name": "St. Catharines GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/SCTH/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 83
+        },
+        {
+          "height": 40,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "WR",
+          "stop_lat": 43.266775,
+          "stop_lon": -79.866222,
+          "stop_name": "West Harbour GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/WR/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 18
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "HA",
+          "stop_lat": 43.253284,
+          "stop_lon": -79.869192,
+          "stop_name": "Hamilton GO Centre",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/HA/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 18
+        },
+        {
+          "height": 90,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "AL",
+          "stop_lat": 43.313385,
+          "stop_lon": -79.855659,
+          "stop_name": "Aldershot GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/AL/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 17
+        },
+        {
+          "height": 90,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BU",
+          "stop_lat": 43.341265,
+          "stop_lon": -79.809141,
+          "stop_name": "Burlington GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BU/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 16
+        },
+        {
+          "height": 86,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "AP",
+          "stop_lat": 43.379429,
+          "stop_lon": -79.760991,
+          "stop_name": "Appleby GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/AP/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 15
+        },
+        {
+          "height": 86,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BO",
+          "stop_lat": 43.416774,
+          "stop_lon": -79.722294,
+          "stop_name": "Bronte GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BO/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 14
+        },
+        {
+          "height": 100,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "OA",
+          "stop_lat": 43.455594,
+          "stop_lon": -79.682242,
+          "stop_name": "Oakville GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/OA/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 13
+        },
+        {
+          "height": 96,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "CL",
+          "stop_lat": 43.513127,
+          "stop_lon": -79.633206,
+          "stop_name": "Clarkson GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/CL/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 12
+        },
+        {
+          "height": 82,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "PO",
+          "stop_lat": 43.555999,
+          "stop_lon": -79.586881,
+          "stop_name": "Port Credit GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/PO/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 10
+        },
+        {
+          "height": 78,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "LO",
+          "stop_lat": 43.591317,
+          "stop_lon": -79.546149,
+          "stop_name": "Long Branch GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/LO/station-details",
+          "wheelchair_boarding": 2,
+          "zone_id": 59
+        },
+        {
+          "height": 78,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "MI",
+          "stop_lat": 43.616411,
+          "stop_lon": -79.497762,
+          "stop_name": "Mimico GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/MI/station-details",
+          "wheelchair_boarding": 2,
+          "zone_id": 79
+        },
+        {
+          "height": 82,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "EX",
+          "stop_lat": 43.635549,
+          "stop_lon": -79.418927,
+          "stop_name": "Exhibition GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/EX/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 2
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "ML",
+          "stop_lat": 43.52364,
+          "stop_lon": -79.867172,
+          "stop_name": "Milton GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/ML/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 24
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "LS",
+          "stop_lat": 43.590791,
+          "stop_lon": -79.788539,
+          "stop_name": "Lisgar GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/LS/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 23
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "ME",
+          "stop_lat": 43.597566,
+          "stop_lon": -79.754328,
+          "stop_name": "Meadowvale GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/ME/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 22
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "SR",
+          "stop_lat": 43.575584,
+          "stop_lon": -79.70882,
+          "stop_name": "Streetsville GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/SR/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 21
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "ER",
+          "stop_lat": 43.567235,
+          "stop_lon": -79.668506,
+          "stop_name": "Erindale GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/ER/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 40
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "CO",
+          "stop_lat": 43.582973,
+          "stop_lon": -79.623695,
+          "stop_name": "Cooksville GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/CO/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 11
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "DI",
+          "stop_lat": 43.608022,
+          "stop_lon": -79.577762,
+          "stop_name": "Dixie GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/DI/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 11
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "KP",
+          "stop_lat": 43.636955,
+          "stop_lon": -79.536287,
+          "stop_name": "Kipling GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/KP/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 19,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "KI",
+          "stop_lat": 43.455686,
+          "stop_lon": -80.49313,
+          "stop_name": "Kitchener GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/KI/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 27
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "GL",
+          "stop_lat": 43.544353,
+          "stop_lon": -80.246917,
+          "stop_name": "Guelph Central GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/GL/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 39
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "AC",
+          "stop_lat": 43.6338043,
+          "stop_lon": -80.034111,
+          "stop_name": "Acton GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/AC/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 37
+        },
+        {
+          "height": 24,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "GE",
+          "stop_lat": 43.655373,
+          "stop_lon": -79.919054,
+          "stop_name": "Georgetown GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/GE/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 35
+        },
+        {
+          "height": 38,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "MO",
+          "stop_lat": 43.6749763,
+          "stop_lon": -79.8221817,
+          "stop_name": "Mount Pleasant GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/MO/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 34
+        },
+        {
+          "height": 38,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BR",
+          "stop_lat": 43.6869087,
+          "stop_lon": -79.7628632,
+          "stop_name": "Brampton Innovation District GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BR/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 33
+        },
+        {
+          "height": 70,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BE",
+          "stop_lat": 43.7022591,
+          "stop_lon": -79.6887512,
+          "stop_name": "Bramalea GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BE/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 32
+        },
+        {
+          "height": 62,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "MA",
+          "stop_lat": 43.705153,
+          "stop_lon": -79.63823,
+          "stop_name": "Malton GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/MA/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 31
+        },
+        {
+          "height": 37,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "ET",
+          "stop_lat": 43.706172,
+          "stop_lon": -79.563506,
+          "stop_name": "Etobicoke North GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/ET/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 4
+        },
+        {
+          "height": 62,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "WE",
+          "stop_lat": 43.70022,
+          "stop_lon": -79.514671,
+          "stop_name": "Weston GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/WE/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 4
+        },
+        {
+          "height": 62,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BL",
+          "stop_lat": 43.656928,
+          "stop_lon": -79.450192,
+          "stop_name": "Bloor GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BL/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 1
+        },
+        {
+          "height": 18,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "AD",
+          "stop_lat": 44.374139,
+          "stop_lon": -79.687858,
+          "stop_name": "Allandale Waterfront GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/AD/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 69
+        },
+        {
+          "height": 18,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BA",
+          "stop_lat": 44.35112,
+          "stop_lon": -79.627441,
+          "stop_name": "Barrie South GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BA/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 68
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BD",
+          "stop_lat": 44.116513,
+          "stop_lon": -79.555394,
+          "stop_name": "Bradford GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BD/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 65
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "EA",
+          "stop_lat": 44.077996,
+          "stop_lon": -79.455776,
+          "stop_name": "East Gwillimbury GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/EA/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 44
+        },
+        {
+          "height": 20,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "NE",
+          "stop_lat": 44.060426,
+          "stop_lon": -79.459289,
+          "stop_name": "Newmarket GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/NE/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 64
+        },
+        {
+          "height": 32,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "AU",
+          "stop_lat": 44.000758,
+          "stop_lon": -79.459725,
+          "stop_name": "Aurora GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/AU/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 63
+        },
+        {
+          "height": 32,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "KC",
+          "stop_lat": 43.920037,
+          "stop_lon": -79.526886,
+          "stop_name": "King City GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/KC/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 62
+        },
+        {
+          "height": 32,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "MP",
+          "stop_lat": 43.859481,
+          "stop_lon": -79.506984,
+          "stop_name": "Maple GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/MP/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 61
+        },
+        {
+          "height": 32,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "RU",
+          "stop_lat": 43.838487,
+          "stop_lon": -79.498819,
+          "stop_name": "Rutherford GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/RU/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 61
+        },
+        {
+          "height": 32,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "DW",
+          "stop_lat": 43.7536333,
+          "stop_lon": -79.47835,
+          "stop_name": "Downsview Park GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/DW/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 19
+        },
+        {
+          "height": 349,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "UN",
+          "stop_lat": 43.645195,
+          "stop_lon": -79.3806,
+          "stop_name": "Union Station",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/UN/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 2
+        },
+        {
+          "height": 9,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "OR",
+          "stop_lat": 43.765518,
+          "stop_lon": -79.364275,
+          "stop_name": "Oriole GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/OR/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 5
+        },
+        {
+          "height": 9,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "OL",
+          "stop_lat": 43.793703,
+          "stop_lon": -79.371403,
+          "stop_name": "Old Cummer GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/OL/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 5
+        },
+        {
+          "height": 9,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "LA",
+          "stop_lat": 43.838546,
+          "stop_lon": -79.423139,
+          "stop_name": "Langstaff GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/LA/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 60
+        },
+        {
+          "height": 9,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "RI",
+          "stop_lat": 43.874307,
+          "stop_lon": -79.426167,
+          "stop_name": "Richmond Hill GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/RI/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 50
+        },
+        {
+          "height": 9,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "GO",
+          "stop_lat": 43.941617,
+          "stop_lon": -79.399033,
+          "stop_name": "Gormley GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/GO/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 78
+        },
+        {
+          "height": 9,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "BM",
+          "stop_lat": 43.975949,
+          "stop_lon": -79.397258,
+          "stop_name": "Bloomington GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/BM/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 98
+        },
+        {
+          "height": 35,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "KE",
+          "stop_lat": 43.733045,
+          "stop_lon": -79.262706,
+          "stop_name": "Kennedy GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/KE/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 77
+        },
+        {
+          "height": 35,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "AG",
+          "stop_lat": 43.78611,
+          "stop_lon": -79.284385,
+          "stop_name": "Agincourt GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/AG/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 7
+        },
+        {
+          "height": 35,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "MK",
+          "stop_lat": 43.823227,
+          "stop_lon": -79.301785,
+          "stop_name": "Milliken GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/MK/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 70
+        },
+        {
+          "height": 35,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "UI",
+          "stop_lat": 43.851689,
+          "stop_lon": -79.314332,
+          "stop_name": "Unionville GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/UI/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 71
+        },
+        {
+          "height": 35,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "CE",
+          "stop_lat": 43.873601,
+          "stop_lon": -79.289211,
+          "stop_name": "Centennial GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/CE/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 72
+        },
+        {
+          "height": 35,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "MR",
+          "stop_lat": 43.882691,
+          "stop_lon": -79.262469,
+          "stop_name": "Markham GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/MR/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 72
+        },
+        {
+          "height": 35,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "MJ",
+          "stop_lat": 43.900521,
+          "stop_lon": -79.26313,
+          "stop_name": "Mount Joy GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/MJ/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 73
+        },
+        {
+          "height": 14,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "ST",
+          "stop_lat": 43.970924,
+          "stop_lon": -79.249989,
+          "stop_name": "Stouffville GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/ST/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 74
+        },
+        {
+          "height": 14,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "LI",
+          "stop_lat": 43.990395,
+          "stop_lon": -79.237098,
+          "stop_name": "Old Elm GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/LI/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 74
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "DA",
+          "stop_lat": 43.686462,
+          "stop_lon": -79.300358,
+          "stop_name": "Danforth GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/DA/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 6
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "SC",
+          "stop_lat": 43.716945,
+          "stop_lon": -79.254722,
+          "stop_name": "Scarborough GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/SC/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 6
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "EG",
+          "stop_lat": 43.739621,
+          "stop_lon": -79.23231,
+          "stop_name": "Eglinton GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/EG/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 8
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "GU",
+          "stop_lat": 43.755272,
+          "stop_lon": -79.198252,
+          "stop_name": "Guildwood GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/GU/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 8
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "RO",
+          "stop_lat": 43.780375,
+          "stop_lon": -79.130646,
+          "stop_name": "Rouge Hill GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/RO/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 9
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "PIN",
+          "stop_lat": 43.831576,
+          "stop_lon": -79.084594,
+          "stop_name": "Pickering GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/PIN/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 91
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "AJ",
+          "stop_lat": 43.847766,
+          "stop_lon": -79.041372,
+          "stop_name": "Ajax GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/AJ/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 92
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "WH",
+          "stop_lat": 43.86484,
+          "stop_lon": -78.93818,
+          "stop_name": "Whitby GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/WH/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 93
+        },
+        {
+          "height": 83,
+          "location_type": 0,
+          "parent_station": NaN,
+          "stop_code": NaN,
+          "stop_id": "OS",
+          "stop_lat": 43.871004,
+          "stop_lon": -78.884807,
+          "stop_name": "Durham College Oshawa GO",
+          "stop_url": "https://www.gotransit.com/find-a-station-or-stop/OS/station-details",
+          "wheelchair_boarding": 1,
+          "zone_id": 94
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "b71ebffa-d017-4c84-8f1b-851288ac7fd9",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

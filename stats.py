@@ -11,7 +11,7 @@ def graphs(trip_durations):
     mean = np.mean(trip_durations)
     std_dev = np.std(trip_durations)
     med = np.median(trip_durations)
-    plt.hist(trip_durations, bins=len(trip_durations)//2, density=True, alpha=0.6, color='b')
+    # plt.hist(trip_durations, bins=len(trip_durations), alpha=0.6, color='b')
     xmin, xmax = plt.xlim()
     x = np.linspace(xmin, xmax, 100)
     p = stats.norm.pdf(x, mean, std_dev)
@@ -26,8 +26,8 @@ def graphs(trip_durations):
 
 
 def main():
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via", "rtd"]
-    # elements = ["mnrr"]
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via", "rtd","metra"]
+    # elements = ["go"]
     for ele in elements: 
         print(f"Processing: {ele}")
 
@@ -61,7 +61,8 @@ def main():
                     'number_of_stops': len(df_cleaned),
                     'first_stop_time' : df_cleaned.iloc[0].departure_time,
                     'last_stop_time' : df_cleaned.iloc[len(df_cleaned)-1].departure_time,
-                    'travel_time': int((timeB-timeA).total_seconds())
+                    'travel_time': int((timeB-timeA).total_seconds()),
+                    'distance' : train['distance']
                 })
 
             min_by_stops = min(num_stops, key=lambda x: x["number_of_stops"])
@@ -74,6 +75,19 @@ def main():
             print(f'\tOn average trains make: {avg_stops:.0f} stops')
             print(f'\tMedian # of train: {median_stops:.0f} stops')
 
+            if (ele != "metrolink" and ele != "sle"):
+                cleaned_data = [item for item in num_stops if item["distance"] != "NA"]
+                min_by_distance = min(cleaned_data, key=lambda x: x["distance"])
+                max_by_distance = max(cleaned_data, key=lambda x: x["distance"])
+                trip_durations = [trip['distance'] for trip in cleaned_data]
+                # graphs(trip_durations)
+                avg_distance = np.mean(trip_durations)
+                median_distance = np.median(trip_durations)
+                print(f'\tShortest Trip (distance wise): {min_by_distance["distance"]:.1f} miles on {min_by_distance["train_id"]}')
+                print(f'\tLongest Trip (distance wise): {max_by_distance["distance"]:.1f} miles on {max_by_distance["train_id"]}')
+                print(f'\tOn average trains travels: {avg_distance:.1f} miles')
+                print(f'\tMedian travel distance: {median_distance:.1f} miles')
+
             min_by_time = min(num_stops, key=lambda x: x["travel_time"])
             max_by_time = max(num_stops, key=lambda x: x["travel_time"])
             trip_durations = [trip['travel_time'] for trip in num_stops]
@@ -83,7 +97,6 @@ def main():
             print(f'\tLongest Trip (time wise): {max_by_time["travel_time"]/60:.1f} minutes on {max_by_time["train_id"]}')
             print(f'\tOn average trains take: {avg_time/60:.1f} minutes')
             print(f'\tMedian time of trips: {median_time/60:.1f} minutes')
-
 if __name__ == "__main__":
     # Start the timer
     start_time = time.time()
@@ -97,4 +110,3 @@ if __name__ == "__main__":
 
     print(f"Execution time: {execution_time:.4f} seconds")
     print(f'Data last updated: {str( datetime.datetime.now())}')
-

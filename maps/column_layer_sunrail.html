@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 28.58620423529412,
+    "longitude": -81.36722917647059,
+    "pitch": 75,
+    "zoom": 8
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 40,
+          "stop_id": 2,
+          "stop_lat": 28.813476,
+          "stop_lon": -81.298115,
+          "stop_name": "Sanford",
+          "stop_url": "http://sunrail.com/station/sanford/",
+          "wheelchair_boarding": 1,
+          "zone_id": 2
+        },
+        {
+          "height": 40,
+          "stop_id": 3,
+          "stop_lat": 28.758665,
+          "stop_lon": -81.318301,
+          "stop_name": "Lake Mary",
+          "stop_url": "http://sunrail.com/station/lake-mary/",
+          "wheelchair_boarding": 1,
+          "zone_id": 2
+        },
+        {
+          "height": 40,
+          "stop_id": 4,
+          "stop_lat": 28.663827,
+          "stop_lon": -81.356613,
+          "stop_name": "Altamonte Springs",
+          "stop_url": "http://sunrail.com/station/altamonte-springs/",
+          "wheelchair_boarding": 1,
+          "zone_id": 2
+        },
+        {
+          "height": 40,
+          "stop_id": 5,
+          "stop_lat": 28.597456,
+          "stop_lon": -81.351667,
+          "stop_name": "Winter Park",
+          "stop_url": "http://sunrail.com/station/winter-park/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 40,
+          "stop_id": 6,
+          "stop_lat": 28.573272,
+          "stop_lon": -81.371393,
+          "stop_name": "AdventHealth",
+          "stop_url": "http://sunrail.com/station/adventhealth/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 40,
+          "stop_id": 7,
+          "stop_lat": 28.548551,
+          "stop_lon": -81.380865,
+          "stop_name": "LYNX Central",
+          "stop_url": "http://sunrail.com/station/lynx-central/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 40,
+          "stop_id": 8,
+          "stop_lat": 28.526087,
+          "stop_lon": -81.381982,
+          "stop_name": "Orlando Health/Amtrak",
+          "stop_url": "http://sunrail.com/station/orlando-health-amtrak/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 40,
+          "stop_id": 9,
+          "stop_lat": 28.453154,
+          "stop_lon": -81.366985,
+          "stop_name": "Sand Lake Road",
+          "stop_url": "http://sunrail.com/station/sand-lake-road/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 40,
+          "stop_id": 14,
+          "stop_lat": 28.538901,
+          "stop_lon": -81.38077,
+          "stop_name": "Church Street",
+          "stop_url": "http://sunrail.com/station/church-street-station/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 40,
+          "stop_id": 15,
+          "stop_lat": 28.701299,
+          "stop_lon": -81.345378,
+          "stop_name": "Longwood",
+          "stop_url": "http://sunrail.com/station/longwood/",
+          "wheelchair_boarding": 1,
+          "zone_id": 2
+        },
+        {
+          "height": 40,
+          "stop_id": 16,
+          "stop_lat": 28.634943,
+          "stop_lon": -81.362163,
+          "stop_name": "Maitland",
+          "stop_url": "http://sunrail.com/station/maitland/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 39,
+          "stop_id": 17,
+          "stop_lat": 28.855694,
+          "stop_lon": -81.323413,
+          "stop_name": "DeBary",
+          "stop_url": "http://sunrail.com/station/debary/",
+          "wheelchair_boarding": 1,
+          "zone_id": 1
+        },
+        {
+          "height": 40,
+          "stop_id": 21,
+          "stop_lat": 28.386511,
+          "stop_lon": -81.374059,
+          "stop_name": "Meadow Woods",
+          "stop_url": "http://sunrail.com/station/meadow-woods/",
+          "wheelchair_boarding": 1,
+          "zone_id": 3
+        },
+        {
+          "height": 40,
+          "stop_id": 22,
+          "stop_lat": 28.343098,
+          "stop_lon": -81.390023,
+          "stop_name": "Tupperware",
+          "stop_url": "http://sunrail.com/station/tupperware/",
+          "wheelchair_boarding": 1,
+          "zone_id": 4
+        },
+        {
+          "height": 40,
+          "stop_id": 23,
+          "stop_lat": 28.293801,
+          "stop_lon": -81.404142,
+          "stop_name": "Kissimmee",
+          "stop_url": "http://sunrail.com/station/kissimmee-amtrak/",
+          "wheelchair_boarding": 1,
+          "zone_id": 4
+        },
+        {
+          "height": 40,
+          "stop_id": 24,
+          "stop_lat": 28.258907,
+          "stop_lon": -81.484367,
+          "stop_name": "Poinciana",
+          "stop_url": "http://sunrail.com/station/poinciana/",
+          "wheelchair_boarding": 1,
+          "zone_id": 4
+        },
+        {
+          "height": 39,
+          "stop_id": 25,
+          "stop_lat": 29.01783,
+          "stop_lon": -81.35266,
+          "stop_name": "DeLand",
+          "stop_url": "http://sunrail.com/station/deland/",
+          "wheelchair_boarding": 1,
+          "zone_id": 1
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "1de3cdcf-d2f1-44c3-a3de-d8600475877d",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

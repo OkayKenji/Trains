@@ -53,11 +53,11 @@ def loadData(name_rail):
     global train_classification 
     global use_calendar 
     railroad = name_rail
-    use_calendar = (railroad == 'septa') or (railroad =='metrolink') or (railroad == 'marc') or (railroad == 'trirail') or (railroad == 'sounder') or (railroad == 'vre') or (railroad == 'nicd') or (railroad == "ace") or (railroad == 'mbta') or (railroad == 'sunrail') or (railroad == 'amtrak') or (railroad == "sle") or (railroad == "hl") or (railroad == "via") or (railroad  == "rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS") or (railroad == "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS")
+    use_calendar = (railroad == 'septa') or (railroad =='metrolink') or (railroad == 'marc') or (railroad == 'trirail') or (railroad == 'sounder') or (railroad == 'vre') or (railroad == 'nicd') or (railroad == "ace") or (railroad == 'mbta') or (railroad == 'sunrail') or (railroad == 'amtrak') or (railroad == "sle") or (railroad == "hl") or (railroad == "via") or (railroad  == "rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS") or (railroad == "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS") or (railroad == "metra")
     train_classification = ''
     if railroad == 'njt':
         train_classification = 'block_id'
-    elif railroad == 'ace' or railroad == 'go'or railroad == 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
+    elif railroad == 'ace' or railroad == 'go'or railroad == 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' or railroad == 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS' or railroad == 'metra':
         train_classification = 'trip_id'
     else:
         train_classification = 'trip_short_name'
@@ -134,7 +134,7 @@ def rtd_exempt():
         file.write(pretty_json)
     
 def main():
-    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd"]
+    elements = ["ace","exo","lirr","marc","metrolink","mnrr","nicd","njt","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","go","via","rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS", "rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS", "rtd","metra"]
     for ele in elements: 
         print(f"Processing: {ele}")
         local_start_time = time.time()

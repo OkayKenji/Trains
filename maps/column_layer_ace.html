@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 37.29019989285715,
+    "longitude": -121.0683927142857,
+    "pitch": 75,
+    "zoom": 6
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73529,
+          "stop_desc": NaN,
+          "stop_id": "LAX",
+          "stop_lat": 34.056205,
+          "stop_lon": -118.236504,
+          "stop_name": "Los Angeles Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/lax",
+          "wheelchair_boarding": 1,
+          "zone_id": "LAX"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73233,
+          "stop_desc": NaN,
+          "stop_id": "BFD",
+          "stop_lat": 35.372182,
+          "stop_lon": -119.007701,
+          "stop_name": "Bakersfield Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/bfd.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "BFD"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73922,
+          "stop_desc": NaN,
+          "stop_id": "WAC",
+          "stop_lat": 35.594231,
+          "stop_lon": -119.331919,
+          "stop_name": "Wasco Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/wac.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "WAC"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73262,
+          "stop_desc": NaN,
+          "stop_id": "COC",
+          "stop_lat": 36.098325,
+          "stop_lon": -119.55714,
+          "stop_name": "Corcoran Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/coc",
+          "wheelchair_boarding": 1,
+          "zone_id": "COC"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73463,
+          "stop_desc": NaN,
+          "stop_id": "HNF",
+          "stop_lat": 36.326092,
+          "stop_lon": -119.651982,
+          "stop_name": "Hanford Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/hnf.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "HNF"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73366,
+          "stop_desc": NaN,
+          "stop_id": "FNO",
+          "stop_lat": 36.738431,
+          "stop_lon": -119.782647,
+          "stop_name": "Fresno Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/fno.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "FNO"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73637,
+          "stop_desc": NaN,
+          "stop_id": "MDR",
+          "stop_lat": 37.022568,
+          "stop_lon": -120.075125,
+          "stop_name": "Madera Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/mdr.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "MDR"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73623,
+          "stop_desc": NaN,
+          "stop_id": "MCD",
+          "stop_lat": 37.30733,
+          "stop_lon": -120.476773,
+          "stop_name": "Merced Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/mcd.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "MCD"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73875,
+          "stop_desc": NaN,
+          "stop_id": "TRK",
+          "stop_lat": 37.527261,
+          "stop_lon": -120.79808,
+          "stop_name": "Turlock-Denair Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/trk.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "TRK"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73663,
+          "stop_desc": NaN,
+          "stop_id": "MOD",
+          "stop_lat": 37.668882,
+          "stop_lon": -120.912354,
+          "stop_name": "Modesto Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/mod.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "MOD"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73758,
+          "stop_desc": NaN,
+          "stop_id": "SKT",
+          "stop_lat": 37.95708,
+          "stop_lon": -121.27888,
+          "stop_name": "Stockton- Robert J Cabral Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/skt.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "SKT"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73756,
+          "stop_desc": NaN,
+          "stop_id": "SKN",
+          "stop_lat": 37.945298,
+          "stop_lon": -121.285573,
+          "stop_name": "Stockton- San Joaquin Street Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/skn.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "SKN"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73563,
+          "stop_desc": NaN,
+          "stop_id": "LOD",
+          "stop_lat": 38.133445,
+          "stop_lon": -121.271655,
+          "stop_name": "Lodi Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/lod.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "LOD"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73720,
+          "stop_desc": NaN,
+          "stop_id": "SAC",
+          "stop_lat": 38.584163,
+          "stop_lon": -121.50064,
+          "stop_name": "Sacremento Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/sac.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "SAC"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73222,
+          "stop_desc": NaN,
+          "stop_id": "ACA",
+          "stop_lat": 38.017818,
+          "stop_lon": -121.816183,
+          "stop_name": "Antioch Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/aca.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "ACA"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73686,
+          "stop_desc": NaN,
+          "stop_id": "MTZ",
+          "stop_lat": 38.019089,
+          "stop_lon": -122.138832,
+          "stop_name": "Martinez Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/mtz.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "MTZ"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73742,
+          "stop_desc": NaN,
+          "stop_id": "RIC",
+          "stop_lat": 37.936775,
+          "stop_lon": -122.353053,
+          "stop_name": "Richmond Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/ric.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "RIC"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73369,
+          "stop_desc": NaN,
+          "stop_id": "EMY",
+          "stop_lat": 37.840463,
+          "stop_lon": -122.291727,
+          "stop_name": "Emeryville Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/emy.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "EMY"
+        },
+        {
+          "height": 0,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73655,
+          "stop_desc": NaN,
+          "stop_id": "OKJ",
+          "stop_lat": 37.793793,
+          "stop_lon": -122.271467,
+          "stop_name": "Oakaland Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/okj.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "OKJ"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73586,
+          "stop_desc": NaN,
+          "stop_id": "LTM",
+          "stop_lat": 37.79894,
+          "stop_lon": -121.264143,
+          "stop_name": "Lathrop Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/ltm.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "LTM"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73872,
+          "stop_desc": NaN,
+          "stop_id": "TRC",
+          "stop_lat": 37.696419,
+          "stop_lon": -121.432738,
+          "stop_name": "Tracy Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/trc.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "TRC"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73827,
+          "stop_desc": NaN,
+          "stop_id": "VAS",
+          "stop_lat": 37.697062,
+          "stop_lon": -121.717655,
+          "stop_name": "Vasco Rt Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/vas.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "VAS"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73548,
+          "stop_desc": NaN,
+          "stop_id": "LIV",
+          "stop_lat": 37.685045,
+          "stop_lon": -121.766906,
+          "stop_name": "Livermore Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/liv.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "LIV"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73757,
+          "stop_desc": NaN,
+          "stop_id": "PLS",
+          "stop_lat": 37.658561,
+          "stop_lon": -121.882229,
+          "stop_name": "Pleasanton Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/pls.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "PLS"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73368,
+          "stop_desc": NaN,
+          "stop_id": "FMT",
+          "stop_lat": 37.559114,
+          "stop_lon": -122.007353,
+          "stop_name": "Fremont Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/fmt.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "FMT"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73422,
+          "stop_desc": NaN,
+          "stop_id": "GAC",
+          "stop_lat": 37.406833,
+          "stop_lon": -121.967047,
+          "stop_name": "Great America Parkway Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/gac.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "GAC"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73722,
+          "stop_desc": NaN,
+          "stop_id": "SCC",
+          "stop_lat": 37.353506,
+          "stop_lon": -121.936312,
+          "stop_name": "Santa Clara Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/scc.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "SCC"
+        },
+        {
+          "height": 8,
+          "location_type": 0,
+          "parent_station": NaN,
+          "platform_code": NaN,
+          "stop_code": 73752,
+          "stop_desc": NaN,
+          "stop_id": "SJC",
+          "stop_lat": 37.330686,
+          "stop_lon": -121.902378,
+          "stop_name": "San Jose Amtrak Station",
+          "stop_timezone": NaN,
+          "stop_url": "https://www.amtrak.com/stations/sjc.html",
+          "wheelchair_boarding": 1,
+          "zone_id": "SJC"
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "f8f71684-9a86-4226-a946-2a98320b5363",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

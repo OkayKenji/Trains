@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 45.526045238805956,
+    "longitude": -73.6614510149254,
+    "pitch": 75,
+    "zoom": 8
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 20,
+          "station_id_additional": "\"['MTL5B']\"",
+          "stop_code": "11010",
+          "stop_desc": NaN,
+          "stop_id": "MTL5D",
+          "stop_lat": 45.500002,
+          "stop_lon": -73.566668,
+          "stop_name": "Gare Centrale",
+          "wheelchair_boarding": 1,
+          "zone_id": 1.0
+        },
+        {
+          "height": 0,
+          "station_id_additional": "\"['MTL3C']\"",
+          "stop_code": "11150",
+          "stop_desc": NaN,
+          "stop_id": "MTL3A",
+          "stop_lat": 45.494771,
+          "stop_lon": -73.570807,
+          "stop_name": "Gare Lucien-L'Allier",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 45,
+          "station_id_additional": "\"['MTL2C']\"",
+          "stop_code": "11160",
+          "stop_desc": NaN,
+          "stop_id": "MTL2A",
+          "stop_lat": 45.473771,
+          "stop_lon": -73.603101,
+          "stop_name": "Gare Vend\u00f4me",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 65,
+          "station_id_additional": "\"['MTL1C']\"",
+          "stop_code": "11170",
+          "stop_desc": NaN,
+          "stop_id": "MTL1A",
+          "stop_lat": 45.453681,
+          "stop_lon": -73.64174,
+          "stop_name": "Gare Montr\u00e9al-Ouest",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 27,
+          "station_id_additional": "\"['LCH1B']\"",
+          "stop_code": "11180",
+          "stop_desc": NaN,
+          "stop_id": "LCH1D",
+          "stop_lat": 45.448687,
+          "stop_lon": -73.711325,
+          "stop_name": "Gare Lachine",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 27,
+          "station_id_additional": "\"['DVL2B']\"",
+          "stop_code": "11190",
+          "stop_desc": NaN,
+          "stop_id": "DVL2D",
+          "stop_lat": 45.449209,
+          "stop_lon": -73.74311,
+          "stop_name": "Gare Dorval",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 24,
+          "station_id_additional": "\"['DVL1B']\"",
+          "stop_code": "11200",
+          "stop_desc": NaN,
+          "stop_id": "DVL1D",
+          "stop_lat": 45.449603,
+          "stop_lon": -73.764257,
+          "stop_name": "Gare Pine Beach",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 24,
+          "station_id_additional": "\"['PCL3B']\"",
+          "stop_code": "11210",
+          "stop_desc": NaN,
+          "stop_id": "PCL3D",
+          "stop_lat": 45.449754,
+          "stop_lon": -73.790874,
+          "stop_name": "Gare Valois",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 27,
+          "station_id_additional": "\"['PCL2B']\"",
+          "stop_code": "11220",
+          "stop_desc": NaN,
+          "stop_id": "PCL2D",
+          "stop_lat": 45.447256,
+          "stop_lon": -73.803441,
+          "stop_name": "Gare Pointe-Claire",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 24,
+          "station_id_additional": "\"['PCL1B']\"",
+          "stop_code": "11230",
+          "stop_desc": NaN,
+          "stop_id": "PCL1D",
+          "stop_lat": 45.442424,
+          "stop_lon": -73.81988,
+          "stop_name": "Gare Cedar Park",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 27,
+          "station_id_additional": "\"['BEA2B']\"",
+          "stop_code": "11240",
+          "stop_desc": NaN,
+          "stop_id": "BEA2D",
+          "stop_lat": 45.434983,
+          "stop_lon": -73.847393,
+          "stop_name": "Gare Beaconsfield",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 23,
+          "station_id_additional": "\"['BEA1B']\"",
+          "stop_code": "11250",
+          "stop_desc": NaN,
+          "stop_id": "BEA1D",
+          "stop_lat": 45.427404,
+          "stop_lon": -73.887258,
+          "stop_name": "Gare Beaurepaire",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 25,
+          "station_id_additional": "\"['BUR1B']\"",
+          "stop_code": "11260",
+          "stop_desc": NaN,
+          "stop_id": "BUR1D",
+          "stop_lat": 45.419916,
+          "stop_lon": -73.915559,
+          "stop_name": "Gare Baie-d'Urf\u00e9",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 25,
+          "station_id_additional": "\"['SAB1B']\"",
+          "stop_code": "11270",
+          "stop_desc": NaN,
+          "stop_id": "SAB1D",
+          "stop_lat": 45.407615,
+          "stop_lon": -73.951215,
+          "stop_name": "Gare Sainte-Anne-de-Bellevue",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 24,
+          "station_id_additional": "\"['LIP1B']\"",
+          "stop_code": "11280",
+          "stop_desc": NaN,
+          "stop_id": "LIP1D",
+          "stop_lat": 45.395932,
+          "stop_lon": -73.965426,
+          "stop_name": "Gare \u00cele-Perrot",
+          "wheelchair_boarding": 0,
+          "zone_id": 4.0
+        },
+        {
+          "height": 24,
+          "station_id_additional": "\"['TVA1B']\"",
+          "stop_code": "11290",
+          "stop_desc": NaN,
+          "stop_id": "TVA1D",
+          "stop_lat": 45.387182,
+          "stop_lon": -73.992274,
+          "stop_name": "Gare Pincourt",
+          "wheelchair_boarding": 0,
+          "zone_id": 4.0
+        },
+        {
+          "height": 25,
+          "station_id_additional": "\"['VAU1B']\"",
+          "stop_code": "11300",
+          "stop_desc": NaN,
+          "stop_id": "VAU1D",
+          "stop_lat": 45.3864,
+          "stop_lon": -74.008255,
+          "stop_name": "Gare Dorion",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 25,
+          "station_id_additional": "\"['VAU8B']\"",
+          "stop_code": "11310",
+          "stop_desc": NaN,
+          "stop_id": "VAU8D",
+          "stop_lat": 45.399009,
+          "stop_lon": -74.050558,
+          "stop_name": "Gare Vaudreuil",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 6,
+          "station_id_additional": "\"['HUD1B']\"",
+          "stop_code": "11320",
+          "stop_desc": NaN,
+          "stop_id": "HUD1D",
+          "stop_lat": 45.459638,
+          "stop_lon": -74.140937,
+          "stop_name": "Gare Hudson",
+          "wheelchair_boarding": 0,
+          "zone_id": 6.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['MTL8B']\"",
+          "stop_code": "11350",
+          "stop_desc": NaN,
+          "stop_id": "MTL8D",
+          "stop_lat": 45.531493,
+          "stop_lon": -73.62378,
+          "stop_name": "Gare Parc",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['MTL37A']\"",
+          "stop_code": "11355",
+          "stop_desc": NaN,
+          "stop_id": "MTL37C",
+          "stop_lat": 45.537058,
+          "stop_lon": -73.658031,
+          "stop_name": "Gare Chabanel",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['MTL7B']\"",
+          "stop_code": "11360",
+          "stop_desc": NaN,
+          "stop_id": "MTL7D",
+          "stop_lat": 45.540251,
+          "stop_lon": -73.676902,
+          "stop_name": "Gare Bois-de-Boulogne",
+          "wheelchair_boarding": 0,
+          "zone_id": 2.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['LVL24A']\"",
+          "stop_code": "11365",
+          "stop_desc": NaN,
+          "stop_id": "LVL24C",
+          "stop_lat": 45.560288,
+          "stop_lon": -73.710104,
+          "stop_name": "Gare De la Concorde",
+          "wheelchair_boarding": 0,
+          "zone_id": 3.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['LVL22A']\"",
+          "stop_code": "11375",
+          "stop_desc": NaN,
+          "stop_id": "LVL22C",
+          "stop_lat": 45.603767,
+          "stop_lon": -73.74266,
+          "stop_name": "Gare Vimont",
+          "wheelchair_boarding": 0,
+          "zone_id": 3.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['LVL4A']\"",
+          "stop_code": "11380",
+          "stop_desc": NaN,
+          "stop_id": "LVL4C",
+          "stop_lat": 45.625439,
+          "stop_lon": -73.764748,
+          "stop_name": "Gare Sainte-Rose",
+          "wheelchair_boarding": 0,
+          "zone_id": 3.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['ROS2A']\"",
+          "stop_code": "11390",
+          "stop_desc": NaN,
+          "stop_id": "ROS2C",
+          "stop_lat": 45.634505,
+          "stop_lon": -73.79574,
+          "stop_name": "Gare Rosem\u00e8re",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['STR4B']\"",
+          "stop_code": "11400",
+          "stop_desc": NaN,
+          "stop_id": "STR4D",
+          "stop_lat": 45.636039,
+          "stop_lon": -73.83355,
+          "stop_name": "Gare Sainte-Th\u00e9r\u00e8se",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['BLA1A']\"",
+          "stop_code": "11410",
+          "stop_desc": NaN,
+          "stop_id": "BLA1C",
+          "stop_lat": 45.672427,
+          "stop_lon": -73.866162,
+          "stop_name": "Gare Blainville",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 24,
+          "station_id_additional": "\"['MIR1A']\"",
+          "stop_code": "11420",
+          "stop_desc": NaN,
+          "stop_id": "MIR1C",
+          "stop_lat": 45.711707,
+          "stop_lon": -73.918555,
+          "stop_name": "Gare Mirabel",
+          "wheelchair_boarding": 0,
+          "zone_id": 6.0
+        },
+        {
+          "height": 28,
+          "station_id_additional": "\"['SJM1A']\"",
+          "stop_code": "11430",
+          "stop_desc": NaN,
+          "stop_id": "SJM1C",
+          "stop_lat": 45.773188,
+          "stop_lon": -73.999119,
+          "stop_name": "Gare Saint-J\u00e9r\u00f4me",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 14,
+          "station_id_additional": "\"['STL1D']\"",
+          "stop_code": "11440",
+          "stop_desc": NaN,
+          "stop_id": "STL1B",
+          "stop_lat": 45.499634,
+          "stop_lon": -73.505824,
+          "stop_name": "Gare Saint-Lambert",
+          "wheelchair_boarding": 0,
+          "zone_id": 3.0
+        },
+        {
+          "height": 14,
+          "station_id_additional": "\"['STH3D']\"",
+          "stop_code": "11450",
+          "stop_desc": NaN,
+          "stop_id": "STH3B",
+          "stop_lat": 45.508145,
+          "stop_lon": -73.433824,
+          "stop_name": "Gare Longueuil-Saint-Hubert",
+          "wheelchair_boarding": 0,
+          "zone_id": 3.0
+        },
+        {
+          "height": 14,
+          "station_id_additional": "\"['STB2D']\"",
+          "stop_code": "11460",
+          "stop_desc": NaN,
+          "stop_id": "STB2B",
+          "stop_lat": 45.512028,
+          "stop_lon": -73.374408,
+          "stop_name": "Gare Saint-Bruno",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 14,
+          "station_id_additional": "\"['SBA2D']\"",
+          "stop_code": "11470",
+          "stop_desc": NaN,
+          "stop_id": "SBA2B",
+          "stop_lat": 45.523306,
+          "stop_lon": -73.305923,
+          "stop_name": "Gare Saint-Basile-le-Grand",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 14,
+          "station_id_additional": "\"['MMS1D']\"",
+          "stop_code": "11480",
+          "stop_desc": NaN,
+          "stop_id": "MMS1B",
+          "stop_lat": 45.546052,
+          "stop_lon": -73.229775,
+          "stop_name": "Gare McMasterville",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 14,
+          "station_id_additional": "\"['MSH1A']\"",
+          "stop_code": "11490",
+          "stop_desc": NaN,
+          "stop_id": "MSH1C",
+          "stop_lat": 45.577198,
+          "stop_lon": -73.178501,
+          "stop_name": "Gare Mont-Saint-Hilaire",
+          "wheelchair_boarding": 0,
+          "zone_id": 6.0
+        },
+        {
+          "height": 18,
+          "station_id_additional": "\"['LCH4C']\"",
+          "stop_code": "11495",
+          "stop_desc": NaN,
+          "stop_id": "LCH4A",
+          "stop_lat": 45.437645,
+          "stop_lon": -73.655887,
+          "stop_name": "Gare Du Canal",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 18,
+          "station_id_additional": "\"['LSL1C']\"",
+          "stop_code": "11500",
+          "stop_desc": NaN,
+          "stop_id": "LSL1A",
+          "stop_lat": 45.425218,
+          "stop_lon": -73.656978,
+          "stop_name": "Gare LaSalle",
+          "wheelchair_boarding": 0,
+          "zone_id": 1.0
+        },
+        {
+          "height": 18,
+          "station_id_additional": "\"['SCS2C']\"",
+          "stop_code": "11510",
+          "stop_desc": NaN,
+          "stop_id": "SCS2A",
+          "stop_lat": 45.382043,
+          "stop_lon": -73.600099,
+          "stop_name": "Gare Sainte-Catherine",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 18,
+          "station_id_additional": "\"['SCS1C']\"",
+          "stop_code": "11520",
+          "stop_desc": NaN,
+          "stop_id": "SCS1A",
+          "stop_lat": 45.373948,
+          "stop_lon": -73.570299,
+          "stop_name": "Gare Saint-Constant",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 18,
+          "station_id_additional": "\"['DEL1C']\"",
+          "stop_code": "11530",
+          "stop_desc": NaN,
+          "stop_id": "DEL1A",
+          "stop_lat": 45.366844,
+          "stop_lon": -73.540801,
+          "stop_name": "Gare Delson",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 18,
+          "station_id_additional": "\"['CAN1C']\"",
+          "stop_code": "11540",
+          "stop_desc": NaN,
+          "stop_id": "CAN1A",
+          "stop_lat": 45.360923,
+          "stop_lon": -73.514848,
+          "stop_name": "Gare Candiac",
+          "wheelchair_boarding": 0,
+          "zone_id": 5.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MTL59A']\"",
+          "stop_code": "11550",
+          "stop_desc": NaN,
+          "stop_id": "MTL59C",
+          "stop_lat": 45.535026,
+          "stop_lon": -73.662662,
+          "stop_name": "Gare Ahuntsic",
+          "wheelchair_boarding": 1,
+          "zone_id": 1.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MTL58A']\"",
+          "stop_code": "11560",
+          "stop_desc": NaN,
+          "stop_id": "MTL58C",
+          "stop_lat": 45.549408,
+          "stop_lon": -73.654339,
+          "stop_name": "Gare Sauv\u00e9",
+          "wheelchair_boarding": 1,
+          "zone_id": 1.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MTL57A']\"",
+          "stop_code": "11570",
+          "stop_desc": NaN,
+          "stop_id": "MTL57C",
+          "stop_lat": 45.582993,
+          "stop_lon": -73.630262,
+          "stop_name": "Gare Saint-Michel-Montr\u00e9al-Nord",
+          "wheelchair_boarding": 1,
+          "zone_id": 2.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MTL56A']\"",
+          "stop_code": "11580",
+          "stop_desc": NaN,
+          "stop_id": "MTL56C",
+          "stop_lat": 45.600339,
+          "stop_lon": -73.615779,
+          "stop_name": "Gare Saint-L\u00e9onard-Montr\u00e9al-Nord",
+          "wheelchair_boarding": 1,
+          "zone_id": 2.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MTL55A']\"",
+          "stop_code": "11590",
+          "stop_desc": NaN,
+          "stop_id": "MTL55C",
+          "stop_lat": 45.617867,
+          "stop_lon": -73.596659,
+          "stop_name": "Gare Anjou",
+          "wheelchair_boarding": 1,
+          "zone_id": 2.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MTL54A']\"",
+          "stop_code": "11600",
+          "stop_desc": NaN,
+          "stop_id": "MTL54C",
+          "stop_lat": 45.660661,
+          "stop_lon": -73.539166,
+          "stop_name": "Gare Rivi\u00e8re-des-Prairies",
+          "wheelchair_boarding": 1,
+          "zone_id": 2.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MTL53A']\"",
+          "stop_code": "11610",
+          "stop_desc": NaN,
+          "stop_id": "MTL53C",
+          "stop_lat": 45.674876,
+          "stop_lon": -73.505342,
+          "stop_name": "Gare Pointe-aux-Trembles",
+          "wheelchair_boarding": 1,
+          "zone_id": 2.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['LEG1A']\"",
+          "stop_code": "11630",
+          "stop_desc": NaN,
+          "stop_id": "LEG1C",
+          "stop_lat": 45.734587,
+          "stop_lon": -73.486111,
+          "stop_name": "Gare Repentigny",
+          "wheelchair_boarding": 1,
+          "zone_id": 5.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['LCN1A']\"",
+          "stop_code": "11640",
+          "stop_desc": NaN,
+          "stop_id": "LCN1C",
+          "stop_lat": 45.728495,
+          "stop_lon": -73.521187,
+          "stop_name": "Gare Terrebonne",
+          "wheelchair_boarding": 1,
+          "zone_id": 5.0
+        },
+        {
+          "height": 16,
+          "station_id_additional": "\"['MAS1A']\"",
+          "stop_code": "11650",
+          "stop_desc": NaN,
+          "stop_id": "MAS1C",
+          "stop_lat": 45.729587,
+          "stop_lon": -73.598495,
+          "stop_name": "Gare Mascouche",
+          "wheelchair_boarding": 1,
+          "zone_id": 5.0
+        },
+        {
+          "height": 6,
+          "station_id_additional": "\"['_BALLANT']\"",
+          "stop_code": "99916",
+          "stop_desc": NaN,
+          "stop_id": "_BALLAN",
+          "stop_lat": 45.447867,
+          "stop_lon": -73.68077,
+          "stop_name": "Ballantyne",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0003",
+          "stop_desc": NaN,
+          "stop_id": "_Josy",
+          "stop_lat": 45.487885,
+          "stop_lon": -73.676139,
+          "stop_name": "Josy Receving",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 16,
+          "station_id_additional": "[]",
+          "stop_code": "FA0004",
+          "stop_desc": NaN,
+          "stop_id": "_PAT_Sud",
+          "stop_lat": 45.677631,
+          "stop_lon": -73.495249,
+          "stop_name": "D\u00e9but Sud de la voie d'\u00e9vitement Pointes-aux-Trembles",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 16,
+          "station_id_additional": "[]",
+          "stop_code": "FA0005",
+          "stop_desc": NaN,
+          "stop_id": "_PAT_Nord",
+          "stop_lat": 45.694456,
+          "stop_lon": -73.48869,
+          "stop_name": "Fin Nord voie de contournement Pointe-aux-Trembles",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0006",
+          "stop_desc": NaN,
+          "stop_id": "_Hibernia",
+          "stop_lat": 45.478019,
+          "stop_lon": -73.564211,
+          "stop_name": "Hibernia",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 16,
+          "station_id_additional": "[]",
+          "stop_code": "FA0020",
+          "stop_desc": NaN,
+          "stop_id": "_Chlemagne",
+          "stop_lat": 45.731546,
+          "stop_lon": -73.486611,
+          "stop_name": "Faux arr\u00eat Voie de contournement Charlemagne",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 16,
+          "station_id_additional": "[]",
+          "stop_code": "FA0021",
+          "stop_desc": NaN,
+          "stop_id": "_RDP_Sud",
+          "stop_lat": 45.628154,
+          "stop_lon": -73.583037,
+          "stop_name": "Rivi\u00e8res-des-Prairies Sud",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 16,
+          "station_id_additional": "[]",
+          "stop_code": "FA0022",
+          "stop_desc": NaN,
+          "stop_id": "_RDP_Nord",
+          "stop_lat": 45.642338,
+          "stop_lon": -73.564132,
+          "stop_name": "Rivi\u00e8re-des-Prairies Nord",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0023",
+          "stop_desc": NaN,
+          "stop_id": "Turcot",
+          "stop_lat": 45.451478,
+          "stop_lon": -73.633384,
+          "stop_name": "Turcot Ouest",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0024",
+          "stop_desc": NaN,
+          "stop_id": "_ST_Henri",
+          "stop_lat": 45.473696,
+          "stop_lon": -73.591113,
+          "stop_name": "Saint-Henri",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0025",
+          "stop_desc": NaN,
+          "stop_id": "_Lachine",
+          "stop_lat": 45.476887,
+          "stop_lon": -73.581406,
+          "stop_name": "Canal Lachine",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0026",
+          "stop_desc": NaN,
+          "stop_id": "_Bridge_N",
+          "stop_lat": 45.489205,
+          "stop_lon": -73.556482,
+          "stop_name": "Bridge Nord",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0027",
+          "stop_desc": NaN,
+          "stop_id": "Wellington",
+          "stop_lat": 45.492605,
+          "stop_lon": -73.555951,
+          "stop_name": "Wellington",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0028",
+          "stop_desc": NaN,
+          "stop_id": "_Paco",
+          "stop_lat": 45.494674,
+          "stop_lon": -73.556294,
+          "stop_name": "Paco",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        },
+        {
+          "height": 6,
+          "station_id_additional": "[]",
+          "stop_code": "FA0029",
+          "stop_desc": NaN,
+          "stop_id": "Montreal",
+          "stop_lat": 45.498368,
+          "stop_lon": -73.563151,
+          "stop_name": "Montr\u00e9al",
+          "wheelchair_boarding": 0,
+          "zone_id": NaN
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "4434d03d-33d2-4f14-ac33-61c31f2cb8d6",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 41.29551088888889,
+    "longitude": -72.5983661111111,
+    "pitch": 75,
+    "zoom": 8
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 20,
+          "stop_id": "NHV",
+          "stop_lat": 41.297714,
+          "stop_lon": -72.92667,
+          "stop_name": "New Haven - NHV",
+          "stop_timezone": "America/New_York",
+          "stop_url": "https://www.amtrak.com/stations/nhv"
+        },
+        {
+          "height": 20,
+          "stop_id": "STS",
+          "stop_lat": 41.305253,
+          "stop_lon": -72.922086,
+          "stop_name": "New Haven - STS",
+          "stop_timezone": "America/New_York",
+          "stop_url": "https://www.amtrak.com/stations/sts"
+        },
+        {
+          "height": 20,
+          "stop_id": "BNF",
+          "stop_lat": 41.274549,
+          "stop_lon": -72.817225,
+          "stop_name": "Branford - BNF",
+          "stop_timezone": "America/New_York",
+          "stop_url": "http://www.amtrak.com/stations/bnf"
+        },
+        {
+          "height": 20,
+          "stop_id": "GUI",
+          "stop_lat": 41.275603,
+          "stop_lon": -72.673513,
+          "stop_name": "Guilford - GUI",
+          "stop_timezone": "America/New_York",
+          "stop_url": "http://www.amtrak.com/stations/gui"
+        },
+        {
+          "height": 12,
+          "stop_id": "MDS",
+          "stop_lat": 41.283577,
+          "stop_lon": -72.599444,
+          "stop_name": "Madison - MDS",
+          "stop_timezone": "America/New_York",
+          "stop_url": "http://www.amtrak.com/stations/mds"
+        },
+        {
+          "height": 19,
+          "stop_id": "CLN",
+          "stop_lat": 41.279458,
+          "stop_lon": -72.528314,
+          "stop_name": "Clinton - CLN",
+          "stop_timezone": "America/New_York",
+          "stop_url": "http://www.amtrak.com/stations/cln"
+        },
+        {
+          "height": 20,
+          "stop_id": "WSB",
+          "stop_lat": 41.288787,
+          "stop_lon": -72.448,
+          "stop_name": "Westbrook - WSB",
+          "stop_timezone": "America/New_York",
+          "stop_url": "http://www.amtrak.com/stations/wsb"
+        },
+        {
+          "height": 20,
+          "stop_id": "OSB",
+          "stop_lat": 41.30039,
+          "stop_lon": -72.376818,
+          "stop_name": "Old Saybrook Amtrak Station - OSB",
+          "stop_timezone": "America/New_York",
+          "stop_url": "https://www.amtrak.com/stations/osb"
+        },
+        {
+          "height": 20,
+          "stop_id": "NLC",
+          "stop_lat": 41.354267,
+          "stop_lon": -72.093225,
+          "stop_name": "New London - NLC",
+          "stop_timezone": "America/New_York",
+          "stop_url": "https://www.amtrak.com/stations/nlc"
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "5c2fee4e-506e-4dd7-95c4-6504c6f621d8",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

@@ -164,6 +164,9 @@
             document.getElementById('testTestSorted').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
             document.getElementById('testTestSorted').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
             
+            document.getElementById('map').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}maps/column_layer_${document.getElementById('train-dropdown').value}.html`
+            document.getElementById('map').href =  `maps/column_layer_${document.getElementById('train-dropdown').value}.html`
+            
             fetchData(selectedValue);
         }
 
@@ -224,8 +227,11 @@
         function filterNumberA() {
             document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
             document.getElementById('testTest').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
-                        document.getElementById('testTestSorted').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
+            document.getElementById('testTestSorted').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
             document.getElementById('testTestSorted').href = `?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}&sort=y`
+            document.getElementById('map').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}maps/column_layer_${document.getElementById('train-dropdown').value}.html`
+            document.getElementById('map').href = `maps/column_layer_${document.getElementById('train-dropdown').value}.html`
+            
             const regex = new RegExp(document.getElementById('testing').value);
             filterNumber(regex);
         }
@@ -306,6 +312,7 @@
             <option value="hl">Hartford Line</option>
             <option value="go">Go Transit</option>
             <option value="via">VIA</option>
+            <option value="metra">METRA</option>
             <option value="rtd">RTD A, B, G, N Lines</option>
             <option value="mnrrInterpolated">MNRR Interpolated</option>
         </select>
@@ -316,6 +323,7 @@
         <a id="testTest" style="margin: 0;" href="?trainFilter=">?trainFilter=</a>
         <p style="margin-top: 0; margin-bottom: 0; margin-left: 50px;">Shareable Link (sorted):</p>
         <a id="testTestSorted" style="margin: 0;" href="?trainFilter=">?trainFilter=</a>
+        <a id="map" style="margin: 0;" href="">column_layer_.html</a>
         <button onclick="filterNumberA()">Filter by Regex Number</button>
         <button onclick="sortTrainsTime()">Sort by Time</button>
     </pre>

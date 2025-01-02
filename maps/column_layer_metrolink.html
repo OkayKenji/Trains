@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 34.03775751343283,
+    "longitude": -117.92239830895524,
+    "pitch": 75,
+    "zoom": 7
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 46,
+          "schedules": 1,
+          "stop_alias": "Baldwin Park",
+          "stop_id": 101,
+          "stop_lat": 34.086426,
+          "stop_lon": -117.957397,
+          "stop_name": "Baldwin Park Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/baldwin-park/",
+          "to_from": "BOTH",
+          "zone_id": 101
+        },
+        {
+          "height": 52,
+          "schedules": 1,
+          "stop_alias": "Burbank - Downtown",
+          "stop_id": 102,
+          "stop_lat": 34.178944,
+          "stop_lon": -118.312866,
+          "stop_name": "Downtown Burbank Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/burbank---downtown/",
+          "to_from": "BOTH",
+          "zone_id": 102
+        },
+        {
+          "height": 22,
+          "schedules": 1,
+          "stop_alias": "Chatsworth",
+          "stop_id": 103,
+          "stop_lat": 34.253197,
+          "stop_lon": -118.599411,
+          "stop_name": "Chatsworth Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/chatsworth/",
+          "to_from": "BOTH",
+          "zone_id": 103
+        },
+        {
+          "height": 48,
+          "schedules": 1,
+          "stop_alias": "Covina",
+          "stop_id": 104,
+          "stop_lat": 34.09214,
+          "stop_lon": -117.888893,
+          "stop_name": "Covina Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/covina/",
+          "to_from": "BOTH",
+          "zone_id": 104
+        },
+        {
+          "height": 46,
+          "schedules": 1,
+          "stop_alias": "El Monte",
+          "stop_id": 105,
+          "stop_lat": 34.076805,
+          "stop_lon": -118.0355,
+          "stop_name": "El Monte Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/el-monte/",
+          "to_from": "BOTH",
+          "zone_id": 105
+        },
+        {
+          "height": 52,
+          "schedules": 1,
+          "stop_alias": "Glendale",
+          "stop_id": 106,
+          "stop_lat": 34.123341,
+          "stop_lon": -118.258926,
+          "stop_name": "Glendale Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/glendale/",
+          "to_from": "BOTH",
+          "zone_id": 106
+        },
+        {
+          "height": 150,
+          "schedules": 1,
+          "stop_alias": "L.A. Union Station",
+          "stop_id": 107,
+          "stop_lat": 34.055729,
+          "stop_lon": -118.233513,
+          "stop_name": "L. A. Union Station Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/l.a.-union-station/",
+          "to_from": "BOTH",
+          "zone_id": 107
+        },
+        {
+          "height": 16,
+          "schedules": 1,
+          "stop_alias": "Moorpark",
+          "stop_id": 108,
+          "stop_lat": 34.285324,
+          "stop_lon": -118.877876,
+          "stop_name": "Moorpark Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/moorpark/",
+          "to_from": "BOTH",
+          "zone_id": 108
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Pomona - North",
+          "stop_id": 109,
+          "stop_lat": 34.093639,
+          "stop_lon": -117.753052,
+          "stop_name": "Pomona (North) Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/pomona---north/",
+          "to_from": "BOTH",
+          "zone_id": 109
+        },
+        {
+          "height": 30,
+          "schedules": 1,
+          "stop_alias": "Sylmar / San Fernando",
+          "stop_id": 110,
+          "stop_lat": 34.292591,
+          "stop_lon": -118.450172,
+          "stop_name": "Sylmar/San Fernando Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/sylmarsan-fernando/",
+          "to_from": "BOTH",
+          "zone_id": 110
+        },
+        {
+          "height": 30,
+          "schedules": 1,
+          "stop_alias": "Santa Clarita",
+          "stop_id": 111,
+          "stop_lat": 34.413437,
+          "stop_lon": -118.524818,
+          "stop_name": "Santa Clarita Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/santa-clarita/",
+          "to_from": "BOTH",
+          "zone_id": 111
+        },
+        {
+          "height": 16,
+          "schedules": 1,
+          "stop_alias": "Simi Valley",
+          "stop_id": 112,
+          "stop_lat": 34.270412,
+          "stop_lon": -118.695549,
+          "stop_name": "Simi Valley Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/simi-valley/",
+          "to_from": "BOTH",
+          "zone_id": 112
+        },
+        {
+          "height": 22,
+          "schedules": 1,
+          "stop_alias": "Van Nuys",
+          "stop_id": 113,
+          "stop_lat": 34.211559,
+          "stop_lon": -118.448219,
+          "stop_name": "Van Nuys Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/van-nuys/",
+          "to_from": "BOTH",
+          "zone_id": 113
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Claremont",
+          "stop_id": 114,
+          "stop_lat": 34.093884,
+          "stop_lon": -117.716354,
+          "stop_name": "Claremont Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/claremont/",
+          "to_from": "BOTH",
+          "zone_id": 114
+        },
+        {
+          "height": 48,
+          "schedules": 1,
+          "stop_alias": "Cal State LA",
+          "stop_id": 115,
+          "stop_lat": 34.062119,
+          "stop_lon": -118.171646,
+          "stop_name": "Cal State LA Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/cal-state-la/",
+          "to_from": "BOTH",
+          "zone_id": 115
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Fontana",
+          "stop_id": 116,
+          "stop_lat": 34.095165,
+          "stop_lon": -117.438095,
+          "stop_name": "Fontana Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/fontana/",
+          "to_from": "BOTH",
+          "zone_id": 116
+        },
+        {
+          "height": 10,
+          "schedules": 1,
+          "stop_alias": "Ontario - East",
+          "stop_id": 117,
+          "stop_lat": 34.039909,
+          "stop_lon": -117.579521,
+          "stop_name": "East Ontario Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/ontario---east/",
+          "to_from": "BOTH",
+          "zone_id": 117
+        },
+        {
+          "height": 34,
+          "schedules": 1,
+          "stop_alias": "Montclair",
+          "stop_id": 118,
+          "stop_lat": 34.094086,
+          "stop_lon": -117.69558,
+          "stop_name": "Montclair Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/montclair/",
+          "to_from": "BOTH",
+          "zone_id": 118
+        },
+        {
+          "height": 10,
+          "schedules": 1,
+          "stop_alias": "Jurupa Valley / Pedley",
+          "stop_id": 119,
+          "stop_lat": 33.978119,
+          "stop_lon": -117.476273,
+          "stop_name": "Jurupa Valley/Pedley Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/jurupa-valleypedley/",
+          "to_from": "BOTH",
+          "zone_id": 119
+        },
+        {
+          "height": 10,
+          "schedules": 1,
+          "stop_alias": "Pomona - Downtown",
+          "stop_id": 120,
+          "stop_lat": 34.058765,
+          "stop_lon": -117.750549,
+          "stop_name": "Downtown Pomona Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/pomona---downtown/",
+          "to_from": "BOTH",
+          "zone_id": 120
+        },
+        {
+          "height": 34,
+          "schedules": 1,
+          "stop_alias": "Rancho Cucamonga",
+          "stop_id": 121,
+          "stop_lat": 34.091854,
+          "stop_lon": -117.559937,
+          "stop_name": "Rancho Cucamonga Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/rancho-cucamonga/",
+          "to_from": "BOTH",
+          "zone_id": 121
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Rialto",
+          "stop_id": 122,
+          "stop_lat": 34.096786,
+          "stop_lon": -117.371887,
+          "stop_name": "Rialto Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/rialto/",
+          "to_from": "BOTH",
+          "zone_id": 122
+        },
+        {
+          "height": 42,
+          "schedules": 1,
+          "stop_alias": "Riverside - Downtown",
+          "stop_id": 123,
+          "stop_lat": 33.975552,
+          "stop_lon": -117.369888,
+          "stop_name": "Riverside-Downtown Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/riverside---downtown/",
+          "to_from": "BOTH",
+          "zone_id": 123
+        },
+        {
+          "height": 42,
+          "schedules": 1,
+          "stop_alias": "San Bernardino Depot",
+          "stop_id": 124,
+          "stop_lat": 34.10453,
+          "stop_lon": -117.310089,
+          "stop_name": "San Bernardino Depot Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/sanbernardinodepot/",
+          "to_from": "BOTH",
+          "zone_id": 124
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Upland",
+          "stop_id": 125,
+          "stop_lat": 34.094501,
+          "stop_lon": -117.647507,
+          "stop_name": "Upland Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/upland/",
+          "to_from": "BOTH",
+          "zone_id": 125
+        },
+        {
+          "height": 10,
+          "schedules": 1,
+          "stop_alias": "Montebello / Commerce",
+          "stop_id": 126,
+          "stop_lat": 34.006962,
+          "stop_lon": -118.12561,
+          "stop_name": "Montebello/ Commerce Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/montebellocommerce/",
+          "to_from": "BOTH",
+          "zone_id": 126
+        },
+        {
+          "height": 10,
+          "schedules": 1,
+          "stop_alias": "Industry",
+          "stop_id": 127,
+          "stop_lat": 34.007927,
+          "stop_lon": -117.845581,
+          "stop_name": "Industry Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/industry/",
+          "to_from": "BOTH",
+          "zone_id": 127
+        },
+        {
+          "height": 26,
+          "schedules": 1,
+          "stop_alias": "Anaheim",
+          "stop_id": 128,
+          "stop_lat": 33.802582,
+          "stop_lon": -117.877998,
+          "stop_name": "Anaheim-ARTIC Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/anaheim/",
+          "to_from": "BOTH",
+          "zone_id": 128
+        },
+        {
+          "height": 30,
+          "schedules": 1,
+          "stop_alias": "Sun Valley",
+          "stop_id": 129,
+          "stop_lat": 34.222401,
+          "stop_lon": -118.373398,
+          "stop_name": "Sun Valley Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/sun-valley/",
+          "to_from": "BOTH",
+          "zone_id": 129
+        },
+        {
+          "height": 40,
+          "schedules": 1,
+          "stop_alias": "Buena Park",
+          "stop_id": 130,
+          "stop_lat": 33.875969,
+          "stop_lon": -117.986855,
+          "stop_name": "Buena Park Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/buena-park/",
+          "to_from": "BOTH",
+          "zone_id": 130
+        },
+        {
+          "height": 0,
+          "schedules": 1,
+          "stop_alias": "San Clemente Pier",
+          "stop_id": 133,
+          "stop_lat": 33.419476,
+          "stop_lon": -117.619598,
+          "stop_name": "San Clemente Pier Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/san-clemente-pier/",
+          "to_from": "BOTH",
+          "zone_id": 133
+        },
+        {
+          "height": 7,
+          "schedules": 1,
+          "stop_alias": "Commerce",
+          "stop_id": 135,
+          "stop_lat": 33.990734,
+          "stop_lon": -118.143776,
+          "stop_name": "Commerce Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/commerce/",
+          "to_from": "BOTH",
+          "zone_id": 135
+        },
+        {
+          "height": 44,
+          "schedules": 1,
+          "stop_alias": "Irvine",
+          "stop_id": 140,
+          "stop_lat": 33.657055,
+          "stop_lon": -117.732933,
+          "stop_name": "Irvine Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/irvine/",
+          "to_from": "BOTH",
+          "zone_id": 140
+        },
+        {
+          "height": 42,
+          "schedules": 1,
+          "stop_alias": "Laguna Niguel / Mission Viejo",
+          "stop_id": 141,
+          "stop_lat": 33.553902,
+          "stop_lon": -117.675003,
+          "stop_name": "Laguna Niguel/ Mission Viejo Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/laguna-niguelmission-viejo/",
+          "to_from": "BOTH",
+          "zone_id": 141
+        },
+        {
+          "height": 40,
+          "schedules": 1,
+          "stop_alias": "Norwalk / Santa Fe Springs",
+          "stop_id": 143,
+          "stop_lat": 33.916203,
+          "stop_lon": -118.060165,
+          "stop_name": "Norwalk/ Santa Fe Springs Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/norwalksanta-fe-springs/",
+          "to_from": "BOTH",
+          "zone_id": 143
+        },
+        {
+          "height": 12,
+          "schedules": 1,
+          "stop_alias": "Oceanside",
+          "stop_id": 144,
+          "stop_lat": 33.192554,
+          "stop_lon": -117.379875,
+          "stop_name": "Oceanside Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/oceanside/",
+          "to_from": "BOTH",
+          "zone_id": 144
+        },
+        {
+          "height": 44,
+          "schedules": 1,
+          "stop_alias": "Orange",
+          "stop_id": 145,
+          "stop_lat": 33.78878,
+          "stop_lon": -117.8573,
+          "stop_name": "Orange Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/orange/",
+          "to_from": "BOTH",
+          "zone_id": 145
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Corona - North Main",
+          "stop_id": 147,
+          "stop_lat": 33.882195,
+          "stop_lon": -117.563454,
+          "stop_name": "North Main Corona Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/corona---north-main/",
+          "to_from": "BOTH",
+          "zone_id": 147
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Riverside - La Sierra",
+          "stop_id": 148,
+          "stop_lat": 33.899925,
+          "stop_lon": -117.4702,
+          "stop_name": "Riverside-La Sierra Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/riverside---la-sierra/",
+          "to_from": "BOTH",
+          "zone_id": 148
+        },
+        {
+          "height": 12,
+          "schedules": 1,
+          "stop_alias": "San Clemente",
+          "stop_id": 152,
+          "stop_lat": 33.432076,
+          "stop_lon": -117.632736,
+          "stop_name": "San Clemente Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/san-clemente/",
+          "to_from": "BOTH",
+          "zone_id": 152
+        },
+        {
+          "height": 12,
+          "schedules": 1,
+          "stop_alias": "San Juan Capistrano",
+          "stop_id": 153,
+          "stop_lat": 33.5014,
+          "stop_lon": -117.663696,
+          "stop_name": "San Juan Capistrano Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/san-juan-capistrano/",
+          "to_from": "BOTH",
+          "zone_id": 153
+        },
+        {
+          "height": 44,
+          "schedules": 1,
+          "stop_alias": "Santa Ana",
+          "stop_id": 154,
+          "stop_lat": 33.751522,
+          "stop_lon": -117.85598,
+          "stop_name": "Santa Ana Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/santa-ana/",
+          "to_from": "BOTH",
+          "zone_id": 154
+        },
+        {
+          "height": 44,
+          "schedules": 1,
+          "stop_alias": "Tustin",
+          "stop_id": 156,
+          "stop_lat": 33.707966,
+          "stop_lon": -117.806015,
+          "stop_name": "Tustin Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/tustin/",
+          "to_from": "BOTH",
+          "zone_id": 156
+        },
+        {
+          "height": 30,
+          "schedules": 1,
+          "stop_alias": "Vista Canyon",
+          "stop_id": 161,
+          "stop_lat": 34.4131,
+          "stop_lon": -118.4339,
+          "stop_name": "Vista Canyon Metrolink Station",
+          "stop_url": "https://metrolinktrains.com/rider-info/general-info/stations/vistacanyon/",
+          "to_from": "BOTH",
+          "zone_id": 161
+        },
+        {
+          "height": 22,
+          "schedules": 1,
+          "stop_alias": "Lancaster",
+          "stop_id": 162,
+          "stop_lat": 34.696579,
+          "stop_lon": -118.136131,
+          "stop_name": "Lancaster Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/lancaster/",
+          "to_from": "BOTH",
+          "zone_id": 162
+        },
+        {
+          "height": 22,
+          "schedules": 1,
+          "stop_alias": "Palmdale",
+          "stop_id": 163,
+          "stop_lat": 34.590771,
+          "stop_lon": -118.119293,
+          "stop_name": "Palmdale Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/palmdale/",
+          "to_from": "BOTH",
+          "zone_id": 163
+        },
+        {
+          "height": 30,
+          "schedules": 1,
+          "stop_alias": "Via Princessa",
+          "stop_id": 164,
+          "stop_lat": 34.408817,
+          "stop_lon": -118.469406,
+          "stop_name": "Via Princessa Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/via-princessa/",
+          "to_from": "BOTH",
+          "zone_id": 164
+        },
+        {
+          "height": 22,
+          "schedules": 1,
+          "stop_alias": "Vincent Grade / Acton",
+          "stop_id": 165,
+          "stop_lat": 34.49786,
+          "stop_lon": -118.118301,
+          "stop_name": "Vincent Grade/Acton Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/vincent-gradeacton/",
+          "to_from": "BOTH",
+          "zone_id": 165
+        },
+        {
+          "height": 6,
+          "schedules": 1,
+          "stop_alias": "Camarillo",
+          "stop_id": 166,
+          "stop_lat": 34.216656,
+          "stop_lon": -119.033829,
+          "stop_name": "Camarillo Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/camarillo/",
+          "to_from": "BOTH",
+          "zone_id": 166
+        },
+        {
+          "height": 22,
+          "schedules": 1,
+          "stop_alias": "Northridge",
+          "stop_id": 167,
+          "stop_lat": 34.230614,
+          "stop_lon": -118.545097,
+          "stop_name": "Northridge Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/northridge/",
+          "to_from": "BOTH",
+          "zone_id": 167
+        },
+        {
+          "height": 6,
+          "schedules": 1,
+          "stop_alias": "Oxnard",
+          "stop_id": 168,
+          "stop_lat": 34.199276,
+          "stop_lon": -119.176308,
+          "stop_name": "Oxnard Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/oxnard/",
+          "to_from": "BOTH",
+          "zone_id": 168
+        },
+        {
+          "height": 6,
+          "schedules": 1,
+          "stop_alias": "Ventura - East",
+          "stop_id": 169,
+          "stop_lat": 34.250793,
+          "stop_lon": -119.205025,
+          "stop_name": "East Ventura Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/ventura---east/",
+          "to_from": "BOTH",
+          "zone_id": 169
+        },
+        {
+          "height": 22,
+          "schedules": 1,
+          "stop_alias": "Burbank Airport - South (VC Line)",
+          "stop_id": 170,
+          "stop_lat": 34.192795,
+          "stop_lon": -118.3526,
+          "stop_name": "Burbank Airport - South (VC Line) Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/burbankairportsouth/",
+          "to_from": "BOTH",
+          "zone_id": 170
+        },
+        {
+          "height": 18,
+          "schedules": 1,
+          "stop_alias": "Anaheim Canyon",
+          "stop_id": 171,
+          "stop_lat": 33.854176,
+          "stop_lon": -117.840523,
+          "stop_name": "Anaheim Canyon Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/anaheim-canyon/",
+          "to_from": "BOTH",
+          "zone_id": 171
+        },
+        {
+          "height": 32,
+          "schedules": 1,
+          "stop_alias": "Corona - West",
+          "stop_id": 173,
+          "stop_lat": 33.885761,
+          "stop_lon": -117.613586,
+          "stop_name": "West Corona Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/corona---west/",
+          "to_from": "BOTH",
+          "zone_id": 173
+        },
+        {
+          "height": 40,
+          "schedules": 1,
+          "stop_alias": "Fullerton",
+          "stop_id": 174,
+          "stop_lat": 33.868698,
+          "stop_lon": -117.922295,
+          "stop_name": "Fullerton Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/fullerton/",
+          "to_from": "BOTH",
+          "zone_id": 174
+        },
+        {
+          "height": 30,
+          "schedules": 1,
+          "stop_alias": "Newhall",
+          "stop_id": 175,
+          "stop_lat": 34.379913,
+          "stop_lon": -118.527306,
+          "stop_name": "Newhall Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/newhall/",
+          "to_from": "BOTH",
+          "zone_id": 175
+        },
+        {
+          "height": 14,
+          "schedules": 1,
+          "stop_alias": "Riverside - Hunter Park / UCR",
+          "stop_id": 181,
+          "stop_lat": 33.997517,
+          "stop_lon": -117.335518,
+          "stop_name": "Riverside-Hunter Park/UCR",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/riverside---hunter-parkucr/",
+          "to_from": "BOTH",
+          "zone_id": 181
+        },
+        {
+          "height": 14,
+          "schedules": 1,
+          "stop_alias": "Moreno Valley / March Field",
+          "stop_id": 182,
+          "stop_lat": 33.911469,
+          "stop_lon": -117.289215,
+          "stop_name": "Moreno Valley/March Field",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/moreno-valleymarch-field/",
+          "to_from": "BOTH",
+          "zone_id": 182
+        },
+        {
+          "height": 14,
+          "schedules": 1,
+          "stop_alias": "Perris - Downtown",
+          "stop_id": 183,
+          "stop_lat": 33.785282,
+          "stop_lon": -117.229836,
+          "stop_name": "Perris Downtown",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/perris---downtown/",
+          "to_from": "BOTH",
+          "zone_id": 183
+        },
+        {
+          "height": 14,
+          "schedules": 1,
+          "stop_alias": "Perris - South",
+          "stop_id": 184,
+          "stop_lat": 33.763752,
+          "stop_lon": -117.205711,
+          "stop_name": "South Perris",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/perris---south/",
+          "to_from": "BOTH",
+          "zone_id": 184
+        },
+        {
+          "height": 78,
+          "schedules": 1,
+          "stop_alias": "San Bernardino - Downtown",
+          "stop_id": 185,
+          "stop_lat": 34.0995034,
+          "stop_lon": -117.2960167,
+          "stop_name": "San Bernardino - Downtown Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/san-bernardino-downtown/",
+          "to_from": "BOTH",
+          "zone_id": 185
+        },
+        {
+          "height": 30,
+          "schedules": 1,
+          "stop_alias": "Burbank Airport - North (AV Line)",
+          "stop_id": 186,
+          "stop_lat": 34.206389,
+          "stop_lon": -118.35,
+          "stop_name": "Burbank Airport - North (AV Line) Metrolink Station",
+          "stop_url": "https://www.metrolinktrains.com/rider-info/general-info/stations/BurbankAirportNorth/",
+          "to_from": "BOTH",
+          "zone_id": 186
+        },
+        {
+          "height": 38,
+          "schedules": 1,
+          "stop_alias": "San Bernardino - Tippecanoe",
+          "stop_id": 188,
+          "stop_lat": 34.0735,
+          "stop_lon": -117.2604,
+          "stop_name": "San Bernardino - Tippecanoe Metrolink Station",
+          "stop_url": "https://metrolinktrains.com/rider-info/general-info/stations/san-bernardino---tippecanoe/",
+          "to_from": "BOTH",
+          "zone_id": 188
+        },
+        {
+          "height": 38,
+          "schedules": 1,
+          "stop_alias": "Redlands - Esri",
+          "stop_id": 189,
+          "stop_lat": 34.060143,
+          "stop_lon": -117.196453,
+          "stop_name": "Redlands - Esri Metrolink Station",
+          "stop_url": "https://metrolinktrains.com/rider-info/general-info/stations/redlands---esri/",
+          "to_from": "BOTH",
+          "zone_id": 189
+        },
+        {
+          "height": 40,
+          "schedules": 1,
+          "stop_alias": "Redlands - Downtown",
+          "stop_id": 190,
+          "stop_lat": 34.059074,
+          "stop_lon": -117.184517,
+          "stop_name": "Redlands - Downtown Metrolink Station",
+          "stop_url": "https://metrolinktrains.com/rider-info/general-info/stations/redlands---downtown/",
+          "to_from": "BOTH",
+          "zone_id": 190
+        },
+        {
+          "height": 38,
+          "schedules": 1,
+          "stop_alias": "Redlands - University",
+          "stop_id": 191,
+          "stop_lat": 34.058872,
+          "stop_lon": -117.165729,
+          "stop_name": "Redlands - University Metrolink Station",
+          "stop_url": "https://metrolinktrains.com/rider-info/general-info/stations/redlands---university/",
+          "to_from": "BOTH",
+          "zone_id": 191
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "99c8804e-5fba-4a20-b436-c8e82482f500",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

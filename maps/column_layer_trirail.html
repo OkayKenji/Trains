@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 26.18745291860526,
+    "longitude": -80.15739119680526,
+    "pitch": 75,
+    "zoom": 8
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 52,
+          "stop_code": 1,
+          "stop_id": 1,
+          "stop_lat": 26.7587432861,
+          "stop_lon": -80.0769348145,
+          "stop_name": "Mangonia Park Station"
+        },
+        {
+          "height": 54,
+          "stop_code": 2,
+          "stop_id": 2,
+          "stop_lat": 26.7132987976,
+          "stop_lon": -80.062538147,
+          "stop_name": "West Palm Beach Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 3,
+          "stop_id": 3,
+          "stop_lat": 26.6161422729,
+          "stop_lon": -80.0691299438,
+          "stop_name": "Lake Worth Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 4,
+          "stop_id": 4,
+          "stop_lat": 26.5537834167,
+          "stop_lon": -80.0705947876,
+          "stop_name": "Boynton Beach Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 5,
+          "stop_id": 5,
+          "stop_lat": 26.4542427063,
+          "stop_lon": -80.090965271,
+          "stop_name": "Delray Beach Station"
+        },
+        {
+          "height": 54,
+          "stop_code": 6,
+          "stop_id": 6,
+          "stop_lat": 26.3927001953,
+          "stop_lon": -80.099029541,
+          "stop_name": "Boca Raton Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 7,
+          "stop_id": 7,
+          "stop_lat": 26.3168621063,
+          "stop_lon": -80.1225509644,
+          "stop_name": "Deerfield Beach Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 8,
+          "stop_id": 8,
+          "stop_lat": 26.2722854614,
+          "stop_lon": -80.1348114014,
+          "stop_name": "Pompano Beach Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 9,
+          "stop_id": 9,
+          "stop_lat": 26.2011947632,
+          "stop_lon": -80.1503677368,
+          "stop_name": "Cypress Creek Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 10,
+          "stop_id": 10,
+          "stop_lat": 26.1199417114,
+          "stop_lon": -80.1698074341,
+          "stop_name": "Fort Lauderdale Station"
+        },
+        {
+          "height": 54,
+          "stop_code": 11,
+          "stop_id": 11,
+          "stop_lat": 26.0616531372,
+          "stop_lon": -80.1656799316,
+          "stop_name": "Ft Lauderdale Airport Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 12,
+          "stop_id": 12,
+          "stop_lat": 26.0322170258,
+          "stop_lon": -80.1680831909,
+          "stop_name": "Sheridan Street Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 13,
+          "stop_id": 13,
+          "stop_lat": 26.0124111176,
+          "stop_lon": -80.1676559448,
+          "stop_name": "Hollywood Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 14,
+          "stop_id": 14,
+          "stop_lat": 25.9215507507,
+          "stop_lon": -80.2169189453,
+          "stop_name": "Golden Glades Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 15,
+          "stop_id": 15,
+          "stop_lat": 25.9000358582,
+          "stop_lon": -80.2526931763,
+          "stop_name": "Opa-Locka Station"
+        },
+        {
+          "height": 78,
+          "stop_code": 16,
+          "stop_id": 16,
+          "stop_lat": 25.8463935852,
+          "stop_lon": -80.2596206665,
+          "stop_name": "Metrorail Transfer Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 17,
+          "stop_id": 17,
+          "stop_lat": 25.8112392426,
+          "stop_lon": -80.2587051392,
+          "stop_name": "Hialeah Market Station"
+        },
+        {
+          "height": 52,
+          "stop_code": 18,
+          "stop_id": 18,
+          "stop_lat": 25.7959403992,
+          "stop_lon": -80.2583312988,
+          "stop_name": "Miami Airport Station"
+        },
+        {
+          "height": 26,
+          "stop_code": 19,
+          "stop_id": 19,
+          "stop_lat": 25.7809696198,
+          "stop_lon": -80.1960144043,
+          "stop_name": "MiamiCentral Station"
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "4a38d10b-e075-456e-ae88-7620bb816f4e",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

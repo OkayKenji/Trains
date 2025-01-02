@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 41.71171058947369,
+    "longitude": -87.26567529473684,
+    "pitch": 75,
+    "zoom": 8
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 53,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Millennium",
+          "stop_desc": "151 East Randolph Street. Chicago. IL",
+          "stop_id": "s1",
+          "stop_lat": 41.8841667,
+          "stop_lon": -87.6230556,
+          "stop_name": "Millennium Station",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 1
+        },
+        {
+          "height": 53,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Van Buren",
+          "stop_desc": "Van Buren & Michigan Ave. Chicago IL",
+          "stop_id": "s2",
+          "stop_lat": 41.8769444,
+          "stop_lon": -87.6230556,
+          "stop_name": "Van Buren St.",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 1
+        },
+        {
+          "height": 32,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Museum Campus",
+          "stop_desc": "Michigan Ave. at 11th St. Chicago IL",
+          "stop_id": "s3",
+          "stop_lat": 41.8686111,
+          "stop_lon": -87.6213889,
+          "stop_name": "Museum Campus/11th St.",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 1
+        },
+        {
+          "height": 0,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "McCormick",
+          "stop_desc": "23rd St. between King Dr. & Lake Shore Dr. Chicago IL",
+          "stop_id": "s4",
+          "stop_lat": 41.8513889,
+          "stop_lon": -87.6163889,
+          "stop_name": "McCormick Place",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 1
+        },
+        {
+          "height": 35,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "57th",
+          "stop_desc": "E. 57th St. & S. Lake Park Ave. Chicago IL",
+          "stop_id": "s5",
+          "stop_lat": 41.7933333,
+          "stop_lon": -87.5875,
+          "stop_name": "57th St.",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 2
+        },
+        {
+          "height": 3,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "63rd",
+          "stop_desc": "63rd Street & Dorchester Chicago IL",
+          "stop_id": "s6",
+          "stop_lat": 41.7802778,
+          "stop_lon": -87.5905556,
+          "stop_name": "63rd St.",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 2
+        },
+        {
+          "height": 48,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Hegewisch",
+          "stop_desc": "13730 S Brainard Ave Chicago IL",
+          "stop_id": "s7",
+          "stop_lat": 41.646189,
+          "stop_lon": -87.543468,
+          "stop_name": "Hegewisch",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 3
+        },
+        {
+          "height": 49,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Hammond",
+          "stop_desc": "4531 S Hohman Ave Hammond IN",
+          "stop_id": "s8",
+          "stop_lat": 41.631008,
+          "stop_lon": -87.515564,
+          "stop_name": "Hammond",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 4
+        },
+        {
+          "height": 49,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "E. Chicago",
+          "stop_desc": "5615 Indianapolis Blvd East Chicago IN",
+          "stop_id": "s9",
+          "stop_lat": 41.611781,
+          "stop_lon": -87.479299,
+          "stop_name": "East Chicago",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 4
+        },
+        {
+          "height": 40,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Gary Airport",
+          "stop_desc": "2nd Place and Clark Rd. Gary IN",
+          "stop_id": "s10",
+          "stop_lat": 41.605503,
+          "stop_lon": -87.39424,
+          "stop_name": "Gary/Chicago Airport",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 5
+        },
+        {
+          "height": 43,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Gary Metro",
+          "stop_desc": "200 W 4th Ave Gary IN",
+          "stop_id": "s11",
+          "stop_lat": 41.604727,
+          "stop_lon": -87.33792,
+          "stop_name": "Gary Metro Center",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 5
+        },
+        {
+          "height": 50,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Miller",
+          "stop_desc": "5800 E Dunes Hwy Gary IN",
+          "stop_id": "s12",
+          "stop_lat": 41.597858,
+          "stop_lon": -87.267972,
+          "stop_name": "Miller",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 5
+        },
+        {
+          "height": 36,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Portage",
+          "stop_desc": "Hillcrest Road and U.S. Highway 12 Ogden Dunes IN",
+          "stop_id": "s13",
+          "stop_lat": 41.617331,
+          "stop_lon": -87.186869,
+          "stop_name": "Portage/Ogden Dunes",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 6
+        },
+        {
+          "height": 37,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Dune Park",
+          "stop_desc": "33 E Us Hwy 12 Chesterton IN",
+          "stop_id": "s14",
+          "stop_lat": 41.644902,
+          "stop_lon": -87.060817,
+          "stop_name": "Dune Park",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 6
+        },
+        {
+          "height": 30,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Beverly Shores",
+          "stop_desc": "US Hwy 12 and Broadway St Chesterton IN",
+          "stop_id": "s15",
+          "stop_lat": 41.673214,
+          "stop_lon": -86.98552,
+          "stop_name": "Beverly Shores",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 7
+        },
+        {
+          "height": 39,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "11th",
+          "stop_desc": "114 East 11th Street Michigan City IN",
+          "stop_id": "s16",
+          "stop_lat": 41.711786,
+          "stop_lon": -86.897917,
+          "stop_name": "11th St. (Michigan City)",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 8
+        },
+        {
+          "height": 26,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Carroll Ave.",
+          "stop_desc": "503 N. Carroll Avenue Michigan City IN",
+          "stop_id": "s17",
+          "stop_lat": 41.713266,
+          "stop_lon": -86.867686,
+          "stop_name": "Carroll Ave. (Michigan City)",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 8
+        },
+        {
+          "height": 12,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "Hudson Lake",
+          "stop_desc": "County Road 700N and Chicago Road Hudson Lake IN",
+          "stop_id": "s18",
+          "stop_lat": 41.709454,
+          "stop_lon": -86.537663,
+          "stop_name": "Hudson Lake",
+          "stop_timezone": "America/Chicago",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 10
+        },
+        {
+          "height": 18,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": "South Bend",
+          "stop_desc": "4485 Terminal Drive South Bend IN",
+          "stop_id": "s19",
+          "stop_lat": 41.70076,
+          "stop_lon": -86.310951,
+          "stop_name": "South Bend Airport",
+          "stop_timezone": "America/Indiana/Indianapolis",
+          "stop_url": NaN,
+          "wheelchair_boarding": NaN,
+          "zone_id": 11
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "21e489ec-f33a-435e-bcfe-06686a333c48",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

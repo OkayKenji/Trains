@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 41.65334244444445,
+    "longitude": -72.75333577777778,
+    "pitch": 75,
+    "zoom": 8
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "height": 21,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 100,
+          "stop_desc": NaN,
+          "stop_id": 1,
+          "stop_lat": 41.297172,
+          "stop_lon": -72.925945,
+          "stop_name": "NEW HAVEN UNION STATION",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 21,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 101,
+          "stop_desc": NaN,
+          "stop_id": 2,
+          "stop_lat": 41.305092,
+          "stop_lon": -72.921692,
+          "stop_name": "STATE STREET STATION",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 21,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 102,
+          "stop_desc": NaN,
+          "stop_id": 3,
+          "stop_lat": 41.461695,
+          "stop_lon": -72.82273,
+          "stop_name": "WALLINGFORD",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 21,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 103,
+          "stop_desc": NaN,
+          "stop_id": 4,
+          "stop_lat": 41.538894,
+          "stop_lon": -72.801485,
+          "stop_name": "MERIDEN",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 21,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 104,
+          "stop_desc": NaN,
+          "stop_id": 5,
+          "stop_lat": 41.636136,
+          "stop_lon": -72.765192,
+          "stop_name": "BERLIN",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 21,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 105,
+          "stop_desc": NaN,
+          "stop_id": 6,
+          "stop_lat": 41.76896,
+          "stop_lon": -72.681831,
+          "stop_name": "HARTFORD",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 13,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 106,
+          "stop_desc": NaN,
+          "stop_id": 7,
+          "stop_lat": 41.852058,
+          "stop_lon": -72.642139,
+          "stop_name": "WINDSOR",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 13,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 107,
+          "stop_desc": NaN,
+          "stop_id": 8,
+          "stop_lat": 41.913938,
+          "stop_lon": -72.625967,
+          "stop_name": "WINDSOR LOCKS",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        },
+        {
+          "height": 12,
+          "location_type": NaN,
+          "parent_station": NaN,
+          "stop_code": 108,
+          "stop_desc": NaN,
+          "stop_id": 9,
+          "stop_lat": 42.106137,
+          "stop_lon": -72.593041,
+          "stop_name": "SPRINGFIELD",
+          "stop_timezone": NaN,
+          "stop_url": NaN,
+          "wheelchair_boarding": 1,
+          "zone_id": NaN
+        }
+      ],
+      "elevationScale": 50,
+      "getElevation": "@@=height",
+      "getFillColor": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "getPosition": "@@=[stop_lon, stop_lat]",
+      "id": "b0b8aaa6-d628-4403-8dfe-627a3f188ddd",
+      "pickable": true,
+      "radius": 200
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '{stop_name}: <b>{height}</b> trains stop', 'style': {'background': 'grey', 'color': 'white', 'font-family': '"Helvetica Neue", Arial', 'z-index': '10000'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>
