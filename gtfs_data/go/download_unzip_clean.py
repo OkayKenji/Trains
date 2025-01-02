@@ -30,9 +30,9 @@ df.to_csv("./gtfs_data/go/trips.txt",index=False)
 service_list = list(set(df['service_id'].to_list()))
 trip_list = list(set(df['trip_id'].to_list()))
 
-df = pd.read_csv('./gtfs_data/go/calendar.txt')
+df = pd.read_csv('./gtfs_data/go/calendar_dates.txt')
 df = df[df['service_id'].isin(service_list)]
-df.to_csv("./gtfs_data/go/calendar.txt",index=False)
+df.to_csv("./gtfs_data/go/calendar_dates.txt",index=False)
 
 df = pd.read_csv('./gtfs_data/go/stop_times.txt')
 df = df[df['trip_id'].isin(trip_list)]

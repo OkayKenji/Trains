@@ -54,6 +54,7 @@ if response.status_code == 200:
             
             # Print the final result
             url = "https://ftis.org/PostFileDownload.aspx?id="+result
+            print(url)
             file_name = 'gtfstrirail.zip'
 
             response = requests.get(url)
@@ -66,7 +67,7 @@ if response.status_code == 200:
             with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
                 zip_ref.extractall(extract_to)
 
-            os.system("rm gtfstrirail.zip")
+            # os.system("rm gtfstrirail.zip")
 
                         
             # Define source and destination directories

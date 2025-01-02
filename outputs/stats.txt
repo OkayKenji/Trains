@@ -20,18 +20,18 @@ Processing: exo
 	14 - Candiac:             18 (17.5%)
 	15 - Mascouche:           16 (15.5%)
 	Total number of trains:   103
-	Shortest Trip (stop # wise): 6 stops on 41
+	Shortest Trip (stop # wise): 7 stops on 41
 	Longest Trip (stop # wise): 26 stops on 1202
-	On average trains make: 12 stops
-	Median # of train: 12 stops
-	Shortest Trip (distance wise): 12.6 miles on 40
+	On average trains make: 13 stops
+	Median # of train: 14 stops
+	Shortest Trip (distance wise): 14.8 miles on 40
 	Longest Trip (distance wise): 39.7 miles on 1202
-	On average trains travels: 25.2 miles
-	Median travel distance: 23.7 miles
-	Shortest Trip (time wise): 26.0 minutes on 41
+	On average trains travels: 27.0 miles
+	Median travel distance: 25.8 miles
+	Shortest Trip (time wise): 32.0 minutes on 41
 	Longest Trip (time wise): 110.0 minutes on 1202
-	On average trains take: 58.4 minutes
-	Median time of trips: 56.0 minutes
+	On average trains take: 63.7 minutes
+	Median time of trips: 58.0 minutes
 Processing: lirr
 	Babylon Branch:          150 (15.9%)
 	City Terminal Zone:      133 (14.1%)
@@ -414,24 +414,29 @@ Processing: rtd
 	On average trains take: 30.7 minutes
 	Median time of trips: 30.8 minutes
 Processing: metra
-	BurlingtonNorthern:     455 (25.9%)
-	HeritageCorridor:       30 (1.7%)
-	MetraElectric:          655 (37.2%)
-	NorthCentralService:    70 (4.0%)
-	RockIsland:             400 (22.7%)
-	SouthwestService:       150 (8.5%)
-	Total number of trains: 1760
-	Shortest Trip (stop # wise): 4 stops on BNSF_BN1230_V2_A
-	Longest Trip (stop # wise): 32 stops on ME_ME100_V2_A
-	On average trains make: 16 stops
-	Median # of train: 15 stops
-	Shortest Trip (distance wise): 4.4 miles on ME_ME245_V2_A
-	Longest Trip (distance wise): 52.9 miles on NCS_NC101_V3_A
-	On average trains travels: 28.6 miles
-	Median travel distance: 30.9 miles
-	Shortest Trip (time wise): 17.0 minutes on ME_ME245_V2_A
-	Longest Trip (time wise): 105.0 minutes on NCS_NC101_V3_A
-	On average trains take: 65.9 minutes
-	Median time of trips: 65.0 minutes
-Execution time: 67.8917 seconds
-Data last updated: 2025-01-01 21:01:40.099890
+	BNSF:                     91 (13.7%)
+	Heritage Corridor:        6 (0.9%)
+	Metra Electric:           131 (19.7%)
+	Milwaukee North:          54 (8.1%)
+	Milwaukee West:           52 (7.8%)
+	North Central Service:    14 (2.1%)
+	Rock Island:              80 (12.0%)
+	Southwest Service:        30 (4.5%)
+	Union Pacific North:      71 (10.7%)
+	Union Pacific Northwest:  78 (11.7%)
+	Union Pacific West:       58 (8.7%)
+	Total number of trains:   665
+	Shortest Trip (stop # wise): 4 stops on 1230
+	Longest Trip (stop # wise): 32 stops on 100
+	On average trains make: 17 stops
+	Median # of train: 17 stops
+	Shortest Trip (distance wise): 4.4 miles on 245
+	Longest Trip (distance wise): 63.2 miles on 637
+	On average trains travels: 31.4 miles
+	Median travel distance: 31.9 miles
+	Shortest Trip (time wise): 30.0 minutes on 1203
+	Longest Trip (time wise): 133.0 minutes on 373
+	On average trains take: 76.6 minutes
+	Median time of trips: 80.0 minutes
+Execution time: 26.3141 seconds
+Data last updated: 2025-01-02 05:29:07.234532

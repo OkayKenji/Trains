@@ -1,0 +1,2 @@
+﻿feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version,feed_contact_email,feed_contact_url
+Maps and Beyond,https://mapsandbeyond.com,EN,20241120,20251231,1,mapsandbeyond.com@gmail.com,https://www.tri-rail.com/pages/view/customer-service
