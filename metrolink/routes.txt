@@ -1,8 +1,0 @@
-"route_id","agency_id","route_short_name","route_long_name","route_type","route_url","route_color","route_text_color","displayable"
-"91 Line","Metrolink",,"Metrolink 91-Perris Valley Line","2","https://metrolinktrains.com/schedules/?type=line&lineName=91+Line","0071CE","FFFFFF","1"
-"Antelope Valley Line","Metrolink",,"Metrolink Antelope Valley Line","2","https://metrolinktrains.com/schedules/?type=line&lineName=Antelope+Valley+Line","00AF43","FFFFFF","1"
-"Inland Emp.-Orange Co. Line","Metrolink",,"Metrolink Inland Empire-Orange County Line","2","https://metrolinktrains.com/schedules/?type=line&lineName=IEOC+Line","E92076","FFFFFF","1"
-"Orange County Line","Metrolink",,"Metrolink Orange County Line","2","https://metrolinktrains.com/schedules/?type=line&lineName=Orange+County+Line","FF8400","FFFFFF","1"
-"Riverside Line","Metrolink",,"Metrolink Riverside Line","2","https://metrolinktrains.com/schedules/?type=line&lineName=Riverside+Line","682E86","FFFFFF","1"
-"San Bernardino Line","Metrolink",,"Metrolink San Bernardino Line","2","https://metrolinktrains.com/schedules/?type=line&lineName=San+Bernardino+Line","A32136","FFFFFF","1"
-"Ventura County Line","Metrolink",,"Metrolink Ventura County Line","2","https://metrolinktrains.com/schedules/?type=line&lineName=Ventura+County+Line","FFB81D","000000","1"

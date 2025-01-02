@@ -1,0 +1,113 @@
+route_id,service_id,trip_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id
+2,Regular,300-Regular,Union Station,300,1,,2
+2,Regular,301-Regular,Spotsylvania,301,0,,2
+2,Regular,302-Regular,Union Station,302,1,,2
+2,Regular,303-Regular,Spotsylvania,303,0,,2
+2,Regular,304-Regular,Union Station,304,1,,2
+2,Regular,305-Regular,Spotsylvania,305,0,,2
+2,Regular,306-Regular,Union Station,306,1,,2
+2,Regular,307-Regular,Spotsylvania,307,0,,2
+2,Regular,308-Regular,Union Station,308,1,,2
+2,Regular,309-Regular,Spotsylvania,309,0,,2
+2,Regular,310-Regular,Union Station,310,1,,2
+2,Regular,311-Regular,Spotsylvania,311,0,,2
+2,Regular,312-Regular,Union Station,312,1,,2
+2,Regular,313-Regular,Spotsylvania,313,0,,2
+2,Regular,314-Regular,Union Station,314,1,,2
+2,Regular,315-Regular,Spotsylvania,315,0,,2
+4,Regular,321-Regular,Broad Run,321,0,,4
+4,Regular,322-Regular,Union Station,322,1,,4
+4,Regular,324-Regular,Union Station,324,1,,4
+4,Regular,325-Regular,Broad Run,325,0,,4
+4,Regular,326-Regular,Union Station,326,1,,4
+4,Regular,327-Regular,Broad Run,327,0,,4
+4,Regular,328-Regular,Union Station,328,1,,4
+4,Regular,329-Regular,Broad Run,329,0,,4
+4,Regular,330-Regular,Union Station,330,1,,4
+4,Regular,331-Regular,Broad Run,331,0,,4
+4,Regular,332-Regular,Union Station,332,1,,4
+4,Regular,333-Regular,Broad Run,333,0,,4
+4,Regular,335-Regular,Broad Run,335,0,,4
+4,Regular,336-Regular,Union Station,336,1,,4
+4,Regular,337-Regular,Broad Run,337,0,,4
+4,Regular,338-Regular,Union Station,338,1,,4
+2,S Schedule post Christmas II,301-S Schedule post Christmas II,Spotsylvania,301,0,,2
+2,S Schedule post Christmas II,302-S Schedule post Christmas II,Union Station,302,1,,2
+2,S Schedule post Christmas II,305-S Schedule post Christmas II,Spotsylvania,305,0,,2
+2,S Schedule post Christmas II,306-S Schedule post Christmas II,Union Station,306,1,,2
+2,S Schedule post Christmas II,309-S Schedule post Christmas II,Spotsylvania,309,0,,2
+2,S Schedule post Christmas II,310-S Schedule post Christmas II,Union Station,310,1,,2
+2,S Schedule post Christmas II,313-S Schedule post Christmas II,Spotsylvania,313,0,,2
+2,S Schedule post Christmas II,314-S Schedule post Christmas II,Union Station,314,1,,2
+4,S Schedule post Christmas II,324-S Schedule post Christmas II,Union Station,324,1,,4
+4,S Schedule post Christmas II,325-S Schedule post Christmas II,Broad Run,325,0,,4
+4,S Schedule post Christmas II,328-S Schedule post Christmas II,Union Station,328,1,,4
+4,S Schedule post Christmas II,329-S Schedule post Christmas II,Broad Run,329,0,,4
+4,S Schedule post Christmas II,330-S Schedule post Christmas II,Union Station,330,1,,4
+4,S Schedule post Christmas II,332-S Schedule post Christmas II,Union Station,332,1,,4
+4,S Schedule post Christmas II,333-S Schedule post Christmas II,Broad Run,333,0,,4
+4,S Schedule post Christmas II,335-S Schedule post Christmas II,Broad Run,335,0,,4
+2,S Schedule Martin Luther King Jr Day,301-S Schedule Martin Luther King Jr Day,Spotsylvania,301,0,,2
+2,S Schedule Martin Luther King Jr Day,302-S Schedule Martin Luther King Jr Day,Union Station,302,1,,2
+2,S Schedule Martin Luther King Jr Day,305-S Schedule Martin Luther King Jr Day,Spotsylvania,305,0,,2
+2,S Schedule Martin Luther King Jr Day,306-S Schedule Martin Luther King Jr Day,Union Station,306,1,,2
+2,S Schedule Martin Luther King Jr Day,309-S Schedule Martin Luther King Jr Day,Spotsylvania,309,0,,2
+2,S Schedule Martin Luther King Jr Day,310-S Schedule Martin Luther King Jr Day,Union Station,310,1,,2
+2,S Schedule Martin Luther King Jr Day,313-S Schedule Martin Luther King Jr Day,Spotsylvania,313,0,,2
+2,S Schedule Martin Luther King Jr Day,314-S Schedule Martin Luther King Jr Day,Union Station,314,1,,2
+4,S Schedule Martin Luther King Jr Day,324-S Schedule Martin Luther King Jr Day,Union Station,324,1,,4
+4,S Schedule Martin Luther King Jr Day,325-S Schedule Martin Luther King Jr Day,Broad Run,325,0,,4
+4,S Schedule Martin Luther King Jr Day,328-S Schedule Martin Luther King Jr Day,Union Station,328,1,,4
+4,S Schedule Martin Luther King Jr Day,329-S Schedule Martin Luther King Jr Day,Broad Run,329,0,,4
+4,S Schedule Martin Luther King Jr Day,330-S Schedule Martin Luther King Jr Day,Union Station,330,1,,4
+4,S Schedule Martin Luther King Jr Day,332-S Schedule Martin Luther King Jr Day,Union Station,332,1,,4
+4,S Schedule Martin Luther King Jr Day,333-S Schedule Martin Luther King Jr Day,Broad Run,333,0,,4
+4,S Schedule Martin Luther King Jr Day,335-S Schedule Martin Luther King Jr Day,Broad Run,335,0,,4
+2,Summer,300-Summer,Union Station,300,1,,2
+2,Summer,301-Summer,Spotsylvania,301,0,,2
+2,Summer,302-Summer,Union Station,302,1,,2
+2,Summer,303-Summer,Spotsylvania,303,0,,2
+2,Summer,304-Summer,Union Station,304,1,,2
+2,Summer,305-Summer,Spotsylvania,305,0,,2
+2,Summer,306-Summer,Union Station,306,1,,2
+2,Summer,307-Summer,Spotsylvania,307,0,,2
+2,Summer,308-Summer,Union Station,308,1,,2
+2,Summer,309-Summer,Spotsylvania,309,0,,2
+2,Summer,310-Summer,Union Station,310,1,,2
+2,Summer,311-Summer,Spotsylvania,311,0,,2
+2,Summer,312-Summer,Union Station,312,1,,2
+2,Summer,313-Summer,Spotsylvania,313,0,,2
+2,Summer,314-Summer,Union Station,314,1,,2
+2,Summer,315-Summer,Spotsylvania,315,0,,2
+4,Summer,321-Summer,Broad Run,321,0,,4
+4,Summer,322-Summer,Union Station,322,1,,4
+4,Summer,324-Summer,Union Station,324,1,,4
+4,Summer,325-Summer,Broad Run,325,0,,4
+4,Summer,326-Summer,Union Station,326,1,,4
+4,Summer,327-Summer,Broad Run,327,0,,4
+4,Summer,328-Summer,Union Station,328,1,,4
+4,Summer,329-Summer,Broad Run,329,0,,4
+4,Summer,330-Summer,Union Station,330,1,,4
+4,Summer,331-Summer,Broad Run,331,0,,4
+4,Summer,332-Summer,Union Station,332,1,,4
+4,Summer,333-Summer,Broad Run,333,0,,4
+4,Summer,335-Summer,Broad Run,335,0,,4
+4,Summer,336-Summer,Union Station,336,1,,4
+4,Summer,337-Summer,Broad Run,337,0,,4
+4,Summer,338-Summer,Union Station,338,1,,4
+2,Juneteenth,301-Juneteenth,Spotsylvania,301,0,,2
+2,Juneteenth,302-Juneteenth,Union Station,302,1,,2
+2,Juneteenth,305-Juneteenth,Spotsylvania,305,0,,2
+2,Juneteenth,306-Juneteenth,Union Station,306,1,,2
+2,Juneteenth,309-Juneteenth,Spotsylvania,309,0,,2
+2,Juneteenth,310-Juneteenth,Union Station,310,1,,2
+2,Juneteenth,313-Juneteenth,Spotsylvania,313,0,,2
+2,Juneteenth,314-Juneteenth,Union Station,314,1,,2
+4,Juneteenth,324-Juneteenth,Union Station,324,1,,4
+4,Juneteenth,325-Juneteenth,Broad Run,325,0,,4
+4,Juneteenth,328-Juneteenth,Union Station,328,1,,4
+4,Juneteenth,329-Juneteenth,Broad Run,329,0,,4
+4,Juneteenth,330-Juneteenth,Union Station,330,1,,4
+4,Juneteenth,332-Juneteenth,Union Station,332,1,,4
+4,Juneteenth,333-Juneteenth,Broad Run,333,0,,4
+4,Juneteenth,335-Juneteenth,Broad Run,335,0,,4
