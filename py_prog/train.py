@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.WARNING,
     format='%(asctime)s | %(levelname)s | %(filename)s:%(lineno)d | \nMessage: %(message)s'
 )
 import warnings 
-warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
-pd.set_option('mode.chained_assignment', None)
+# warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
+# pd.set_option('mode.chained_assignment', None)
 
 
 def getServices(calendar_dates, railroad, calendar):
@@ -62,7 +62,9 @@ def loadData(name_rail):
     else:
         train_classification = 'trip_short_name'
 
-    return pd.read_csv(f'./{railroad}/calendar_dates.txt'), pd.read_csv(f'./{railroad}/routes.txt'), pd.read_csv(f'./{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'./{railroad}/stops.txt'), pd.read_csv(f'./{railroad}/trips.txt'), pd.read_csv(f'./{railroad}/calendar_dates.txt') if (not use_calendar) else pd.read_csv(f'./{railroad}/calendar.txt'), railroad, pd.read_csv(f'{railroad}/shapes.txt')
+    base_path = './gtfs_data'
+
+    return pd.read_csv(f'{base_path}/{railroad}/calendar_dates.txt'), pd.read_csv(f'{base_path}/{railroad}/routes.txt'), pd.read_csv(f'{base_path}/{railroad}/stop_times.txt', dtype={'track': 'str'}), pd.read_csv(f'{base_path}/{railroad}/stops.txt'), pd.read_csv(f'{base_path}/{railroad}/trips.txt'), pd.read_csv(f'{base_path}/{railroad}/calendar_dates.txt') if (not use_calendar) else pd.read_csv(f'{base_path}/{railroad}/calendar.txt'), railroad, pd.read_csv(f'{base_path}/{railroad}/shapes.txt')
 
 def getTrains(listOfServices, trips): 
     listOfTrains = trips[trips.service_id.isin(listOfServices.service_id)]
@@ -120,17 +122,17 @@ def reformat(stops, routes, listOfTrains, stop_times):
 def rtd_exempt():
     print("\tRTD Exception...")
 
-    with open('./json/datartd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS.json', 'r') as file1:
+    with open('./data/json/datartd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS.json', 'r') as file1:
         data1 = json.load(file1)
 
-    with open('./json/datartd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS.json', 'r') as file2:
+    with open('./data/json/datartd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS.json', 'r') as file2:
         data2 = json.load(file2)
 
     arr = data1 + data2
 
     pretty_json = json.dumps(arr)
 
-    with open(f'./json/datartd.json', 'w') as file:
+    with open(f'./data/json/datartd.json', 'w') as file:
         file.write(pretty_json)
     
 def main():
@@ -180,12 +182,11 @@ def main():
             stop_map = stop_list.set_index("stop_name")["eee"]
             all_stops[f'{train_number} ({line})'] = all_stops['stop_name'].map(stop_map).fillna('')
 
-        # html_table = stops.to_html()
 
         all_stops.columns = all_stops.columns.str.replace('Train ', '', regex=False)
         all_stops.columns = all_stops.columns.str.replace('CTrail ', '', regex=False)
         all_stops.columns = all_stops.columns.str.replace( r"^\d{8}-[A-Za-z]{2}-", '', regex=True)
-        all_stops.to_csv(f'./csv/{ele}.csv')
+        all_stops.to_csv(f'./data/csv/{ele}.csv')
         print("\tWait a while as we format the data...")
         arr = []
 
@@ -246,7 +247,7 @@ def main():
         # Save dictionary as JSON to a file
         pretty_json = json.dumps(arr)
 
-        with open(f'./json/data{ele}.json', 'w') as file:
+        with open(f'./data/json/data{ele}.json', 'w') as file:
             file.write(pretty_json)
         local_end_time = time.time()
 

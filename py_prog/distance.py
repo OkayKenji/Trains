@@ -1,9 +1,7 @@
 import pandas as pd
 from geopy.distance import geodesic
 from geopy.distance import great_circle
-import math
 import logging
-
 
 class QuadTree:
     def __init__(self, bounds, max_points=4):
@@ -170,10 +168,3 @@ class MainDistanceCalculator:
             return total_distance
     def test(self):
         return self.shape_distances
-
-# stops = pd.read_csv('./exo/stops.txt')
-# shapes = pd.read_csv('./exo/shapes.txt')
-# shape_id = 10388
-# departure_station = 'Gare Hudson'
-# arrival_station = "Gare Lucien-L'Allier"
-# print(calculate_distance(departure_station,arrival_station,stops,shape_id,shapes))

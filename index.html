@@ -25,21 +25,16 @@
         let orig_list;
         const queryString = window.location.search;
         const queryParams = queryString.substring(1).split('&');
-
-        console.log(queryString)
-
         const params = {};
         queryParams.forEach(param => {
             const [key, value] = param.split('=');
             params[key] = decodeURIComponent(value); // Decode URI components
         });
-
-        console.log(params.sort)
-
         function fetchData(fileName) {
-            fetch(`./json/data${fileName}.json`)
+            fetch(`./data/json/data${fileName}.json`)
                 .then(response => response.json())
                 .then(data => {
+ 
                     // Process the JSON data
                     const trains = [];
 
@@ -157,6 +152,9 @@
         }
 
         function onSelectionChange() {
+            const tableContainer = document.getElementById('table-container');
+            tableContainer.innerText = 'Loading JSON Data...';
+
             const dropdown = document.getElementById('train-dropdown');
             const selectedValue = dropdown.value;
             document.getElementById('testTest').innerText = `${window.location.protocol}${window.location.hostname}${window.location.pathname}?trainFilter=${encodeURI(document.getElementById('testing').value)}&railroad=${document.getElementById('train-dropdown').value}`
