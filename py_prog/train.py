@@ -37,10 +37,17 @@ class GenerateTrainList:
 
         # may be missing
         if os.path.isfile(f'{base_path}/{railroad}/calendar.txt'):
-            logging.debug(f'{railroad}: calendar is omitted')
             self.calendar = pd.read_csv(f'{base_path}/{railroad}/calendar.txt')
         else:
+            logging.debug(f'{railroad}: calendar is omitted')
             self.calendar = pd.DataFrame()
+
+        if os.path.isfile(f'./junk/est_{railroad}.json'):
+            with open(f'./junk/est_{railroad}.json', 'r') as file:
+                self.equivalent_shapes = json.load(file)
+        else:
+            self.equivalent_shapes = None
+
 
         self.routes = pd.read_csv(f'{base_path}/{railroad}/routes.txt')
         self.stop_times =pd.read_csv(f'{base_path}/{railroad}/stop_times.txt')
@@ -107,7 +114,6 @@ class GenerateTrainList:
                 (self.calendar_dates['exception_type'].astype(str) == "1")
             ]            
             return listOfServices[['service_id']]
-        print(self.calendar, self.calendar_dates)
         logging.warning(f'{self.railroad}: Both calendar_dates and calendar missing!')
         return None
 
@@ -236,7 +242,12 @@ class GenerateTrainList:
                 logging.debug(sublist)
                 break
 
-        main_distance_calculator = MainDistanceCalculator(self.shapes)
+        main_distance_calculator = MainDistanceCalculator(self.shapes,self.equivalent_shapes)
+
+        local_end_time = time.time()
+        local_execution_time = local_end_time - local_start_time
+        print(f"\tLocal Execution time so far: {local_execution_time:.4f} seconds")
+
         for _, k in enumerate(all_stops):
             match = re.match(r'([\w\s\.]+)\s+\(([éô0-9a-zA-Z\/\-\&\-\s]+)\)', k)
             if match:
@@ -295,8 +306,6 @@ class GenerateTrainList:
 if __name__ == "__main__":
     # Start the timer
     start_time = time.time()
-
-    # elements = ["exo","lirr","marc","metrolink","mnrr","nicd","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","via","rtd"]
     elements = [
         {
             "railroad" : "njt",

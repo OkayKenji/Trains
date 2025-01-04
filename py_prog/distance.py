@@ -2,7 +2,7 @@ import pandas as pd
 from geopy.distance import geodesic
 from geopy.distance import great_circle
 import logging
-
+import re
 class QuadTree:
     def __init__(self, bounds, max_points=4):
         self.bounds = bounds  # (xmin, ymin, xmax, ymax)
@@ -101,11 +101,12 @@ class CalculateDistance:
         ]
         total_distance = sum(distances)
         return total_distance
-
+import json
 class MainDistanceCalculator:
-    def __init__(self, shapes, shape_distances={}):
+    def __init__(self, shapes, equivalent_shapes, shape_distances={}):
         self.shapes = shapes
         self.shape_distances = shape_distances
+        self.equivalent_shapes = equivalent_shapes
     def safe_str_conversion(self, value):
         try:
             # If the value contains 'E' (likely to be scientific notation), treat it as a string.
@@ -117,54 +118,63 @@ class MainDistanceCalculator:
         except ValueError:
             # If the value can't be converted to a number, return it as is (as a string)
             return str(value)
+    
+    def equivalent_shape(self,shape):
+        if self.equivalent_shapes is None:
+            return shape
+        return self.equivalent_shapes[f'{shape}']
 
 
     def calculate_distance(self, departure_station,arrival_station,stops,shape_id):
         if departure_station > arrival_station:
             departure_station, arrival_station = arrival_station, departure_station
+        shape_id = (shape_id)
+
         if f'{departure_station}-{arrival_station}-{shape_id}' in self.shape_distances:
             logging.info(f'Collision with: {departure_station}-{arrival_station}-{shape_id}')
             return self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}']
-        else: 
-            logging.info(f'First time with: {departure_station}-{arrival_station}-{shape_id}')
 
-            if (shape_id == "NA" or shape_id == "nan" or pd.isna(shape_id)):
-                return "NA"
-            logging.debug(f'{shape_id}, {type(shape_id)}') # nan
-            df = self.shapes
-            sub_df = df[df.shape_id.astype(str).isin([self.safe_str_conversion(shape_id)])]
-            if 'shape_pt_sequence' in df.columns:
-                sub_df = sub_df.sort_values(by='shape_pt_sequence')
-            lat_lon_list = sub_df[['shape_pt_lat', 'shape_pt_lon']].values.tolist()
-            if shape_id == "436E0248":
-                print(self.safe_str_conversion(shape_id))
-            # Calculate min and max latitude/longitude from your dataset
-            min_lat = sub_df['shape_pt_lat'].min()
-            max_lat = sub_df['shape_pt_lat'].max()
-            min_lon = sub_df['shape_pt_lon'].min()
-            max_lon = sub_df['shape_pt_lon'].max()
-            logging.debug(f"{len(sub_df['shape_pt_lat'])}")
-            bounds = (min_lat-1, min_lon-1,  max_lat+1,max_lon+1)
+                
+        logging.info(f'First time with: {departure_station}-{arrival_station}-{shape_id}')
 
-            quad_tree = QuadTree(bounds)
+        if (shape_id == "NA" or shape_id == "nan" or pd.isna(shape_id)):
+            return "NA"
+        logging.debug(f'{shape_id}, {type(shape_id)}') # nan
+        df = self.shapes
+        sub_df = df[df.shape_id.astype(str).isin([self.safe_str_conversion(shape_id)])]
+        if 'shape_pt_sequence' in df.columns:
+            sub_df = sub_df.sort_values(by='shape_pt_sequence')
+        lat_lon_list = sub_df[['shape_pt_lat', 'shape_pt_lon']].values.tolist()
+        # if shape_id == "436E0248":
+        #     print(self.safe_str_conversion(shape_id))
+        # Calculate min and max latitude/longitude from your dataset
+        min_lat = sub_df['shape_pt_lat'].min()
+        max_lat = sub_df['shape_pt_lat'].max()
+        min_lon = sub_df['shape_pt_lon'].min()
+        max_lon = sub_df['shape_pt_lon'].max()
+        logging.debug(f"{len(sub_df['shape_pt_lat'])}")
+        bounds = (min_lat-1, min_lon-1,  max_lat+1,max_lon+1)
 
-            for point in lat_lon_list:
-                quad_tree.insert(point)
+        quad_tree = QuadTree(bounds)
 
-        
+        for point in lat_lon_list:
+            quad_tree.insert(point)
+
+    
 
 
-            nearest_A, _ = quad_tree.execute(stops,departure_station)
+        nearest_A, _ = quad_tree.execute(stops,departure_station)
 
-            nearest_B, _ = quad_tree.execute(stops,arrival_station)
+        nearest_B, _ = quad_tree.execute(stops,arrival_station)
 
-            logging.debug(f"{nearest_A} {nearest_B}")
+        logging.debug(f"{nearest_A} {nearest_B}")
 
-            dist = CalculateDistance(self.shapes)
-            total_distance = dist.shape_to_dist(shape_id,nearest_A,nearest_B)
-            self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}'] = total_distance
-            
-            logging.debug(f"{total_distance} miles")
-            return total_distance
+        dist = CalculateDistance(self.shapes)
+        total_distance = dist.shape_to_dist(shape_id,nearest_A,nearest_B)
+        self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}'] = total_distance
+        # print(sub_df[["shape_pt_lat","shape_pt_lon"]].reset_index())
+        logging.debug(f"{total_distance} miles")
+        return total_distance
     def test(self):
         return self.shape_distances
+        # Local Execution time: 613.9763 seconds
