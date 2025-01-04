@@ -292,9 +292,11 @@ CR-Fitchburg,FALL 2024-NORTHWKD-Weekday-14,FirstNightNorth-717915-430,North Stat
 CR-Fitchburg,FALL 2024-NORTHWKD-Weekday-14,FirstNightNorth-717916-432,North Station,432,1,,9840003,1,,CR-Fitchburg-d82ea33a-1,1
 CR-Fitchburg,canonical,canonical-CR-Fitchburg-C1-1,North Station,C400,1,,canonical-9840003,1,,CR-Fitchburg-745cb51d-1,0
 CR-Foxboro,SPRING2024-SOUTHSUN-Sunday-64A,UpdatedSundayPatsGame-693087-9711,Foxboro,9711,0,,SouthStationToFoxboroViaBackBay,1,,CR-Foxboro-f1ed91e2-0,2
+CR-Foxboro,SPRING2024-SOUTHSUN-Sunday-65A,Jan5SundayPatsGame-693087-9711,Foxboro,9711,0,,SouthStationToFoxboroViaBackBay,1,,CR-Foxboro-71c5586e-0,2
 CR-Foxboro,canonical,canonical-CR-Foxboro-C1-0,Foxboro,C9701,0,,canonical-SouthStationToFoxboroViaBackBay,1,,CR-Foxboro-C1-0,0
 CR-Foxboro,canonical,canonical-CR-Foxboro-C2-0,Providence,C9801,0,,canonical-SouFoxProv,1,,CR-Foxboro-C2-0,0
 CR-Foxboro,SPRING2024-SOUTHSUN-Sunday-64A,UpdatedSundayPatsGame-693088-9810,Foxboro,9810,1,,ProvidenceToSouthStationViaFoxboro,1,,CR-Foxboro-30736035-1,2
+CR-Foxboro,SPRING2024-SOUTHSUN-Sunday-65A,Jan5SundayPatsGame-693088-9810,Foxboro,9810,1,,ProvidenceToSouthStationViaFoxboro,1,,CR-Foxboro-84ac0fa9-1,2
 CR-Foxboro,canonical,canonical-CR-Foxboro-C1-1,South Station,C9700,1,,canonical-FoxboroToSouthStationViaBackBay,1,,CR-Foxboro-C1-1,0
 CR-Foxboro,canonical,canonical-CR-Foxboro-C2-1,Foxboro,C9800,1,,canonical-ProvidenceToSouthStationViaFoxboro,1,,CR-Foxboro-C2-1,0
 CR-Franklin,FALL 2024-SOUTHSAT-Saturday-1-S85407dc6,SouthWKNDF24-698042-1701,Forge Park/495,1701,0,,9880003,1,,CR-Franklin-807421e2-0,1

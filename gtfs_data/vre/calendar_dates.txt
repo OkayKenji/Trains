@@ -1,12 +1,4 @@
 service_id,date,exception_type
-<<<<<<< HEAD
-S Schedule post Christmas II,20241230,1
-Regular,20241230,2
-S Schedule post Christmas II,20241231,1
-Regular,20241231,2
-Regular,20250101,2
-=======
->>>>>>> new-branch
 S Schedule Martin Luther King Jr Day,20250120,1
 Regular,20250120,2
 Regular,20250217,2

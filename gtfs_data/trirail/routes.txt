@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-route_id,route_short_name,route_long_name,route_type,route_color,route_text_color
-1,"TR","Tri-Rail",2,006c86,FFFFFF
-2,"DML","Downtown Miami Link",2,F3BE18,000000
-3,"MCE","MiamiCentral Express",2,9BCD65,FFFFFF
-=======
 ﻿route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,route_sort_order,continuous_pickup,continuous_drop_off
 1,SFRTA,TR,Tri-Rail,,2,,006c86,FFFFFF,,,
 2,SFRTA,DML,Downtown Miami Link,,2,,F3BE18,000000,,,
 3,SFRTA,MCE,MiamiCentral Express,,2,,9BCD65,FFFFFF,,,
 4,SFRTA,FLL,Airport Shuttle,,3,,E05200,FFFFFF,,,
->>>>>>> new-branch

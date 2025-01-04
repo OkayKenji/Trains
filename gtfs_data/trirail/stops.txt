@@ -1,4 +1,4 @@
-stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+﻿stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
 1,1,Mangonia Park Station,,26.7587432861,-80.0769348145,,,,,,
 2,2,West Palm Beach Station,,26.7132987976,-80.062538147,,,,,,
 3,3,Lake Worth Station,,26.6161422729,-80.0691299438,,,,,,
