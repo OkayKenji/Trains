@@ -215,30 +215,30 @@ Processing: vre
 	On average trains take: 91.8 minutes
 	Median time of trips: 88.5 minutes
 Processing: mbta
-	Fairmount Line:                57 (10.9%)
-	Fitchburg Line:                38 (7.3%)
-	Framingham/Worcester Line:     55 (10.5%)
-	Franklin/Foxboro Line:         47 (9.0%)
+	Fairmount Line:                57 (11.0%)
+	Fitchburg Line:                38 (7.4%)
+	Framingham/Worcester Line:     47 (9.1%)
+	Franklin/Foxboro Line:         47 (9.1%)
 	Greenbush Line:                26 (5.0%)
-	Haverhill Line:                43 (8.2%)
+	Haverhill Line:                43 (8.3%)
 	Kingston Line:                 26 (5.0%)
-	Lowell Line:                   37 (7.1%)
-	Middleborough/Lakeville Line:  28 (5.3%)
-	Needham Line:                  34 (6.5%)
-	Newburyport/Rockport Line:     59 (11.3%)
-	Providence/Stoughton Line:     74 (14.1%)
-	Total number of trains:        524
+	Lowell Line:                   37 (7.2%)
+	Middleborough/Lakeville Line:  28 (5.4%)
+	Needham Line:                  34 (6.6%)
+	Newburyport/Rockport Line:     59 (11.4%)
+	Providence/Stoughton Line:     74 (14.3%)
+	Total number of trains:        516
 	Shortest Trip (stop # wise): 5 stops on 204
 	Longest Trip (stop # wise): 19 stops on 732
 	On average trains make: 11 stops
-	Median # of train: 11 stops
+	Median # of train: 10 stops
 	Shortest Trip (distance wise): 7.9 miles on 921
 	Longest Trip (distance wise): 62.8 miles on 801
-	On average trains travels: 29.6 miles
-	Median travel distance: 30.4 miles
+	On average trains travels: 29.4 miles
+	Median travel distance: 30.2 miles
 	Shortest Trip (time wise): 26.0 minutes on 633
 	Longest Trip (time wise): 118.0 minutes on 801
-	On average trains take: 62.4 minutes
+	On average trains take: 61.8 minutes
 	Median time of trips: 64.0 minutes
 Processing: sunrail
 	SunRail:                40 (100.0%)
@@ -256,11 +256,11 @@ Processing: sunrail
 	On average trains take: 104.7 minutes
 	Median time of trips: 105.0 minutes
 Processing: amtrak
-	Acela:                                  27 (4.5%)
+	Acela:                                  25 (4.2%)
 	Adirondack:                             2 (0.3%)
 	Amtrak Cascades:                        14 (2.3%)
 	Amtrak Hartford Line:                   6 (1.0%)
-	Amtrak Thruway Connecting Service:      201 (33.5%)
+	Amtrak Thruway Connecting Service:      201 (33.7%)
 	Auto Train:                             2 (0.3%)
 	Blue Water:                             2 (0.3%)
 	Borealis:                               2 (0.3%)
@@ -273,7 +273,7 @@ Processing: amtrak
 	Coast Starlight:                        2 (0.3%)
 	Commuter Rail:                          88 (14.7%)
 	Crescent:                               2 (0.3%)
-	Downeaster:                             11 (1.8%)
+	Downeaster:                             10 (1.7%)
 	Empire Builder:                         4 (0.7%)
 	Empire Service:                         16 (2.7%)
 	Ethan Allen Express:                    2 (0.3%)
@@ -289,7 +289,7 @@ Processing: amtrak
 	Maple Leaf:                             4 (0.7%)
 	Missouri River Runner:                  2 (0.3%)
 	Northeast Regional:                     46 (7.7%)
-	Pacific Surfliner:                      20 (3.3%)
+	Pacific Surfliner:                      20 (3.4%)
 	Palmetto:                               2 (0.3%)
 	Pennsylvanian:                          2 (0.3%)
 	Pere Marquette:                         2 (0.3%)
@@ -304,18 +304,18 @@ Processing: amtrak
 	Vermonter:                              2 (0.3%)
 	Winter Park Express:                    2 (0.3%)
 	Wolverine:                              6 (1.0%)
-	Total number of trains:                 600
+	Total number of trains:                 597
 	Shortest Trip (stop # wise): 2 stops on 52
 	Longest Trip (stop # wise): 46 stops on 40
 	On average trains make: 10 stops
 	Median # of train: 9 stops
 	Shortest Trip (distance wise): 25.0 miles on 522
 	Longest Trip (distance wise): 2721.3 miles on 421
-	On average trains travels: 396.7 miles
+	On average trains travels: 398.8 miles
 	Median travel distance: 224.6 miles
 	Shortest Trip (time wise): 10.0 minutes on 3768
 	Longest Trip (time wise): 3943.0 minutes on 421
-	On average trains take: 310.2 minutes
+	On average trains take: 310.6 minutes
 	Median time of trips: 178.0 minutes
 Processing: sle
 	Commuter Rail:          20 (100.0%)
@@ -365,36 +365,34 @@ Processing: go
 	On average trains take: 67.3 minutes
 	Median time of trips: 62.0 minutes
 Processing: via
-	Air Connect:             1 (1.5%)
-	Jasper - Prince Rupert:  2 (3.0%)
-	Montréal - Halifax:      2 (3.0%)
-	Montréal - Senneterre:   1 (1.5%)
-	Montréal - Toronto:      12 (17.9%)
-	Ottawa - Montréal:       2 (3.0%)
-	Ottawa - Québec:         4 (6.0%)
-	Ottawa - Toronto:        20 (29.9%)
-	Québec - Fallowfield:    4 (6.0%)
-	Québec - Montréal:       2 (3.0%)
-	Sudbury - White River:   1 (1.5%)
-	The Pas - Churchill:     1 (1.5%)
-	Toronto - Kingston:      2 (3.0%)
-	Toronto - London:        2 (3.0%)
-	Toronto - Sarnia:        2 (3.0%)
-	Toronto - Windsor:       8 (11.9%)
-	Vancouver - Toronto:     1 (1.5%)
-	Total number of trains:  67
+	Air Connect:             1 (1.7%)
+	Jasper - Prince Rupert:  1 (1.7%)
+	Montréal - Halifax:      2 (3.3%)
+	Montréal - Senneterre:   1 (1.7%)
+	Montréal - Toronto:      12 (20.0%)
+	Ottawa - Montréal:       2 (3.3%)
+	Ottawa - Québec:         4 (6.7%)
+	Ottawa - Toronto:        18 (30.0%)
+	Québec - Fallowfield:    4 (6.7%)
+	Québec - Montréal:       2 (3.3%)
+	Sudbury - White River:   1 (1.7%)
+	The Pas - Churchill:     1 (1.7%)
+	Toronto - Sarnia:        2 (3.3%)
+	Toronto - Windsor:       8 (13.3%)
+	Vancouver - Toronto:     1 (1.7%)
+	Total number of trains:  60
 	Shortest Trip (stop # wise): 2 stops on nan
 	Longest Trip (stop # wise): 67 stops on 2
 	On average trains make: 13 stops
 	Median # of train: 10 stops
 	Shortest Trip (distance wise): 3.1 miles on nan
 	Longest Trip (distance wise): 2743.7 miles on 2
-	On average trains travels: 332.6 miles
+	On average trains travels: 340.9 miles
 	Median travel distance: 276.4 miles
 	Shortest Trip (time wise): 10.0 minutes on nan
 	Longest Trip (time wise): 5549.0 minutes on 2
-	On average trains take: 470.9 minutes
-	Median time of trips: 290.0 minutes
+	On average trains take: 472.4 minutes
+	Median time of trips: 296.5 minutes
 Processing: rtd
 	A:                      146 (43.6%)
 	B:                      36 (10.7%)
@@ -438,5 +436,5 @@ Processing: metra
 	Longest Trip (time wise): 133.0 minutes on 373
 	On average trains take: 76.6 minutes
 	Median time of trips: 80.0 minutes
-Execution time: 26.3141 seconds
-Data last updated: 2025-01-02 05:29:07.234532
+Execution time: 20.0233 seconds
+Data last updated: 2025-01-03 23:17:08.288907
