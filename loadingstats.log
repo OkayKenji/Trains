@@ -1,0 +1,40 @@
+2025-01-04 17:04:21,765 | INFO | train.py:193 | 
+Message: Processing: njt
+2025-01-04 17:06:39,296 | INFO | train.py:305 | 
+Message: 	Local Execution time: 137.5272 seconds
+2025-01-04 17:06:39,408 | INFO | train.py:193 | 
+Message: Processing: ace
+2025-01-04 17:06:39,729 | INFO | train.py:305 | 
+Message: 	Local Execution time: 0.3214 seconds
+2025-01-04 17:06:41,057 | INFO | train.py:193 | 
+Message: Processing: go
+2025-01-04 17:07:05,949 | INFO | train.py:305 | 
+Message: 	Local Execution time: 24.8868 seconds
+2025-01-04 17:07:05,990 | INFO | train.py:193 | 
+Message: Processing: rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS
+2025-01-04 17:07:08,345 | INFO | train.py:305 | 
+Message: 	Local Execution time: 2.3549 seconds
+2025-01-04 17:07:08,385 | INFO | train.py:193 | 
+Message: Processing: rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS
+2025-01-04 17:07:16,028 | INFO | train.py:305 | 
+Message: 	Local Execution time: 7.6432 seconds
+2025-01-04 17:07:16,225 | INFO | train.py:193 | 
+Message: Processing: metra
+2025-01-04 17:07:29,820 | INFO | train.py:305 | 
+Message: 	Local Execution time: 13.5955 seconds
+2025-01-04 17:07:29,885 | INFO | train.py:193 | 
+Message: Processing: exo
+2025-01-04 17:07:33,436 | INFO | train.py:305 | 
+Message: 	Local Execution time: 3.5513 seconds
+2025-01-04 17:07:33,566 | INFO | train.py:193 | 
+Message: Processing: lirr
+2025-01-04 17:09:31,060 | INFO | train.py:193 | 
+Message: Processing: njt
+2025-01-04 17:11:06,845 | INFO | train.py:305 | 
+Message: 	Local Execution time: 95.7855 seconds
+2025-01-04 17:11:06,875 | INFO | train.py:193 | 
+Message: Processing: ace
+2025-01-04 17:11:06,985 | INFO | train.py:305 | 
+Message: 	Local Execution time: 0.1096 seconds
+2025-01-04 17:11:07,555 | INFO | train.py:193 | 
+Message: Processing: go

@@ -10,7 +10,9 @@ from distance import MainDistanceCalculator
 import logging
 import os
 
-logging.basicConfig(level=logging.WARNING,
+logging.basicConfig(
+    filename='loadingstats.log',
+    level=logging.INFO,
     format='%(asctime)s | %(levelname)s | %(filename)s:%(lineno)d | \nMessage: %(message)s'
 )
 
@@ -135,7 +137,7 @@ class GenerateTrainList:
         stop_name = self.stops.loc[self.stops['stop_id'] == row['stop_id'], 'stop_name']
         if not stop_name.empty:
             return stop_name.iloc[0]
-        if self.railroad != 'marc' and self.railroad != 'vre' and self.railroad != 'exo' and self.railroad != 'mbta' and self.railroad != 'amtrak' and  self.railroad != 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' and self.railroad != 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS':
+        if self.railroad != 'marc' and self.railroad != 'vre' and self.railroad != 'exo' and self.railroad != 'mbta' and self.railroad != 'amtrak' and  self.railroad != 'rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS' and self.railroad != 'rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS' and self.railroad != 'njt':
             return None # give up
         stop_name = self.stops.loc[self.stops['station_id_additional'].apply(lambda x: str(row['stop_id']) in ast.literal_eval(x)), 'stop_name']
 
@@ -211,7 +213,7 @@ class GenerateTrainList:
         listOfTrains = listOfTrains.astype({f'{self.train_classification}': 'str',
                                             'trip_headsign': 'str',
                                             'direction_id': 'str'})
-        logging.info(f"\tf{self.railroad}Wait a while as we process the data...)")
+        logging.debug(f"\tf{self.railroad}Wait a while as we process the data...)")
         
 
         reformated = self.reformat(listOfTrains)
@@ -234,7 +236,7 @@ class GenerateTrainList:
         all_stops.columns = all_stops.columns.str.replace( r"^\d{8}-[A-Za-z]{2}-", '', regex=True)
        
         all_stops.to_csv(f'./data/csv/{self.railroad}.csv')
-        logging.info("\tWait a while as we format the data...")
+        logging.debug("\tWait a while as we format the data...")
         arr = []
 
         for _, sublist in enumerate(reformated):
@@ -246,7 +248,7 @@ class GenerateTrainList:
 
         local_end_time = time.time()
         local_execution_time = local_end_time - local_start_time
-        print(f"\tLocal Execution time so far: {local_execution_time:.4f} seconds")
+        logging.debug(f"\tLocal Execution time so far: {local_execution_time:.4f} seconds")
 
         for _, k in enumerate(all_stops):
             match = re.match(r'([\w\s\.]+)\s+\(([éô0-9a-zA-Z\/\-\&\-\s]+)\)', k)
@@ -300,7 +302,7 @@ class GenerateTrainList:
 
         local_execution_time = local_end_time - local_start_time
 
-        print(f"\tLocal Execution time: {local_execution_time:.4f} seconds")
+        logging.info(f"\tLocal Execution time: {local_execution_time:.4f} seconds")
         # exit(0)
 
 if __name__ == "__main__":
@@ -396,9 +398,6 @@ if __name__ == "__main__":
             "train_classification": 'trip_short_name',
         }
     ]
-        # elements = ["exo","lirr","marc","metrolink","mnrr","nicd","septa","trirail","vre","mbta","sunrail","amtrak","sle","hl","via","rtd"]
-
-
 
     for ele in elements: 
         x = GenerateTrainList(
@@ -412,5 +411,5 @@ if __name__ == "__main__":
     end_time = time.time()
     execution_time = end_time - start_time
 
-    print(f"Execution time: {execution_time:.4f} seconds")
+    logging.info(f"Execution time: {execution_time:.4f} seconds")
     

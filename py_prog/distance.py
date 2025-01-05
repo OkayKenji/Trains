@@ -126,19 +126,20 @@ class MainDistanceCalculator:
 
 
     def calculate_distance(self, departure_station,arrival_station,stops,shape_id):
+        if (shape_id == "NA" or shape_id == "nan" or pd.isna(shape_id)):
+            return "NA"
         if departure_station > arrival_station:
             departure_station, arrival_station = arrival_station, departure_station
-        shape_id = (shape_id)
+        shape_id = self.equivalent_shape(self.safe_str_conversion(shape_id))
 
         if f'{departure_station}-{arrival_station}-{shape_id}' in self.shape_distances:
-            logging.info(f'Collision with: {departure_station}-{arrival_station}-{shape_id}')
+            logging.debug(f'Collision with: {departure_station}-{arrival_station}-{shape_id}')
             return self.shape_distances[f'{departure_station}-{arrival_station}-{shape_id}']
 
                 
-        logging.info(f'First time with: {departure_station}-{arrival_station}-{shape_id}')
+        logging.debug(f'First time with: {departure_station}-{arrival_station}-{shape_id}')
 
-        if (shape_id == "NA" or shape_id == "nan" or pd.isna(shape_id)):
-            return "NA"
+        
         logging.debug(f'{shape_id}, {type(shape_id)}') # nan
         df = self.shapes
         sub_df = df[df.shape_id.astype(str).isin([self.safe_str_conversion(shape_id)])]

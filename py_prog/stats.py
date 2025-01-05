@@ -97,6 +97,25 @@ def main():
             print(f'\tLongest Trip (time wise): {max_by_time["travel_time"]/60:.1f} minutes on {max_by_time["train_id"]}')
             print(f'\tOn average trains take: {avg_time/60:.1f} minutes')
             print(f'\tMedian time of trips: {median_time/60:.1f} minutes')
+            
+            if (ele != "rtd"):
+
+                # Get stops and their info
+                df = pd.read_csv(f'./data/csv/{ele}.csv') # assuming running form root
+                df_ref = pd.read_csv(f'./gtfs_data/{ele}/stops.txt')
+                # df_ace = pd.read_csv(f'./gtfs_data/{ele}/shapes.txt')
+
+                # Clean and calculate max trains per stop
+                df.drop('Unnamed: 0', axis=1, inplace=True)
+                row_stop_counts = df.drop(columns=["stop_name"]).notna().sum(axis=1)
+                df_ref['counts'] = row_stop_counts
+                df_ref = df_ref[['stop_name','counts']]
+                df_ref = df_ref.sort_values(by='counts',ascending=False).iloc[0:3].reset_index(drop=True)
+                print("\tTop three stations: ")
+                for index,row in df_ref.iterrows():
+                    print(f'\t\t{index+1}. {row["stop_name"]} ({row["counts"]} trains)')
+ 
+
 if __name__ == "__main__":
     # Start the timer
     start_time = time.time()

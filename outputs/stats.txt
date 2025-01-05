@@ -13,6 +13,10 @@ Processing: ace
 	Longest Trip (time wise): 142.0 minutes on ACE02
 	On average trains take: 133.2 minutes
 	Median time of trips: 132.0 minutes
+	Top three stations: 
+		1. Stockton- Robert J Cabral Amtrak Station (8 trains)
+		2. Great America Parkway Amtrak Station (8 trains)
+		3. Santa Clara Amtrak Station (8 trains)
 Processing: exo
 	11 - Vaudreuil/Hudson:    27 (26.2%)
 	12 - Saint-Jérôme:        28 (27.2%)
@@ -32,6 +36,10 @@ Processing: exo
 	Longest Trip (time wise): 110.0 minutes on 1202
 	On average trains take: 63.7 minutes
 	Median time of trips: 58.0 minutes
+	Top three stations: 
+		1. Gare Lucien-L'Allier (65 trains)
+		2. Gare Vendôme (65 trains)
+		3. Gare Montréal-Ouest (65 trains)
 Processing: lirr
 	Babylon Branch:          150 (15.9%)
 	City Terminal Zone:      133 (14.1%)
@@ -57,6 +65,10 @@ Processing: lirr
 	Longest Trip (time wise): 193.0 minutes on 7
 	On average trains take: 57.3 minutes
 	Median time of trips: 56.0 minutes
+	Top three stations: 
+		1. Jamaica (777 trains)
+		2. Penn Station (402 trains)
+		3. Woodside (273 trains)
 Processing: marc
 	BRUNSWICK - WASHINGTON:  19 (19.6%)
 	CAMDEN - WASHINGTON:     21 (21.6%)
@@ -72,8 +84,12 @@ Processing: marc
 	Median travel distance: 40.0 miles
 	Shortest Trip (time wise): 16.0 minutes on 613
 	Longest Trip (time wise): 134.0 minutes on 875
-	On average trains take: 76.4 minutes
+	On average trains take: 77.2 minutes
 	Median time of trips: 68.0 minutes
+	Top three stations: 
+		1. UNION STATION MARC Washington (94 trains)
+		2. PENN STATION MARC  (57 trains)
+		3. BWI RAIL STATION MARC  (50 trains)
 Processing: metrolink
 	Metrolink 91-Perris Valley Line:             14 (6.8%)
 	Metrolink Antelope Valley Line:              30 (14.6%)
@@ -91,6 +107,10 @@ Processing: metrolink
 	Longest Trip (time wise): 157.0 minutes on 824
 	On average trains take: 80.5 minutes
 	Median time of trips: 91.0 minutes
+	Top three stations: 
+		1. L. A. Union Station Metrolink Station (150 trains)
+		2. San Bernardino - Downtown Metrolink Station (78 trains)
+		3. Downtown Burbank Metrolink Station (52 trains)
 Processing: mnrr
 	Danbury:                26 (3.9%)
 	Harlem:                 208 (31.3%)
@@ -111,6 +131,10 @@ Processing: mnrr
 	Longest Trip (time wise): 139.0 minutes on 1575
 	On average trains take: 77.1 minutes
 	Median time of trips: 71.0 minutes
+	Top three stations: 
+		1. Grand Central (569 trains)
+		2. Harlem-125 St (526 trains)
+		3. Stamford (225 trains)
 Processing: nicd
 	South Shore Line:       59 (100.0%)
 	Total number of trains: 59
@@ -126,6 +150,10 @@ Processing: nicd
 	Longest Trip (time wise): 124.0 minutes on 22
 	On average trains take: 78.3 minutes
 	Median time of trips: 81.0 minutes
+	Top three stations: 
+		1. Millennium Station (53 trains)
+		2. Van Buren St. (53 trains)
+		3. Miller (50 trains)
 Processing: njt
 	Atlantic City Rail Line:   24 (2.8%)
 	Gladstone Branch:          44 (5.1%)
@@ -154,6 +182,10 @@ Processing: njt
 	Longest Trip (time wise): 158.0 minutes on 0062
 	On average trains take: 66.0 minutes
 	Median time of trips: 70.0 minutes
+	Top three stations: 
+		1. SECAUCUS STATION (439 trains)
+		2. NEW YORK PENN STATION (338 trains)
+		3. HOBOKEN (259 trains)
 Processing: septa
 	Airport Line:              78 (12.6%)
 	Chestnut Hill East Line:   40 (6.5%)
@@ -181,6 +213,10 @@ Processing: septa
 	Longest Trip (time wise): 102.0 minutes on 514
 	On average trains take: 51.8 minutes
 	Median time of trips: 52.0 minutes
+	Top three stations: 
+		1. Suburban Station (619 trains)
+		2. Gray 30th Street (390 trains)
+		3. Jefferson Station (376 trains)
 Processing: trirail
 	Downtown Miami Link:    24 (30.8%)
 	MiamiCentral Express:   2 (2.6%)
@@ -198,6 +234,10 @@ Processing: trirail
 	Longest Trip (time wise): 120.0 minutes on P611
 	On average trains take: 85.3 minutes
 	Median time of trips: 115.0 minutes
+	Top three stations: 
+		1. Metrorail Transfer Station (78.0 trains)
+		2. Boca Raton Station (54.0 trains)
+		3. West Palm Beach Station (54.0 trains)
 Processing: vre
 	Fredericksburg Line:    16 (50.0%)
 	Manassas Line:          16 (50.0%)
@@ -214,6 +254,10 @@ Processing: vre
 	Longest Trip (time wise): 107.0 minutes on 301
 	On average trains take: 91.8 minutes
 	Median time of trips: 88.5 minutes
+	Top three stations: 
+		1. Union Station (32 trains)
+		2. Alexandria (32 trains)
+		3. L Enfant (29 trains)
 Processing: mbta
 	Fairmount Line:                57 (11.0%)
 	Fitchburg Line:                38 (7.4%)
@@ -240,6 +284,10 @@ Processing: mbta
 	Longest Trip (time wise): 118.0 minutes on 801
 	On average trains take: 61.8 minutes
 	Median time of trips: 64.0 minutes
+	Top three stations: 
+		1. South Station (333 trains)
+		2. Back Bay (187 trains)
+		3. North Station (176 trains)
 Processing: sunrail
 	SunRail:                40 (100.0%)
 	Total number of trains: 40
@@ -255,6 +303,10 @@ Processing: sunrail
 	Longest Trip (time wise): 118.0 minutes on P337
 	On average trains take: 104.7 minutes
 	Median time of trips: 105.0 minutes
+	Top three stations: 
+		1. Sanford (40 trains)
+		2. Lake Mary (40 trains)
+		3. Altamonte Springs (40 trains)
 Processing: amtrak
 	Acela:                                  25 (4.2%)
 	Adirondack:                             2 (0.3%)
@@ -317,6 +369,10 @@ Processing: amtrak
 	Longest Trip (time wise): 3943.0 minutes on 421
 	On average trains take: 310.6 minutes
 	Median time of trips: 178.0 minutes
+	Top three stations: 
+		1. Baltimore Penn Station - BAL (140 trains)
+		2. Washington Union Station - WAS (136 trains)
+		3. Ny Moynihan Train Hall At Penn Station - NYP (131 trains)
 Processing: sle
 	Commuter Rail:          20 (100.0%)
 	Total number of trains: 20
@@ -328,6 +384,10 @@ Processing: sle
 	Longest Trip (time wise): 72.0 minutes on 1634
 	On average trains take: 66.0 minutes
 	Median time of trips: 65.0 minutes
+	Top three stations: 
+		1. New Haven - NHV (20 trains)
+		2. New Haven - STS (20 trains)
+		3. Branford - BNF (20 trains)
 Processing: hl
 	Hartford Line:          21 (100.0%)
 	Total number of trains: 21
@@ -343,6 +403,10 @@ Processing: hl
 	Longest Trip (time wise): 96.0 minutes on 4466
 	On average trains take: 75.5 minutes
 	Median time of trips: 91.0 minutes
+	Top three stations: 
+		1. NEW HAVEN UNION STATION (21 trains)
+		2. STATE STREET STATION (21 trains)
+		3. WALLINGFORD (21 trains)
 Processing: go
 	Barrie:                 32 (9.2%)
 	Kitchener:              70 (20.1%)
@@ -364,6 +428,10 @@ Processing: go
 	Longest Trip (time wise): 157.0 minutes on 1977
 	On average trains take: 67.3 minutes
 	Median time of trips: 62.0 minutes
+	Top three stations: 
+		1. Union Station (349 trains)
+		2. Oakville GO (100 trains)
+		3. Clarkson GO (96 trains)
 Processing: via
 	Air Connect:             1 (1.7%)
 	Jasper - Prince Rupert:  1 (1.7%)
@@ -393,6 +461,10 @@ Processing: via
 	Longest Trip (time wise): 5549.0 minutes on 2
 	On average trains take: 472.4 minutes
 	Median time of trips: 296.5 minutes
+	Top three stations: 
+		1. Toronto (43 trains)
+		2. Kingston (29 trains)
+		3. Ottawa (28 trains)
 Processing: rtd
 	A:                      146 (43.6%)
 	B:                      36 (10.7%)
@@ -412,7 +484,7 @@ Processing: rtd
 	On average trains take: 30.7 minutes
 	Median time of trips: 30.8 minutes
 Processing: metra
-	BNSF:                     91 (13.7%)
+	Burlington Northern:      91 (13.7%)
 	Heritage Corridor:        6 (0.9%)
 	Metra Electric:           131 (19.7%)
 	Milwaukee North:          54 (8.1%)
@@ -436,5 +508,9 @@ Processing: metra
 	Longest Trip (time wise): 133.0 minutes on 373
 	On average trains take: 76.6 minutes
 	Median time of trips: 80.0 minutes
-Execution time: 20.0233 seconds
-Data last updated: 2025-01-03 23:17:08.288907
+	Top three stations: 
+		1. Chicago Union Station (247 trains)
+		2. Chicago OTC (207 trains)
+		3. Clybourn (140 trains)
+Execution time: 19.8474 seconds
+Data last updated: 2025-01-04 17:19:17.811551
