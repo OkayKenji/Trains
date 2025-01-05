@@ -5,6 +5,7 @@ import pandas as pd
 import re
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 import scipy.stats as stats
 
 def graphs(trip_durations):
@@ -44,6 +45,12 @@ def main():
                 print(f'\t{f"{train_line}:":<{longest_length}} {total_train_in_route} ({total_train_in_route/len(train_list)*100:.1f}%)')
             print(f'\t{"Total number of trains:":<{longest_length}} {len(train_list)}')
             num_stops = []
+            binned_times = {
+                "4-10" : 0,
+                "10-16" : 0,
+                "16-22" : 0,
+                "22-4": 0
+            }
             for train in train_list:
                 df = pd.DataFrame(train['stops']).transpose()
                 df_cleaned = df[df['departure_time'] != 'n/a']
@@ -52,10 +59,13 @@ def main():
 
                 timeA = df_cleaned.iloc[0].departure_time
                 timeB = df_cleaned.iloc[len(df_cleaned)-1].departure_time
+
                 timeA = f'1900-01-{1+(int(timeA[:timeA.find(":")])//24)} {int(timeA[:timeA.find(":")])%24}:{timeA[timeA.find(":")+1:]}' if re.match(r"^([2-9][4-9]|[3-9]\d|\d{3,}):.*",timeA) else f'1900-01-01 {timeA}'
                 timeB = f'1900-01-{1+(int(timeB[:timeB.find(":")])//24)} {int(timeB[:timeB.find(":")])%24}:{timeB[timeB.find(":")+1:]}' if re.match(r"^([2-9][4-9]|[3-9]\d|\d{3,}):.*",timeB) else f'1900-01-01 {timeB}'
                 timeA = datetime.datetime.strptime(timeA, '%Y-%m-%d %H:%M:%S')
                 timeB = datetime.datetime.strptime(timeB, '%Y-%m-%d %H:%M:%S')
+                
+                binned_times[list(binned_times.keys())[math.floor((timeA.hour-4)/6)]] = binned_times[list(binned_times.keys())[math.floor((timeA.hour-4)/6)]] + 1
                 num_stops.append({
                     'train_id' : train['train_number'],
                     'number_of_stops': len(df_cleaned),
@@ -64,13 +74,12 @@ def main():
                     'travel_time': int((timeB-timeA).total_seconds()),
                     'distance' : train['distance']
                 })
-
             min_by_stops = min(num_stops, key=lambda x: x["number_of_stops"])
             max_by_stops = max(num_stops, key=lambda x: x["number_of_stops"])
             trip_durations = [trip['number_of_stops'] for trip in num_stops]
             avg_stops = np.mean(trip_durations)
             median_stops = np.median(trip_durations)
-            print(f'\tShortest Trip (stop # wise): {min_by_stops["number_of_stops"]} stops on {min_by_stops["train_id"]}')
+            print(f'\n\tShortest Trip (stop # wise): {min_by_stops["number_of_stops"]} stops on {min_by_stops["train_id"]}')
             print(f'\tLongest Trip (stop # wise): {max_by_stops["number_of_stops"]} stops on {max_by_stops["train_id"]}')
             print(f'\tOn average trains make: {avg_stops:.0f} stops')
             print(f'\tMedian # of train: {median_stops:.0f} stops')
@@ -83,7 +92,7 @@ def main():
                 # graphs(trip_durations)
                 avg_distance = np.mean(trip_durations)
                 median_distance = np.median(trip_durations)
-                print(f'\tShortest Trip (distance wise): {min_by_distance["distance"]:.1f} miles on {min_by_distance["train_id"]}')
+                print(f'\n\tShortest Trip (distance wise): {min_by_distance["distance"]:.1f} miles on {min_by_distance["train_id"]}')
                 print(f'\tLongest Trip (distance wise): {max_by_distance["distance"]:.1f} miles on {max_by_distance["train_id"]}')
                 print(f'\tOn average trains travels: {avg_distance:.1f} miles')
                 print(f'\tMedian travel distance: {median_distance:.1f} miles')
@@ -93,13 +102,12 @@ def main():
             trip_durations = [trip['travel_time'] for trip in num_stops]
             avg_time = np.mean(trip_durations)
             median_time = np.median(trip_durations)
-            print(f'\tShortest Trip (time wise): {min_by_time["travel_time"]/60:.1f} minutes on {min_by_time["train_id"]}')
+            print(f'\n\tShortest Trip (time wise): {min_by_time["travel_time"]/60:.1f} minutes on {min_by_time["train_id"]}')
             print(f'\tLongest Trip (time wise): {max_by_time["travel_time"]/60:.1f} minutes on {max_by_time["train_id"]}')
             print(f'\tOn average trains take: {avg_time/60:.1f} minutes')
             print(f'\tMedian time of trips: {median_time/60:.1f} minutes')
             
             if (ele != "rtd"):
-
                 # Get stops and their info
                 df = pd.read_csv(f'./data/csv/{ele}.csv') # assuming running form root
                 df_ref = pd.read_csv(f'./gtfs_data/{ele}/stops.txt')
@@ -111,11 +119,15 @@ def main():
                 df_ref['counts'] = row_stop_counts
                 df_ref = df_ref[['stop_name','counts']]
                 df_ref = df_ref.sort_values(by='counts',ascending=False).iloc[0:3].reset_index(drop=True)
-                print("\tTop three stations: ")
+                print("\n\tTop three stations: ")
                 for index,row in df_ref.iterrows():
                     print(f'\t\t{index+1}. {row["stop_name"]} ({row["counts"]} trains)')
- 
-
+            print("\n\tTime frequency (leaving times): ")
+            print(f'\t4 am to 10 am: {binned_times["4-10"]}')
+            print(f'\t10 am to 4 pm: {binned_times["10-16"]}')
+            print(f'\t4 pm to 10 pm: {binned_times["16-22"]}')
+            print(f'\t10pm to 4 am: {binned_times["22-4"]}')
+            print(f'\n')
 if __name__ == "__main__":
     # Start the timer
     start_time = time.time()

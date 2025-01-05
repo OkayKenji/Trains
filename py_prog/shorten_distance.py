@@ -19,7 +19,7 @@ for ele in elements:
             obj_2[f'{shape}'] = obj[f'{ind}'][0]
             ahhhh = obj[f'{ind}'] 
             ahhhh.append(shape)
-            obj[f'{ind}'] =ahhhh
+            obj[f'{ind}'] = ahhhh
         else:
             obj[f'{index}'] = [shape]
             obj_2[f'{shape}'] = shape

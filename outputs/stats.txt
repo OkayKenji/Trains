@@ -1,22 +1,34 @@
 Processing: ace
 	ACE Train:              8 (100.0%)
 	Total number of trains: 8
+
 	Shortest Trip (stop # wise): 10 stops on ACE01
 	Longest Trip (stop # wise): 10 stops on ACE01
 	On average trains make: 10 stops
 	Median # of train: 10 stops
+
 	Shortest Trip (distance wise): 85.3 miles on ACE01
 	Longest Trip (distance wise): 85.8 miles on ACE02
 	On average trains travels: 85.6 miles
 	Median travel distance: 85.6 miles
+
 	Shortest Trip (time wise): 132.0 minutes on ACE01
 	Longest Trip (time wise): 142.0 minutes on ACE02
 	On average trains take: 133.2 minutes
 	Median time of trips: 132.0 minutes
+
 	Top three stations: 
 		1. Stockton- Robert J Cabral Amtrak Station (8 trains)
 		2. Great America Parkway Amtrak Station (8 trains)
 		3. Santa Clara Amtrak Station (8 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 4
+	10 am to 4 pm: 2
+	4 pm to 10 pm: 2
+	10pm to 4 am: 0
+
+
 Processing: exo
 	11 - Vaudreuil/Hudson:    27 (26.2%)
 	12 - Saint-Jérôme:        28 (27.2%)
@@ -24,22 +36,34 @@ Processing: exo
 	14 - Candiac:             18 (17.5%)
 	15 - Mascouche:           16 (15.5%)
 	Total number of trains:   103
+
 	Shortest Trip (stop # wise): 7 stops on 41
 	Longest Trip (stop # wise): 26 stops on 1202
 	On average trains make: 13 stops
 	Median # of train: 14 stops
+
 	Shortest Trip (distance wise): 14.8 miles on 40
 	Longest Trip (distance wise): 39.7 miles on 1202
 	On average trains travels: 27.0 miles
 	Median travel distance: 25.8 miles
+
 	Shortest Trip (time wise): 32.0 minutes on 41
 	Longest Trip (time wise): 110.0 minutes on 1202
 	On average trains take: 63.7 minutes
 	Median time of trips: 58.0 minutes
+
 	Top three stations: 
 		1. Gare Lucien-L'Allier (65 trains)
 		2. Gare Vendôme (65 trains)
 		3. Gare Montréal-Ouest (65 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 39
+	10 am to 4 pm: 21
+	4 pm to 10 pm: 41
+	10pm to 4 am: 2
+
+
 Processing: lirr
 	Babylon Branch:          150 (15.9%)
 	City Terminal Zone:      133 (14.1%)
@@ -53,43 +77,67 @@ Processing: lirr
 	Ronkonkoma Branch:       112 (11.9%)
 	West Hempstead Branch:   38 (4.0%)
 	Total number of trains:  945
+
 	Shortest Trip (stop # wise): 2 stops on 2306
 	Longest Trip (stop # wise): 18 stops on 2
 	On average trains make: 11 stops
 	Median # of train: 11 stops
+
 	Shortest Trip (distance wise): 9.1 miles on 1763
 	Longest Trip (distance wise): 118.0 miles on 14
 	On average trains travels: 29.5 miles
 	Median travel distance: 24.4 miles
+
 	Shortest Trip (time wise): 19.0 minutes on 2832
 	Longest Trip (time wise): 193.0 minutes on 7
 	On average trains take: 57.3 minutes
 	Median time of trips: 56.0 minutes
+
 	Top three stations: 
 		1. Jamaica (777 trains)
 		2. Penn Station (402 trains)
 		3. Woodside (273 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 289
+	10 am to 4 pm: 226
+	4 pm to 10 pm: 299
+	10pm to 4 am: 131
+
+
 Processing: marc
 	BRUNSWICK - WASHINGTON:  19 (19.6%)
 	CAMDEN - WASHINGTON:     21 (21.6%)
 	PENN - WASHINGTON:       57 (58.8%)
 	Total number of trains:  97
+
 	Shortest Trip (stop # wise): 2 stops on 408
 	Longest Trip (stop # wise): 17 stops on 879
 	On average trains make: 9 stops
 	Median # of train: 9 stops
+
 	Shortest Trip (distance wise): 11.4 miles on 613
 	Longest Trip (distance wise): 76.3 miles on 505
 	On average trains travels: 47.1 miles
 	Median travel distance: 40.0 miles
+
 	Shortest Trip (time wise): 16.0 minutes on 613
 	Longest Trip (time wise): 134.0 minutes on 875
 	On average trains take: 77.2 minutes
 	Median time of trips: 68.0 minutes
+
 	Top three stations: 
 		1. UNION STATION MARC Washington (94 trains)
 		2. PENN STATION MARC  (57 trains)
 		3. BWI RAIL STATION MARC  (50 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 42
+	10 am to 4 pm: 20
+	4 pm to 10 pm: 34
+	10pm to 4 am: 1
+
+
 Processing: metrolink
 	Metrolink 91-Perris Valley Line:             14 (6.8%)
 	Metrolink Antelope Valley Line:              30 (14.6%)
@@ -99,18 +147,29 @@ Processing: metrolink
 	Metrolink San Bernardino Line:               86 (41.7%)
 	Metrolink Ventura County Line:               22 (10.7%)
 	Total number of trains:                      206
+
 	Shortest Trip (stop # wise): 5 stops on 302
 	Longest Trip (stop # wise): 15 stops on 803
 	On average trains make: 10 stops
 	Median # of train: 10 stops
+
 	Shortest Trip (time wise): 20.0 minutes on 3806
 	Longest Trip (time wise): 157.0 minutes on 824
 	On average trains take: 80.5 minutes
 	Median time of trips: 91.0 minutes
+
 	Top three stations: 
 		1. L. A. Union Station Metrolink Station (150 trains)
 		2. San Bernardino - Downtown Metrolink Station (78 trains)
 		3. Downtown Burbank Metrolink Station (52 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 70
+	10 am to 4 pm: 73
+	4 pm to 10 pm: 57
+	10pm to 4 am: 6
+
+
 Processing: mnrr
 	Danbury:                26 (3.9%)
 	Harlem:                 208 (31.3%)
@@ -119,41 +178,65 @@ Processing: mnrr
 	New Haven:              211 (31.8%)
 	Waterbury:              24 (3.6%)
 	Total number of trains: 664
+
 	Shortest Trip (stop # wise): 4 stops on 507
 	Longest Trip (stop # wise): 30 stops on 699
 	On average trains make: 13 stops
 	Median # of train: 13 stops
+
 	Shortest Trip (distance wise): 7.3 miles on 1716
 	Longest Trip (distance wise): 82.0 miles on 916
 	On average trains travels: 41.7 miles
 	Median travel distance: 33.0 miles
+
 	Shortest Trip (time wise): 17.0 minutes on 1751
 	Longest Trip (time wise): 139.0 minutes on 1575
 	On average trains take: 77.1 minutes
 	Median time of trips: 71.0 minutes
+
 	Top three stations: 
 		1. Grand Central (569 trains)
 		2. Harlem-125 St (526 trains)
 		3. Stamford (225 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 222
+	10 am to 4 pm: 153
+	4 pm to 10 pm: 229
+	10pm to 4 am: 60
+
+
 Processing: nicd
 	South Shore Line:       59 (100.0%)
 	Total number of trains: 59
+
 	Shortest Trip (stop # wise): 2 stops on 400
 	Longest Trip (stop # wise): 16 stops on 11
 	On average trains make: 11 stops
 	Median # of train: 11 stops
+
 	Shortest Trip (distance wise): 32.2 miles on 400
 	Longest Trip (distance wise): 89.7 miles on 8
 	On average trains travels: 56.3 miles
 	Median travel distance: 57.5 miles
+
 	Shortest Trip (time wise): 38.0 minutes on 400
 	Longest Trip (time wise): 124.0 minutes on 22
 	On average trains take: 78.3 minutes
 	Median time of trips: 81.0 minutes
+
 	Top three stations: 
 		1. Millennium Station (53 trains)
 		2. Van Buren St. (53 trains)
 		3. Miller (50 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 24
+	10 am to 4 pm: 14
+	4 pm to 10 pm: 17
+	10pm to 4 am: 4
+
+
 Processing: njt
 	Atlantic City Rail Line:   24 (2.8%)
 	Gladstone Branch:          44 (5.1%)
@@ -170,22 +253,34 @@ Processing: njt
 	Raritan Valley Line:       52 (6.0%)
 	Riverline Light Rail:      23 (2.7%)
 	Total number of trains:    861
+
 	Shortest Trip (stop # wise): 2 stops on 4100
 	Longest Trip (stop # wise): 26 stops on 0067
 	On average trains make: 13 stops
 	Median # of train: 13 stops
+
 	Shortest Trip (distance wise): 1.2 miles on 007NK009
 	Longest Trip (distance wise): 106.2 miles on 0059
 	On average trains travels: 34.5 miles
 	Median travel distance: 30.8 miles
+
 	Shortest Trip (time wise): 5.0 minutes on 4100
 	Longest Trip (time wise): 158.0 minutes on 0062
 	On average trains take: 66.0 minutes
 	Median time of trips: 70.0 minutes
+
 	Top three stations: 
 		1. SECAUCUS STATION (439 trains)
 		2. NEW YORK PENN STATION (338 trains)
 		3. HOBOKEN (259 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 291
+	10 am to 4 pm: 182
+	4 pm to 10 pm: 303
+	10pm to 4 am: 85
+
+
 Processing: septa
 	Airport Line:              78 (12.6%)
 	Chestnut Hill East Line:   40 (6.5%)
@@ -201,63 +296,99 @@ Processing: septa
 	West Trenton Line:         42 (6.8%)
 	Wilmington/Newark Line:    42 (6.8%)
 	Total number of trains:    619
+
 	Shortest Trip (stop # wise): 5 stops on 401
 	Longest Trip (stop # wise): 27 stops on 3526
 	On average trains make: 15 stops
 	Median # of train: 15 stops
+
 	Shortest Trip (distance wise): 6.0 miles on 1052
 	Longest Trip (distance wise): 41.4 miles on 9213
 	On average trains travels: 18.6 miles
 	Median travel distance: 14.5 miles
+
 	Shortest Trip (time wise): 21.0 minutes on 1059
 	Longest Trip (time wise): 102.0 minutes on 514
 	On average trains take: 51.8 minutes
 	Median time of trips: 52.0 minutes
+
 	Top three stations: 
 		1. Suburban Station (619 trains)
 		2. Gray 30th Street (390 trains)
 		3. Jefferson Station (376 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 194
+	10 am to 4 pm: 177
+	4 pm to 10 pm: 206
+	10pm to 4 am: 42
+
+
 Processing: trirail
 	Downtown Miami Link:    24 (30.8%)
 	MiamiCentral Express:   2 (2.6%)
 	Tri-Rail:               52 (66.7%)
 	Total number of trains: 78
+
 	Shortest Trip (stop # wise): 2 stops on P305X
 	Longest Trip (stop # wise): 18 stops on P600
 	On average trains make: 13 stops
 	Median # of train: 18 stops
+
 	Shortest Trip (distance wise): 8.9 miles on P610X
 	Longest Trip (distance wise): 73.0 miles on X301
 	On average trains travels: 52.0 miles
 	Median travel distance: 71.1 miles
+
 	Shortest Trip (time wise): 20.0 minutes on P305X
 	Longest Trip (time wise): 120.0 minutes on P611
 	On average trains take: 85.3 minutes
 	Median time of trips: 115.0 minutes
+
 	Top three stations: 
 		1. Metrorail Transfer Station (78.0 trains)
 		2. Boca Raton Station (54.0 trains)
 		3. West Palm Beach Station (54.0 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 26
+	10 am to 4 pm: 21
+	4 pm to 10 pm: 26
+	10pm to 4 am: 5
+
+
 Processing: vre
 	Fredericksburg Line:    16 (50.0%)
 	Manassas Line:          16 (50.0%)
 	Total number of trains: 32
+
 	Shortest Trip (stop # wise): 4 stops on 321
 	Longest Trip (stop # wise): 13 stops on 301
 	On average trains make: 11 stops
 	Median # of train: 10 stops
+
 	Shortest Trip (distance wise): 34.0 miles on 321
 	Longest Trip (distance wise): 60.2 miles on 300
 	On average trains travels: 47.1 miles
 	Median travel distance: 47.1 miles
+
 	Shortest Trip (time wise): 72.0 minutes on 321
 	Longest Trip (time wise): 107.0 minutes on 301
 	On average trains take: 91.8 minutes
 	Median time of trips: 88.5 minutes
+
 	Top three stations: 
 		1. Union Station (32 trains)
 		2. Alexandria (32 trains)
 		3. L Enfant (29 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 15
+	10 am to 4 pm: 6
+	4 pm to 10 pm: 11
+	10pm to 4 am: 0
+
+
 Processing: mbta
 	Fairmount Line:                57 (11.0%)
 	Fitchburg Line:                38 (7.4%)
@@ -272,41 +403,65 @@ Processing: mbta
 	Newburyport/Rockport Line:     59 (11.4%)
 	Providence/Stoughton Line:     74 (14.3%)
 	Total number of trains:        516
+
 	Shortest Trip (stop # wise): 5 stops on 204
 	Longest Trip (stop # wise): 19 stops on 732
 	On average trains make: 11 stops
 	Median # of train: 10 stops
+
 	Shortest Trip (distance wise): 7.9 miles on 921
 	Longest Trip (distance wise): 62.8 miles on 801
 	On average trains travels: 29.4 miles
 	Median travel distance: 30.2 miles
+
 	Shortest Trip (time wise): 26.0 minutes on 633
 	Longest Trip (time wise): 118.0 minutes on 801
 	On average trains take: 61.8 minutes
 	Median time of trips: 64.0 minutes
+
 	Top three stations: 
 		1. South Station (333 trains)
 		2. Back Bay (187 trains)
 		3. North Station (176 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 159
+	10 am to 4 pm: 161
+	4 pm to 10 pm: 162
+	10pm to 4 am: 34
+
+
 Processing: sunrail
 	SunRail:                40 (100.0%)
 	Total number of trains: 40
+
 	Shortest Trip (stop # wise): 15 stops on P301
 	Longest Trip (stop # wise): 17 stops on P302
 	On average trains make: 17 stops
 	Median # of train: 17 stops
+
 	Shortest Trip (distance wise): 44.9 miles on P301
 	Longest Trip (distance wise): 60.6 miles on P302
 	On average trains travels: 60.2 miles
 	Median travel distance: 60.6 miles
+
 	Shortest Trip (time wise): 82.0 minutes on P301
 	Longest Trip (time wise): 118.0 minutes on P337
 	On average trains take: 104.7 minutes
 	Median time of trips: 105.0 minutes
+
 	Top three stations: 
 		1. Sanford (40 trains)
 		2. Lake Mary (40 trains)
 		3. Altamonte Springs (40 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 16
+	10 am to 4 pm: 12
+	4 pm to 10 pm: 12
+	10pm to 4 am: 0
+
+
 Processing: amtrak
 	Acela:                                  25 (4.2%)
 	Adirondack:                             2 (0.3%)
@@ -357,56 +512,91 @@ Processing: amtrak
 	Winter Park Express:                    2 (0.3%)
 	Wolverine:                              6 (1.0%)
 	Total number of trains:                 597
+
 	Shortest Trip (stop # wise): 2 stops on 52
 	Longest Trip (stop # wise): 46 stops on 40
 	On average trains make: 10 stops
 	Median # of train: 9 stops
+
 	Shortest Trip (distance wise): 25.0 miles on 522
 	Longest Trip (distance wise): 2721.3 miles on 421
 	On average trains travels: 398.8 miles
 	Median travel distance: 224.6 miles
+
 	Shortest Trip (time wise): 10.0 minutes on 3768
 	Longest Trip (time wise): 3943.0 minutes on 421
 	On average trains take: 310.6 minutes
 	Median time of trips: 178.0 minutes
+
 	Top three stations: 
 		1. Baltimore Penn Station - BAL (140 trains)
 		2. Washington Union Station - WAS (136 trains)
 		3. Ny Moynihan Train Hall At Penn Station - NYP (131 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 176
+	10 am to 4 pm: 190
+	4 pm to 10 pm: 191
+	10pm to 4 am: 40
+
+
 Processing: sle
 	Commuter Rail:          20 (100.0%)
 	Total number of trains: 20
+
 	Shortest Trip (stop # wise): 7 stops on 1691
 	Longest Trip (stop # wise): 9 stops on 1600
 	On average trains make: 9 stops
 	Median # of train: 9 stops
+
 	Shortest Trip (time wise): 62.0 minutes on 1637
 	Longest Trip (time wise): 72.0 minutes on 1634
 	On average trains take: 66.0 minutes
 	Median time of trips: 65.0 minutes
+
 	Top three stations: 
 		1. New Haven - NHV (20 trains)
 		2. New Haven - STS (20 trains)
 		3. Branford - BNF (20 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 9
+	10 am to 4 pm: 3
+	4 pm to 10 pm: 7
+	10pm to 4 am: 1
+
+
 Processing: hl
 	Hartford Line:          21 (100.0%)
 	Total number of trains: 21
+
 	Shortest Trip (stop # wise): 6 stops on 4450
 	Longest Trip (stop # wise): 9 stops on 4400
 	On average trains make: 8 stops
 	Median # of train: 9 stops
+
 	Shortest Trip (distance wise): 36.7 miles on 4451
 	Longest Trip (distance wise): 62.0 miles on 4400
 	On average trains travels: 51.7 miles
 	Median travel distance: 62.0 miles
+
 	Shortest Trip (time wise): 52.0 minutes on 4450
 	Longest Trip (time wise): 96.0 minutes on 4466
 	On average trains take: 75.5 minutes
 	Median time of trips: 91.0 minutes
+
 	Top three stations: 
 		1. NEW HAVEN UNION STATION (21 trains)
 		2. STATE STREET STATION (21 trains)
 		3. WALLINGFORD (21 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 7
+	10 am to 4 pm: 5
+	4 pm to 10 pm: 8
+	10pm to 4 am: 1
+
+
 Processing: go
 	Barrie:                 32 (9.2%)
 	Kitchener:              70 (20.1%)
@@ -416,22 +606,34 @@ Processing: go
 	Richmond Hill:          9 (2.6%)
 	Stouffville:            35 (10.0%)
 	Total number of trains: 349
+
 	Shortest Trip (stop # wise): 5 stops on 3009
 	Longest Trip (stop # wise): 12 stops on 3812
 	On average trains make: 9 stops
 	Median # of train: 10 stops
+
 	Shortest Trip (distance wise): 17.3 miles on 3009
 	Longest Trip (distance wise): 82.3 miles on 1960
 	On average trains travels: 34.6 miles
 	Median travel distance: 31.5 miles
+
 	Shortest Trip (time wise): 35.0 minutes on 3328
 	Longest Trip (time wise): 157.0 minutes on 1977
 	On average trains take: 67.3 minutes
 	Median time of trips: 62.0 minutes
+
 	Top three stations: 
 		1. Union Station (349 trains)
 		2. Oakville GO (100 trains)
 		3. Clarkson GO (96 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 100
+	10 am to 4 pm: 97
+	4 pm to 10 pm: 120
+	10pm to 4 am: 32
+
+
 Processing: via
 	Air Connect:             1 (1.7%)
 	Jasper - Prince Rupert:  1 (1.7%)
@@ -449,40 +651,63 @@ Processing: via
 	Toronto - Windsor:       8 (13.3%)
 	Vancouver - Toronto:     1 (1.7%)
 	Total number of trains:  60
+
 	Shortest Trip (stop # wise): 2 stops on nan
 	Longest Trip (stop # wise): 67 stops on 2
 	On average trains make: 13 stops
 	Median # of train: 10 stops
+
 	Shortest Trip (distance wise): 3.1 miles on nan
 	Longest Trip (distance wise): 2743.7 miles on 2
 	On average trains travels: 340.9 miles
 	Median travel distance: 276.4 miles
+
 	Shortest Trip (time wise): 10.0 minutes on nan
 	Longest Trip (time wise): 5549.0 minutes on 2
 	On average trains take: 472.4 minutes
 	Median time of trips: 296.5 minutes
+
 	Top three stations: 
 		1. Toronto (43 trains)
 		2. Kingston (29 trains)
 		3. Ottawa (28 trains)
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 21
+	10 am to 4 pm: 21
+	4 pm to 10 pm: 17
+	10pm to 4 am: 1
+
+
 Processing: rtd
 	A:                      146 (43.6%)
 	B:                      36 (10.7%)
 	G:                      81 (24.2%)
 	N:                      72 (21.5%)
 	Total number of trains: 335
+
 	Shortest Trip (stop # wise): 4 stops on 115056971
 	Longest Trip (stop # wise): 8 stops on 115056970
 	On average trains make: 7 stops
 	Median # of train: 8 stops
+
 	Shortest Trip (distance wise): 5.7 miles on 115057057
 	Longest Trip (distance wise): 23.3 miles on 115068805
 	On average trains travels: 16.2 miles
 	Median travel distance: 13.4 miles
+
 	Shortest Trip (time wise): 15.0 minutes on 115056971
 	Longest Trip (time wise): 37.0 minutes on 115068805
 	On average trains take: 30.7 minutes
 	Median time of trips: 30.8 minutes
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 98
+	10 am to 4 pm: 108
+	4 pm to 10 pm: 96
+	10pm to 4 am: 33
+
+
 Processing: metra
 	Burlington Northern:      91 (13.7%)
 	Heritage Corridor:        6 (0.9%)
@@ -496,21 +721,33 @@ Processing: metra
 	Union Pacific Northwest:  78 (11.7%)
 	Union Pacific West:       58 (8.7%)
 	Total number of trains:   665
+
 	Shortest Trip (stop # wise): 4 stops on 1230
 	Longest Trip (stop # wise): 32 stops on 100
 	On average trains make: 17 stops
 	Median # of train: 17 stops
+
 	Shortest Trip (distance wise): 4.4 miles on 245
 	Longest Trip (distance wise): 63.2 miles on 637
 	On average trains travels: 31.4 miles
 	Median travel distance: 31.9 miles
+
 	Shortest Trip (time wise): 30.0 minutes on 1203
 	Longest Trip (time wise): 133.0 minutes on 373
 	On average trains take: 76.6 minutes
 	Median time of trips: 80.0 minutes
+
 	Top three stations: 
 		1. Chicago Union Station (247 trains)
 		2. Chicago OTC (207 trains)
 		3. Clybourn (140 trains)
-Execution time: 19.8474 seconds
-Data last updated: 2025-01-04 17:19:17.811551
+
+	Time frequency (leaving times): 
+	4 am to 10 am: 246
+	10 am to 4 pm: 158
+	4 pm to 10 pm: 227
+	10pm to 4 am: 34
+
+
+Execution time: 31.7530 seconds
+Data last updated: 2025-01-05 02:52:44.758170
