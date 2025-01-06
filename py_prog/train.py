@@ -169,8 +169,8 @@ class GenerateTrainList:
                 train_id,
                 listOfTrains.loc[listOfTrains.trip_id == train, 'trip_headsign'].iloc[0],
                 self.cvtRouteStringToNumber(listOfTrains.loc[listOfTrains.trip_id == train, 'route_id'].iloc[0]),
-                listOfTrains.loc[listOfTrains.trip_id == train, 'shape_id'].iloc[0] if 'shape_id' in listOfTrains.columns else 'NA'
-            ])
+                listOfTrains.loc[listOfTrains.trip_id == train, 'shape_id'].iloc[0] if 'shape_id' in listOfTrains.columns else 'NA',
+                listOfTrains.loc[listOfTrains.trip_id == train, 'direction_id'].iloc[0] if 'direction_id' in listOfTrains.columns else 'NA',            ])
         return reformated
 
     def rtd_exempt(self):
@@ -265,21 +265,25 @@ class GenerateTrainList:
                     starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
                     ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
+                    direction_id= result[0][5] if len(result) > 0 else "N/A"
                 elif self.railroad == 'hl':
                     result = [sublist for sublist in reformated if sublist[1] == f'CTrail {match.group(1)}']
                     starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
                     ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
+                    direction_id = result[0][5] if len(result) > 0 else "N/A"
                 elif self.railroad == 'go':  
                     result = [sublist for sublist in reformated if re.sub(r"^\d{8}-[A-Za-z]{2}-", '', sublist[1]) == f'{match.group(1)}']
                     starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
                     ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
-                    distance = result[0][4] if len(result) > 0 else "N/A"     
+                    distance = result[0][4] if len(result) > 0 else "N/A"   
+                    direction_id = result[0][5] if len(result) > 0 else "N/A"
                 else:
                     result = [sublist for sublist in reformated if sublist[1] == f'{match.group(1)}']
                     starting_station = result[0][0].iloc[0] if len(result) > 0 else "N/A"
                     ending_station = result[0][0].iloc[len(result[0][0])-1] if len(result) > 0 else "N/A"
                     distance = result[0][4] if len(result) > 0 else "N/A"
+                    direction_id= result[0][5] if len(result) > 0 else "N/A"
                 new_ele = { 
                     'train_number': match.group(1),
                     'train_line': match.group(2),
@@ -289,7 +293,8 @@ class GenerateTrainList:
                         ending_station['stop_name'],
                         self.stops,
                         distance
-                    ) 
+                    ),
+                    'direction_id': direction_id
             }
 
                 arr.append(new_ele)
@@ -310,12 +315,12 @@ if __name__ == "__main__":
     start_time = time.time()
     elements = [
         {
-            "railroad" : "njt",
-            "train_classification": 'block_id',
-        },
-        {
             "railroad" : "ace",
             "train_classification": 'trip_id',
+        },
+        {
+            "railroad" : "njt",
+            "train_classification": 'block_id',
         },
         {
             "railroad" : "go",

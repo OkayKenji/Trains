@@ -38,3 +38,91 @@ Message: Processing: ace
 Message: 	Local Execution time: 0.1096 seconds
 2025-01-04 17:11:07,555 | INFO | train.py:193 | 
 Message: Processing: go
+2025-01-05 06:01:35,715 | INFO | train.py:193 | 
+Message: Processing: njt
+2025-01-05 06:04:44,533 | INFO | train.py:193 | 
+Message: Processing: ace
+2025-01-05 06:04:44,777 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.2442 seconds
+2025-01-05 06:04:45,123 | INFO | train.py:193 | 
+Message: Processing: njt
+2025-01-05 06:07:23,367 | INFO | train.py:310 | 
+Message: 	Local Execution time: 158.2442 seconds
+2025-01-05 06:07:24,142 | INFO | train.py:193 | 
+Message: Processing: go
+2025-01-05 06:07:38,999 | INFO | train.py:310 | 
+Message: 	Local Execution time: 14.8553 seconds
+2025-01-05 06:07:39,032 | INFO | train.py:193 | 
+Message: Processing: rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS
+2025-01-05 06:07:41,623 | INFO | train.py:310 | 
+Message: 	Local Execution time: 2.5906 seconds
+2025-01-05 06:07:41,664 | INFO | train.py:193 | 
+Message: Processing: rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS
+2025-01-05 06:07:50,642 | INFO | train.py:310 | 
+Message: 	Local Execution time: 8.9775 seconds
+2025-01-05 06:07:50,845 | INFO | train.py:193 | 
+Message: Processing: metra
+2025-01-05 06:08:07,158 | INFO | train.py:310 | 
+Message: 	Local Execution time: 16.3062 seconds
+2025-01-05 06:08:07,233 | INFO | train.py:193 | 
+Message: Processing: exo
+2025-01-05 06:08:11,475 | INFO | train.py:310 | 
+Message: 	Local Execution time: 4.2428 seconds
+2025-01-05 06:08:11,592 | INFO | train.py:193 | 
+Message: Processing: lirr
+2025-01-05 06:08:44,165 | INFO | train.py:310 | 
+Message: 	Local Execution time: 32.5729 seconds
+2025-01-05 06:08:44,215 | INFO | train.py:193 | 
+Message: Processing: marc
+2025-01-05 06:08:47,352 | INFO | train.py:310 | 
+Message: 	Local Execution time: 3.1373 seconds
+2025-01-05 06:08:47,377 | INFO | train.py:193 | 
+Message: Processing: metrolink
+2025-01-05 06:08:49,767 | INFO | train.py:310 | 
+Message: 	Local Execution time: 2.3852 seconds
+2025-01-05 06:08:50,158 | INFO | train.py:193 | 
+Message: Processing: mnrr
+2025-01-05 06:09:18,946 | INFO | train.py:310 | 
+Message: 	Local Execution time: 28.7875 seconds
+2025-01-05 06:09:18,972 | INFO | train.py:193 | 
+Message: Processing: nicd
+2025-01-05 06:09:20,116 | INFO | train.py:310 | 
+Message: 	Local Execution time: 1.1443 seconds
+2025-01-05 06:09:20,242 | INFO | train.py:193 | 
+Message: Processing: septa
+2025-01-05 06:09:52,952 | INFO | train.py:310 | 
+Message: 	Local Execution time: 32.7099 seconds
+2025-01-05 06:09:52,973 | INFO | train.py:193 | 
+Message: Processing: vre
+2025-01-05 06:09:53,735 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.7620 seconds
+2025-01-05 06:09:54,012 | INFO | train.py:193 | 
+Message: Processing: mbta
+2025-01-05 06:10:28,135 | INFO | train.py:310 | 
+Message: 	Local Execution time: 34.1231 seconds
+2025-01-05 06:10:28,172 | INFO | train.py:193 | 
+Message: Processing: sunrail
+2025-01-05 06:10:28,962 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.7899 seconds
+2025-01-05 06:10:29,224 | INFO | train.py:193 | 
+Message: Processing: amtrak
+2025-01-05 06:11:41,237 | INFO | train.py:310 | 
+Message: 	Local Execution time: 72.0131 seconds
+2025-01-05 06:11:41,482 | INFO | train.py:193 | 
+Message: Processing: sle
+2025-01-05 06:11:41,677 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.1955 seconds
+2025-01-05 06:11:41,862 | INFO | train.py:193 | 
+Message: Processing: hl
+2025-01-05 06:11:46,797 | INFO | train.py:310 | 
+Message: 	Local Execution time: 4.9348 seconds
+2025-01-05 06:11:46,912 | INFO | train.py:193 | 
+Message: Processing: via
+2025-01-05 06:11:57,742 | INFO | train.py:310 | 
+Message: 	Local Execution time: 10.8297 seconds
+2025-01-05 06:11:57,752 | INFO | train.py:193 | 
+Message: Processing: rtd
+2025-01-05 06:11:58,075 | INFO | train.py:201 | 
+Message: 	Local Execution time: 0.3227 seconds
+2025-01-05 06:11:58,075 | INFO | train.py:419 | 
+Message: Execution time: 433.5591 seconds
