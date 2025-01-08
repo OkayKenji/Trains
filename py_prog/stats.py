@@ -12,14 +12,12 @@ def graphs(trip_durations):
     mean = np.mean(trip_durations)
     std_dev = np.std(trip_durations)
     med = np.median(trip_durations)
-    # plt.hist(trip_durations, bins=len(trip_durations), alpha=0.6, color='b')
+    plt.hist(trip_durations, bins=len(trip_durations), alpha=0.6, color='b')
     xmin, xmax = plt.xlim()
     x = np.linspace(xmin, xmax, 100)
     p = stats.norm.pdf(x, mean, std_dev)
     plt.plot(x, p, 'k', linewidth=2)
     plt.title(f'Normal Distribution (mean={mean:.2f}, med={med:.2f} std_dev={std_dev:.2f})')
-    plt.xlabel('Trip (stops)')
-    plt.ylabel('Density')
 
     # Show the plot
     plt.show()
