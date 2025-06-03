@@ -5,10 +5,10 @@ stop_id,stop_code,stop_name,stop_desc,platform_code,platform_name,stop_lat,stop_
 17095,17095.0,Terminal E - Arrivals Level,Terminal E - Silver Line - SL1 South Station,,South Station,42.369344,-71.020238,SL1-Logan,"Terminal E Arrivals, Door E106, Boston Logan International Airport, Boston, MA 02128",https://www.mbta.com/stops/17095,level_logan_arrivals,0,,1,Boston,Logan Airport Terminal E,,3.0,[]
 17096,17096.0,Congress St @ World Trade Center Sta,Congress St @ World Trade Center Sta - Silver Line - South Station,,South Station,42.348769,-71.042336,SLWaterfrontNonLogan,,https://www.mbta.com/stops/17096,level_in_street,0,,1,Boston,Congress Street,Seaport Lane,3.0,[]
 27092,27092.0,Terminal B Stop 1 - Arrivals Level,Terminal B Stop 1 - Silver Line - SL1 South Station,,South Station,42.3621,-71.01882,SL1-Logan,"Terminal B Arrivals, Door B103, Boston Logan International Airport, Boston, MA 02128",https://www.mbta.com/stops/27092,level_logan_arrivals,0,,1,Boston,Logan Airport Terminal B,,3.0,[]
-Boat-Aquarium,,Central Wharf (South),Central Wharf (South) - Winthrop Ferry,,Winthrop Ferry,42.358815,-71.048779,Boat-Aquarium,"Central Wharf near Milk St, Boston, MA 02110",https://www.mbta.com/stops/Boat-Aquarium,,0,,1,Boston,,,4.0,[]
+Boat-Aquarium,,Central Wharf (South),Central Wharf (South) - Winthrop/Quincy Ferry,,Winthrop/Quincy Ferry,42.358815,-71.048779,Boat-Aquarium,"Central Wharf near Milk St, Boston, MA 02110",https://www.mbta.com/stops/Boat-Aquarium,,0,,1,Boston,,,4.0,[]
 Boat-Blossom,,Blossom Street Pier,Blossom Street Pier - Lynn Ferry,,Lynn Ferry,42.45481,-70.94802,Boat-zone-1A,"379 Blossom St Ext, Lynn, MA 01905",https://www.mbta.com/stops/Boat-Blossom,,0,,1,Lynn,,,4.0,[]
 Boat-Charlestown,,Charlestown Navy Yard,Charlestown Navy Yard - Charlestown Ferry,,Charlestown Ferry,42.372756,-71.052528,,"Pier 4, Boston, MA 02129",https://www.mbta.com/stops/Boat-Charlestown,,0,,1,Boston,,,4.0,[]
-Boat-Fan,,Seaport/Fan Pier,Seaport/Fan Pier - Winthrop Ferry,,Winthrop Ferry,42.353484,-71.04323,Boat-Fan,"Fan Pier Marina near Institute of Contemporary Art, Boston, MA 02210",https://www.mbta.com/stops/Boat-Fan,,0,,1,Boston,,,4.0,[]
+Boat-Fan,,Seaport/Fan Pier,Seaport/Fan Pier - Winthrop/Quincy Ferry,,Winthrop/Quincy Ferry,42.353484,-71.04323,Boat-Fan,"Fan Pier Marina near Institute of Contemporary Art, Boston, MA 02210",https://www.mbta.com/stops/Boat-Fan,,0,,1,Boston,,,4.0,[]
 Boat-George,,Georges Island,Georges Island - Hingham/Hull Ferry,,Hingham/Hull Ferry,42.319742,-70.930427,Boat-George,"George's Island, Boston, MA",https://www.mbta.com/stops/Boat-George,,0,,1,Boston,,,4.0,[]
 Boat-Hingham,,Hingham,Hingham - Hingham/Hull Ferry,,Hingham/Hull Ferry,42.253956,-70.919844,Boat-Hingham,"28 Shipyard Dr, Hingham, MA 02043",https://www.mbta.com/stops/Boat-Hingham,,0,,1,Hingham,,,4.0,[]
 Boat-Hull,,Hull,Hull - Hingham/Hull Ferry,,Hingham/Hull Ferry,42.303251,-70.920215,Boat-Hull,"180 Main St, Hull, MA 02045",https://www.mbta.com/stops/Boat-Hull,,0,,1,Hull,,,4.0,[]
@@ -17,10 +17,10 @@ Boat-Logan,,Logan Airport Ferry Terminal,Logan Airport - Hingham/Hull Ferry,,Hin
 Boat-Long,,Long Wharf (North),Long Wharf (North) - Gate 5,5,Gate 5,42.360795,-71.049976,Boat-Long,"Long Wharf near Christopher Columbus Park, Boston, MA 02110",https://www.mbta.com/stops/Boat-Long,,0,,1,Boston,,,4.0,[]
 Boat-Long-South,,Long Wharf (South),Long Wharf (South) - Charlestown Ferry,,Charlestown Ferry,42.359448,-71.050498,Boat-Long,"Long Wharf near Old Atlantic Ave, Boston, MA 02110",https://www.mbta.com/stops/Boat-Long-South,,0,,1,Boston,,,4.0,[]
 Boat-Long-South-4,,Long Wharf (South) - Gate 4,Long Wharf (South) - Gate 4,4,Gate 4,42.359897,-71.04859,Boat-Long,"Long Wharf near Old Atlantic Ave, Boston, MA 02110",https://www.mbta.com/stops/Boat-Long-South-4,,0,,1,Boston,,,4.0,[]
-Boat-Quincy,,Quincy,Quincy - Winthrop Ferry,,Winthrop Ferry,42.30132,-71.03201,Boat-zone-1A,"Marina Bay near Squantum Point Park, Quincy, MA 02171",https://www.mbta.com/stops/Boat-Quincy,,0,,1,Quincy,,,4.0,[]
+Boat-Quincy,,Quincy,Quincy - Quincy Ferry,,Quincy Ferry,42.30132,-71.03201,Boat-zone-1A,"Marina Bay near Squantum Point Park, Quincy, MA 02171",https://www.mbta.com/stops/Boat-Quincy,,0,,1,Quincy,,,4.0,[]
 Boat-Rowes,,Rowes Wharf,Rowes Wharf - Gate C,C,Gate C,42.355721,-71.049897,Boat-Rowes,"60 Rowes Wharf, Boston, MA 02110",https://www.mbta.com/stops/Boat-Rowes,,0,,1,Boston,,,4.0,[]
 Boat-Winthrop,,Winthrop Landing,Winthrop Landing - Winthrop Ferry,,Winthrop Ferry,42.366711,-70.973302,Boat-zone-1A,"705 Shirley St, Winthrop, MA 02152",https://www.mbta.com/stops/Boat-Winthrop,,0,,1,Winthrop,,,4.0,[]
-place-CM-0493,,Wareham Village,,,,41.758333,-70.714722,CF-zone-buzzards,"176 Merchants Way, Wareham, MA 02571",https://www.mbta.com/stops/place-CM-0493,,1,,1,Wareham,,,,"""['CM-0493-S']"""
+place-CM-0493,,Wareham Village,,,,41.7604,-70.7171,CF-zone-buzzards,"176 Merchants Way, Wareham, MA 02571",https://www.mbta.com/stops/place-CM-0493,,1,,1,Wareham,,,,"""['CM-0493-S']"""
 place-CM-0547,,Buzzards Bay,,,,41.744805,-70.616226,CF-zone-buzzards,"70 Main Street, Buzzards Bay, MA 02532",https://www.mbta.com/stops/place-CM-0547,,1,,1,Bourne,,,,"""['CM-0547-S']"""
 place-CM-0564,,Bourne,,,,41.746497,-70.588772,CF-zone-buzzards,"21 Bourne Bridge, Bourne, MA 02532",https://www.mbta.com/stops/place-CM-0564,,1,,1,Bourne,,,,"""['CM-0564-S']"""
 place-CM-0790,,Hyannis,,,,41.660225,-70.276583,CF-zone-hyannis,"215 Iyannough Road, Hyannis, MA 02601",https://www.mbta.com/stops/place-CM-0790,,1,,1,Barnstable,,,,"""['CM-0790-S']"""
@@ -50,9 +50,9 @@ place-FB-0143,,Norwood Depot,,,,42.196857,-71.196688,CR-zone-3,"14 Hill St, Norw
 place-FB-0148,,Norwood Central,,,,42.188775,-71.199665,CR-zone-3,"164 Broadway, Norwood, MA 02062",https://www.mbta.com/stops/place-FB-0148,,1,,1,Norwood,,,,"""['FB-0148', 'FB-0148-01', 'FB-0148-02']"""
 place-FB-0166,,Windsor Gardens,,,,42.172127,-71.219366,CR-zone-4,"Buckminster Dr and Engamore Ln, Norwood, MA 02062",https://www.mbta.com/stops/place-FB-0166,,1,,2,Norwood,,,,"""['FB-0166-S']"""
 place-FB-0177,,Plimptonville,,,,42.159123,-71.236125,CR-zone-4,"185 Plimpton St, Walpole, MA 02081",https://www.mbta.com/stops/place-FB-0177,,1,,2,Walpole,,,,"""['FB-0177-S']"""
-place-FB-0191,,Walpole,,,,42.145477,-71.25779,CR-zone-4,"275 West St, Walpole, MA 02081",https://www.mbta.com/stops/place-FB-0191,,1,,2,Walpole,,,,"""['FB-0191-S']"""
+place-FB-0191,,Walpole,,,,42.145477,-71.25779,CR-zone-4,"275 West St, Walpole, MA 02081",https://www.mbta.com/stops/place-FB-0191,,1,,1,Walpole,,,,"""['FB-0191-S']"""
 place-FB-0230,,Norfolk,,,,42.120694,-71.325217,CR-zone-5,"9 Rockwood Rd, Norfolk, MA 02056",https://www.mbta.com/stops/place-FB-0230,,1,,1,Norfolk,,,,"""['FB-0230-S']"""
-place-FB-0275,,Franklin,,,,42.083238,-71.396102,CR-zone-6,"75 Depot St, Franklin, MA 02038",https://www.mbta.com/stops/place-FB-0275,,1,,2,Franklin,,,,"""['FB-0275-S']"""
+place-FB-0275,,Franklin,,,,42.083238,-71.396102,CR-zone-6,"75 Depot St, Franklin, MA 02038",https://www.mbta.com/stops/place-FB-0275,,1,,1,Franklin,,,,"""['FB-0275-S']"""
 place-FB-0303,,Forge Park/495,,,,42.089941,-71.43902,CR-zone-6,"1000 W Central St, Franklin, MA 02038",https://www.mbta.com/stops/place-FB-0303,,1,,1,Franklin,,,,"""['FB-0303-S']"""
 place-FR-0064,,Belmont,,,,42.395896,-71.17619,CR-zone-1,"Common St and Concord Ave, Belmont, MA 02478",https://www.mbta.com/stops/place-FR-0064,,1,,2,Belmont,,,,"""['FR-0064', 'FR-0064-01', 'FR-0064-02']"""
 place-FR-0074,,Waverley,,,,42.3876,-71.190744,CR-zone-1,"525 Trapelo Rd, Belmont, MA 02478",https://www.mbta.com/stops/place-FR-0074,,1,,2,Belmont,,,,"""['FR-0074', 'FR-0074-01', 'FR-0074-02']"""
@@ -71,6 +71,8 @@ place-FR-0394,,Shirley,,,,42.545089,-71.648004,CR-zone-8,"Ayer Rd and Phoenix St
 place-FR-0451,,North Leominster,,,,42.539017,-71.739186,CR-zone-8,"44 Nashua St, Leominster, MA 01453",https://www.mbta.com/stops/place-FR-0451,,1,,1,Leominster,,,,"""['FR-0451', 'FR-0451-01', 'FR-0451-02']"""
 place-FR-0494,,Fitchburg,,,,42.58072,-71.792611,CR-zone-8,"150 Main St, Fitchburg, MA 01420",https://www.mbta.com/stops/place-FR-0494,,1,,1,Fitchburg,,,,"""['FR-0494-CS']"""
 place-FR-3338,,Wachusett,,,,42.553477,-71.848488,CR-zone-8,"55 Authority Dr, Fitchburg, MA 01420",https://www.mbta.com/stops/place-FR-3338,,1,,1,Fitchburg,,,,"""['FR-3338-CS']"""
+place-FRS-0054,,Freetown,,,,41.773672,-71.090733,CR-zone-8,"153 South Main Street, Freetown, MA, 02702",https://www.mbta.com/stops/place-FRS-0054,,1,,1,Freetown,,,,"""['FRS-0054-S']"""
+place-FRS-0109,,Fall River Depot,,,,41.713982,-71.154182,CR-zone-8,"825 Davol St, Fall River, MA 02720",https://www.mbta.com/stops/place-FRS-0109,,1,,1,Fall River,,,,"""['FRS-0109-S']"""
 place-FS-0049,,Foxboro,,,,42.0951,-71.26151,CR-zone-4,"Gillette Stadium near Lots 3 and 4, Foxborough, MA 02035",https://www.mbta.com/stops/place-FS-0049,,1,,1,Foxborough,,,,"""['FS-0049-S']"""
 place-GB-0198,,Montserrat,,,,42.562171,-70.869254,CR-zone-4,"180 Essex St, Beverly, MA 01915",https://www.mbta.com/stops/place-GB-0198,,1,,1,Beverly,,,,"""['GB-0198', 'GB-0198-01', 'GB-0198-02']"""
 place-GB-0222,,Prides Crossing,,,,42.559446,-70.825541,CR-zone-5,"600 Hale St, Beverly, MA 01915",https://www.mbta.com/stops/place-GB-0222,,1,,2,Beverly,,,,"""['GB-0222', 'GB-0222-01', 'GB-0222-02']"""
@@ -87,12 +89,13 @@ place-GRB-0199,,Cohasset,,,,42.24421,-70.837529,CR-zone-4,"110 Chief Justice Cus
 place-GRB-0233,,North Scituate,,,,42.219528,-70.788602,CR-zone-5,"777 Country Way, Scituate, MA 02066",https://www.mbta.com/stops/place-GRB-0233,,1,,1,Scituate,,,,"""['GRB-0233-S']"""
 place-GRB-0276,,Greenbush,,,,42.178776,-70.746641,CR-zone-6,"247 Old Driftway, Scituate, MA 02066",https://www.mbta.com/stops/place-GRB-0276,,1,,1,Scituate,,,,"""['GRB-0276-S']"""
 place-KB-0351,,Kingston,,,,41.97762,-70.721709,CR-zone-8,"134 Marion Dr, Kingston, MA 02364",https://www.mbta.com/stops/place-KB-0351,,1,,1,Kingston,,,,"""['KB-0351-S']"""
+place-MBS-0350,,Middleborough,,,,41.887,-70.923209,CR-zone-8,"52 West Grove Street, Middleborough MA 02346",https://www.mbta.com/stops/place-MBS-0350,,1,,1,Middleborough,,,,"""['MBS-0350-S']"""
 place-MM-0150,,Holbrook/Randolph,,,,42.156343,-71.027371,CR-zone-3,"Union St and Center St, Randolph, MA 02368",https://www.mbta.com/stops/place-MM-0150,,1,,1,Randolph,,,,"""['MM-0150-S']"""
 place-MM-0186,,Montello,,,,42.106555,-71.022001,CR-zone-4,"150 Spark St, Brockton, MA 02302",https://www.mbta.com/stops/place-MM-0186,,1,,1,Brockton,,,,"""['MM-0186', 'MM-0186-CS', 'MM-0186-S']"""
 place-MM-0200,,Brockton,,,,42.084659,-71.016534,CR-zone-4,"7 Commercial St, Brockton, MA 02302",https://www.mbta.com/stops/place-MM-0200,,1,,1,Brockton,,,,"""['MM-0200', 'MM-0200-CS', 'MM-0200-S']"""
 place-MM-0219,,Campello,,,,42.060951,-71.011004,CR-zone-5,"30 Riverside Ave, Brockton, MA 02301",https://www.mbta.com/stops/place-MM-0219,,1,,1,Brockton,,,,"""['MM-0219-S']"""
 place-MM-0277,,Bridgewater,,,,41.984916,-70.96537,CR-zone-6,"85 Burrill Ave, Bridgewater, MA 02324",https://www.mbta.com/stops/place-MM-0277,,1,,1,Bridgewater,,,,"""['MM-0277-S']"""
-place-MM-0356,,Middleborough/Lakeville,,,,41.87821,-70.918444,CR-zone-8,"125 Commercial Dr, Lakeville, MA 02347",https://www.mbta.com/stops/place-MM-0356,,1,,1,Lakeville,,,,"""['MM-0356-S']"""
+place-MM-0356,,Lakeville,,,,41.87821,-70.918444,CR-zone-8,"125 Commercial Dr, Lakeville, MA 02347",https://www.mbta.com/stops/place-MM-0356,,1,,1,Lakeville,,,,"""['MM-0356-S']"""
 place-NB-0064,,Roslindale Village,,,,42.287442,-71.130283,CR-zone-1,"1 Belgrade Ave, Roslindale, MA 02131",https://www.mbta.com/stops/place-NB-0064,,1,,1,Boston,,,,"""['NB-0064-S']"""
 place-NB-0072,,Bellevue,,,,42.286588,-71.145557,CR-zone-1,"35 Colbert St, West Roxbury, MA 02132",https://www.mbta.com/stops/place-NB-0072,,1,,1,Boston,,,,"""['NB-0072-S']"""
 place-NB-0076,,Highland,,,,42.284969,-71.153937,CR-zone-1,"Corey St and Hastings St, West Roxbury, MA 02132",https://www.mbta.com/stops/place-NB-0076,,1,,1,Boston,,,,"""['NB-0076-S']"""
@@ -101,6 +104,9 @@ place-NB-0109,,Hersey,,,,42.275648,-71.215528,CR-zone-2,"Great Plain Ave and Bro
 place-NB-0120,,Needham Junction,,,,42.273187,-71.235559,CR-zone-2,"51 Junction St, Needham, MA 02492",https://www.mbta.com/stops/place-NB-0120,,1,,1,Needham,,,,"""['NB-0120-S']"""
 place-NB-0127,,Needham Center,,,,42.280775,-71.237686,CR-zone-2,"Great Plain Ave and Eaton Sq, Needham, MA 02492",https://www.mbta.com/stops/place-NB-0127,,1,,1,Needham,,,,"""['NB-0127-S']"""
 place-NB-0137,,Needham Heights,,,,42.293444,-71.236027,CR-zone-2,"95 Avery Sq, Needham, MA 02494",https://www.mbta.com/stops/place-NB-0137,,1,,1,Needham,,,,"""['NB-0137-S']"""
+place-NBM-0374,,East Taunton,,,,41.868197,-71.061694,CR-zone-8,"1141 County Street, Taunton, MA 02780",https://www.mbta.com/stops/place-NBM-0374,,1,,1,Taunton,,,,"""['NBM-0374', 'NBM-0374-01', 'NBM-0374-02']"""
+place-NBM-0523,,Church Street,,,,41.674308,-70.939322,CR-zone-8,"387 Church St, New Bedford, MA 02745",https://www.mbta.com/stops/place-NBM-0523,,1,,1,New Bedford,,,,"""['NBM-0523-S']"""
+place-NBM-0546,,New Bedford,,,,41.643703,-70.9252,CR-zone-8,"536 Acushnet Ave, New Bedford, MA 02740",https://www.mbta.com/stops/place-NBM-0546,,1,,1,New Bedford,,,,"""['NBM-0546-S']"""
 place-NEC-1659,,Wickford Junction,,,,41.581289,-71.491147,CR-zone-10,"1011 Ten Rod Rd, North Kingstown, RI",https://www.mbta.com/stops/place-NEC-1659,,1,,1,North Kingstown,,,,"""['NEC-1659-03']"""
 place-NEC-1768,,TF Green Airport,,,,41.726599,-71.442453,CR-zone-9,"700 Jefferson Blvd, Warwick, RI 02886",https://www.mbta.com/stops/place-NEC-1768,,1,,1,Warwick,,,,"""['NEC-1768-03']"""
 place-NEC-1851,,Providence,,,,41.829293,-71.413301,CR-zone-8,"100 Gaspee St, Providence, RI 02903",https://www.mbta.com/stops/place-NEC-1851,,1,,1,Providence,,,,"""['NEC-1851', 'NEC-1851-01', 'NEC-1851-02', 'NEC-1851-03', 'NEC-1851-05']"""
@@ -112,7 +118,7 @@ place-NEC-2108,,Sharon,,,,42.124553,-71.184468,CR-zone-4,"1 Upland Rd, Sharon, M
 place-NEC-2139,,Canton Junction,,,,42.163204,-71.15376,CR-zone-3,"Beaumont St and Sherman St, Canton, MA 02021",https://www.mbta.com/stops/place-NEC-2139,,1,,1,Canton,,,,"""['NEC-2139', 'NEC-2139-01', 'NEC-2139-02', 'SB-0150-04', 'SB-0150-06']"""
 place-NEC-2173,,Route 128,,,,42.210308,-71.147134,CR-zone-2,"50 University Ave, Westwood, MA 02090",https://www.mbta.com/stops/place-NEC-2173,,1,,1,Westwood,,,,"""['NEC-2173', 'NEC-2173-01', 'NEC-2173-02']"""
 place-NEC-2203,,Hyde Park,,,,42.25503,-71.125526,CR-zone-1,"1 Pingree St, Hyde Park, MA 02136",https://www.mbta.com/stops/place-NEC-2203,,1,,1,Boston,,,,"""['NEC-2203', 'NEC-2203-02', 'NEC-2203-03']"""
-place-NHRML-0055,,West Medford,,,,42.421776,-71.133342,CR-zone-1A,"481 High St, Medford, MA 02155",https://www.mbta.com/stops/place-NHRML-0055,,1,,2,Medford,,,,"""['NHRML-0055', 'NHRML-0055-01', 'NHRML-0055-02']"""
+place-NHRML-0055,,West Medford,,,,42.421776,-71.133342,CR-zone-1A,"481 High St, Medford, MA 02155",https://www.mbta.com/stops/place-NHRML-0055,,1,,1,Medford,,,,"""['NHRML-0055', 'NHRML-0055-01', 'NHRML-0055-02']"""
 place-NHRML-0073,,Wedgemere,,,,42.444948,-71.140169,CR-zone-1,"25 Mystic Valley Pkwy, Winchester, MA 01890",https://www.mbta.com/stops/place-NHRML-0073,,1,,1,Winchester,,,,"""['NHRML-0073', 'NHRML-0073-01', 'NHRML-0073-02']"""
 place-NHRML-0078,,Winchester Center,,,,42.451088,-71.13783,CR-zone-1,"29 Waterfield Rd, Winchester, MA 01890",https://www.mbta.com/stops/place-NHRML-0078,,1,,1,Winchester,,,,"""['NHRML-0078', 'NHRML-0078-01', 'NHRML-0078-02']"""
 place-NHRML-0116,,Mishawum,,,,42.504402,-71.137618,CR-zone-2,"250 Mishawum Rd, Woburn, MA 01801",https://www.mbta.com/stops/place-NHRML-0116,,1,,2,Woburn,,,,"""['NHRML-0116', 'NHRML-0116-01', 'NHRML-0116-02']"""
@@ -135,7 +141,7 @@ place-WML-0091,,West Newton,,,,42.347878,-71.230528,CR-zone-2,"1395 Washington S
 place-WML-0102,,Auburndale,,,,42.345833,-71.250373,CR-zone-2,"Auburn St and Woodland Rd, Newton, MA 02466",https://www.mbta.com/stops/place-WML-0102,,1,,2,Newton,,,,"""['WML-0102-02']"""
 place-WML-0125,,Wellesley Farms,,,,42.323608,-71.272288,CR-zone-3,"90 Croton St, Wellesley, MA 02481",https://www.mbta.com/stops/place-WML-0125,,1,,2,Wellesley,,,,"""['WML-0125', 'WML-0125-01', 'WML-0125-02']"""
 place-WML-0135,,Wellesley Hills,,,,42.31037,-71.277044,CR-zone-3,"341 Washington St, Wellesley, MA 02481",https://www.mbta.com/stops/place-WML-0135,,1,,2,Wellesley,,,,"""['WML-0135', 'WML-0135-01', 'WML-0135-02']"""
-place-WML-0147,,Wellesley Square,,,,42.297526,-71.294173,CR-zone-3,"1 Grove St, Wellesley, MA 02482",https://www.mbta.com/stops/place-WML-0147,,1,,2,Wellesley,,,,"""['WML-0147', 'WML-0147-01', 'WML-0147-02']"""
+place-WML-0147,,Wellesley Square,,,,42.297526,-71.294173,CR-zone-3,"1 Grove St, Wellesley, MA 02482",https://www.mbta.com/stops/place-WML-0147,,1,,1,Wellesley,,,,"""['WML-0147', 'WML-0147-01', 'WML-0147-02']"""
 place-WML-0177,,Natick Center,,,,42.285719,-71.347133,CR-zone-4,"1 Walnut St, Natick, MA 01760",https://www.mbta.com/stops/place-WML-0177,,1,,2,Natick,,,,"""['WML-0177', 'WML-0177-01', 'WML-0177-02']"""
 place-WML-0199,,West Natick,,,,42.283064,-71.391797,CR-zone-4,"249 West Central St, Natick, MA 01760",https://www.mbta.com/stops/place-WML-0199,,1,,1,Natick,,,,"""['WML-0199', 'WML-0199-01', 'WML-0199-02']"""
 place-WML-0214,,Framingham,,,,42.276108,-71.420055,CR-zone-5,"417 Waverly St, Framingham, MA 01702",https://www.mbta.com/stops/place-WML-0214,,1,,1,Framingham,,,,"""['WML-0214', 'WML-0214-01', 'WML-0214-02']"""
@@ -153,7 +159,7 @@ place-WR-0120,,Reading,,,,42.52221,-71.108294,CR-zone-2,"35 Lincoln St, Reading,
 place-WR-0163,,North Wilmington,,,,42.569661,-71.159696,CR-zone-3,"370 Middlesex Ave, Wilmington, MA 01887",https://www.mbta.com/stops/place-WR-0163,,1,,2,Wilmington,,,,"""['WR-0163-S']"""
 place-WR-0205,,Ballardvale,,,,42.627356,-71.159962,CR-zone-4,"195 Andover St, Andover, MA 01810",https://www.mbta.com/stops/place-WR-0205,,1,,1,Andover,,,,"""['WR-0205-02']"""
 place-WR-0228,,Andover,,,,42.658336,-71.144502,CR-zone-5,"17 Railroad St, Andover, MA 01810",https://www.mbta.com/stops/place-WR-0228,,1,,1,Andover,,,,"""['WR-0228-02']"""
-place-WR-0264,,Lawrence,,,,42.701806,-71.15198,CR-zone-6,"S Union St and Merrimack St, Lawrence, MA 01843",https://www.mbta.com/stops/place-WR-0264,,1,,1,Lawrence,,,,"""['WR-0264-02']"""
+place-WR-0264,,Lawrence,,,,42.701806,-71.15198,CR-zone-6,"S Union St and Merrimack St, Lawrence, MA 01843",https://www.mbta.com/stops/place-WR-0264,,1,,1,Lawrence,,,,"""['WR-0264-01', 'WR-0264-02']"""
 place-WR-0325,,Bradford,,,,42.766912,-71.088411,CR-zone-7,"10 Railroad Ave, Bradford, MA 01835",https://www.mbta.com/stops/place-WR-0325,,1,,1,Haverhill,,,,"""['WR-0325', 'WR-0325-01', 'WR-0325-02']"""
 place-WR-0329,,Haverhill,,,,42.773474,-71.086237,CR-zone-7,"1 Washington Ave, Haverhill, MA 01832",https://www.mbta.com/stops/place-WR-0329,,1,,1,Haverhill,,,,"""['WR-0329', 'WR-0329-01', 'WR-0329-02']"""
 place-alfcl,,Alewife,,,,42.39583,-71.141287,,"Alewife Brook Pkwy and Cambridge Park Dr, Cambridge, MA 02140",https://www.mbta.com/stops/place-alfcl,,1,,1,Cambridge,,,,"""['70061', 'Alewife-01', 'Alewife-02']"""
@@ -220,7 +226,7 @@ place-gover,,Government Center,,,,42.359705,-71.059215,,"Cambridge St and Court 
 place-grigg,,Griggs Street,,,,42.348545,-71.134949,,"Commonwealth Ave and Griggs St, Boston, MA",https://www.mbta.com/stops/place-grigg,,1,,2,Boston,,,,"""['70128', '70129']"""
 place-grnst,,Green Street,,,,42.310525,-71.107414,,"150 Green St, Jamaica Plain, MA",https://www.mbta.com/stops/place-grnst,,1,,1,Boston,,,,"""['70002', '70003']"""
 place-haecl,,Haymarket,,,,42.363021,-71.05829,,"136 Blackstone St, Boston, MA 02109",https://www.mbta.com/stops/place-haecl,,1,,1,Boston,,,,"""['70024', '70025', '70203', '70204']"""
-place-harsq,,Harvard,,,,42.373362,-71.118956,,"1400 Massachusetts Ave, Cambridge, MA",https://www.mbta.com/stops/place-harsq,,1,,1,Cambridge,,,,"""['2076', '20761', '70067', '70068']"""
+place-harsq,,Harvard,,,,42.373362,-71.118956,,"1400 Massachusetts Ave, Cambridge, MA",https://www.mbta.com/stops/place-harsq,,1,,1,Cambridge,,,,"""['70067', '70068']"""
 place-harvd,,Harvard Avenue,,,,42.350243,-71.131355,,"Commonwealth Ave and Harvard Ave, Boston, MA",https://www.mbta.com/stops/place-harvd,,1,,1,Boston,,,,"""['70130', '70131']"""
 place-hsmnl,,Heath Street,,,,42.328316,-71.110252,,"Heath St and South Huntington Ave, Boston, MA",https://www.mbta.com/stops/place-hsmnl,,1,,1,Boston,,,,"""['70260']"""
 place-hwsst,,Hawes Street,,,,42.344906,-71.111145,,"Beacon St and Hawes St, Brookline, MA",https://www.mbta.com/stops/place-hwsst,,1,,2,Brookline,,,,"""['70213', '70214']"""
@@ -273,7 +279,7 @@ place-sstat,,South Station,,,,42.352271,-71.055242,CR-zone-1A,"700 Atlantic Ave,
 place-state,,State,,,,42.358978,-71.057598,,"200 Washington St, Boston, MA",https://www.mbta.com/stops/place-state,,1,,1,Boston,,,,"""['70022', '70023', '70041', '70042']"""
 place-sthld,,Sutherland Road,,,,42.341614,-71.146202,,"Commonwealth Ave and Sutherland Rd, Boston, MA",https://www.mbta.com/stops/place-sthld,,1,,2,Boston,,,,"""['70116', '70117']"""
 place-stpul,,Saint Paul Street,,,,42.343327,-71.116997,,"Beacon St and Saint Paul St, Brookline, MA 02446",https://www.mbta.com/stops/place-stpul,,1,,2,Brookline,,,,"""['70217', '70218']"""
-place-sull,,Sullivan Square,,,,42.383975,-71.076994,,"Maffa Way and Cambridge St, Charlestown, MA 02129",https://www.mbta.com/stops/place-sull,,1,,1,Boston,,,,"""['29002', '70030', '70031']"""
+place-sull,,Sullivan Square,,,,42.383975,-71.076994,,"Maffa Way and Cambridge St, Charlestown, MA 02129",https://www.mbta.com/stops/place-sull,,1,,1,Boston,,,,"""['70030', '70031']"""
 place-sumav,,Summit Avenue,,,,42.34111,-71.12561,,"Beacon St and Summit Ave, Brookline, MA",https://www.mbta.com/stops/place-sumav,,1,,2,Brookline,,,,"""['70223', '70224']"""
 place-symcl,,Symphony,,,,42.342687,-71.085056,,"Massachusetts Ave and Huntington Ave, Boston, MA",https://www.mbta.com/stops/place-symcl,,1,,2,Boston,,,,"""['70241', '70242']"""
 place-tapst,,Tappan Street,,,,42.338459,-71.138702,,"Beacon St and Tappan St, Brookline, MA",https://www.mbta.com/stops/place-tapst,,1,,2,Brookline,,,,"""['70231', '70232']"""
@@ -283,10 +289,9 @@ place-valrd,,Valley Road,,,,42.268347,-71.081343,,"291 Valley Rd, Milton, MA 021
 place-waban,,Waban,,,,42.325845,-71.230609,,"Beacon St and Waban Sq, Newton, MA 02468",https://www.mbta.com/stops/place-waban,,1,,1,Newton,,,,"""['70164', '70165']"""
 place-wascm,,Washington Street,,,,42.343864,-71.142853,,"Commonwealth Ave and Washington St, Boston, MA",https://www.mbta.com/stops/place-wascm,,1,,1,Boston,,,,"""['70120', '70121']"""
 place-welln,,Wellington,,,,42.40237,-71.077082,,"Revere Beach Pkwy and Rivers Edge Dr, Medford, MA 02155",https://www.mbta.com/stops/place-welln,,1,,1,Medford,,,,"""['70032', '70033']"""
-5271,5271.0,Wellington Station Busway,,,,42.402581,-71.076089,,,https://www.mbta.com/stops/place-welln,,0,place-welln,1,Medford,Cooper Street,,,[]
 place-wimnl,,Wood Island,,,,42.37964,-71.022865,,"450 Bennington St, East Boston, MA",https://www.mbta.com/stops/place-wimnl,,1,,1,Boston,,,,"""['70049', '70050']"""
 place-wlsta,,Wollaston,,,,42.266514,-71.020337,,"90 Woodbine St, Quincy, MA 02171",https://www.mbta.com/stops/place-wlsta,,1,,1,Quincy,,,,"""['70099', '70100']"""
-place-wondl,,Wonderland,,,,42.41342,-70.991648,,"1300 North Shore Rd, Revere, MA 02151",https://www.mbta.com/stops/place-wondl,,1,,1,Revere,,,,"""['15795', '70059', '70060']"""
+place-wondl,,Wonderland,,,,42.41342,-70.991648,,"1300 North Shore Rd, Revere, MA 02151",https://www.mbta.com/stops/place-wondl,,1,,1,Revere,,,,"""['70059', '70060']"""
 place-woodl,,Woodland,,,,42.332902,-71.243362,,"1940 Washington St, Newton, MA 02466",https://www.mbta.com/stops/place-woodl,,1,,1,Newton,,,,"""['70162', '70163']"""
 place-wrnst,,Warren Street,,,,42.348343,-71.140457,,"Commonwealth Ave and Warren St, Boston, MA",https://www.mbta.com/stops/place-wrnst,,1,,2,Boston,,,,"""['70124', '70125']"""
 place-wtcst,,World Trade Center,,,,42.34863,-71.04246,,"Congress St and World Trade Center Ave, Boston, MA",https://www.mbta.com/stops/place-wtcst,,1,,1,Boston,,,,"""['74613', '74615']"""

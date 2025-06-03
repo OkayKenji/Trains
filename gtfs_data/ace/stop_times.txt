@@ -1,221 +1,121 @@
 trip_id,stop_sequence,stop_id,arrival_time,departure_time,stop_headsign,pickup_type,drop_off_type,continuous_pickup,continuous_drop_off,shape_dist_traveled,timepoint
-ACE04,0,SJC,15:35:00,15:35:00,San Jose Amtrak Station,0,0,,,0,
-ACE04,1,SCC,15:40:00,15:40:00,Santa Clara Amtrak Station,0,0,,,4085.459419129001,
-ACE04,2,GAC,15:49:00,15:49:00,Great America Parkway Amtrak Station,0,0,,,10842.688557345953,
-ACE04,3,FMT,16:05:00,16:05:00,Fremont Amtrak Station,0,0,,,31003.78828098498,
-ACE04,4,PLS,16:28:00,16:28:00,Pleasanton Amtrak Station,0,0,,,53149.45542342616,
-ACE04,5,LIV,16:37:00,16:37:00,Livermore Amtrak Station,0,0,,,64008.57935494818,
-ACE04,6,VAS,16:42:00,16:42:00,Vasco Rt Amtrak Station,0,0,,,68610.26964290605,
-ACE04,7,TRC,17:11:00,17:11:00,Tracy Amtrak Station,0,0,,,100692.67588007517,
-ACE04,8,LTM,17:23:00,17:23:00,Lathrop Amtrak Station,0,0,,,120202.30844935894,
-ACE04,9,SKT,17:47:00,17:47:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.68384977913,
-ACE06,0,SJC,16:35:00,16:35:00,San Jose Amtrak Station,0,0,,,0,
-ACE06,1,SCC,16:40:00,16:40:00,Santa Clara Amtrak Station,0,0,,,4085.459419129001,
-ACE06,2,GAC,16:49:00,16:49:00,Great America Parkway Amtrak Station,0,0,,,10842.688557345953,
-ACE06,3,FMT,17:05:00,17:05:00,Fremont Amtrak Station,0,0,,,31003.78828098498,
-ACE06,4,PLS,17:28:00,17:28:00,Pleasanton Amtrak Station,0,0,,,53149.45542342616,
-ACE06,5,LIV,17:37:00,17:37:00,Livermore Amtrak Station,0,0,,,64008.57935494818,
-ACE06,6,VAS,17:42:00,17:42:00,Vasco Rt Amtrak Station,0,0,,,68610.26964290605,
-ACE06,7,TRC,18:11:00,18:11:00,Tracy Amtrak Station,0,0,,,100692.67588007517,
-ACE06,8,LTM,18:23:00,18:23:00,Lathrop Amtrak Station,0,0,,,120202.30844935894,
-ACE06,9,SKT,18:47:00,18:47:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.68384977913,
-ACE08,0,SJC,17:35:00,17:35:00,San Jose Amtrak Station,0,0,,,0,
-ACE08,1,SCC,17:40:00,17:40:00,Santa Clara Amtrak Station,0,0,,,4085.459419129001,
-ACE08,2,GAC,17:49:00,17:49:00,Great America Parkway Amtrak Station,0,0,,,10842.688557345953,
-ACE08,3,FMT,18:05:00,18:05:00,Fremont Amtrak Station,0,0,,,31003.78828098498,
-ACE08,4,PLS,18:28:00,18:28:00,Pleasanton Amtrak Station,0,0,,,53149.45542342616,
-ACE08,5,LIV,18:37:00,18:37:00,Livermore Amtrak Station,0,0,,,64008.57935494818,
-ACE08,6,VAS,18:42:00,18:42:00,Vasco Rt Amtrak Station,0,0,,,68610.26964290605,
-ACE08,7,TRC,19:11:00,19:11:00,Tracy Amtrak Station,0,0,,,100692.67588007517,
-ACE08,8,LTM,19:23:00,19:23:00,Lathrop Amtrak Station,0,0,,,120202.30844935894,
-ACE08,9,SKT,19:47:00,19:47:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.68384977913,
-ACE01,0,SKT,04:10:00,04:10:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE01,1,LTM,04:29:00,04:29:00,Lathrop Amtrak Station,0,0,,,17884.11416058083,
-ACE01,2,TRC,04:41:00,04:41:00,Tracy Amtrak Station,0,0,,,37412.587087555774,
-ACE01,3,VAS,05:10:00,05:10:00,Vasco Rt Amtrak Station,0,0,,,69499.63367152879,
-ACE01,4,LIV,05:15:00,05:15:00,Livermore Amtrak Station,0,0,,,74120.2800445276,
-ACE01,5,PLS,05:23:00,05:23:00,Pleasanton Amtrak Station,0,0,,,85004.68009664462,
-ACE01,6,FMT,05:45:00,05:45:00,Fremont Amtrak Station,0,0,,,106212.60152245872,
-ACE01,7,GAC,06:03:00,06:03:00,Great America Parkway Amtrak Station,0,0,,,126379.77542437006,
-ACE01,8,SCC,06:10:00,06:10:00,Santa Clara Amtrak Station,0,0,,,133108.457656862,
-ACE01,9,SJC,06:22:00,06:22:00,San Jose Amtrak Station,0,0,,,137171.37548557593,
-ACE03,0,SKT,05:35:00,05:35:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE03,1,LTM,05:54:00,05:54:00,Lathrop Amtrak Station,0,0,,,17884.11416058083,
-ACE03,2,TRC,06:06:00,06:06:00,Tracy Amtrak Station,0,0,,,37412.587087555774,
-ACE03,3,VAS,06:35:00,06:35:00,Vasco Rt Amtrak Station,0,0,,,69499.63367152879,
-ACE03,4,LIV,06:40:00,06:40:00,Livermore Amtrak Station,0,0,,,74120.2800445276,
-ACE03,5,PLS,06:48:00,06:48:00,Pleasanton Amtrak Station,0,0,,,85004.68009664462,
-ACE03,6,FMT,07:10:00,07:10:00,Fremont Amtrak Station,0,0,,,106212.60152245872,
-ACE03,7,GAC,07:28:00,07:28:00,Great America Parkway Amtrak Station,0,0,,,126379.77542437006,
-ACE03,8,SCC,07:35:00,07:35:00,Santa Clara Amtrak Station,0,0,,,133108.457656862,
-ACE03,9,SJC,07:47:00,07:47:00,San Jose Amtrak Station,0,0,,,137171.37548557593,
-ACE05,0,SKT,06:40:00,06:40:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE05,1,LTM,06:59:00,06:59:00,Lathrop Amtrak Station,0,0,,,17884.11416058083,
-ACE05,2,TRC,07:11:00,07:11:00,Tracy Amtrak Station,0,0,,,37412.587087555774,
-ACE05,3,VAS,07:40:00,07:40:00,Vasco Rt Amtrak Station,0,0,,,69499.63367152879,
-ACE05,4,LIV,07:45:00,07:45:00,Livermore Amtrak Station,0,0,,,74120.2800445276,
-ACE05,5,PLS,07:53:00,07:53:00,Pleasanton Amtrak Station,0,0,,,85004.68009664462,
-ACE05,6,FMT,08:15:00,08:15:00,Fremont Amtrak Station,0,0,,,106212.60152245872,
-ACE05,7,GAC,08:33:00,08:33:00,Great America Parkway Amtrak Station,0,0,,,126379.77542437006,
-ACE05,8,SCC,08:40:00,08:40:00,Santa Clara Amtrak Station,0,0,,,133108.457656862,
-ACE05,9,SJC,08:52:00,08:52:00,San Jose Amtrak Station,0,0,,,137171.37548557593,
-ACE07,0,SKT,07:32:00,07:32:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE07,1,LTM,07:51:00,07:51:00,Lathrop Amtrak Station,0,0,,,17884.11416058083,
-ACE07,2,TRC,08:03:00,08:03:00,Tracy Amtrak Station,0,0,,,37412.587087555774,
-ACE07,3,VAS,08:32:00,08:32:00,Vasco Rt Amtrak Station,0,0,,,69499.63367152879,
-ACE07,4,LIV,08:37:00,08:37:00,Livermore Amtrak Station,0,0,,,74120.2800445276,
-ACE07,5,PLS,08:45:00,08:45:00,Pleasanton Amtrak Station,0,0,,,85004.68009664462,
-ACE07,6,FMT,09:07:00,09:07:00,Fremont Amtrak Station,0,0,,,106212.60152245872,
-ACE07,7,GAC,09:25:00,09:25:00,Great America Parkway Amtrak Station,0,0,,,126379.77542437006,
-ACE07,8,SCC,09:32:00,09:32:00,Santa Clara Amtrak Station,0,0,,,133108.457656862,
-ACE07,9,SJC,09:44:00,09:44:00,San Jose Amtrak Station,0,0,,,137171.37548557593,
-ACE04H,0,SJC,15:35:00,15:35:00,San Jose Amtrak Station,0,0,,,0,
-ACE04H,1,SCC,15:40:00,15:40:00,Santa Clara Amtrak Station,0,0,,,4085.459419129001,
-ACE04H,2,GAC,15:49:00,15:49:00,Great America Parkway Amtrak Station,0,0,,,10842.688557345953,
-ACE04H,3,FMT,16:05:00,16:05:00,Fremont Amtrak Station,0,0,,,31003.78828098498,
-ACE04H,4,PLS,16:28:00,16:28:00,Pleasanton Amtrak Station,0,0,,,53149.45542342616,
-ACE04H,5,LIV,16:37:00,16:37:00,Livermore Amtrak Station,0,0,,,64008.57935494818,
-ACE04H,6,VAS,16:42:00,16:42:00,Vasco Rt Amtrak Station,0,0,,,68610.26964290605,
-ACE04H,7,TRC,17:11:00,17:11:00,Tracy Amtrak Station,0,0,,,100692.67588007517,
-ACE04H,8,LTM,17:23:00,17:23:00,Lathrop Amtrak Station,0,0,,,120202.30844935894,
-ACE04H,9,SKT,17:47:00,17:47:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.68384977913,
-ACE06H,0,SJC,16:35:00,16:35:00,San Jose Amtrak Station,0,0,,,0,
-ACE06H,1,SCC,16:40:00,16:40:00,Santa Clara Amtrak Station,0,0,,,4085.459419129001,
-ACE06H,2,GAC,16:49:00,16:49:00,Great America Parkway Amtrak Station,0,0,,,10842.688557345953,
-ACE06H,3,FMT,17:05:00,17:05:00,Fremont Amtrak Station,0,0,,,31003.78828098498,
-ACE06H,4,PLS,17:28:00,17:28:00,Pleasanton Amtrak Station,0,0,,,53149.45542342616,
-ACE06H,5,LIV,17:37:00,17:37:00,Livermore Amtrak Station,0,0,,,64008.57935494818,
-ACE06H,6,VAS,17:42:00,17:42:00,Vasco Rt Amtrak Station,0,0,,,68610.26964290605,
-ACE06H,7,TRC,18:11:00,18:11:00,Tracy Amtrak Station,0,0,,,100692.67588007517,
-ACE06H,8,LTM,18:23:00,18:23:00,Lathrop Amtrak Station,0,0,,,120202.30844935894,
-ACE06H,9,SKT,18:47:00,18:47:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.68384977913,
-ACE03H,0,SKT,05:35:00,05:35:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE03H,1,LTM,05:54:00,05:54:00,Lathrop Amtrak Station,0,0,,,17884.11416058083,
-ACE03H,2,TRC,06:06:00,06:06:00,Tracy Amtrak Station,0,0,,,37412.587087555774,
-ACE03H,3,VAS,06:35:00,06:35:00,Vasco Rt Amtrak Station,0,0,,,69499.63367152879,
-ACE03H,4,LIV,06:40:00,06:40:00,Livermore Amtrak Station,0,0,,,74120.2800445276,
-ACE03H,5,PLS,06:48:00,06:48:00,Pleasanton Amtrak Station,0,0,,,85004.68009664462,
-ACE03H,6,FMT,07:10:00,07:10:00,Fremont Amtrak Station,0,0,,,106212.60152245872,
-ACE03H,7,GAC,07:28:00,07:28:00,Great America Parkway Amtrak Station,0,0,,,126379.77542437006,
-ACE03H,8,SCC,07:35:00,07:35:00,Santa Clara Amtrak Station,0,0,,,133108.457656862,
-ACE03H,9,SJC,07:47:00,07:47:00,San Jose Amtrak Station,0,0,,,137171.37548557593,
-ACE05H,0,SKT,06:40:00,06:40:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE05H,1,LTM,06:59:00,06:59:00,Lathrop Amtrak Station,0,0,,,17884.11416058083,
-ACE05H,2,TRC,07:11:00,07:11:00,Tracy Amtrak Station,0,0,,,37412.587087555774,
-ACE05H,3,VAS,07:40:00,07:40:00,Vasco Rt Amtrak Station,0,0,,,69499.63367152879,
-ACE05H,4,LIV,07:45:00,07:45:00,Livermore Amtrak Station,0,0,,,74120.2800445276,
-ACE05H,5,PLS,07:53:00,07:53:00,Pleasanton Amtrak Station,0,0,,,85004.68009664462,
-ACE05H,6,FMT,08:15:00,08:15:00,Fremont Amtrak Station,0,0,,,106212.60152245872,
-ACE05H,7,GAC,08:33:00,08:33:00,Great America Parkway Amtrak Station,0,0,,,126379.77542437006,
-ACE05H,8,SCC,08:40:00,08:40:00,Santa Clara Amtrak Station,0,0,,,133108.457656862,
-ACE05H,9,SJC,08:52:00,08:52:00,San Jose Amtrak Station,0,0,,,137171.37548557593,
-ACE14,0,SJC,17:14:00,17:14:00,San Jose Amtrak Station,0,0,,,0,
-ACE14,1,SCC,17:19:00,17:19:00,Santa Clara Amtrak Station,0,0,,,4085.459419,
-ACE14,2,GAC,17:33:00,17:33:00,Great America Parkway Amtrak Station,0,0,,,10842.68856,
-ACE14,3,FMT,17:49:00,17:49:00,Fremont Amtrak Station,0,0,,,31003.78828,
-ACE14,4,PLS,18:12:00,18:12:00,Pleasanton Amtrak Station,0,0,,,53149.45542,
-ACE14,5,LIV,18:21:00,18:21:00,Livermore Amtrak Station,0,0,,,64008.57935,
-ACE14,6,VAS,18:26:00,18:26:00,Vasco Rt Amtrak Station,0,0,,,68610.26964,
-ACE14,7,TRC,18:55:00,18:55:00,Tracy Amtrak Station,0,0,,,100692.6759,
-ACE14,8,LTM,19:07:00,19:07:00,Lathrop Amtrak Station,0,0,,,120202.3084,
-ACE14,9,SKT,19:31:00,19:31:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.6838,
-ACE16,0,SJC,21:05:00,21:05:00,San Jose Amtrak Station,0,0,,,0,
-ACE16,1,SCC,21:10:00,21:10:00,Santa Clara Amtrak Station,0,0,,,4085.459419,
-ACE16,2,GAC,21:24:00,21:24:00,Great America Parkway Amtrak Station,0,0,,,10842.68856,
-ACE16,3,FMT,21:40:00,21:40:00,Fremont Amtrak Station,0,0,,,31003.78828,
-ACE16,4,PLS,22:03:00,22:03:00,Pleasanton Amtrak Station,0,0,,,53149.45542,
-ACE16,5,LIV,22:12:00,22:12:00,Livermore Amtrak Station,0,0,,,64008.57935,
-ACE16,6,VAS,22:17:00,22:17:00,Vasco Rt Amtrak Station,0,0,,,68610.26964,
-ACE16,7,TRC,22:46:00,22:46:00,Tracy Amtrak Station,0,0,,,100692.6759,
-ACE16,8,LTM,22:58:00,22:58:00,Lathrop Amtrak Station,0,0,,,120202.3084,
-ACE16,9,SKT,23:22:00,23:22:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.6838,
-ACE18,0,SJC,16:50:00,16:50:00,San Jose Amtrak Station,0,0,,,0,
-ACE18,1,SCC,16:55:00,16:55:00,Santa Clara Amtrak Station,0,0,,,4085.459419,
-ACE18,2,GAC,17:09:00,17:09:00,Great America Parkway Amtrak Station,0,0,,,10842.68856,
-ACE18,3,FMT,17:25:00,17:25:00,Fremont Amtrak Station,0,0,,,31003.78828,
-ACE18,4,PLS,17:48:00,17:48:00,Pleasanton Amtrak Station,0,0,,,53149.45542,
-ACE18,5,LIV,17:57:00,17:57:00,Livermore Amtrak Station,0,0,,,64008.57935,
-ACE18,6,VAS,18:02:00,18:02:00,Vasco Rt Amtrak Station,0,0,,,68610.26964,
-ACE18,7,TRC,18:31:00,18:31:00,Tracy Amtrak Station,0,0,,,100692.6759,
-ACE18,8,LTM,18:43:00,18:43:00,Lathrop Amtrak Station,0,0,,,120202.3084,
-ACE18,9,SKT,19:07:00,19:07:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.6838,
-ACE20,0,SJC,17:14:00,17:14:00,San Jose Amtrak Station,0,0,,,0,
-ACE20,1,SCC,17:19:00,17:19:00,Santa Clara Amtrak Station,0,0,,,4085.459419,
-ACE20,2,GAC,17:33:00,17:33:00,Great America Parkway Amtrak Station,0,0,,,10842.68856,
-ACE20,3,FMT,17:49:00,17:49:00,Fremont Amtrak Station,0,0,,,31003.78828,
-ACE20,4,PLS,18:12:00,18:12:00,Pleasanton Amtrak Station,0,0,,,53149.45542,
-ACE20,5,LIV,18:21:00,18:21:00,Livermore Amtrak Station,0,0,,,64008.57935,
-ACE20,6,VAS,18:26:00,18:26:00,Vasco Rt Amtrak Station,0,0,,,68610.26964,
-ACE20,7,TRC,18:55:00,18:55:00,Tracy Amtrak Station,0,0,,,100692.6759,
-ACE20,8,LTM,19:07:00,19:07:00,Lathrop Amtrak Station,0,0,,,120202.3084,
-ACE20,9,SKT,19:31:00,19:31:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.6838,
-ACE22,0,SJC,21:05:00,21:05:00,San Jose Amtrak Station,0,0,,,0,
-ACE22,1,SCC,21:10:00,21:10:00,Santa Clara Amtrak Station,0,0,,,4085.459419,
-ACE22,2,GAC,21:24:00,21:24:00,Great America Parkway Amtrak Station,0,0,,,10842.68856,
-ACE22,3,FMT,21:40:00,21:40:00,Fremont Amtrak Station,0,0,,,31003.78828,
-ACE22,4,PLS,22:03:00,22:03:00,Pleasanton Amtrak Station,0,0,,,53149.45542,
-ACE22,5,LIV,22:12:00,22:12:00,Livermore Amtrak Station,0,0,,,64008.57935,
-ACE22,6,VAS,22:17:00,22:17:00,Vasco Rt Amtrak Station,0,0,,,68610.26964,
-ACE22,7,TRC,22:46:00,22:46:00,Tracy Amtrak Station,0,0,,,100692.6759,
-ACE22,8,LTM,22:58:00,22:58:00,Lathrop Amtrak Station,0,0,,,120202.3084,
-ACE22,9,SKT,23:22:00,23:22:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,138118.6838,
-ACE11,0,SKT,09:15:00,09:15:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE11,1,LTM,09:34:00,09:34:00,Lathrop Amtrak Station,0,0,,,17884.11416,
-ACE11,2,TRC,09:46:00,09:46:00,Tracy Amtrak Station,0,0,,,37412.58709,
-ACE11,3,VAS,10:15:00,10:15:00,Vasco Rt Amtrak Station,0,0,,,69499.63367,
-ACE11,4,LIV,10:20:00,10:20:00,Livermore Amtrak Station,0,0,,,74120.28004,
-ACE11,5,PLS,10:28:00,10:28:00,Pleasanton Amtrak Station,0,0,,,85004.6801,
-ACE11,6,FMT,10:50:00,10:50:00,Fremont Amtrak Station,0,0,,,106212.6015,
-ACE11,7,GAC,11:08:00,11:08:00,Great America Parkway Amtrak Station,0,0,,,126379.7754,
-ACE11,8,SCC,11:15:00,11:15:00,Santa Clara Amtrak Station,0,0,,,133108.4577,
-ACE11,9,SJC,11:27:00,11:27:00,San Jose Amtrak Station,0,0,,,137171.3755,
-ACE13,0,SKT,13:05:00,13:05:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE13,1,LTM,13:24:00,13:24:00,Lathrop Amtrak Station,0,0,,,17884.11416,
-ACE13,2,TRC,13:36:00,13:36:00,Tracy Amtrak Station,0,0,,,37412.58709,
-ACE13,3,VAS,14:05:00,14:05:00,Vasco Rt Amtrak Station,0,0,,,69499.63367,
-ACE13,4,LIV,14:10:00,14:10:00,Livermore Amtrak Station,0,0,,,74120.28004,
-ACE13,5,PLS,14:18:00,14:18:00,Pleasanton Amtrak Station,0,0,,,85004.6801,
-ACE13,6,FMT,14:40:00,14:40:00,Fremont Amtrak Station,0,0,,,106212.6015,
-ACE13,7,GAC,14:58:00,14:58:00,Great America Parkway Amtrak Station,0,0,,,126379.7754,
-ACE13,8,SCC,15:05:00,15:05:00,Santa Clara Amtrak Station,0,0,,,133108.4577,
-ACE13,9,SJC,15:17:00,15:17:00,San Jose Amtrak Station,0,0,,,137171.3755,
-ACE15,0,SKT,09:15:00,09:15:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE15,1,LTM,09:34:00,09:34:00,Lathrop Amtrak Station,0,0,,,17884.11416,
-ACE15,2,TRC,09:46:00,09:46:00,Tracy Amtrak Station,0,0,,,37412.58709,
-ACE15,3,VAS,10:15:00,10:15:00,Vasco Rt Amtrak Station,0,0,,,69499.63367,
-ACE15,4,LIV,10:20:00,10:20:00,Livermore Amtrak Station,0,0,,,74120.28004,
-ACE15,5,PLS,10:28:00,10:28:00,Pleasanton Amtrak Station,0,0,,,85004.6801,
-ACE15,6,FMT,10:50:00,10:50:00,Fremont Amtrak Station,0,0,,,106212.6015,
-ACE15,7,GAC,11:08:00,11:08:00,Great America Parkway Amtrak Station,0,0,,,126379.7754,
-ACE15,8,SCC,11:15:00,11:15:00,Santa Clara Amtrak Station,0,0,,,133108.4577,
-ACE15,9,SJC,11:27:00,11:27:00,San Jose Amtrak Station,0,0,,,137171.3755,
-ACE17,0,SKT,09:15:00,09:15:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE17,1,LTM,09:34:00,09:34:00,Lathrop Amtrak Station,0,0,,,17884.11416,
-ACE17,2,TRC,09:46:00,09:46:00,Tracy Amtrak Station,0,0,,,37412.58709,
-ACE17,3,VAS,10:15:00,10:15:00,Vasco Rt Amtrak Station,0,0,,,69499.63367,
-ACE17,4,LIV,10:20:00,10:20:00,Livermore Amtrak Station,0,0,,,74120.28004,
-ACE17,5,PLS,10:28:00,10:28:00,Pleasanton Amtrak Station,0,0,,,85004.6801,
-ACE17,6,FMT,10:50:00,10:50:00,Fremont Amtrak Station,0,0,,,106212.6015,
-ACE17,7,GAC,11:08:00,11:08:00,Great America Parkway Amtrak Station,0,0,,,126379.7754,
-ACE17,8,SCC,11:15:00,11:15:00,Santa Clara Amtrak Station,0,0,,,133108.4577,
-ACE17,9,SJC,11:27:00,11:27:00,San Jose Amtrak Station,0,0,,,137171.3755,
-ACE19,0,SKT,12:55:00,12:55:00,Stockton- Robert J Cabral Amtrak Station,0,0,,,0,
-ACE19,1,LTM,13:14:00,13:14:00,Lathrop Amtrak Station,0,0,,,17884.11416,
-ACE19,2,TRC,13:26:00,13:26:00,Tracy Amtrak Station,0,0,,,37412.58709,
-ACE19,3,VAS,13:55:00,13:55:00,Vasco Rt Amtrak Station,0,0,,,69499.63367,
-ACE19,4,LIV,14:00:00,14:00:00,Livermore Amtrak Station,0,0,,,74120.28004,
-ACE19,5,PLS,14:08:00,14:08:00,Pleasanton Amtrak Station,0,0,,,85004.6801,
-ACE19,6,FMT,14:30:00,14:30:00,Fremont Amtrak Station,0,0,,,106212.6015,
-ACE19,7,GAC,14:48:00,14:48:00,Great America Parkway Amtrak Station,0,0,,,126379.7754,
-ACE19,8,SCC,14:55:00,14:55:00,Santa Clara Amtrak Station,0,0,,,133108.4577,
-ACE19,9,SJC,15:07:00,15:07:00,San Jose Amtrak Station,0,0,,,137171.3755,
-ACE02,0,SJC,14:10:00,14:10:00,,,,,,0,0
-ACE02,1,SCC,14:15:00,14:15:00,,,,,,4085.459419129001,0
-ACE02,2,GAC,14:24:00,14:24:00,,,,,,10842.688557345953,0
-ACE02,3,FMT,14:45:00,14:45:00,,,,,,31003.78828098498,0
-ACE02,4,PLS,15:08:00,15:08:00,,,,,,53149.45542342616,0
-ACE02,5,LIV,15:22:00,15:22:00,,,,,,64008.57935494818,0
-ACE02,6,VAS,15:27:00,15:27:00,,,,,,68610.26964290605,0
-ACE02,7,TRC,15:56:00,15:56:00,,,,,,100692.67588007517,0
-ACE02,8,LTM,16:08:00,16:08:00,,,,,,120202.30844935894,0
-ACE02,9,SKT,16:32:00,16:32:00,,,,,,138118.68384977913,0
+ACE04,0,SJC,15:35:00,15:35:00,San Jose Station,0,0,,,0,0
+ACE04,1,SCC,15:40:00,15:40:00,Santa Clara Station,0,0,,,4085.459419,0
+ACE04,2,GAC,15:49:00,15:49:00,Great America Parkway Station,0,0,,,10842.68856,0
+ACE04,3,FMT,16:05:00,16:05:00,Fremont Station,0,0,,,31003.78828,0
+ACE04,4,PLS,16:28:00,16:28:00,Pleasanton Station,0,0,,,53149.45542,0
+ACE04,5,LIV,16:37:00,16:37:00,Livermore Station,0,0,,,64008.57935,0
+ACE04,6,VAS,16:42:00,16:42:00,Vasco Rt Station,0,0,,,68610.26964,0
+ACE04,7,TRC,17:11:00,17:11:00,Tracy Station,0,0,,,100692.6759,0
+ACE04,8,LTM,17:23:00,17:23:00,Lathrop Station,0,0,,,120202.3084,0
+ACE04,9,SKT,17:47:00,17:47:00,Stockton- Robert J Cabral Station,0,0,,,138118.6838,0
+ACE06,0,SJC,16:35:00,16:35:00,San Jose Station,0,0,,,0,0
+ACE06,1,SCC,16:40:00,16:40:00,Santa Clara Station,0,0,,,4085.459419,0
+ACE06,2,GAC,16:49:00,16:49:00,Great America Parkway Station,0,0,,,10842.68856,0
+ACE06,3,FMT,17:05:00,17:05:00,Fremont Station,0,0,,,31003.78828,0
+ACE06,4,PLS,17:28:00,17:28:00,Pleasanton Station,0,0,,,53149.45542,0
+ACE06,5,LIV,17:37:00,17:37:00,Livermore Station,0,0,,,64008.57935,0
+ACE06,6,VAS,17:42:00,17:42:00,Vasco Rt Station,0,0,,,68610.26964,0
+ACE06,7,TRC,18:11:00,18:11:00,Tracy Station,0,0,,,100692.6759,0
+ACE06,8,LTM,18:23:00,18:23:00,Lathrop Station,0,0,,,120202.3084,0
+ACE06,9,SKT,18:47:00,18:47:00,Stockton- Robert J Cabral Station,0,0,,,138118.6838,0
+ACE08,0,SJC,17:35:00,17:35:00,San Jose Station,0,0,,,0,0
+ACE08,1,SCC,17:40:00,17:40:00,Santa Clara Station,0,0,,,4085.459419,0
+ACE08,2,GAC,17:49:00,17:49:00,Great America Parkway Station,0,0,,,10842.68856,0
+ACE08,3,FMT,18:05:00,18:05:00,Fremont Station,0,0,,,31003.78828,0
+ACE08,4,PLS,18:28:00,18:28:00,Pleasanton Station,0,0,,,53149.45542,0
+ACE08,5,LIV,18:37:00,18:37:00,Livermore Station,0,0,,,64008.57935,0
+ACE08,6,VAS,18:42:00,18:42:00,Vasco Rt Station,0,0,,,68610.26964,0
+ACE08,7,TRC,19:11:00,19:11:00,Tracy Station,0,0,,,100692.6759,0
+ACE08,8,LTM,19:23:00,19:23:00,Lathrop Station,0,0,,,120202.3084,0
+ACE08,9,SKT,19:47:00,19:47:00,Stockton- Robert J Cabral Station,0,0,,,138118.6838,0
+ACE01,0,SKT,4:10:00,4:10:00,Stockton- Robert J Cabral Station,0,0,,,0,0
+ACE01,1,LTM,4:29:00,4:29:00,Lathrop Station,0,0,,,17884.11416,0
+ACE01,2,TRC,4:41:00,4:41:00,Tracy Station,0,0,,,37412.58709,0
+ACE01,3,VAS,5:10:00,5:10:00,Vasco Rt Station,0,0,,,69499.63367,0
+ACE01,4,LIV,5:15:00,5:15:00,Livermore Station,0,0,,,74120.28004,0
+ACE01,5,PLS,5:23:00,5:23:00,Pleasanton Station,0,0,,,85004.6801,0
+ACE01,6,FMT,5:45:00,5:45:00,Fremont Station,0,0,,,106212.6015,0
+ACE01,7,GAC,6:03:00,6:03:00,Great America Parkway Station,0,0,,,126379.7754,0
+ACE01,8,SCC,6:10:00,6:10:00,Santa Clara Station,0,0,,,133108.4577,0
+ACE01,9,SJC,6:22:00,6:22:00,San Jose Station,0,0,,,137171.3755,0
+ACE03,0,SKT,5:35:00,5:35:00,Stockton- Robert J Cabral Station,0,0,,,0,0
+ACE03,1,LTM,5:54:00,5:54:00,Lathrop Station,0,0,,,17884.11416,0
+ACE03,2,TRC,6:06:00,6:06:00,Tracy Station,0,0,,,37412.58709,0
+ACE03,3,VAS,6:35:00,6:35:00,Vasco Rt Station,0,0,,,69499.63367,0
+ACE03,4,LIV,6:40:00,6:40:00,Livermore Station,0,0,,,74120.28004,0
+ACE03,5,PLS,6:48:00,6:48:00,Pleasanton Station,0,0,,,85004.6801,0
+ACE03,6,FMT,7:10:00,7:10:00,Fremont Station,0,0,,,106212.6015,0
+ACE03,7,GAC,7:28:00,7:28:00,Great America Parkway Station,0,0,,,126379.7754,0
+ACE03,8,SCC,7:35:00,7:35:00,Santa Clara Station,0,0,,,133108.4577,0
+ACE03,9,SJC,7:47:00,7:47:00,San Jose Station,0,0,,,137171.3755,0
+ACE05,0,SKT,6:40:00,6:40:00,Stockton- Robert J Cabral Station,0,0,,,0,0
+ACE05,1,LTM,6:59:00,6:59:00,Lathrop Station,0,0,,,17884.11416,0
+ACE05,2,TRC,7:11:00,7:11:00,Tracy Station,0,0,,,37412.58709,0
+ACE05,3,VAS,7:40:00,7:40:00,Vasco Rt Station,0,0,,,69499.63367,0
+ACE05,4,LIV,7:45:00,7:45:00,Livermore Station,0,0,,,74120.28004,0
+ACE05,5,PLS,7:53:00,7:53:00,Pleasanton Station,0,0,,,85004.6801,0
+ACE05,6,FMT,8:15:00,8:15:00,Fremont Station,0,0,,,106212.6015,0
+ACE05,7,GAC,8:33:00,8:33:00,Great America Parkway Station,0,0,,,126379.7754,0
+ACE05,8,SCC,8:40:00,8:40:00,Santa Clara Station,0,0,,,133108.4577,0
+ACE05,9,SJC,8:52:00,8:52:00,San Jose Station,0,0,,,137171.3755,0
+ACE07,0,SKT,7:32:00,7:32:00,Stockton- Robert J Cabral Station,0,0,,,0,0
+ACE07,1,LTM,7:51:00,7:51:00,Lathrop Station,0,0,,,17884.11416,0
+ACE07,2,TRC,8:03:00,8:03:00,Tracy Station,0,0,,,37412.58709,0
+ACE07,3,VAS,8:32:00,8:32:00,Vasco Rt Station,0,0,,,69499.63367,0
+ACE07,4,LIV,8:37:00,8:37:00,Livermore Station,0,0,,,74120.28004,0
+ACE07,5,PLS,8:45:00,8:45:00,Pleasanton Station,0,0,,,85004.6801,0
+ACE07,6,FMT,9:07:00,9:07:00,Fremont Station,0,0,,,106212.6015,0
+ACE07,7,GAC,9:25:00,9:25:00,Great America Parkway Station,0,0,,,126379.7754,0
+ACE07,8,SCC,9:32:00,9:32:00,Santa Clara Station,0,0,,,133108.4577,0
+ACE07,9,SJC,9:44:00,9:44:00,San Jose Station,0,0,,,137171.3755,0
+ACE06H,0,SJC,16:35:00,16:35:00,San Jose Station,0,0,,,0,0
+ACE06H,1,SCC,16:40:00,16:40:00,Santa Clara Station,0,0,,,4085.459419,0
+ACE06H,2,GAC,16:49:00,16:49:00,Great America Parkway Station,0,0,,,10842.68856,0
+ACE06H,3,FMT,17:05:00,17:05:00,Fremont Station,0,0,,,31003.78828,0
+ACE06H,4,PLS,17:28:00,17:28:00,Pleasanton Station,0,0,,,53149.45542,0
+ACE06H,5,LIV,17:37:00,17:37:00,Livermore Station,0,0,,,64008.57935,0
+ACE06H,6,VAS,17:42:00,17:42:00,Vasco Rt Station,0,0,,,68610.26964,0
+ACE06H,7,TRC,18:11:00,18:11:00,Tracy Station,0,0,,,100692.6759,0
+ACE06H,8,LTM,18:23:00,18:23:00,Lathrop Station,0,0,,,120202.3084,0
+ACE06H,9,SKT,18:47:00,18:47:00,Stockton- Robert J Cabral Station,0,0,,,138118.6838,0
+ACE03H,0,SKT,5:35:00,5:35:00,Stockton- Robert J Cabral Station,0,0,,,0,0
+ACE03H,1,LTM,5:54:00,5:54:00,Lathrop Station,0,0,,,17884.11416,0
+ACE03H,2,TRC,6:06:00,6:06:00,Tracy Station,0,0,,,37412.58709,0
+ACE03H,3,VAS,6:35:00,6:35:00,Vasco Rt Station,0,0,,,69499.63367,0
+ACE03H,4,LIV,6:40:00,6:40:00,Livermore Station,0,0,,,74120.28004,0
+ACE03H,5,PLS,6:48:00,6:48:00,Pleasanton Station,0,0,,,85004.6801,0
+ACE03H,6,FMT,7:10:00,7:10:00,Fremont Station,0,0,,,106212.6015,0
+ACE03H,7,GAC,7:28:00,7:28:00,Great America Parkway Station,0,0,,,126379.7754,0
+ACE03H,8,SCC,7:35:00,7:35:00,Santa Clara Station,0,0,,,133108.4577,0
+ACE03H,9,SJC,7:47:00,7:47:00,San Jose Station,0,0,,,137171.3755,0
+ACE05H,0,SKT,6:40:00,6:40:00,Stockton- Robert J Cabral Station,0,0,,,0,0
+ACE05H,1,LTM,6:59:00,6:59:00,Lathrop Station,0,0,,,17884.11416,0
+ACE05H,2,TRC,7:11:00,7:11:00,Tracy Station,0,0,,,37412.58709,0
+ACE05H,3,VAS,7:40:00,7:40:00,Vasco Rt Station,0,0,,,69499.63367,0
+ACE05H,4,LIV,7:45:00,7:45:00,Livermore Station,0,0,,,74120.28004,0
+ACE05H,5,PLS,7:53:00,7:53:00,Pleasanton Station,0,0,,,85004.6801,0
+ACE05H,6,FMT,8:15:00,8:15:00,Fremont Station,0,0,,,106212.6015,0
+ACE05H,7,GAC,8:33:00,8:33:00,Great America Parkway Station,0,0,,,126379.7754,0
+ACE05H,8,SCC,8:40:00,8:40:00,Santa Clara Station,0,0,,,133108.4577,0
+ACE05H,9,SJC,8:52:00,8:52:00,San Jose Station,0,0,,,137171.3755,0
+ACE02,0,SJC,14:10:00,14:10:00,San Jose Station,0,0,,,0,0
+ACE02,1,SCC,14:15:00,14:15:00,Santa Clara Station,0,0,,,4085.459419,0
+ACE02,2,GAC,14:24:00,14:24:00, Great America Parkway Station,0,0,,,10842.68856,0
+ACE02,3,FMT,14:45:00,14:45:00,Fremont Station,0,0,,,31003.78828,0
+ACE02,4,PLS,15:08:00,15:08:00,Pleasanton Station,0,0,,,53149.45542,0
+ACE02,5,LIV,15:22:00,15:22:00,Livermore Station,0,0,,,64008.57935,0
+ACE02,6,VAS,15:27:00,15:27:00,Vasco Rd Station,0,0,,,68610.26964,0
+ACE02,7,TRC,15:56:00,15:56:00,Tracy Station,0,0,,,100692.6759,0
+ACE02,8,LTM,16:08:00,16:08:00,Lathrop Station,0,0,,,120202.3084,0
+ACE02,9,SKT,16:32:00,16:32:00,Stockton-Robert J Cabral Station,0,0,,,138118.6838,0
+ACE02H,0,SJC,14:10:00,14:10:00,San Jose Station,0,0,1,1,0,0
+ACE02H,1,SCC,14:15:00,14:15:00,Santa Clara Station,0,0,1,1,4085.459419,0
+ACE02H,2,GAC,14:24:00,14:24:00,Great America Parkway Station,0,0,1,1,10842.68856,0
+ACE02H,3,FMT,14:45:00,14:45:00,Fremont Station,0,0,1,1,31003.78828,0
+ACE02H,4,PLS,15:08:00,15:08:00,Pleasanton Station,0,0,1,1,53149.45542,0
+ACE02H,5,LIV,15:22:00,15:22:00,Livermore Station,0,0,1,1,64008.57935,0
+ACE02H,6,VAS,15:27:00,15:27:00,Vasco Rt Station,0,0,1,1,68610.26964,0
+ACE02H,7,TRC,15:56:00,15:56:00,Tracy Station,0,0,1,1,100692.6759,0
+ACE02H,8,LTM,16:08:00,16:08:00,Lathrop Station,0,0,1,1,120202.3084,0
+ACE02H,9,SKT,16:32:00,16:32:00,Stockton- Robert J Cabral Station,0,0,1,1,138118.6838,0

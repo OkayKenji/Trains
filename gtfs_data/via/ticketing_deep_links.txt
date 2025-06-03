@@ -1,0 +1,2 @@
+web_url,ticketing_deep_link_id
+https://reservia.viarail.ca/google-results,1

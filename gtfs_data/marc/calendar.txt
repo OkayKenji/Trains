@@ -15,4 +15,5 @@ service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,e
 101BrunswickRP,0,0,0,0,0,0,0,20221114,20251231
 103Normal,0,0,0,0,0,0,1,20221114,20251231
 103Amtrak,0,0,0,0,0,0,0,20221114,20251231
-PennHoliday24Special,0,0,0,0,0,0,0,20241212,20241231
+Bruns25Special,0,0,0,0,0,0,0,20250206,20251231
+102Special,0,0,0,0,0,0,0,20250601,20250630

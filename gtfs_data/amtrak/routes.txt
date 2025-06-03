@@ -23,7 +23,6 @@ route_id,agency_id,route_short_name,route_long_name,route_type,route_url,route_c
 51,51,,Southwest Chief,2,https://www.amtrak.com/southwest-chief-train,CAE4F1,000000
 58,51,,Cardinal,2,https://www.amtrak.com/cardinal-train,CAE4F1,000000
 61,51,,Downeaster,2,https://www.amtrak.com/downeaster-train,CAE4F1,000000
-26025,51,,San Joaquins,2,https://www.amtrak.com/san-joaquins-train,CAE4F1,000000
 55,51,,Pere Marquette,2,https://www.amtrak.com/michigan-services-train,CAE4F1,000000
 56,51,,Illini,2,https://www.amtrak.com/illinois-services-train,CAE4F1,000000
 60,51,,Amtrak Cascades,2,https://www.amtrak.com/cascades-train,CAE4F1,000000
@@ -46,7 +45,6 @@ route_id,agency_id,route_short_name,route_long_name,route_type,route_url,route_c
 36924,51,,Coast Starlight,2,https://www.amtrak.com/coast-starlight-train,CAE4F1,000000
 36926,51,,Lincoln Service Missouri River Runner,2,https://www.amtrak.com/illinois-services-train,CAE4F1,000000
 36930,51,,Sunset Limited,2,https://www.amtrak.com/sunset-limited-train,CAE4F1,000000
-39626,51,,Winter Park Express,2,https://www.amtrak.com/winter-park-express,CAE4F1,000000
 40751,51,,Acela,2,http://www.amtrak.com/acela-train,CAE4F1,000000
 41042,51,,Amtrak Hartford Line,2,https://www.amtrak.com/amtrak-hartford-line-train,CAE4F1,000000
 41044,51,,Valley Flyer,2,https://www.amtrak.com/valley-flyer-train,CAE4F1,000000
@@ -60,4 +58,5 @@ route_id,agency_id,route_short_name,route_long_name,route_type,route_url,route_c
 42958,1233,,Amtrak Thruway Connecting Service,3,http://www.amtrak.com,CAE4F1,000000
 42985,1238,,Commuter Rail,2,http://www.amtrak.com,CAE4F1,000000
 42991,51,,Borealis,2,http://www.amtrak.com,CAE4F1,000000
+42992,51,,Berkshire Flyer,2,http://www.amtrak.com,CAE4F1,000000
 42994,51,,Floridian,2,http://www.amtrak.com,CAE4F1,000000

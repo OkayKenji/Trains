@@ -3,14 +3,14 @@ so_shore,WD,400,Carroll Ave. (Michigan City),400,1,,south_shore_WB
 so_shore,WD,102,Chicago,102,1,,south_shore_WB
 so_shore,WD,104,Chicago,104,1,,south_shore_WB
 so_shore,WD,106,Chicago,106,1,,south_shore_WB
-so_shore,WD,8,Chicago,8,1,,south_shore_WB
 so_shore,WD,108,Chicago,108,1,,south_shore_WB
+so_shore,WD,10,Chicago,10,1,,south_shore_WB
 so_shore,WD,110,Chicago,110,1,,south_shore_WB
 so_shore,WD,112,Chicago,112,1,,south_shore_WB
 so_shore,WD,114,Chicago,114,1,,south_shore_WB
+so_shore,WD,214,Chicago,214,1,,south_shore_WB
 so_shore,WD,16,Chicago,16,1,,south_shore_WB
-so_shore,WD,116,Chicago,116,1,,south_shore_WB
-so_shore,WD,216,Chicago,216,1,,south_shore_WB
+so_shore,WD,118,Chicago,118,1,,south_shore_WB
 so_shore,WD,218,Chicago,218,1,,south_shore_WB
 so_shore,WD,120,Chicago,120,1,,south_shore_WB
 so_shore,WD,22,Chicago,22,1,,south_shore_WB
@@ -32,21 +32,23 @@ so_shore,WE,952,Carroll Ave. (Michigan City),952,1,,south_shore_WB
 so_shore,WE,600,Chicago,600,1,,south_shore_WB
 so_shore,WE,502,Chicago,502,1,,south_shore_WB
 so_shore,WE,504,Chicago,504,1,,south_shore_WB
-so_shore,WE,606,Chicago,606,1,,south_shore_WB
 so_shore,WE,506,Chicago,506,1,,south_shore_WB
 so_shore,WE,608,Chicago,608,1,,south_shore_WB
 so_shore,WE,508,Chicago,508,1,,south_shore_WB
-so_shore,WE,610,Chicago,610,1,,south_shore_WB
 so_shore,WE,954,Carroll Ave. (Michigan City),954,1,,south_shore_WB
+so_shore,WE,610,Chicago,610,1,,south_shore_WB
 so_shore,WE,510,Chicago,510,1,,south_shore_WB
+so_shore,WE,612,Chicago,612,1,,south_shore_WB
 so_shore,WE,956,Carroll Ave. (Michigan City),956,1,,south_shore_WB
+so_shore,WE,512,Chicago,512,1,,south_shore_WB
+so_shore,WE,958,Carroll Ave. (Michigan City),958,1,,south_shore_WB
+so_shore,WE,960,Carroll Ave. (Michigan City),960,1,,south_shore_WB
 so_shore,WD,401,South Bend,401,0,,south_shore_EB
 so_shore,WD,403,South Bend,403,0,,south_shore_EB
 so_shore,WD,201,Miller,201,0,,south_shore_EB
 so_shore,WD,203,Miller,203,0,,south_shore_EB
 so_shore,WD,205,Miller,205,0,,south_shore_EB
 so_shore,WD,405,South Bend,405,0,,south_shore_EB
-so_shore,WD,103,Carroll Ave. (Michigan City),103,0,,south_shore_EB
 so_shore,WD,105,Carroll Ave. (Michigan City),105,0,,south_shore_EB
 so_shore,WD,7,South Bend,7,0,,south_shore_EB
 so_shore,WD,207,Miller,207,0,,south_shore_EB
@@ -70,15 +72,16 @@ so_shore,WD,33,South Bend,33,0,,south_shore_EB
 so_shore,WD,133,Carroll Ave. (Michigan City),133,0,,south_shore_EB
 so_shore,WD,35,South Bend,35,0,,south_shore_EB
 so_shore,WD,101,Carroll Ave. (Michigan City),101,0,,south_shore_EB
-so_shore,WD,19,South Bend,19,0,,south_shore_EB
 so_shore,WE,701,South Bend,701,0,,south_shore_EB
 so_shore,WE,703,South Bend,703,0,,south_shore_EB
+so_shore,WE,705,South Bend,705,0,,south_shore_EB
 so_shore,WE,503,South Bend,503,0,,south_shore_EB
-so_shore,WE,603,Carroll Ave. (Michigan City),603,0,,south_shore_EB
 so_shore,WE,505,South Bend,505,0,,south_shore_EB
-so_shore,WE,605,Carroll Ave. (Michigan City),605,0,,south_shore_EB
 so_shore,WE,507,South Bend,507,0,,south_shore_EB
+so_shore,WE,609,Carroll Ave. (Michigan City),609,0,,south_shore_EB
 so_shore,WE,509,South Bend,509,0,,south_shore_EB
 so_shore,WE,511,South Bend,511,0,,south_shore_EB
 so_shore,WE,513,South Bend,513,0,,south_shore_EB
+so_shore,WE,515,South Bend,515,0,,south_shore_EB
+so_shore,WE,517,South Bend,517,0,,south_shore_EB
 so_shore,WE,601,Carroll Ave. (Michigan City),601,0,,south_shore_EB

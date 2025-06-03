@@ -6,7 +6,7 @@ s4,McCormick Place,"23rd St. between King Dr. & Lake Shore Dr. Chicago IL",41.85
 s5,57th St.,"E. 57th St. & S. Lake Park Ave. Chicago IL",41.7933333,-87.5875,2,America/Chicago,57th,,,,
 s6,63rd St.,"63rd Street & Dorchester Chicago IL",41.7802778,-87.5905556,2,America/Chicago,63rd,,,,
 s7,Hegewisch,"13730 S Brainard Ave Chicago IL",41.646189,-87.543468,3,America/Chicago,Hegewisch,,,,
-s8,Hammond,"4531 S Hohman Ave Hammond IN",41.631008,-87.515564,4,America/Chicago,Hammond,,,,
+s8,Hammond Gateway,"4530 Sheffield Avenue Hammond IN",41.631048,-87.518848,America/Chicago,Hammond,,,,
 s9,East Chicago,"5615 Indianapolis Blvd East Chicago IN",41.611781,-87.479299,4,America/Chicago,E. Chicago,,,,
 s10,Gary/Chicago Airport,"2nd Place and Clark Rd. Gary IN",41.605503,-87.39424,5,America/Chicago,Gary Airport,,,,
 s11,Gary Metro Center,"200 W 4th Ave Gary IN",41.604727,-87.33792,5,America/Chicago,Gary Metro,,,,

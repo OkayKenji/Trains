@@ -49,8 +49,8 @@ MTL55C,Gare Anjou,,45.617867,-73.596659,2.0,11590,1,"""['MTL55A']"""
 MTL54C,Gare Rivière-des-Prairies,,45.660661,-73.539166,2.0,11600,1,"""['MTL54A']"""
 MTL53C,Gare Pointe-aux-Trembles,,45.674876,-73.505342,2.0,11610,1,"""['MTL53A']"""
 LEG1C,Gare Repentigny,,45.734587,-73.486111,5.0,11630,1,"""['LEG1A']"""
-LCN1C,Gare Terrebonne,,45.728495,-73.521187,5.0,11640,1,"""['LCN1A']"""
-MAS1C,Gare Mascouche,,45.729587,-73.598495,5.0,11650,1,"""['MAS1A']"""
+LCN1C,Gare Terrebonne,,45.728495,-73.521187,5.0,11640,0,"""['LCN1A']"""
+MAS1C,Gare Mascouche,,45.729587,-73.598495,5.0,11650,0,"""['MAS1A']"""
 _BALLAN,Ballantyne,,45.447867,-73.68077,,99916,0,"""['_BALLANT']"""
 _Josy,Josy Receving,,45.487885,-73.676139,,FA0003,0,[]
 _PAT_Sud,Début Sud de la voie d'évitement Pointes-aux-Trembles,,45.677631,-73.495249,,FA0004,0,[]

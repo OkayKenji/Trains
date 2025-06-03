@@ -2,7 +2,6 @@ stop_id,stop_name,stop_url,stop_timezone,stop_lat,stop_lon
 ABB,Abbotsford-Colby - ABB,https://www.amtrak.com/stations/abb,America/Chicago,44.928553,-90.314667
 ABE,Aberdeen Amtrak Station - ABE,https://www.amtrak.com/stations/abe,America/New_York,39.508447,-76.16326
 ABQ,Albuquerque Alvarado Transportation Center - ABQ,https://www.amtrak.com/stations/abq,America/Denver,35.082061,-106.647975
-ACA,Antioch-Pittsburg - ACA,https://www.amtrak.com/stations/aca,America/Los_Angeles,38.0177,-121.816024
 ACD,Arcadia Valley Station - ACD,https://www.amtrak.com/stations/acd,America/Chicago,37.592161,-90.624403
 ADM,Ardmore Amtrak Station - ADM,https://www.amtrak.com/stations/adm,America/Chicago,34.172465,-97.12551
 AKY,Ashland Amtrak Station - AKY,https://www.amtrak.com/stations/aky,America/New_York,38.480875,-82.639603
@@ -84,7 +83,6 @@ CLV,Cloverdale Amtrak Bus Stop - CLV,https://www.amtrak.com/stations/clv,America
 CML,Camarillo Amtrak - CML,https://www.amtrak.com/stations/cml,America/Los_Angeles,34.215933,-119.034114
 CMO,Chemult - CMO,https://www.amtrak.com/stations/cmo,America/Los_Angeles,43.216784,-121.781594
 CNV,Castleton Amtrak Station - CNV,https://www.amtrak.com/stations/cnv,America/New_York,43.613382,-73.171337
-COC,Corcoran - COC,https://www.amtrak.com/stations/coc,America/Los_Angeles,36.098516,-119.55705
 COI,Connersville Amtrak - COI,https://www.amtrak.com/stations/coi,America/New_York,39.645969,-85.13338
 COT,Coatesville Amtrak - COT,https://www.amtrak.com/stations/cot,America/New_York,39.985688,-75.820929
 COV,Connellsville Amtrak - COV,https://www.amtrak.com/stations/cov,America/New_York,40.020282,-79.592813
@@ -313,11 +311,9 @@ MAL,Malta Amtrak Station - MAL,https://www.amtrak.com/stations/mal,America/Denve
 MAT,Mattoon Amtrak Station - MAT,https://www.amtrak.com/stations/mat,America/Chicago,39.48273,-88.376045
 MAY,Maysville Amtrak Station - MAY,https://www.amtrak.com/stations/may,America/New_York,38.652148,-83.771074
 MCB,Mccomb - MCB,https://www.amtrak.com/stations/mcb,America/Chicago,31.244467,-90.451334
-MCD,Merced - MCD,https://www.amtrak.com/stations/mcd,America/Los_Angeles,37.307183,-120.476805
 MCG,Mcgregor Amtrak - MCG,https://www.amtrak.com/stations/mcg,America/Chicago,31.443352,-97.404756
 MCK,Mccook Amtrak Station - MCK,https://www.amtrak.com/stations/mck,America/Chicago,40.197634,-100.625792
 MDN,Meriden - MDN,https://www.amtrak.com/stations/mdn,America/New_York,41.539385,-72.800678
-MDR,Madera Amtrak - MDR,https://www.amtrak.com/stations/mdr,America/Los_Angeles,37.022471,-120.07498
 MDT,Mendota Amtrak Station - MDT,https://www.amtrak.com/stations/mdt,America/Chicago,41.549584,-89.11792
 MEI,Meridian Union Station - MEI,https://www.amtrak.com/stations/mei,America/Chicago,32.364166,-88.696568
 MEM,Memphis - MEM,https://www.amtrak.com/stations/mem,America/Chicago,35.132458,-90.059109
@@ -333,7 +329,6 @@ MKB,Milwaukee Airport Amtrak Bus Stop - MKB,http://www.amtrak.com/stations/mkb,A
 MKE,Milwaukee - MKE,https://www.amtrak.com/stations/mke,America/Chicago,43.034518,-87.917104
 MKS,Marks Amtrak - MKS,https://www.amtrak.com/stations/mks,America/Chicago,34.258227,-90.272342
 MNG,Montgomery Amtrak - MNG,https://www.amtrak.com/stations/mng,America/New_York,38.180743,-81.32403
-MOD,Modesto - MOD,https://www.amtrak.com/stations/mod,America/Los_Angeles,37.668951,-120.912913
 MOJ,Mojave Amtrak Bus Stop - MOJ,https://www.amtrak.com/stations/moj,America/Los_Angeles,35.05249,-118.173181
 MOT,Minot Amtrak Station - MOT,https://www.amtrak.com/stations/mot,America/Chicago,48.236083,-101.298557
 MPK,Moorpark Amtrak - MPK,https://www.amtrak.com/stations/mpk,America/Los_Angeles,34.28476,-118.878059
@@ -389,6 +384,7 @@ OLT,San Diego Old Town Transportation Center - OLT,https://www.amtrak.com/statio
 OLW,Olympia-Lacey Amtrak Station - OLW,https://www.amtrak.com/stations/olw,America/Los_Angeles,46.991273,-122.794059
 OMA,Omaha Amtrak Station - OMA,https://www.amtrak.com/stations/oma,America/Chicago,41.249697,-95.927201
 ONA,Ontario Amtrak - ONA,https://www.amtrak.com/stations/ona,America/Los_Angeles,34.061672,-117.649569
+ORB,Old Orchard Beach Amtrak - ORB,https://www.amtrak.com/stations/orb,America/New_York,43.514326,-70.376225
 ORC,Oregon City Amtrak - ORC,https://www.amtrak.com/stations/orc,America/Los_Angeles,45.366146,-122.595925
 ORL,Orlando - ORL,https://www.amtrak.com/stations/orl,America/New_York,28.525926,-81.381516
 ORV,Oroville Amtrak Bus Stop - ORV,https://www.amtrak.com/stations/orv,America/Los_Angeles,39.520057,-121.572102
@@ -558,7 +554,6 @@ TPL,Temple - TPL,https://www.amtrak.com/stations/tpl,America/Chicago,31.095883,-
 TRA,Tracy Bus Stop Amtrak Bus Stop - TRA,https://www.amtrak.com/stations/tra,America/Los_Angeles,37.761409,-121.436094
 TRE,Trenton - TRE,https://www.amtrak.com/stations/tre,America/New_York,40.219011,-74.75444
 TRI,Trinidad Amtrak - TRI,https://www.amtrak.com/stations/tri,America/Denver,37.172688,-104.507981
-TRK,Turlock-Denair - TRK,https://www.amtrak.com/stations/trk,America/Los_Angeles,37.527229,-120.798009
 TRM,Troy Amtrak Station - TRM,https://www.amtrak.com/stations/trm,America/New_York,42.542555,-83.191026
 TRU,Truckee Amtrak Station - TRU,https://www.amtrak.com/stations/tru,America/Los_Angeles,39.327616,-120.185387
 TUK,Tukwila Amtrak - TUK,https://www.amtrak.com/stations/tuk,America/Los_Angeles,47.461081,-122.240254
@@ -576,7 +571,6 @@ VEC,Ventura Amtrak - VEC,https://www.amtrak.com/stations/vec,America/Los_Angeles
 VNC,Van Nuys - VNC,https://www.amtrak.com/stations/vnc,America/Los_Angeles,34.211294,-118.448206
 VRV,Victorville Amtrak - VRV,https://www.amtrak.com/stations/vrv,America/Los_Angeles,34.5372,-117.292956
 WAB,Waterbury-Stowe Amtrak Station - WAB,https://www.amtrak.com/stations/wab,America/New_York,44.335011,-72.751806
-WAC,Wasco - WAC,https://www.amtrak.com/stations/wac,America/Los_Angeles,35.594092,-119.332309
 WAH,Washington Amtrak Station - WAH,https://www.amtrak.com/stations/wah,America/Chicago,38.561466,-91.012717
 WAR,Warrensburg Amtrak Station - WAR,https://www.amtrak.com/stations/war,America/Chicago,38.76275,-93.7409
 WBG,Williamsburg Amtrak Station - WBG,https://www.amtrak.com/stations/wbg,America/New_York,37.276414,-76.708564
@@ -610,7 +604,6 @@ WOB,Woburn Amtrak Station - WOB,https://www.amtrak.com/stations/wob,America/New_
 WOR,Worcester Union Station - WOR,https://www.amtrak.com/stations/wor,America/New_York,42.261478,-71.794812
 WPB,West Palm Beach Amtrak Station - WPB,https://www.amtrak.com/stations/wpb,America/New_York,26.712554,-80.062184
 WPK,Winter Park Amtrak Station - WPK,https://www.amtrak.com/stations/wpk,America/New_York,28.597099,-81.351993
-WPR,Winter Park Ski Resort Amtrak Station - WPR,https://www.amtrak.com/stations/wpr,America/Denver,39.887584,-105.763245
 WPS,Winter Park - WPS,https://www.amtrak.com/stations/wps,America/Denver,39.88369,-105.761836
 WPT,Wolf Point Amtrak Station - WPT,https://www.amtrak.com/stations/wpt,America/Denver,48.091672,-105.642736
 WRJ,White River Junction Amtrak Station - WRJ,https://www.amtrak.com/stations/wrj,America/New_York,43.647785,-72.317272
@@ -637,8 +630,6 @@ BTN,Burlington - BTN,http://www.amtrak.com/stations/btn,America/New_York,44.4757
 VRN,Ferrisburgh - VRN,http://www.amtrak.com/stations/vrn,America/New_York,44.180921,-73.248824
 MBY,Middlebury - MBY,http://www.amtrak.com/stations/mby,America/New_York,44.017425,-73.169775
 MYU,Seaside-Marina - MYU,http://www.amtrak.com/stations/myu,America/Los_Angeles,36.653516,-121.801379
-PWN,Pottstown - PWN,http://www.amtrak.com/stations/pwn,America/New_York,40.244388,-75.650845
-RDI,Reading - RDI,http://www.amtrak.com/stations/rdi,America/New_York,40.333791,-75.923048
 CBN,Canadian Border - CBN,http://www.amtrak.com/stations/cbn,America/New_York,43.109235,-79.058357
 NFS,Niagara Falls - NFS,http://www.amtrak.com/stations/nfs,America/New_York,43.108736,-79.063291
 TWO,Toronto - TWO,http://www.amtrak.com/stations/two,America/New_York,43.645427,-79.380762

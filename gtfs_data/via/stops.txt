@@ -352,7 +352,7 @@ stop_id,stop_code,stop_name,location_type,stop_lon,stop_lat,stop_timezone,parent
 309,NAPN,Napanee,0,-76.954262,44.25365,America/Toronto,,
 301,VERE,Veregin,0,-102.077952,51.581493,America/Regina,,
 303,OSKL,Oskelaneo Lodge,0,-75.056591,48.111198,America/Toronto,,
-305,UFRZ,Upper Frazer,0,-121.946648,54.120005,America/Vancouver,,
+305,UFRZ,Upper Fraser,0,-121.946648,54.120005,America/Vancouver,,
 306,SANM,Sanmaur,0,-73.795987,47.893778,America/Toronto,,
 307,SMTR,Smithers,0,-127.176219,54.777708,America/Vancouver,,
 145,ABBO,Abbotsford,0,-122.277756,49.116845,America/Vancouver,,

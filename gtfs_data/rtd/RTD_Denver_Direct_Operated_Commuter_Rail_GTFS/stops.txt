@@ -69,7 +69,7 @@ Perry Station,34234,34234,Vehicles Travelling North,39.734568,-105.040036,,,1,,,
 Cherry Creek,34136,34136,Vehicles Travelling North,39.718122,-104.957349,,,1,,,0,['-1']
 Ulster / Tufts,34147,34147,Vehicles Travelling North,39.630961,-104.896356,,,1,,,0,['-1']
 Dayton Station,33710,33710,Vehicles Travelling North,39.643677,-104.878653,,,1,,,0,['-1']
-US 36 / Broomfield Station,33745,33745,Vehicles Travelling South,39.906436,-105.086374,,,1,,,0,"['-1', '33531', '33537']"
+US 36 / Broomfield Station,33745,33745,Vehicles Travelling South,39.906436,-105.086374,,,1,,,0,"['-1', '33531']"
 Southmoor Station,33721,33721,Vehicles Travelling North,39.648898,-104.915046,,,1,,,0,['-1']
 27th Way / Broadway,33789,33789,Vehicles Travelling North,39.99712,-105.26104,,,1,,,0,['-1']
 Thornton West Side,33733,33733,Vehicles Travelling South,39.8553,-104.987905,,,1,,,0,['-1']
@@ -130,7 +130,7 @@ Orchard Station,33720,33720,Vehicles Travelling North,39.6134,-104.89641,,,1,,,0
 Evergreen,33889,33889,Vehicles Travelling ,39.654788,-105.340412,,,0,,,1,"['33809', '-1']"
 US 287 / Niwot Rd,33848,33848,Vehicles Travelling North,40.102022,-105.103487,,,1,,,0,['-1']
 US 285 / Twin Forks,33845,33845,Vehicles Travelling North,39.607118,-105.229658,,,1,,,0,['-1']
-Wagon Road,33746,33746,Vehicles Travelling North,39.912353,-104.994181,,,1,,,0,"['35354', '-1']"
+Wagon Road,33746,33746,Vehicles Travelling North,39.912353,-104.994181,,,1,,,0,"['-1', '26048', '35354']"
 US 36 / Sheridan Station East Side,33734,33734,Vehicles Travelling North,39.857837,-105.052841,,,1,,,0,['-1']
 18th St / Stout Station,34117,34117,Vehicles Travelling North,39.748064,-104.990319,,,1,,,0,['-1']
 Red Rocks College Station,34240,34240,Vehicles Travelling North,39.724954,-105.149955,,,1,,,0,['-1']
