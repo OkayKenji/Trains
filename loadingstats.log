@@ -126,3 +126,53 @@ Message: Processing: rtd
 Message: 	Local Execution time: 0.3227 seconds
 2025-01-05 06:11:58,075 | INFO | train.py:419 | 
 Message: Execution time: 433.5591 seconds
+2025-06-11 20:49:53,914 | INFO | train.py:193 | 
+Message: Processing: ace
+2025-06-11 20:49:54,088 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.1738 seconds
+2025-06-11 20:49:54,340 | INFO | train.py:193 | 
+Message: Processing: njt
+2025-06-11 20:49:54,340 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0000 seconds
+2025-06-11 20:49:54,640 | INFO | train.py:193 | 
+Message: Processing: go
+2025-06-11 20:49:54,663 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0229 seconds
+2025-06-11 20:49:54,741 | INFO | train.py:193 | 
+Message: Processing: rtd/RTD_Denver_Direct_Operated_Commuter_Rail_GTFS
+2025-06-11 20:49:54,753 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0118 seconds
+2025-06-11 20:49:54,825 | INFO | train.py:193 | 
+Message: Processing: rtd/RTD_Denver_Purchased_Transportation_Commuter_Rail_GTFS
+2025-06-11 20:49:54,842 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0169 seconds
+2025-06-11 20:49:55,044 | INFO | train.py:193 | 
+Message: Processing: metra
+2025-06-11 20:50:04,896 | INFO | train.py:310 | 
+Message: 	Local Execution time: 9.8526 seconds
+2025-06-11 20:50:05,007 | INFO | train.py:193 | 
+Message: Processing: exo
+2025-06-11 20:50:05,022 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0148 seconds
+2025-06-11 20:50:05,164 | INFO | train.py:193 | 
+Message: Processing: lirr
+2025-06-11 20:50:05,171 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0065 seconds
+2025-06-11 20:50:05,277 | INFO | train.py:193 | 
+Message: Processing: marc
+2025-06-11 20:50:07,368 | INFO | train.py:310 | 
+Message: 	Local Execution time: 2.0895 seconds
+2025-06-11 20:50:07,464 | INFO | train.py:193 | 
+Message: Processing: metrolink
+2025-06-11 20:50:07,474 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0105 seconds
+2025-06-11 20:50:08,107 | INFO | train.py:193 | 
+Message: Processing: mnrr
+2025-06-11 20:50:08,151 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.0441 seconds
+2025-06-11 20:50:08,224 | INFO | train.py:193 | 
+Message: Processing: nicd
+2025-06-11 20:50:08,926 | INFO | train.py:310 | 
+Message: 	Local Execution time: 0.7026 seconds
+2025-06-11 20:50:09,114 | INFO | train.py:193 | 
+Message: Processing: septa
